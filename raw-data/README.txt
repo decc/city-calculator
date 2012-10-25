@@ -1,9 +1,9 @@
 This directory contains data from a variety of sources. The structure of the
 sub-directories is:
 
-topic/publisher/vintage/
+	    topic/publisher/vintage/
 
-For example: emissions/decc/2012-08-23 contains emissions data published by DECC
+Example: emissions/decc/2012-08-23 contains emissions data published by DECC
 on 23 August 2012.
 
 Within each such directory there are typically three subdirectories:
@@ -18,4 +18,5 @@ modified/   Contains restructured versions of the raw data to make it easier to
 
 csv/	    Contains the data as comma-separated-value text files, suitable for
 	    loading into a statistical package such as R. 
+
 
