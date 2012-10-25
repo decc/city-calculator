@@ -1,0 +1,15 @@
+sector_code,sector_name
+A,Industry and Commercial Electricity
+B,Industry and Commercial Gas
+C,Large Industrial Installations
+D,Industrial and Commercial Other Fuels
+E,Agricultural Combustion
+F,Railways
+G,Domestic Electricity
+H,Domestic Gas
+I,Domestic 'Other Fuels'
+J,Road Transport (A roads)
+K,Road Transport (Motorways)
+L,Road Transport (Minor roads)
+M,Road Transport Other
+N,LULUCF Net Emissions

@@ -1,0 +1,15 @@
+region_name,geography_code
+North East,E12000001
+North West,E12000002
+Yorkshire and the Humber,E12000003
+East Midlands,E12000004
+West Midlands,E12000005
+East of England,E12000006
+Greater London,E12000007
+South East,E12000008
+South West,E12000009
+Northern Ireland,N92000002
+Scotland,S92000003
+Wales,W92000004
+Unallocated,#N/A
+,
