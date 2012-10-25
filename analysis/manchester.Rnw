@@ -45,6 +45,18 @@
 
 \section{Overview of Manchester's emissions}
 
+Table xxx puts Manchester's current \COO\ emissions in context. Note that
+regional emissions are given on an end-user basis. That is, the emissions from
+the production of certain forms of energy are allocated to the user of that
+energy, rather than the producer. (Electricity and ???) Furthermore, only \COO\
+emissions are computed and not all sectors are included.
+
+From this staring point, Manchester aims to reduce its emissions to XXX in
+2020. (The actual target is a reduction of 48\% on 1990 levels but regional
+figures are only available back to 2005. [someone] has estimated 1990 levels and
+concluded that the target is equivalent to a reduction of XX on 2005 levels.)
+
+
 
 
 %<<label = set_options, echo = FALSE>>=
@@ -54,3 +66,11 @@
 
 
 \end{document}
+
+Manchester
+Birmingham
+Leeds
+Nottingham
+Newcastle
+
+Cite: the regional data set
