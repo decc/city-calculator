@@ -15,9 +15,10 @@ the standard geographical code used by \acronym{ONS}.
   A data frame with 34272 observations on the following 8 variables.
   \describe{
     
-    \item{\code{la_name}}{The human-readable name of the local
-      authority as in the original file published by \acronym{DECC}. The
-      original name of this field was \dQuote{LA Region Name}.}
+    \item{\code{la_name}}{The human-readable name of the local authority
+      as in the original file published by \acronym{DECC}. The original
+      name of this field was \dQuote{LA Region Name}. The values in this
+      field are unique and may be used as a key.}
     
     \item{\code{geography_code}}{The standard \acronym{ONS}
       code for the geographical region of the local authority.}
