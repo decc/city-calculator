@@ -2,6 +2,7 @@
 ## TODO: Make this an R package
 
 library(plyr)
+library(reshape2)
 
 ## Regional emissions data
 load("../data/emissions/data/ukreg.Rdata")
@@ -28,11 +29,11 @@ Newcastle 'Newcastle upon Tyne'
 ## High-level sectors
 sector0 <- read.table(header = TRUE, text = "
 sector_code sector0
-A 'Industrial and Commercial'
-B 'Industrial and Commercial'
-C 'Large Industrial Installations'
-D 'Industrial and Commercial'
-E 'Industrial and Commercial'
+A 'Ind. & Comm.'
+B 'Ind. & Comm.'
+C 'Large Ind.'
+D 'Ind. & Comm.'
+E 'Ind. & Comm.'
 F 'Transport'
 G 'Domestic'
 H 'Domestic'
@@ -46,21 +47,18 @@ N 'LULUCF'
 
 sector0$sector0 <- factor(sector0$sector0,
                           c("Domestic", "Transport",
-                            "Industrial and Commercial",
-                            "Large Industrial Installations",
+                            "Ind. & Comm.",
+                            "Large Ind.",
                             "LULUCF"),
                           ordered = TRUE)
 
 ## Select 2010. Restrict to those local authorities comprising the cities and to
 ## the high-level sectors
 
-citiesco2 <- merge(cities, ukregco2)
-citiesco2 <- merge(citiesco2, sector0)
-citiesco2 <- citiesco2[citiesco2$yr == 2010,
-                       c("city", "sector0", "sector_name", "CO2")]
+cities.co2 <- merge(cities, ukregco2)
+cities.co2 <- merge(cities.co2, sector0)
+cities.co2 <- cities.co2[c("city", "la_name", "sector0", "sector_name", "yr", "CO2")]
 
-## Cross-tab of total CO2 emissions
-dcast(citiesco2, sector0 ~ city, margins = TRUE, sum)
-format(dcast(citiesco2, sector0 ~ city, margins = TRUE, sum), big.mark = " ",
-       format = "f")
+
+
 
