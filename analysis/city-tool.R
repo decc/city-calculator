@@ -31,7 +31,7 @@ sector0 <- read.table(header = TRUE, text = "
 sector_code sector0
 A 'Ind. & Comm.'
 B 'Ind. & Comm.'
-C 'Large Ind.'
+C 'Ind. & Comm.'
 D 'Ind. & Comm.'
 E 'Ind. & Comm.'
 F 'Transport'
@@ -48,16 +48,8 @@ N 'LULUCF'
 sector0$sector0 <- factor(sector0$sector0,
                           c("Domestic", "Transport",
                             "Ind. & Comm.",
-                            "Large Ind.",
                             "LULUCF"),
                           ordered = TRUE)
-
-## Select 2010. Restrict to those local authorities comprising the cities and to
-## the high-level sectors
-
-cities.co2 <- merge(cities, ukregco2)
-cities.co2 <- merge(cities.co2, sector0)
-cities.co2 <- cities.co2[c("city", "la_name", "sector0", "sector_name", "yr", "CO2")]
 
 
 

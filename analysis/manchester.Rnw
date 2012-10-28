@@ -1,9 +1,9 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 \usepackage{amsmath}   % for mathematical niceties
 \usepackage{Sweave}    % for literate analysis
 \usepackage{biblatex}  % for citations
 \usepackage{booktabs}  % for professional tables
-\usepackage{hyperref}
+\usepackage{hyperref}  % to make URLs clickable
 % \usepackage[a4paper]{geometry}
 % \usepackage{tabularx}
 % \usepackage{microtype} % Because we care
@@ -11,6 +11,7 @@
 %
 % BIBLIOGRAPHY
 \addbibresource{../bibliography/cities.bib}
+%
 % SI UNITS
 \usepackage[load-configurations=abbreviations, per-mode=symbol, mode=text]{siunitx}
 % \DeclareSIUnit{\Wh}{Wh}
@@ -18,30 +19,45 @@
 % \DeclareSIUnit{\year}{y}
 %
 % TYPOGRAPHY
+\hyphenation{man-ches-t-er}
 \usepackage[utf8]{inputenc}          
 \usepackage[T1]{fontenc}              
 \usepackage[tt={monowidth}]{cfr-lm} 
 %
 % SWEAVE OPTIONS
-\SweaveOpts{keep.source=TRUE}
+%\SweaveOpts{keep.source=TRUE}
 %\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontsize=\small, formatcom=\color{decc.orange}}
 %\DefineVerbatimEnvironment{Soutput}{Verbatim}{fontsize=\small, formatcom=\color{decc.blue}}
 %\DefineVerbatimEnvironment{Scode}{Verbatim}{fontsize=\small}
 %
-% COLOUR
-% \definecolor{decc.orange}{rgb}{0.777, 0.320, 0.00}
-% \definecolor{decc.blue}{rgb}{0.000, 0.617, 0.887}
-%
 % SHORTCUTS
-\newcommand{\COO}{CO$_\text{2}$}
-\title{Overview of Manchester's \COO\ emissions}
+\newcommand{\COO}{{\lstyle CO$_\text{2}$}}
+%
+% CHOICE OF CITY
+% Change these to change the name of the city (not the calculation)
+\newcommand{\city}{Manchester}
+\newcommand{\citys}{Manchester's} 
+\title{\city}
 \author{James Geddes}
 \begin{document}
 \maketitle
 % 
 <<label = initialise, echo = FALSE>>=
+## Initiliase analytical code
 options(continue = " ")
 source("city-tool.R")
+## The name of the city -- change this to change the city for which the calculations are performed 
+the_city = "Manchester"
+## Add names of cities and high-level sectors to UK regional statistics
+cities.co2 <- subset(merge(merge(cities, ukregco2), sector0),
+                     select = c("city", "la_name", "sector0", "sector_name", "yr", "CO2"))
+
+cities.pop <- subset(merge(cities, ukregpop),
+                     select = c("city", "la_name", "yr", "pop"))
+## Summarise emissions and population by year for the city.
+the_city.co2 <- ddply(cities.co2[cities.co2$city == the_city, ],
+                      .(yr), summarise, CO2 = sum(CO2))
+the_city.pop <- cities.pop[cities.pop$city == the_city, ]
 @ 
 
 \section{Introduction}
@@ -50,75 +66,118 @@ source("city-tool.R")
 
 \subsection{About this document}
 
-\section{Overview of Manchester's emissions}
+\section{Overview of \citys\  emissions}
 
-Table~\ref{table:summary_all} puts Manchester's current \COO\ emissions in
-context. The emissions shown in the table are given on an an end-user
-basis. That is, the emissions from the production of certain forms of energy
-(mainly electricity) are allocated to the user of that energy, rather than the
-producer.
+The UK's total greenhouse gas emissions in 2010 (exlcuding international
+aviation and shipping) were \SI{590.2}{Mt.\COO e}, of which \SI[round-mode =
+places, round-precision = 1]{%
+\Sexpr{with(ukregco2, 0.001*sum(CO2[yr == 2010]))}}%
+{Mt.\COO} are included in the local authority dataset \cite{decc-emissions,
+  decc-regional-emissions}. Table~\ref{table:reconciliation} shows a
+reconciliation of these figures.
 %
-\begin{table}[ht]
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{@{}lr@{}} \toprule
+%
+    2010 Emissions                                       & \si{Mt.\COO e} \\ \midrule
+%   ------------------------------------------------        --------------------------
+    \textbf{UK Emissions as submitted to UNFCC}          & \textbf{590.2} \\
+    \textit{less} Greenhouse gases other than \COO       &          92.0 \\
+    \phantom{\textit{less}} %
+                  Overseas territories and flights to/from UK &      2.3 \\ \midrule
+    \textbf{UK and Crown Dependencies (\COO)}            & \textbf{495.8} \\
+    \textit{less} Crown Dependencies                     &           1.3 \\ \midrule
+    \textbf{Territorial UK (\COO)}                       & \textbf{494.5} \\ 
+    Methodological differences with Emissions Inventory  &         $-3.5$ \\
+    \textit{less} Sectors excluded from local authority dataset &   23.5 \\ \midrule
+    \textbf{Local authority dataset (\COO)}              & 
+    \num[round-mode = places, round-precision = 1, text-rm =
+    \bfseries]{\Sexpr{with(ukregco2, 0.001*sum(CO2[yr == 2010]))}} \\ \bottomrule
+  \end{tabular}
+  \caption{Reconciliation of the total emissions
+    from the local authority dataset with the UK's UNFCCC submission. Sectors
+    excluded from the local authority dataset are domestic shipping and
+    aviation, military transport, and exports (including international aviation
+    and shipping for exports). Other greenhouse gases are mainly methane and
+    nitrous oxide from agriculture, and the ``F-gases'' from industry.\label{table:reconciliation}} 
+\end{table}  
+% 
+
+In 2010, total emissions from \city\ were \SI[round-mode = places, round-precision =
+1]{%
+\Sexpr{0.001 * sum(the_city.co2$CO2[the_city.co2$yr == 2010])}%
+}{Mt.\COO}~\cite{decc-regional-emissions}. Table~\ref{table:summary_all} shows
+\citys\ historic \COO\ emissions in the context of selected other cities.
+%
+\begin{table}[htbp]
 <<label = summary_all, echo = FALSE>>=
 format(dcast(cities.co2, city ~ yr, function(x) {0.001 * sum(x)}, value.var =
              "CO2"), digits = 3)
 @ 
 \caption{Total \COO\ emissions (in \si{Mt.\COO}) from selected cities on an
-  end-user basis. Figures are from DECC's regional energy
-  statistics~\cite{decc-regional-emissions}.}
-\label{table:summary_all}
+  end-user basis.\label{table:summary_all}}
 \end{table}
 %
-For comparison, table~\ref{table:reconciliation} shows the emissions from all UK
-regions and reconciles these to the UK's total emissions as submitted to the
-UNFCCC.
-%
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{@{}lr@{}} \toprule
-    2010 Emissions                                       & \si{Mt.\COO e} \\ \midrule
-    \textbf{Local authority dataset (\COO)}              & 
-    \num[round-mode = places, round-precision = 1, text-rm = \bfseries]{\Sexpr{with(ukregco2, 0.001*sum(CO2[yr == 2010]))}} \\
-    Methodological differences with Emissions Inventory  & $-3.5$ \\
-    Sectors excluded from local authority dataset        & 23.5 \\ \midrule
-    \textbf{Territorial UK (\COO)}                       & \textbf{494.5} \\ 
-    Crown Dependencies                                   & 1.3 \\ \midrule
-    \textbf{UK and Crown Dependencies (\COO)}            & \textbf{495.8} \\
-    Other greenhouse gases                               & 92.0 \\
-    Overseas territories and flights to/from UK          & 2.3 \\ \midrule
-    \textbf{UK Emissions as submitted to UNFCC}          & \textbf{590.2} \\ \bottomrule
-  \end{tabular}
-  \caption{\label{table:reconciliation} Reconciliation of the total emissions
-    from the local authority dataset to the UK's UNFCCC submission. Sectors
-    excluded from the local authority dataset are domestic shipping and
-    aviation, military transport, and exports (including international aviation
-    and shipping for exports). Other greenhouse gases are mainly methane and
-    nitrous oxide from agriculture, and the ``F-gases'' from industry. Figures
-    for UNFCCC submissions are from DECC~\cite{decc-emissions}.} 
-\end{table}  
-%
+Emissions per capita in \city\ were
+\SI[round-mode = places, round-precision = 1]{%
+\Sexpr{with(the_city.co2, sum(CO2[yr == 2010])) / with(the_city.pop, sum(pop[yr == 2010]))}%
+}{t.\COO} in 2010, which compares with a UK average of \SI[round-mode = places, round-precision = 1]{%
+\Sexpr{sum(ukregco2$CO2) / sum(ukregpop$pop, na.rm = TRUE)}%
+}{t.\COO} (based on the regional statistics dataset). 
+% The next section is only applicable for those cities which are composed of
+% several boroughs
 
-Greater Manchester is composed of ten boroughs, the emissions of which are
-broken out by sector in table~\ref{table:borough-emissions}. 
-\begin{table}[ht]
-<<label = manchester_co2, echo = FALSE>>=
-format(dcast(subset(cities.co2, city == "Manchester" & yr == 2010),
-             la_name ~ sector0,
-             sum, 
-             value.var = "CO2", margins = TRUE), big.mark = ",", digits = 1)
+The boroughs which comprise \city\ differ in their emissions
+characteristics. Table~\ref{table:borough-summary} shows summary statistics for
+each borough; and table~\ref{table:borough-emissions-bysector} shows the per capita
+emissions broken down by sector.
+%
+\begin{table}[htbp]
+<<label = borough_summary, echo = FALSE>>=
+city <- cities.co2[cities.co2$city == the_city, ]
+city0 <- ddply(city, .(la_name, yr), summarise, CO2 = sum(CO2))
+city0 <- transform(merge(city0, ukregpop), CO2percapita = CO2 / pop)
+n.boroughs <- length(cities$city[cities$city == the_city])
+format(subset(city0, 
+              yr == 2010, 
+              select = c("la_name", "CO2", "pop", "CO2percapita")),
+       big.mark =",", digits = 2)
 @ 
-\caption{\label{table:borough-emissions} Emissions from the ten boroughs. Note
-  that the high-level sectors shown here are not identical to those in the data as
-  published by DECC: Railways have been included within Transport, Large
- Industrial The abbreviated sectors are ``Industrial and Commercial''
-  and ``Large Industrial Installations''.}
+\caption{Summary statistics for each of the \Sexpr{n.boroughs} boroughs that make up
+  \city. (Emissions are in~\si{kt.\COO}; population figures are mid-year
+  estimates in thousands; and emissions per capita are in tonnes.)\label{table:borough-summary}}
 \end{table}
 
+\begin{table}[htbp]
+<<label = city_co2, echo = FALSE>>=
+cities.sector0.co2 <- ddply(cities.co2, .(city, la_name, sector0, yr), 
+                            summarise, CO2 = sum(CO2))
+cities.sector0.co2 <- merge(cities.sector0.co2, cities.pop)
+cities.sector0.co2 <- transform(cities.sector0.co2, CO2percapita = CO2 / pop)
+format(dcast(subset(cities.sector0.co2, city == the_city & yr == 2010),
+             la_name ~ sector0, 
+             sum, value.var = "CO2percapita", margins = "sector0"), 
+       big.mark = ",", digits = 2)
+@ 
+\caption{Per capita emissions from the individual boroughs in 2010. The abbreviated
+  sectors are ``Industrial and Commercial'' and ``Large Industrial
+  Installations''. Note that the high-level sectors shown here are not identical
+  to those in the data as published by DECC as Railways have been included within
+  Transport.\label{table:borough-emissions-bysector}}
+\end{table}
 
-From this starting point, Manchester aims to reduce its emissions to XXX in
-2020. (The actual target is a reduction of 48\% on 1990 levels but regional
-figures are only available back to 2005. [someone] has estimated 1990 levels and
-concluded that the target is equivalent to a reduction of XX on 2005 levels.)
+The Greater Manchester Combined Authority has set a decarbonisation target of a
+reduction of \SI{48}{\percent} on 1990 levels
+by~2020~\cite{agma-gmccs}. However, regional emissions data is not available
+back to~1990, the most recent period being~2005. It has been suggested that the
+\SI{48}{\percent} target translates into a reduction of \SI{40.23}{\percent}
+against 2005 levels~\cite{woodholmes-lot1c}. In addition, Manchester City has
+adopted a target of \SI{41}{\percent} by 2020 against 2005
+levels~\cite{mcc-future}. So, for the purpose of this document, we will assume
+that the 2020 target is a reduction of about \SI{40}{\percent} against 2005
+levels.
+
 
 
 
