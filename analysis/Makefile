@@ -1,8 +1,11 @@
 .SUFFIXES: .tex .pdf .Rnw
 
-manchester: manchester.pdf
+manchester: manchester.pdf 
 
-manchester.pdf: manchester.Rnw ../bibliography/cities.bib
+manchester.pdf: manchester.Rnw manchester.bbl
+
+manchester.bbl: ../bibliography/cities.bib
+	biber manchester
 
 .Rnw.tex:	
 	R CMD Sweave $<

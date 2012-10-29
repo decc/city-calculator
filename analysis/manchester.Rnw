@@ -160,10 +160,10 @@ format(dcast(subset(cities.sector0.co2, city == the_city & yr == 2010),
              sum, value.var = "CO2percapita", margins = "sector0"), 
        big.mark = ",", digits = 2)
 @ 
-\caption{Per capita emissions from the individual boroughs in 2010. The abbreviated
-  sectors are ``Industrial and Commercial'' and ``Large Industrial
-  Installations''. Note that the high-level sectors shown here are not identical
-  to those in the data as published by DECC as Railways have been included within
+\caption{Per capita emissions from the individual boroughs in 2010. The
+  abbreviated sector is ``Industrial and Commercial''. Note that the high-level
+  sectors shown here are not identical to those in the data as published by DECC
+  as Railways have been included within
   Transport.\label{table:borough-emissions-bysector}}
 \end{table}
 
@@ -174,7 +174,7 @@ back to~1990, the most recent period being~2005. It has been suggested that the
 \SI{48}{\percent} target translates into a reduction of \SI{40.23}{\percent}
 against 2005 levels~\cite{woodholmes-lot1c}. In addition, Manchester City has
 adopted a target of \SI{41}{\percent} by 2020 against 2005
-levels~\cite{mcc-future}. So, for the purpose of this document, we will assume
+levels~\cite{mcc-future}. For the purpose of this document, we will assume
 that the 2020 target is a reduction of about \SI{40}{\percent} against 2005
 levels.
 
