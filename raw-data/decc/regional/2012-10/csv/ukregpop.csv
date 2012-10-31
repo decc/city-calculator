@@ -1,0 +1,2449 @@
+yr,lau,geography_code,sta,region,pop
+2005,Darlington,E06000005,Darlington,North East,98.5
+2006,Darlington,E06000005,Darlington,North East,99
+2007,Darlington,E06000005,Darlington,North East,99.6
+2008,Darlington,E06000005,Darlington,North East,100.1
+2009,Darlington,E06000005,Darlington,North East,100.4
+2010,Darlington,E06000005,Darlington,North East,100.8
+2005,Durham,E06000047,Durham,North East,495.7
+2006,Durham,E06000047,Durham,North East,498.1
+2007,Durham,E06000047,Durham,North East,501.8
+2008,Durham,E06000047,Durham,North East,504.9
+2009,Durham,E06000047,Durham,North East,506.5
+2010,Durham,E06000047,Durham,North East,510.8
+2005,Gateshead,E08000020,Gateshead,North East,190.1
+2006,Gateshead,E08000020,Gateshead,North East,189.7
+2007,Gateshead,E08000020,Gateshead,North East,189.7
+2008,Gateshead,E08000020,Gateshead,North East,189.9
+2009,Gateshead,E08000020,Gateshead,North East,190.8
+2010,Gateshead,E08000020,Gateshead,North East,191.7
+2005,Hartlepool,E06000001,Hartlepool,North East,90.2
+2006,Hartlepool,E06000001,Hartlepool,North East,90.4
+2007,Hartlepool,E06000001,Hartlepool,North East,90.5
+2008,Hartlepool,E06000001,Hartlepool,North East,90.8
+2009,Hartlepool,E06000001,Hartlepool,North East,90.9
+2010,Hartlepool,E06000001,Hartlepool,North East,91.3
+2005,Middlesbrough,E06000002,Middlesbrough,North East,139.9
+2006,Middlesbrough,E06000002,Middlesbrough,North East,139.6
+2007,Middlesbrough,E06000002,Middlesbrough,North East,139.7
+2008,Middlesbrough,E06000002,Middlesbrough,North East,140.1
+2009,Middlesbrough,E06000002,Middlesbrough,North East,140.5
+2010,Middlesbrough,E06000002,Middlesbrough,North East,142.4
+2005,Newcastle upon Tyne,E08000021,Newcastle upon Tyne,North East,272.6
+2006,Newcastle upon Tyne,E08000021,Newcastle upon Tyne,North East,274.2
+2007,Newcastle upon Tyne,E08000021,Newcastle upon Tyne,North East,275.6
+2008,Newcastle upon Tyne,E08000021,Newcastle upon Tyne,North East,277.8
+2009,Newcastle upon Tyne,E08000021,Newcastle upon Tyne,North East,284.3
+2010,Newcastle upon Tyne,E08000021,Newcastle upon Tyne,North East,292.2
+2005,North Tyneside,E08000022,North Tyneside,North East,193.3
+2006,North Tyneside,E08000022,North Tyneside,North East,194.2
+2007,North Tyneside,E08000022,North Tyneside,North East,194.8
+2008,North Tyneside,E08000022,North Tyneside,North East,196
+2009,North Tyneside,E08000022,North Tyneside,North East,197.2
+2010,North Tyneside,E08000022,North Tyneside,North East,198.5
+2005,Northumberland,E06000048,Northumberland,North East,309.3
+2006,Northumberland,E06000048,Northumberland,North East,309.3
+2007,Northumberland,E06000048,Northumberland,North East,310.4
+2008,Northumberland,E06000048,Northumberland,North East,310.9
+2009,Northumberland,E06000048,Northumberland,North East,311.1
+2010,Northumberland,E06000048,Northumberland,North East,312
+2005,Redcar and Cleveland,E06000003,Redcar and Cleveland,North East,138.9
+2006,Redcar and Cleveland,E06000003,Redcar and Cleveland,North East,138.5
+2007,Redcar and Cleveland,E06000003,Redcar and Cleveland,North East,138.1
+2008,Redcar and Cleveland,E06000003,Redcar and Cleveland,North East,137.8
+2009,Redcar and Cleveland,E06000003,Redcar and Cleveland,North East,137.5
+2010,Redcar and Cleveland,E06000003,Redcar and Cleveland,North East,137.4
+2005,South Tyneside,E08000023,South Tyneside,North East,150.8
+2006,South Tyneside,E08000023,South Tyneside,North East,150.6
+2007,South Tyneside,E08000023,South Tyneside,North East,150.6
+2008,South Tyneside,E08000023,South Tyneside,North East,151.4
+2009,South Tyneside,E08000023,South Tyneside,North East,152.4
+2010,South Tyneside,E08000023,South Tyneside,North East,153.7
+2005,Stockton-on-Tees,E06000004,Stockton-on-Tees,North East,187
+2006,Stockton-on-Tees,E06000004,Stockton-on-Tees,North East,187.9
+2007,Stockton-on-Tees,E06000004,Stockton-on-Tees,North East,188.6
+2008,Stockton-on-Tees,E06000004,Stockton-on-Tees,North East,189.8
+2009,Stockton-on-Tees,E06000004,Stockton-on-Tees,North East,191.1
+2010,Stockton-on-Tees,E06000004,Stockton-on-Tees,North East,192.4
+2005,Sunderland,E08000024,Sunderland,North East,281.7
+2006,Sunderland,E08000024,Sunderland,North East,281.3
+2007,Sunderland,E08000024,Sunderland,North East,281
+2008,Sunderland,E08000024,Sunderland,North East,280.9
+2009,Sunderland,E08000024,Sunderland,North East,281.7
+2010,Sunderland,E08000024,Sunderland,North East,283.5
+2005,Blackburn with Darwen,E06000008,Blackburn with Darwen,North West,140
+2006,Blackburn with Darwen,E06000008,Blackburn with Darwen,North West,139.9
+2007,Blackburn with Darwen,E06000008,Blackburn with Darwen,North West,139.5
+2008,Blackburn with Darwen,E06000008,Blackburn with Darwen,North West,139.4
+2009,Blackburn with Darwen,E06000008,Blackburn with Darwen,North West,139.9
+2010,Blackburn with Darwen,E06000008,Blackburn with Darwen,North West,140
+2005,Blackpool,E06000009,Blackpool,North West,143.2
+2006,Blackpool,E06000009,Blackpool,North West,142.6
+2007,Blackpool,E06000009,Blackpool,North West,141.8
+2008,Blackpool,E06000009,Blackpool,North West,140.6
+2009,Blackpool,E06000009,Blackpool,North West,140
+2010,Blackpool,E06000009,Blackpool,North West,140
+2005,Bolton,E08000001,Bolton,North West,262.8
+2006,Bolton,E08000001,Bolton,North West,262.9
+2007,Bolton,E08000001,Bolton,North West,263
+2008,Bolton,E08000001,Bolton,North West,263.7
+2009,Bolton,E08000001,Bolton,North West,265.1
+2010,Bolton,E08000001,Bolton,North West,266.5
+2005,Bury,E08000002,Bury,North West,181.1
+2006,Bury,E08000002,Bury,North West,181.2
+2007,Bury,E08000002,Bury,North West,181.7
+2008,Bury,E08000002,Bury,North West,181.6
+2009,Bury,E08000002,Bury,North West,182.6
+2010,Bury,E08000002,Bury,North West,183.8
+2005,Cheshire East,E06000049,Cheshire,North West,358.6
+2006,Cheshire East,E06000049,Cheshire,North West,359.4
+2007,Cheshire East,E06000049,Cheshire,North West,360.9
+2008,Cheshire East,E06000049,Cheshire,North West,362.2
+2009,Cheshire East,E06000049,Cheshire,North West,362.7
+2010,Cheshire East,E06000049,Cheshire,North West,363.8
+2005,Cheshire West and Chester,E06000050,Cheshire,North West,325.6
+2006,Cheshire West and Chester,E06000050,Cheshire,North West,326.6
+2007,Cheshire West and Chester,E06000050,Cheshire,North West,326.5
+2008,Cheshire West and Chester,E06000050,Cheshire,North West,326
+2009,Cheshire West and Chester,E06000050,Cheshire,North West,326.5
+2010,Cheshire West and Chester,E06000050,Cheshire,North West,327.3
+2005,Allerdale,E07000026,Cumbria,North West,94.4
+2006,Allerdale,E07000026,Cumbria,North West,94.2
+2007,Allerdale,E07000026,Cumbria,North West,94.3
+2008,Allerdale,E07000026,Cumbria,North West,94.3
+2009,Allerdale,E07000026,Cumbria,North West,94.3
+2010,Allerdale,E07000026,Cumbria,North West,94.1
+2005,Barrow-in-Furness,E07000027,Cumbria,North West,71.2
+2006,Barrow-in-Furness,E07000027,Cumbria,North West,71
+2007,Barrow-in-Furness,E07000027,Cumbria,North West,70.9
+2008,Barrow-in-Furness,E07000027,Cumbria,North West,70.8
+2009,Barrow-in-Furness,E07000027,Cumbria,North West,70.9
+2010,Barrow-in-Furness,E07000027,Cumbria,North West,70.7
+2005,Carlisle,E07000028,Cumbria,North West,105.1
+2006,Carlisle,E07000028,Cumbria,North West,105.7
+2007,Carlisle,E07000028,Cumbria,North West,105.6
+2008,Carlisle,E07000028,Cumbria,North West,105.1
+2009,Carlisle,E07000028,Cumbria,North West,104.7
+2010,Carlisle,E07000028,Cumbria,North West,104.5
+2005,Copeland,E07000029,Cumbria,North West,69.7
+2006,Copeland,E07000029,Cumbria,North West,70
+2007,Copeland,E07000029,Cumbria,North West,70.1
+2008,Copeland,E07000029,Cumbria,North West,70
+2009,Copeland,E07000029,Cumbria,North West,69.7
+2010,Copeland,E07000029,Cumbria,North West,69.5
+2005,Eden,E07000030,Cumbria,North West,51.6
+2006,Eden,E07000030,Cumbria,North West,51.6
+2007,Eden,E07000030,Cumbria,North West,51.6
+2008,Eden,E07000030,Cumbria,North West,51.7
+2009,Eden,E07000030,Cumbria,North West,51.8
+2010,Eden,E07000030,Cumbria,North West,51.8
+2005,South Lakeland,E07000031,Cumbria,North West,104.6
+2006,South Lakeland,E07000031,Cumbria,North West,104.3
+2007,South Lakeland,E07000031,Cumbria,North West,104.3
+2008,South Lakeland,E07000031,Cumbria,North West,104
+2009,South Lakeland,E07000031,Cumbria,North West,103.8
+2010,South Lakeland,E07000031,Cumbria,North West,103.7
+2005,Halton,E06000006,Halton,North West,118.1
+2006,Halton,E06000006,Halton,North West,118.3
+2007,Halton,E06000006,Halton,North West,118.3
+2008,Halton,E06000006,Halton,North West,118.5
+2009,Halton,E06000006,Halton,North West,118.7
+2010,Halton,E06000006,Halton,North West,119.3
+2005,Knowsley,E08000011,Knowsley,North West,150.1
+2006,Knowsley,E08000011,Knowsley,North West,150.1
+2007,Knowsley,E08000011,Knowsley,North West,149.8
+2008,Knowsley,E08000011,Knowsley,North West,149.7
+2009,Knowsley,E08000011,Knowsley,North West,149.4
+2010,Knowsley,E08000011,Knowsley,North West,149.1
+2005,Burnley,E07000117,Lancashire,North West,87.1
+2006,Burnley,E07000117,Lancashire,North West,86.8
+2007,Burnley,E07000117,Lancashire,North West,86.2
+2008,Burnley,E07000117,Lancashire,North West,86
+2009,Burnley,E07000117,Lancashire,North West,85.6
+2010,Burnley,E07000117,Lancashire,North West,85.3
+2005,Chorley,E07000118,Lancashire,North West,103.3
+2006,Chorley,E07000118,Lancashire,North West,103.5
+2007,Chorley,E07000118,Lancashire,North West,103.9
+2008,Chorley,E07000118,Lancashire,North West,104.7
+2009,Chorley,E07000118,Lancashire,North West,104.8
+2010,Chorley,E07000118,Lancashire,North West,105.4
+2005,Fylde,E07000119,Lancashire,North West,75.8
+2006,Fylde,E07000119,Lancashire,North West,75.8
+2007,Fylde,E07000119,Lancashire,North West,76.4
+2008,Fylde,E07000119,Lancashire,North West,76.1
+2009,Fylde,E07000119,Lancashire,North West,76.3
+2010,Fylde,E07000119,Lancashire,North West,76.6
+2005,Hyndburn,E07000120,Lancashire,North West,81.7
+2006,Hyndburn,E07000120,Lancashire,North West,81.7
+2007,Hyndburn,E07000120,Lancashire,North West,81.6
+2008,Hyndburn,E07000120,Lancashire,North West,81.2
+2009,Hyndburn,E07000120,Lancashire,North West,81.1
+2010,Hyndburn,E07000120,Lancashire,North West,81.1
+2005,Lancaster,E07000121,Lancashire,North West,139.9
+2006,Lancaster,E07000121,Lancashire,North West,140.2
+2007,Lancaster,E07000121,Lancashire,North West,139.9
+2008,Lancaster,E07000121,Lancashire,North West,139.5
+2009,Lancaster,E07000121,Lancashire,North West,139.8
+2010,Lancaster,E07000121,Lancashire,North West,141.1
+2005,Pendle,E07000122,Lancashire,North West,88.9
+2006,Pendle,E07000122,Lancashire,North West,89.2
+2007,Pendle,E07000122,Lancashire,North West,89.1
+2008,Pendle,E07000122,Lancashire,North West,89.1
+2009,Pendle,E07000122,Lancashire,North West,89.3
+2010,Pendle,E07000122,Lancashire,North West,89.3
+2005,Preston,E07000123,Lancashire,North West,135.9
+2006,Preston,E07000123,Lancashire,North West,136.8
+2007,Preston,E07000123,Lancashire,North West,136.8
+2008,Preston,E07000123,Lancashire,North West,135.3
+2009,Preston,E07000123,Lancashire,North West,134.6
+2010,Preston,E07000123,Lancashire,North West,135.1
+2005,Ribble Valley,E07000124,Lancashire,North West,56.9
+2006,Ribble Valley,E07000124,Lancashire,North West,57.3
+2007,Ribble Valley,E07000124,Lancashire,North West,57.7
+2008,Ribble Valley,E07000124,Lancashire,North West,57.8
+2009,Ribble Valley,E07000124,Lancashire,North West,57.7
+2010,Ribble Valley,E07000124,Lancashire,North West,58
+2005,Rossendale,E07000125,Lancashire,North West,65.8
+2006,Rossendale,E07000125,Lancashire,North West,66
+2007,Rossendale,E07000125,Lancashire,North West,66.4
+2008,Rossendale,E07000125,Lancashire,North West,66.7
+2009,Rossendale,E07000125,Lancashire,North West,67.1
+2010,Rossendale,E07000125,Lancashire,North West,67.4
+2005,South Ribble,E07000126,Lancashire,North West,105.9
+2006,South Ribble,E07000126,Lancashire,North West,106.4
+2007,South Ribble,E07000126,Lancashire,North West,106.9
+2008,South Ribble,E07000126,Lancashire,North West,107.5
+2009,South Ribble,E07000126,Lancashire,North West,108.2
+2010,South Ribble,E07000126,Lancashire,North West,108.3
+2005,West Lancashire,E07000127,Lancashire,North West,110.3
+2006,West Lancashire,E07000127,Lancashire,North West,110.5
+2007,West Lancashire,E07000127,Lancashire,North West,110.7
+2008,West Lancashire,E07000127,Lancashire,North West,110.4
+2009,West Lancashire,E07000127,Lancashire,North West,110.2
+2010,West Lancashire,E07000127,Lancashire,North West,110.3
+2005,Wyre,E07000128,Lancashire,North West,109.7
+2006,Wyre,E07000128,Lancashire,North West,110.4
+2007,Wyre,E07000128,Lancashire,North West,110.8
+2008,Wyre,E07000128,Lancashire,North West,110.8
+2009,Wyre,E07000128,Lancashire,North West,111.1
+2010,Wyre,E07000128,Lancashire,North West,111.4
+2005,Liverpool,E08000012,Liverpool,North West,443.3
+2006,Liverpool,E08000012,Liverpool,North West,443.3
+2007,Liverpool,E08000012,Liverpool,North West,442.6
+2008,Liverpool,E08000012,Liverpool,North West,441.1
+2009,Liverpool,E08000012,Liverpool,North West,442.3
+2010,Liverpool,E08000012,Liverpool,North West,445.2
+2005,Manchester,E08000003,Manchester,North West,447
+2006,Manchester,E08000003,Manchester,North West,455.7
+2007,Manchester,E08000003,Manchester,North West,465.2
+2008,Manchester,E08000003,Manchester,North West,473.2
+2009,Manchester,E08000003,Manchester,North West,483.8
+2010,Manchester,E08000003,Manchester,North West,498.8
+2005,Oldham,E08000004,Oldham,North West,217.9
+2006,Oldham,E08000004,Oldham,North West,217.7
+2007,Oldham,E08000004,Oldham,North West,217.7
+2008,Oldham,E08000004,Oldham,North West,218.2
+2009,Oldham,E08000004,Oldham,North West,218.8
+2010,Oldham,E08000004,Oldham,North West,219.8
+2005,Rochdale,E08000005,Rochdale,North West,204.8
+2006,Rochdale,E08000005,Rochdale,North West,204.3
+2007,Rochdale,E08000005,Rochdale,North West,204
+2008,Rochdale,E08000005,Rochdale,North West,204.4
+2009,Rochdale,E08000005,Rochdale,North West,204.7
+2010,Rochdale,E08000005,Rochdale,North West,205.2
+2005,Salford,E08000006,Salford,North West,219.4
+2006,Salford,E08000006,Salford,North West,220.9
+2007,Salford,E08000006,Salford,North West,221.3
+2008,Salford,E08000006,Salford,North West,223
+2009,Salford,E08000006,Salford,North West,225.1
+2010,Salford,E08000006,Salford,North West,229
+2005,Sefton,E08000014,Sefton,North West,277.6
+2006,Sefton,E08000014,Sefton,North West,276.1
+2007,Sefton,E08000014,Sefton,North West,275.1
+2008,Sefton,E08000014,Sefton,North West,274.2
+2009,Sefton,E08000014,Sefton,North West,273.3
+2010,Sefton,E08000014,Sefton,North West,272.9
+2005,St. Helens,E08000013,St. Helens,North West,176.7
+2006,St. Helens,E08000013,St. Helens,North West,176.6
+2007,St. Helens,E08000013,St. Helens,North West,176.5
+2008,St. Helens,E08000013,St. Helens,North West,176.7
+2009,St. Helens,E08000013,St. Helens,North West,177.1
+2010,St. Helens,E08000013,St. Helens,North West,177.4
+2005,Stockport,E08000007,Stockport,North West,282.4
+2006,Stockport,E08000007,Stockport,North West,281.6
+2007,Stockport,E08000007,Stockport,North West,282
+2008,Stockport,E08000007,Stockport,North West,282.5
+2009,Stockport,E08000007,Stockport,North West,283.7
+2010,Stockport,E08000007,Stockport,North West,284.6
+2005,Tameside,E08000008,Tameside,North West,213
+2006,Tameside,E08000008,Tameside,North West,213.2
+2007,Tameside,E08000008,Tameside,North West,213.2
+2008,Tameside,E08000008,Tameside,North West,214.4
+2009,Tameside,E08000008,Tameside,North West,215.4
+2010,Tameside,E08000008,Tameside,North West,216.9
+2005,Trafford,E08000009,Trafford,North West,211.9
+2006,Trafford,E08000009,Trafford,North West,212.6
+2007,Trafford,E08000009,Trafford,North West,213.3
+2008,Trafford,E08000009,Trafford,North West,213.7
+2009,Trafford,E08000009,Trafford,North West,215.3
+2010,Trafford,E08000009,Trafford,North West,217.3
+2005,Warrington,E06000007,Warrington,North West,193.2
+2006,Warrington,E06000007,Warrington,North West,193.9
+2007,Warrington,E06000007,Warrington,North West,195.1
+2008,Warrington,E06000007,Warrington,North West,196.2
+2009,Warrington,E06000007,Warrington,North West,197.8
+2010,Warrington,E06000007,Warrington,North West,198.9
+2005,Wigan,E08000010,Wigan,North West,303.5
+2006,Wigan,E08000010,Wigan,North West,304
+2007,Wigan,E08000010,Wigan,North West,304.1
+2008,Wigan,E08000010,Wigan,North West,305.4
+2009,Wigan,E08000010,Wigan,North West,306.5
+2010,Wigan,E08000010,Wigan,North West,307.6
+2005,Wirral,E08000015,Wirral,North West,310.8
+2006,Wirral,E08000015,Wirral,North West,309.8
+2007,Wirral,E08000015,Wirral,North West,308.9
+2008,Wirral,E08000015,Wirral,North West,308.5
+2009,Wirral,E08000015,Wirral,North West,308.5
+2010,Wirral,E08000015,Wirral,North West,308.8
+2005,Barnsley,E08000016,Barnsley,Yorkshire and the Humber,221.8
+2006,Barnsley,E08000016,Barnsley,Yorkshire and the Humber,222.9
+2007,Barnsley,E08000016,Barnsley,Yorkshire and the Humber,223.9
+2008,Barnsley,E08000016,Barnsley,Yorkshire and the Humber,225.2
+2009,Barnsley,E08000016,Barnsley,Yorkshire and the Humber,226.3
+2010,Barnsley,E08000016,Barnsley,Yorkshire and the Humber,227.6
+2005,Bradford,E08000032,Bradford,Yorkshire and the Humber,486.2
+2006,Bradford,E08000032,Bradford,Yorkshire and the Humber,491.6
+2007,Bradford,E08000032,Bradford,Yorkshire and the Humber,496.2
+2008,Bradford,E08000032,Bradford,Yorkshire and the Humber,501.4
+2009,Bradford,E08000032,Bradford,Yorkshire and the Humber,506.8
+2010,Bradford,E08000032,Bradford,Yorkshire and the Humber,512.6
+2005,Calderdale,E08000033,Calderdale,Yorkshire and the Humber,195.6
+2006,Calderdale,E08000033,Calderdale,Yorkshire and the Humber,197
+2007,Calderdale,E08000033,Calderdale,Yorkshire and the Humber,198.5
+2008,Calderdale,E08000033,Calderdale,Yorkshire and the Humber,200.1
+2009,Calderdale,E08000033,Calderdale,Yorkshire and the Humber,201.6
+2010,Calderdale,E08000033,Calderdale,Yorkshire and the Humber,202.7
+2005,Doncaster,E08000017,Doncaster,Yorkshire and the Humber,288.6
+2006,Doncaster,E08000017,Doncaster,Yorkshire and the Humber,288.4
+2007,Doncaster,E08000017,Doncaster,Yorkshire and the Humber,288.9
+2008,Doncaster,E08000017,Doncaster,Yorkshire and the Humber,289.3
+2009,Doncaster,E08000017,Doncaster,Yorkshire and the Humber,290.1
+2010,Doncaster,E08000017,Doncaster,Yorkshire and the Humber,290.6
+2005,East Riding of Yorkshire,E06000011,East Riding of Yorkshire,Yorkshire and the Humber,329.4
+2006,East Riding of Yorkshire,E06000011,East Riding of Yorkshire,Yorkshire and the Humber,331.4
+2007,East Riding of Yorkshire,E06000011,East Riding of Yorkshire,Yorkshire and the Humber,333.9
+2008,East Riding of Yorkshire,E06000011,East Riding of Yorkshire,Yorkshire and the Humber,336.1
+2009,East Riding of Yorkshire,E06000011,East Riding of Yorkshire,Yorkshire and the Humber,337
+2010,East Riding of Yorkshire,E06000011,East Riding of Yorkshire,Yorkshire and the Humber,338.7
+2005,"Kingston upon Hull, City of",E06000010,"Kingston upon Hull, City of",Yorkshire and the Humber,256.9
+2006,"Kingston upon Hull, City of",E06000010,"Kingston upon Hull, City of",Yorkshire and the Humber,258.7
+2007,"Kingston upon Hull, City of",E06000010,"Kingston upon Hull, City of",Yorkshire and the Humber,259.5
+2008,"Kingston upon Hull, City of",E06000010,"Kingston upon Hull, City of",Yorkshire and the Humber,261.1
+2009,"Kingston upon Hull, City of",E06000010,"Kingston upon Hull, City of",Yorkshire and the Humber,262.4
+2010,"Kingston upon Hull, City of",E06000010,"Kingston upon Hull, City of",Yorkshire and the Humber,263.9
+2005,Kirklees,E08000034,Kirklees,Yorkshire and the Humber,395.8
+2006,Kirklees,E08000034,Kirklees,Yorkshire and the Humber,397.9
+2007,Kirklees,E08000034,Kirklees,Yorkshire and the Humber,400.7
+2008,Kirklees,E08000034,Kirklees,Yorkshire and the Humber,403.6
+2009,Kirklees,E08000034,Kirklees,Yorkshire and the Humber,406.8
+2010,Kirklees,E08000034,Kirklees,Yorkshire and the Humber,409.8
+2005,Leeds,E08000035,Leeds,Yorkshire and the Humber,750.6
+2006,Leeds,E08000035,Leeds,Yorkshire and the Humber,762.5
+2007,Leeds,E08000035,Leeds,Yorkshire and the Humber,772.2
+2008,Leeds,E08000035,Leeds,Yorkshire and the Humber,779.3
+2009,Leeds,E08000035,Leeds,Yorkshire and the Humber,787.7
+2010,Leeds,E08000035,Leeds,Yorkshire and the Humber,798.8
+2005,North East Lincolnshire,E06000012,North East Lincolnshire ,Yorkshire and the Humber,158
+2006,North East Lincolnshire,E06000012,North East Lincolnshire ,Yorkshire and the Humber,157.6
+2007,North East Lincolnshire,E06000012,North East Lincolnshire ,Yorkshire and the Humber,157.3
+2008,North East Lincolnshire,E06000012,North East Lincolnshire ,Yorkshire and the Humber,157.2
+2009,North East Lincolnshire,E06000012,North East Lincolnshire ,Yorkshire and the Humber,157.1
+2010,North East Lincolnshire,E06000012,North East Lincolnshire ,Yorkshire and the Humber,157.3
+2005,North Lincolnshire,E06000013,North Lincolnshire,Yorkshire and the Humber,158
+2006,North Lincolnshire,E06000013,North Lincolnshire,Yorkshire and the Humber,159
+2007,North Lincolnshire,E06000013,North Lincolnshire,Yorkshire and the Humber,159.7
+2008,North Lincolnshire,E06000013,North Lincolnshire,Yorkshire and the Humber,160.5
+2009,North Lincolnshire,E06000013,North Lincolnshire,Yorkshire and the Humber,161
+2010,North Lincolnshire,E06000013,North Lincolnshire,Yorkshire and the Humber,161.3
+2005,Craven,E07000163,North Yorkshire,Yorkshire and the Humber,54.7
+2006,Craven,E07000163,North Yorkshire,Yorkshire and the Humber,55
+2007,Craven,E07000163,North Yorkshire,Yorkshire and the Humber,55.4
+2008,Craven,E07000163,North Yorkshire,Yorkshire and the Humber,55.7
+2009,Craven,E07000163,North Yorkshire,Yorkshire and the Humber,55.5
+2010,Craven,E07000163,North Yorkshire,Yorkshire and the Humber,55.4
+2005,Hambleton,E07000164,North Yorkshire,Yorkshire and the Humber,85.3
+2006,Hambleton,E07000164,North Yorkshire,Yorkshire and the Humber,86
+2007,Hambleton,E07000164,North Yorkshire,Yorkshire and the Humber,86.6
+2008,Hambleton,E07000164,North Yorkshire,Yorkshire and the Humber,86.9
+2009,Hambleton,E07000164,North Yorkshire,Yorkshire and the Humber,87.3
+2010,Hambleton,E07000164,North Yorkshire,Yorkshire and the Humber,87.6
+2005,Harrogate,E07000165,North Yorkshire,Yorkshire and the Humber,154
+2006,Harrogate,E07000165,North Yorkshire,Yorkshire and the Humber,154.4
+2007,Harrogate,E07000165,North Yorkshire,Yorkshire and the Humber,154.8
+2008,Harrogate,E07000165,North Yorkshire,Yorkshire and the Humber,156.1
+2009,Harrogate,E07000165,North Yorkshire,Yorkshire and the Humber,157.9
+2010,Harrogate,E07000165,North Yorkshire,Yorkshire and the Humber,158.7
+2005,Richmondshire,E07000166,North Yorkshire,Yorkshire and the Humber,49.3
+2006,Richmondshire,E07000166,North Yorkshire,Yorkshire and the Humber,49.7
+2007,Richmondshire,E07000166,North Yorkshire,Yorkshire and the Humber,50.6
+2008,Richmondshire,E07000166,North Yorkshire,Yorkshire and the Humber,51.4
+2009,Richmondshire,E07000166,North Yorkshire,Yorkshire and the Humber,52.8
+2010,Richmondshire,E07000166,North Yorkshire,Yorkshire and the Humber,53
+2005,Ryedale,E07000167,North Yorkshire,Yorkshire and the Humber,52.5
+2006,Ryedale,E07000167,North Yorkshire,Yorkshire and the Humber,52.7
+2007,Ryedale,E07000167,North Yorkshire,Yorkshire and the Humber,53.1
+2008,Ryedale,E07000167,North Yorkshire,Yorkshire and the Humber,53.3
+2009,Ryedale,E07000167,North Yorkshire,Yorkshire and the Humber,53.6
+2010,Ryedale,E07000167,North Yorkshire,Yorkshire and the Humber,53.6
+2005,Scarborough,E07000168,North Yorkshire,Yorkshire and the Humber,108.2
+2006,Scarborough,E07000168,North Yorkshire,Yorkshire and the Humber,108.2
+2007,Scarborough,E07000168,North Yorkshire,Yorkshire and the Humber,108.3
+2008,Scarborough,E07000168,North Yorkshire,Yorkshire and the Humber,108.5
+2009,Scarborough,E07000168,North Yorkshire,Yorkshire and the Humber,108.5
+2010,Scarborough,E07000168,North Yorkshire,Yorkshire and the Humber,108.6
+2005,Selby,E07000169,North Yorkshire,Yorkshire and the Humber,78.5
+2006,Selby,E07000169,North Yorkshire,Yorkshire and the Humber,79.3
+2007,Selby,E07000169,North Yorkshire,Yorkshire and the Humber,80.3
+2008,Selby,E07000169,North Yorkshire,Yorkshire and the Humber,81.6
+2009,Selby,E07000169,North Yorkshire,Yorkshire and the Humber,82.2
+2010,Selby,E07000169,North Yorkshire,Yorkshire and the Humber,82.9
+2005,Rotherham,E08000018,Rotherham,Yorkshire and the Humber,252
+2006,Rotherham,E08000018,Rotherham,Yorkshire and the Humber,252.3
+2007,Rotherham,E08000018,Rotherham,Yorkshire and the Humber,252.3
+2008,Rotherham,E08000018,Rotherham,Yorkshire and the Humber,252.9
+2009,Rotherham,E08000018,Rotherham,Yorkshire and the Humber,253.9
+2010,Rotherham,E08000018,Rotherham,Yorkshire and the Humber,254.6
+2005,Sheffield,E08000019,Sheffield,Yorkshire and the Humber,525.8
+2006,Sheffield,E08000019,Sheffield,Yorkshire and the Humber,529.7
+2007,Sheffield,E08000019,Sheffield,Yorkshire and the Humber,535.1
+2008,Sheffield,E08000019,Sheffield,Yorkshire and the Humber,539.8
+2009,Sheffield,E08000019,Sheffield,Yorkshire and the Humber,547
+2010,Sheffield,E08000019,Sheffield,Yorkshire and the Humber,555.5
+2005,Wakefield,E08000036,Wakefield,Yorkshire and the Humber,320.3
+2006,Wakefield,E08000036,Wakefield,Yorkshire and the Humber,321.4
+2007,Wakefield,E08000036,Wakefield,Yorkshire and the Humber,321.8
+2008,Wakefield,E08000036,Wakefield,Yorkshire and the Humber,322.8
+2009,Wakefield,E08000036,Wakefield,Yorkshire and the Humber,323.9
+2010,Wakefield,E08000036,Wakefield,Yorkshire and the Humber,325.6
+2005,York,E06000014,York,Yorkshire and the Humber,189.2
+2006,York,E06000014,York,Yorkshire and the Humber,191
+2007,York,E06000014,York,Yorkshire and the Humber,192.5
+2008,York,E06000014,York,Yorkshire and the Humber,194.9
+2009,York,E06000014,York,Yorkshire and the Humber,198.8
+2010,York,E06000014,York,Yorkshire and the Humber,202.4
+2005,Derby,E06000015,Derby,East Midlands,237.3
+2006,Derby,E06000015,Derby,East Midlands,239.7
+2007,Derby,E06000015,Derby,East Midlands,241.8
+2008,Derby,E06000015,Derby,East Midlands,243.2
+2009,Derby,E06000015,Derby,East Midlands,244.1
+2010,Derby,E06000015,Derby,East Midlands,246.9
+2005,Amber Valley,E07000032,Derbyshire,East Midlands,119
+2006,Amber Valley,E07000032,Derbyshire,East Midlands,119.8
+2007,Amber Valley,E07000032,Derbyshire,East Midlands,120.1
+2008,Amber Valley,E07000032,Derbyshire,East Midlands,120.8
+2009,Amber Valley,E07000032,Derbyshire,East Midlands,121
+2010,Amber Valley,E07000032,Derbyshire,East Midlands,121.6
+2005,Bolsover,E07000033,Derbyshire,East Midlands,73.6
+2006,Bolsover,E07000033,Derbyshire,East Midlands,74
+2007,Bolsover,E07000033,Derbyshire,East Midlands,74.3
+2008,Bolsover,E07000033,Derbyshire,East Midlands,74.3
+2009,Bolsover,E07000033,Derbyshire,East Midlands,74.2
+2010,Bolsover,E07000033,Derbyshire,East Midlands,74.6
+2005,Chesterfield,E07000034,Derbyshire,East Midlands,100.3
+2006,Chesterfield,E07000034,Derbyshire,East Midlands,100.5
+2007,Chesterfield,E07000034,Derbyshire,East Midlands,100.5
+2008,Chesterfield,E07000034,Derbyshire,East Midlands,100.7
+2009,Chesterfield,E07000034,Derbyshire,East Midlands,100.9
+2010,Chesterfield,E07000034,Derbyshire,East Midlands,101
+2005,Derbyshire Dales,E07000035,Derbyshire,East Midlands,69.1
+2006,Derbyshire Dales,E07000035,Derbyshire,East Midlands,69.1
+2007,Derbyshire Dales,E07000035,Derbyshire,East Midlands,69.5
+2008,Derbyshire Dales,E07000035,Derbyshire,East Midlands,70
+2009,Derbyshire Dales,E07000035,Derbyshire,East Midlands,70.1
+2010,Derbyshire Dales,E07000035,Derbyshire,East Midlands,70.4
+2005,Erewash,E07000036,Derbyshire,East Midlands,110.1
+2006,Erewash,E07000036,Derbyshire,East Midlands,109.9
+2007,Erewash,E07000036,Derbyshire,East Midlands,110
+2008,Erewash,E07000036,Derbyshire,East Midlands,110.5
+2009,Erewash,E07000036,Derbyshire,East Midlands,110.9
+2010,Erewash,E07000036,Derbyshire,East Midlands,111.3
+2005,High Peak,E07000037,Derbyshire,East Midlands,90.3
+2006,High Peak,E07000037,Derbyshire,East Midlands,90.9
+2007,High Peak,E07000037,Derbyshire,East Midlands,91.6
+2008,High Peak,E07000037,Derbyshire,East Midlands,92.1
+2009,High Peak,E07000037,Derbyshire,East Midlands,92.4
+2010,High Peak,E07000037,Derbyshire,East Midlands,92.6
+2005,North East Derbyshire,E07000038,Derbyshire,East Midlands,97.5
+2006,North East Derbyshire,E07000038,Derbyshire,East Midlands,97.5
+2007,North East Derbyshire,E07000038,Derbyshire,East Midlands,97.8
+2008,North East Derbyshire,E07000038,Derbyshire,East Midlands,97.9
+2009,North East Derbyshire,E07000038,Derbyshire,East Midlands,98
+2010,North East Derbyshire,E07000038,Derbyshire,East Midlands,98.3
+2005,South Derbyshire,E07000039,Derbyshire,East Midlands,87.9
+2006,South Derbyshire,E07000039,Derbyshire,East Midlands,89.3
+2007,South Derbyshire,E07000039,Derbyshire,East Midlands,90.5
+2008,South Derbyshire,E07000039,Derbyshire,East Midlands,91.8
+2009,South Derbyshire,E07000039,Derbyshire,East Midlands,92.8
+2010,South Derbyshire,E07000039,Derbyshire,East Midlands,93.9
+2005,Leicester,E06000016,Leicester,East Midlands,291.4
+2006,Leicester,E06000016,Leicester,East Midlands,296.8
+2007,Leicester,E06000016,Leicester,East Midlands,300.9
+2008,Leicester,E06000016,Leicester,East Midlands,303.8
+2009,Leicester,E06000016,Leicester,East Midlands,304.7
+2010,Leicester,E06000016,Leicester,East Midlands,306.6
+2005,Blaby,E07000129,Leicestershire,East Midlands,92.1
+2006,Blaby,E07000129,Leicestershire,East Midlands,92.5
+2007,Blaby,E07000129,Leicestershire,East Midlands,92.9
+2008,Blaby,E07000129,Leicestershire,East Midlands,93.5
+2009,Blaby,E07000129,Leicestershire,East Midlands,93.6
+2010,Blaby,E07000129,Leicestershire,East Midlands,94
+2005,Charnwood,E07000130,Leicestershire,East Midlands,157.9
+2006,Charnwood,E07000130,Leicestershire,East Midlands,159.6
+2007,Charnwood,E07000130,Leicestershire,East Midlands,161.2
+2008,Charnwood,E07000130,Leicestershire,East Midlands,163.3
+2009,Charnwood,E07000130,Leicestershire,East Midlands,165
+2010,Charnwood,E07000130,Leicestershire,East Midlands,166.8
+2005,Harborough,E07000131,Leicestershire,East Midlands,80.3
+2006,Harborough,E07000131,Leicestershire,East Midlands,81.1
+2007,Harborough,E07000131,Leicestershire,East Midlands,82.1
+2008,Harborough,E07000131,Leicestershire,East Midlands,82.7
+2009,Harborough,E07000131,Leicestershire,East Midlands,83.4
+2010,Harborough,E07000131,Leicestershire,East Midlands,84
+2005,Hinckley and Bosworth,E07000132,Leicestershire,East Midlands,102.7
+2006,Hinckley and Bosworth,E07000132,Leicestershire,East Midlands,103.2
+2007,Hinckley and Bosworth,E07000132,Leicestershire,East Midlands,103.7
+2008,Hinckley and Bosworth,E07000132,Leicestershire,East Midlands,104.4
+2009,Hinckley and Bosworth,E07000132,Leicestershire,East Midlands,104.8
+2010,Hinckley and Bosworth,E07000132,Leicestershire,East Midlands,105.1
+2005,Melton,E07000133,Leicestershire,East Midlands,48.5
+2006,Melton,E07000133,Leicestershire,East Midlands,48.5
+2007,Melton,E07000133,Leicestershire,East Midlands,48.7
+2008,Melton,E07000133,Leicestershire,East Midlands,48.7
+2009,Melton,E07000133,Leicestershire,East Midlands,48.9
+2010,Melton,E07000133,Leicestershire,East Midlands,49.5
+2005,North West Leicestershire,E07000134,Leicestershire,East Midlands,88.9
+2006,North West Leicestershire,E07000134,Leicestershire,East Midlands,89.3
+2007,North West Leicestershire,E07000134,Leicestershire,East Midlands,90
+2008,North West Leicestershire,E07000134,Leicestershire,East Midlands,90.5
+2009,North West Leicestershire,E07000134,Leicestershire,East Midlands,90.6
+2010,North West Leicestershire,E07000134,Leicestershire,East Midlands,90.8
+2005,Oadby and Wigston,E07000135,Leicestershire,East Midlands,57.6
+2006,Oadby and Wigston,E07000135,Leicestershire,East Midlands,58.1
+2007,Oadby and Wigston,E07000135,Leicestershire,East Midlands,58.3
+2008,Oadby and Wigston,E07000135,Leicestershire,East Midlands,58.5
+2009,Oadby and Wigston,E07000135,Leicestershire,East Midlands,58.5
+2010,Oadby and Wigston,E07000135,Leicestershire,East Midlands,58.5
+2005,Boston,E07000136,Lincolnshire,East Midlands,58.8
+2006,Boston,E07000136,Lincolnshire,East Midlands,59
+2007,Boston,E07000136,Lincolnshire,East Midlands,59.1
+2008,Boston,E07000136,Lincolnshire,East Midlands,59.1
+2009,Boston,E07000136,Lincolnshire,East Midlands,59
+2010,Boston,E07000136,Lincolnshire,East Midlands,59
+2005,East Lindsey,E07000137,Lincolnshire,East Midlands,137.7
+2006,East Lindsey,E07000137,Lincolnshire,East Midlands,138.6
+2007,East Lindsey,E07000137,Lincolnshire,East Midlands,140.1
+2008,East Lindsey,E07000137,Lincolnshire,East Midlands,140.8
+2009,East Lindsey,E07000137,Lincolnshire,East Midlands,140.8
+2010,East Lindsey,E07000137,Lincolnshire,East Midlands,141.6
+2005,Lincoln,E07000138,Lincolnshire,East Midlands,87.8
+2006,Lincoln,E07000138,Lincolnshire,East Midlands,88.1
+2007,Lincoln,E07000138,Lincolnshire,East Midlands,88.2
+2008,Lincoln,E07000138,Lincolnshire,East Midlands,88
+2009,Lincoln,E07000138,Lincolnshire,East Midlands,88.5
+2010,Lincoln,E07000138,Lincolnshire,East Midlands,89.7
+2005,North Kesteven,E07000139,Lincolnshire,East Midlands,101.1
+2006,North Kesteven,E07000139,Lincolnshire,East Midlands,102.4
+2007,North Kesteven,E07000139,Lincolnshire,East Midlands,103.9
+2008,North Kesteven,E07000139,Lincolnshire,East Midlands,105
+2009,North Kesteven,E07000139,Lincolnshire,East Midlands,105.7
+2010,North Kesteven,E07000139,Lincolnshire,East Midlands,106.4
+2005,South Holland,E07000140,Lincolnshire,East Midlands,81.8
+2006,South Holland,E07000140,Lincolnshire,East Midlands,82.5
+2007,South Holland,E07000140,Lincolnshire,East Midlands,83.1
+2008,South Holland,E07000140,Lincolnshire,East Midlands,83.9
+2009,South Holland,E07000140,Lincolnshire,East Midlands,84.1
+2010,South Holland,E07000140,Lincolnshire,East Midlands,84.6
+2005,South Kesteven,E07000141,Lincolnshire,East Midlands,127.9
+2006,South Kesteven,E07000141,Lincolnshire,East Midlands,128.8
+2007,South Kesteven,E07000141,Lincolnshire,East Midlands,129.7
+2008,South Kesteven,E07000141,Lincolnshire,East Midlands,130.5
+2009,South Kesteven,E07000141,Lincolnshire,East Midlands,131.2
+2010,South Kesteven,E07000141,Lincolnshire,East Midlands,132.3
+2005,West Lindsey,E07000142,Lincolnshire,East Midlands,84.7
+2006,West Lindsey,E07000142,Lincolnshire,East Midlands,85.9
+2007,West Lindsey,E07000142,Lincolnshire,East Midlands,87.4
+2008,West Lindsey,E07000142,Lincolnshire,East Midlands,88.3
+2009,West Lindsey,E07000142,Lincolnshire,East Midlands,88.6
+2010,West Lindsey,E07000142,Lincolnshire,East Midlands,89.4
+2005,Corby,E07000150,Northamptonshire,East Midlands,53.5
+2006,Corby,E07000150,Northamptonshire,East Midlands,53.5
+2007,Corby,E07000150,Northamptonshire,East Midlands,54
+2008,Corby,E07000150,Northamptonshire,East Midlands,54.5
+2009,Corby,E07000150,Northamptonshire,East Midlands,55.2
+2010,Corby,E07000150,Northamptonshire,East Midlands,55.8
+2005,Daventry,E07000151,Northamptonshire,East Midlands,76.2
+2006,Daventry,E07000151,Northamptonshire,East Midlands,77.1
+2007,Daventry,E07000151,Northamptonshire,East Midlands,77.7
+2008,Daventry,E07000151,Northamptonshire,East Midlands,78.1
+2009,Daventry,E07000151,Northamptonshire,East Midlands,78.9
+2010,Daventry,E07000151,Northamptonshire,East Midlands,79
+2005,East Northamptonshire,E07000152,Northamptonshire,East Midlands,81.6
+2006,East Northamptonshire,E07000152,Northamptonshire,East Midlands,82.8
+2007,East Northamptonshire,E07000152,Northamptonshire,East Midlands,84.1
+2008,East Northamptonshire,E07000152,Northamptonshire,East Midlands,84.7
+2009,East Northamptonshire,E07000152,Northamptonshire,East Midlands,85
+2010,East Northamptonshire,E07000152,Northamptonshire,East Midlands,85.3
+2005,Kettering,E07000153,Northamptonshire,East Midlands,86
+2006,Kettering,E07000153,Northamptonshire,East Midlands,86.8
+2007,Kettering,E07000153,Northamptonshire,East Midlands,88.3
+2008,Kettering,E07000153,Northamptonshire,East Midlands,89.3
+2009,Kettering,E07000153,Northamptonshire,East Midlands,90.1
+2010,Kettering,E07000153,Northamptonshire,East Midlands,90.6
+2005,Northampton,E07000154,Northamptonshire,East Midlands,197.5
+2006,Northampton,E07000154,Northamptonshire,East Midlands,201.5
+2007,Northampton,E07000154,Northamptonshire,East Midlands,205.3
+2008,Northampton,E07000154,Northamptonshire,East Midlands,208.8
+2009,Northampton,E07000154,Northamptonshire,East Midlands,210.5
+2010,Northampton,E07000154,Northamptonshire,East Midlands,212.1
+2005,South Northamptonshire,E07000155,Northamptonshire,East Midlands,86.1
+2006,South Northamptonshire,E07000155,Northamptonshire,East Midlands,87.1
+2007,South Northamptonshire,E07000155,Northamptonshire,East Midlands,87.9
+2008,South Northamptonshire,E07000155,Northamptonshire,East Midlands,88.2
+2009,South Northamptonshire,E07000155,Northamptonshire,East Midlands,88.5
+2010,South Northamptonshire,E07000155,Northamptonshire,East Midlands,88.8
+2005,Wellingborough,E07000156,Northamptonshire,East Midlands,74.5
+2006,Wellingborough,E07000156,Northamptonshire,East Midlands,74.9
+2007,Wellingborough,E07000156,Northamptonshire,East Midlands,75.2
+2008,Wellingborough,E07000156,Northamptonshire,East Midlands,75.6
+2009,Wellingborough,E07000156,Northamptonshire,East Midlands,75.7
+2010,Wellingborough,E07000156,Northamptonshire,East Midlands,75.7
+2005,Nottingham,E06000018,Nottingham,East Midlands,286.2
+2006,Nottingham,E06000018,Nottingham,East Midlands,289.6
+2007,Nottingham,E06000018,Nottingham,East Midlands,292.3
+2008,Nottingham,E06000018,Nottingham,East Midlands,296.6
+2009,Nottingham,E06000018,Nottingham,East Midlands,300.8
+2010,Nottingham,E06000018,Nottingham,East Midlands,306.7
+2005,Ashfield,E07000170,Nottinghamshire,East Midlands,114.6
+2006,Ashfield,E07000170,Nottinghamshire,East Midlands,115
+2007,Ashfield,E07000170,Nottinghamshire,East Midlands,115.3
+2008,Ashfield,E07000170,Nottinghamshire,East Midlands,115.7
+2009,Ashfield,E07000170,Nottinghamshire,East Midlands,116.4
+2010,Ashfield,E07000170,Nottinghamshire,East Midlands,117
+2005,Bassetlaw,E07000171,Nottinghamshire,East Midlands,110.5
+2006,Bassetlaw,E07000171,Nottinghamshire,East Midlands,110.6
+2007,Bassetlaw,E07000171,Nottinghamshire,East Midlands,110.7
+2008,Bassetlaw,E07000171,Nottinghamshire,East Midlands,111.3
+2009,Bassetlaw,E07000171,Nottinghamshire,East Midlands,111.6
+2010,Bassetlaw,E07000171,Nottinghamshire,East Midlands,111.8
+2005,Broxtowe,E07000172,Nottinghamshire,East Midlands,109.5
+2006,Broxtowe,E07000172,Nottinghamshire,East Midlands,109.8
+2007,Broxtowe,E07000172,Nottinghamshire,East Midlands,110.1
+2008,Broxtowe,E07000172,Nottinghamshire,East Midlands,110.9
+2009,Broxtowe,E07000172,Nottinghamshire,East Midlands,111.5
+2010,Broxtowe,E07000172,Nottinghamshire,East Midlands,111.8
+2005,Gedling,E07000173,Nottinghamshire,East Midlands,112.2
+2006,Gedling,E07000173,Nottinghamshire,East Midlands,111.8
+2007,Gedling,E07000173,Nottinghamshire,East Midlands,112
+2008,Gedling,E07000173,Nottinghamshire,East Midlands,112.3
+2009,Gedling,E07000173,Nottinghamshire,East Midlands,112.7
+2010,Gedling,E07000173,Nottinghamshire,East Midlands,113.2
+2005,Mansfield,E07000174,Nottinghamshire,East Midlands,99
+2006,Mansfield,E07000174,Nottinghamshire,East Midlands,99.2
+2007,Mansfield,E07000174,Nottinghamshire,East Midlands,99.3
+2008,Mansfield,E07000174,Nottinghamshire,East Midlands,99.8
+2009,Mansfield,E07000174,Nottinghamshire,East Midlands,99.7
+2010,Mansfield,E07000174,Nottinghamshire,East Midlands,99.6
+2005,Newark and Sherwood,E07000175,Nottinghamshire,East Midlands,110.5
+2006,Newark and Sherwood,E07000175,Nottinghamshire,East Midlands,111.2
+2007,Newark and Sherwood,E07000175,Nottinghamshire,East Midlands,111.9
+2008,Newark and Sherwood,E07000175,Nottinghamshire,East Midlands,112.5
+2009,Newark and Sherwood,E07000175,Nottinghamshire,East Midlands,113
+2010,Newark and Sherwood,E07000175,Nottinghamshire,East Midlands,113.6
+2005,Rushcliffe,E07000176,Nottinghamshire,East Midlands,108.6
+2006,Rushcliffe,E07000176,Nottinghamshire,East Midlands,109.3
+2007,Rushcliffe,E07000176,Nottinghamshire,East Midlands,110
+2008,Rushcliffe,E07000176,Nottinghamshire,East Midlands,110.8
+2009,Rushcliffe,E07000176,Nottinghamshire,East Midlands,111.7
+2010,Rushcliffe,E07000176,Nottinghamshire,East Midlands,112.8
+2005,Rutland,E06000017,Rutland,East Midlands,36.6
+2006,Rutland,E06000017,Rutland,East Midlands,37.2
+2007,Rutland,E06000017,Rutland,East Midlands,37.4
+2008,Rutland,E06000017,Rutland,East Midlands,38.1
+2009,Rutland,E06000017,Rutland,East Midlands,38.4
+2010,Rutland,E06000017,Rutland,East Midlands,38.6
+2005,Birmingham,E08000025,Birmingham,West Midlands,1003.5
+2006,Birmingham,E08000025,Birmingham,West Midlands,1008
+2007,Birmingham,E08000025,Birmingham,West Midlands,1011.7
+2008,Birmingham,E08000025,Birmingham,West Midlands,1019.2
+2009,Birmingham,E08000025,Birmingham,West Midlands,1028.7
+2010,Birmingham,E08000025,Birmingham,West Midlands,1036.9
+2005,Coventry,E08000026,Coventry,West Midlands,303.5
+2006,Coventry,E08000026,Coventry,West Midlands,304.8
+2007,Coventry,E08000026,Coventry,West Midlands,306.5
+2008,Coventry,E08000026,Coventry,West Midlands,310.5
+2009,Coventry,E08000026,Coventry,West Midlands,312.8
+2010,Coventry,E08000026,Coventry,West Midlands,315.7
+2005,Dudley,E08000027,Dudley,West Midlands,305.3
+2006,Dudley,E08000027,Dudley,West Midlands,305.3
+2007,Dudley,E08000027,Dudley,West Midlands,305.4
+2008,Dudley,E08000027,Dudley,West Midlands,306.3
+2009,Dudley,E08000027,Dudley,West Midlands,306.6
+2010,Dudley,E08000027,Dudley,West Midlands,307.4
+2005,"Herefordshire, County of",E06000019,"Herefordshire, County of",West Midlands,177
+2006,"Herefordshire, County of",E06000019,"Herefordshire, County of",West Midlands,177.5
+2007,"Herefordshire, County of",E06000019,"Herefordshire, County of",West Midlands,178.1
+2008,"Herefordshire, County of",E06000019,"Herefordshire, County of",West Midlands,179.1
+2009,"Herefordshire, County of",E06000019,"Herefordshire, County of",West Midlands,179.1
+2010,"Herefordshire, County of",E06000019,"Herefordshire, County of",West Midlands,179.3
+2005,Sandwell,E08000028,Sandwell,West Midlands,287.1
+2006,Sandwell,E08000028,Sandwell,West Midlands,287.3
+2007,Sandwell,E08000028,Sandwell,West Midlands,287
+2008,Sandwell,E08000028,Sandwell,West Midlands,288.7
+2009,Sandwell,E08000028,Sandwell,West Midlands,291
+2010,Sandwell,E08000028,Sandwell,West Midlands,292.8
+2005,Shropshire,E06000051,Shropshire,West Midlands,286.1
+2006,Shropshire,E06000051,Shropshire,West Midlands,287.2
+2007,Shropshire,E06000051,Shropshire,West Midlands,288.7
+2008,Shropshire,E06000051,Shropshire,West Midlands,290.7
+2009,Shropshire,E06000051,Shropshire,West Midlands,291.8
+2010,Shropshire,E06000051,Shropshire,West Midlands,293.4
+2005,Solihull,E08000029,Solihull,West Midlands,201.3
+2006,Solihull,E08000029,Solihull,West Midlands,202
+2007,Solihull,E08000029,Solihull,West Midlands,202.8
+2008,Solihull,E08000029,Solihull,West Midlands,204.3
+2009,Solihull,E08000029,Solihull,West Midlands,205.2
+2010,Solihull,E08000029,Solihull,West Midlands,206.1
+2005,Cannock Chase,E07000192,Staffordshire,West Midlands,93.9
+2006,Cannock Chase,E07000192,Staffordshire,West Midlands,93.8
+2007,Cannock Chase,E07000192,Staffordshire,West Midlands,94
+2008,Cannock Chase,E07000192,Staffordshire,West Midlands,94.3
+2009,Cannock Chase,E07000192,Staffordshire,West Midlands,94.5
+2010,Cannock Chase,E07000192,Staffordshire,West Midlands,94.7
+2005,East Staffordshire,E07000193,Staffordshire,West Midlands,106.7
+2006,East Staffordshire,E07000193,Staffordshire,West Midlands,106.8
+2007,East Staffordshire,E07000193,Staffordshire,West Midlands,107.4
+2008,East Staffordshire,E07000193,Staffordshire,West Midlands,108.2
+2009,East Staffordshire,E07000193,Staffordshire,West Midlands,108.8
+2010,East Staffordshire,E07000193,Staffordshire,West Midlands,109.4
+2005,Lichfield,E07000194,Staffordshire,West Midlands,95.9
+2006,Lichfield,E07000194,Staffordshire,West Midlands,96.8
+2007,Lichfield,E07000194,Staffordshire,West Midlands,97.6
+2008,Lichfield,E07000194,Staffordshire,West Midlands,98
+2009,Lichfield,E07000194,Staffordshire,West Midlands,98.3
+2010,Lichfield,E07000194,Staffordshire,West Midlands,98.7
+2005,Newcastle-under-Lyme,E07000195,Staffordshire,West Midlands,124.2
+2006,Newcastle-under-Lyme,E07000195,Staffordshire,West Midlands,124.1
+2007,Newcastle-under-Lyme,E07000195,Staffordshire,West Midlands,124.5
+2008,Newcastle-under-Lyme,E07000195,Staffordshire,West Midlands,124.2
+2009,Newcastle-under-Lyme,E07000195,Staffordshire,West Midlands,124.2
+2010,Newcastle-under-Lyme,E07000195,Staffordshire,West Midlands,124.5
+2005,South Staffordshire,E07000196,Staffordshire,West Midlands,106
+2006,South Staffordshire,E07000196,Staffordshire,West Midlands,105.9
+2007,South Staffordshire,E07000196,Staffordshire,West Midlands,106.2
+2008,South Staffordshire,E07000196,Staffordshire,West Midlands,106.4
+2009,South Staffordshire,E07000196,Staffordshire,West Midlands,106.3
+2010,South Staffordshire,E07000196,Staffordshire,West Midlands,106.6
+2005,Stafford,E07000197,Staffordshire,West Midlands,123
+2006,Stafford,E07000197,Staffordshire,West Midlands,123.4
+2007,Stafford,E07000197,Staffordshire,West Midlands,124.4
+2008,Stafford,E07000197,Staffordshire,West Midlands,125.2
+2009,Stafford,E07000197,Staffordshire,West Midlands,125.5
+2010,Stafford,E07000197,Staffordshire,West Midlands,126
+2005,Staffordshire Moorlands,E07000198,Staffordshire,West Midlands,94.7
+2006,Staffordshire Moorlands,E07000198,Staffordshire,West Midlands,95.1
+2007,Staffordshire Moorlands,E07000198,Staffordshire,West Midlands,95.2
+2008,Staffordshire Moorlands,E07000198,Staffordshire,West Midlands,95.3
+2009,Staffordshire Moorlands,E07000198,Staffordshire,West Midlands,95.4
+2010,Staffordshire Moorlands,E07000198,Staffordshire,West Midlands,95.4
+2005,Tamworth,E07000199,Staffordshire,West Midlands,74.7
+2006,Tamworth,E07000199,Staffordshire,West Midlands,74.9
+2007,Tamworth,E07000199,Staffordshire,West Midlands,75.1
+2008,Tamworth,E07000199,Staffordshire,West Midlands,75.3
+2009,Tamworth,E07000199,Staffordshire,West Midlands,75.7
+2010,Tamworth,E07000199,Staffordshire,West Midlands,76
+2005,Stoke-on-Trent,E06000021,Stoke on Trent,West Midlands,239.7
+2006,Stoke-on-Trent,E06000021,Stoke on Trent,West Midlands,239.5
+2007,Stoke-on-Trent,E06000021,Stoke on Trent,West Midlands,238.2
+2008,Stoke-on-Trent,E06000021,Stoke on Trent,West Midlands,239.3
+2009,Stoke-on-Trent,E06000021,Stoke on Trent,West Midlands,238.9
+2010,Stoke-on-Trent,E06000021,Stoke on Trent,West Midlands,240.1
+2005,Telford and Wrekin,E06000020,Telford and Wrekin,West Midlands,161.1
+2006,Telford and Wrekin,E06000020,Telford and Wrekin,West Midlands,161.5
+2007,Telford and Wrekin,E06000020,Telford and Wrekin,West Midlands,161.4
+2008,Telford and Wrekin,E06000020,Telford and Wrekin,West Midlands,161.7
+2009,Telford and Wrekin,E06000020,Telford and Wrekin,West Midlands,162.3
+2010,Telford and Wrekin,E06000020,Telford and Wrekin,West Midlands,162.6
+2005,Walsall,E08000030,Walsall,West Midlands,254.5
+2006,Walsall,E08000030,Walsall,West Midlands,254.3
+2007,Walsall,E08000030,Walsall,West Midlands,254.2
+2008,Walsall,E08000030,Walsall,West Midlands,255.1
+2009,Walsall,E08000030,Walsall,West Midlands,255.9
+2010,Walsall,E08000030,Walsall,West Midlands,256.9
+2005,North Warwickshire,E07000218,Warwickshire,West Midlands,61.9
+2006,North Warwickshire,E07000218,Warwickshire,West Midlands,61.9
+2007,North Warwickshire,E07000218,Warwickshire,West Midlands,61.7
+2008,North Warwickshire,E07000218,Warwickshire,West Midlands,61.8
+2009,North Warwickshire,E07000218,Warwickshire,West Midlands,61.9
+2010,North Warwickshire,E07000218,Warwickshire,West Midlands,61.9
+2005,Nuneaton and Bedworth,E07000219,Warwickshire,West Midlands,120.2
+2006,Nuneaton and Bedworth,E07000219,Warwickshire,West Midlands,120.4
+2007,Nuneaton and Bedworth,E07000219,Warwickshire,West Midlands,120.9
+2008,Nuneaton and Bedworth,E07000219,Warwickshire,West Midlands,121.8
+2009,Nuneaton and Bedworth,E07000219,Warwickshire,West Midlands,122
+2010,Nuneaton and Bedworth,E07000219,Warwickshire,West Midlands,122.2
+2005,Rugby,E07000220,Warwickshire,West Midlands,90.1
+2006,Rugby,E07000220,Warwickshire,West Midlands,90.9
+2007,Rugby,E07000220,Warwickshire,West Midlands,91.8
+2008,Rugby,E07000220,Warwickshire,West Midlands,92.7
+2009,Rugby,E07000220,Warwickshire,West Midlands,93.3
+2010,Rugby,E07000220,Warwickshire,West Midlands,94.2
+2005,Stratford-on-Avon,E07000221,Warwickshire,West Midlands,114.8
+2006,Stratford-on-Avon,E07000221,Warwickshire,West Midlands,116.2
+2007,Stratford-on-Avon,E07000221,Warwickshire,West Midlands,117.8
+2008,Stratford-on-Avon,E07000221,Warwickshire,West Midlands,118.7
+2009,Stratford-on-Avon,E07000221,Warwickshire,West Midlands,118.9
+2010,Stratford-on-Avon,E07000221,Warwickshire,West Midlands,119
+2005,Warwick,E07000222,Warwickshire,West Midlands,134.5
+2006,Warwick,E07000222,Warwickshire,West Midlands,135.5
+2007,Warwick,E07000222,Warwickshire,West Midlands,137
+2008,Warwick,E07000222,Warwickshire,West Midlands,138.2
+2009,Warwick,E07000222,Warwickshire,West Midlands,139
+2010,Warwick,E07000222,Warwickshire,West Midlands,138.8
+2005,Wolverhampton,E08000031,Wolverhampton,West Midlands,238.5
+2006,Wolverhampton,E08000031,Wolverhampton,West Midlands,238.1
+2007,Wolverhampton,E08000031,Wolverhampton,West Midlands,237.4
+2008,Wolverhampton,E08000031,Wolverhampton,West Midlands,238.1
+2009,Wolverhampton,E08000031,Wolverhampton,West Midlands,238.5
+2010,Wolverhampton,E08000031,Wolverhampton,West Midlands,239.4
+2005,Bromsgrove,E07000234,Worcestershire,West Midlands,91.1
+2006,Bromsgrove,E07000234,Worcestershire,West Midlands,91.7
+2007,Bromsgrove,E07000234,Worcestershire,West Midlands,92.4
+2008,Bromsgrove,E07000234,Worcestershire,West Midlands,93
+2009,Bromsgrove,E07000234,Worcestershire,West Midlands,93.4
+2010,Bromsgrove,E07000234,Worcestershire,West Midlands,93.4
+2005,Malvern Hills,E07000235,Worcestershire,West Midlands,73.6
+2006,Malvern Hills,E07000235,Worcestershire,West Midlands,73.9
+2007,Malvern Hills,E07000235,Worcestershire,West Midlands,74.4
+2008,Malvern Hills,E07000235,Worcestershire,West Midlands,74.8
+2009,Malvern Hills,E07000235,Worcestershire,West Midlands,75
+2010,Malvern Hills,E07000235,Worcestershire,West Midlands,75.4
+2005,Redditch,E07000236,Worcestershire,West Midlands,78.5
+2006,Redditch,E07000236,Worcestershire,West Midlands,78.6
+2007,Redditch,E07000236,Worcestershire,West Midlands,78.6
+2008,Redditch,E07000236,Worcestershire,West Midlands,78.8
+2009,Redditch,E07000236,Worcestershire,West Midlands,78.7
+2010,Redditch,E07000236,Worcestershire,West Midlands,78.7
+2005,Worcester,E07000237,Worcestershire,West Midlands,93.1
+2006,Worcester,E07000237,Worcestershire,West Midlands,93.1
+2007,Worcester,E07000237,Worcestershire,West Midlands,93.4
+2008,Worcester,E07000237,Worcestershire,West Midlands,93.9
+2009,Worcester,E07000237,Worcestershire,West Midlands,94.7
+2010,Worcester,E07000237,Worcestershire,West Midlands,94.8
+2005,Wychavon,E07000238,Worcestershire,West Midlands,115.2
+2006,Wychavon,E07000238,Worcestershire,West Midlands,115.8
+2007,Wychavon,E07000238,Worcestershire,West Midlands,116.5
+2008,Wychavon,E07000238,Worcestershire,West Midlands,116.5
+2009,Wychavon,E07000238,Worcestershire,West Midlands,116.7
+2010,Wychavon,E07000238,Worcestershire,West Midlands,117
+2005,Wyre Forest,E07000239,Worcestershire,West Midlands,97.7
+2006,Wyre Forest,E07000239,Worcestershire,West Midlands,97.8
+2007,Wyre Forest,E07000239,Worcestershire,West Midlands,98.2
+2008,Wyre Forest,E07000239,Worcestershire,West Midlands,98.3
+2009,Wyre Forest,E07000239,Worcestershire,West Midlands,98.1
+2010,Wyre Forest,E07000239,Worcestershire,West Midlands,98.1
+2005,Bedford,E06000055,Bedfordshire,East of England,153.9
+2006,Bedford,E06000055,Bedfordshire,East of England,154.7
+2007,Bedford,E06000055,Bedfordshire,East of England,155.5
+2008,Bedford,E06000055,Bedfordshire,East of England,157.1
+2009,Bedford,E06000055,Bedfordshire,East of England,158
+2010,Bedford,E06000055,Bedfordshire,East of England,160.8
+2005,Central Bedfordshire,E06000056,Bedfordshire,East of England,244.4
+2006,Central Bedfordshire,E06000056,Bedfordshire,East of England,246.9
+2007,Central Bedfordshire,E06000056,Bedfordshire,East of England,249.3
+2008,Central Bedfordshire,E06000056,Bedfordshire,East of England,251.7
+2009,Central Bedfordshire,E06000056,Bedfordshire,East of England,252.9
+2010,Central Bedfordshire,E06000056,Bedfordshire,East of England,255.2
+2005,Cambridge,E07000008,Cambridgeshire,East of England,110.7
+2006,Cambridge,E07000008,Cambridgeshire,East of England,112.9
+2007,Cambridge,E07000008,Cambridgeshire,East of England,115.7
+2008,Cambridge,E07000008,Cambridgeshire,East of England,118.7
+2009,Cambridge,E07000008,Cambridgeshire,East of England,121.1
+2010,Cambridge,E07000008,Cambridgeshire,East of England,125.7
+2005,East Cambridgeshire,E07000009,Cambridgeshire,East of England,78.8
+2006,East Cambridgeshire,E07000009,Cambridgeshire,East of England,79.8
+2007,East Cambridgeshire,E07000009,Cambridgeshire,East of England,81.2
+2008,East Cambridgeshire,E07000009,Cambridgeshire,East of England,82.6
+2009,East Cambridgeshire,E07000009,Cambridgeshire,East of England,83.9
+2010,East Cambridgeshire,E07000009,Cambridgeshire,East of England,84.9
+2005,Fenland,E07000010,Cambridgeshire,East of England,89
+2006,Fenland,E07000010,Cambridgeshire,East of England,90
+2007,Fenland,E07000010,Cambridgeshire,East of England,91.2
+2008,Fenland,E07000010,Cambridgeshire,East of England,91.6
+2009,Fenland,E07000010,Cambridgeshire,East of England,91.7
+2010,Fenland,E07000010,Cambridgeshire,East of England,91.9
+2005,Huntingdonshire,E07000011,Cambridgeshire,East of England,162.8
+2006,Huntingdonshire,E07000011,Cambridgeshire,East of England,163.6
+2007,Huntingdonshire,E07000011,Cambridgeshire,East of England,164
+2008,Huntingdonshire,E07000011,Cambridgeshire,East of England,165.2
+2009,Huntingdonshire,E07000011,Cambridgeshire,East of England,165.8
+2010,Huntingdonshire,E07000011,Cambridgeshire,East of England,167.3
+2005,South Cambridgeshire,E07000012,Cambridgeshire,East of England,137.2
+2006,South Cambridgeshire,E07000012,Cambridgeshire,East of England,138.7
+2007,South Cambridgeshire,E07000012,Cambridgeshire,East of England,140.5
+2008,South Cambridgeshire,E07000012,Cambridgeshire,East of England,142.4
+2009,South Cambridgeshire,E07000012,Cambridgeshire,East of England,144.5
+2010,South Cambridgeshire,E07000012,Cambridgeshire,East of England,146.4
+2005,Basildon,E07000066,Essex,East of England,167.5
+2006,Basildon,E07000066,Essex,East of England,168.6
+2007,Basildon,E07000066,Essex,East of England,170.1
+2008,Basildon,E07000066,Essex,East of England,172.9
+2009,Basildon,E07000066,Essex,East of England,174.1
+2010,Basildon,E07000066,Essex,East of England,175.2
+2005,Braintree,E07000067,Essex,East of England,138.6
+2006,Braintree,E07000067,Essex,East of England,139.8
+2007,Braintree,E07000067,Essex,East of England,141
+2008,Braintree,E07000067,Essex,East of England,142.4
+2009,Braintree,E07000067,Essex,East of England,142.7
+2010,Braintree,E07000067,Essex,East of England,144
+2005,Brentwood,E07000068,Essex,East of England,70.2
+2006,Brentwood,E07000068,Essex,East of England,70.7
+2007,Brentwood,E07000068,Essex,East of England,71.3
+2008,Brentwood,E07000068,Essex,East of England,72.5
+2009,Brentwood,E07000068,Essex,East of England,73.8
+2010,Brentwood,E07000068,Essex,East of England,74.8
+2005,Castle Point,E07000069,Essex,East of England,87.8
+2006,Castle Point,E07000069,Essex,East of England,88.1
+2007,Castle Point,E07000069,Essex,East of England,88.5
+2008,Castle Point,E07000069,Essex,East of England,88.9
+2009,Castle Point,E07000069,Essex,East of England,89.2
+2010,Castle Point,E07000069,Essex,East of England,89.4
+2005,Chelmsford,E07000070,Essex,East of England,162.9
+2006,Chelmsford,E07000070,Essex,East of England,162.9
+2007,Chelmsford,E07000070,Essex,East of England,163.8
+2008,Chelmsford,E07000070,Essex,East of England,165.4
+2009,Chelmsford,E07000070,Essex,East of England,167.8
+2010,Chelmsford,E07000070,Essex,East of England,169.5
+2005,Colchester,E07000071,Essex,East of England,162.9
+2006,Colchester,E07000071,Essex,East of England,165.7
+2007,Colchester,E07000071,Essex,East of England,169.6
+2008,Colchester,E07000071,Essex,East of England,174.3
+2009,Colchester,E07000071,Essex,East of England,177.1
+2010,Colchester,E07000071,Essex,East of England,181
+2005,Epping Forest,E07000072,Essex,East of England,122.1
+2006,Epping Forest,E07000072,Essex,East of England,122.5
+2007,Epping Forest,E07000072,Essex,East of England,122.9
+2008,Epping Forest,E07000072,Essex,East of England,123.4
+2009,Epping Forest,E07000072,Essex,East of England,124
+2010,Epping Forest,E07000072,Essex,East of England,124.7
+2005,Harlow,E07000073,Essex,East of England,77.9
+2006,Harlow,E07000073,Essex,East of England,78.2
+2007,Harlow,E07000073,Essex,East of England,78.9
+2008,Harlow,E07000073,Essex,East of England,79.9
+2009,Harlow,E07000073,Essex,East of England,80.6
+2010,Harlow,E07000073,Essex,East of England,81.7
+2005,Maldon,E07000074,Essex,East of England,60.9
+2006,Maldon,E07000074,Essex,East of England,61.3
+2007,Maldon,E07000074,Essex,East of England,61.9
+2008,Maldon,E07000074,Essex,East of England,62.5
+2009,Maldon,E07000074,Essex,East of England,62.9
+2010,Maldon,E07000074,Essex,East of England,63.2
+2005,Rochford,E07000075,Essex,East of England,80.7
+2006,Rochford,E07000075,Essex,East of England,81.3
+2007,Rochford,E07000075,Essex,East of England,82.2
+2008,Rochford,E07000075,Essex,East of England,83
+2009,Rochford,E07000075,Essex,East of England,83.1
+2010,Rochford,E07000075,Essex,East of England,83.4
+2005,Tendring,E07000076,Essex,East of England,144.2
+2006,Tendring,E07000076,Essex,East of England,145.3
+2007,Tendring,E07000076,Essex,East of England,146.8
+2008,Tendring,E07000076,Essex,East of England,147.8
+2009,Tendring,E07000076,Essex,East of England,148
+2010,Tendring,E07000076,Essex,East of England,148.5
+2005,Uttlesford,E07000077,Essex,East of England,70.9
+2006,Uttlesford,E07000077,Essex,East of England,72
+2007,Uttlesford,E07000077,Essex,East of England,73.2
+2008,Uttlesford,E07000077,Essex,East of England,74.6
+2009,Uttlesford,E07000077,Essex,East of England,75.6
+2010,Uttlesford,E07000077,Essex,East of England,77.5
+2005,Broxbourne,E07000095,Hertfordshire,East of England,87.8
+2006,Broxbourne,E07000095,Hertfordshire,East of England,88.4
+2007,Broxbourne,E07000095,Hertfordshire,East of England,89.2
+2008,Broxbourne,E07000095,Hertfordshire,East of England,89.6
+2009,Broxbourne,E07000095,Hertfordshire,East of England,90.2
+2010,Broxbourne,E07000095,Hertfordshire,East of England,90.6
+2005,Dacorum,E07000096,Hertfordshire,East of England,137.8
+2006,Dacorum,E07000096,Hertfordshire,East of England,137.8
+2007,Dacorum,E07000096,Hertfordshire,East of England,138.5
+2008,Dacorum,E07000096,Hertfordshire,East of England,139.9
+2009,Dacorum,E07000096,Hertfordshire,East of England,141.6
+2010,Dacorum,E07000096,Hertfordshire,East of England,142.9
+2005,East Hertfordshire,E07000097,Hertfordshire,East of England,131.5
+2006,East Hertfordshire,E07000097,Hertfordshire,East of England,132.6
+2007,East Hertfordshire,E07000097,Hertfordshire,East of England,134.1
+2008,East Hertfordshire,E07000097,Hertfordshire,East of England,135.7
+2009,East Hertfordshire,E07000097,Hertfordshire,East of England,137.1
+2010,East Hertfordshire,E07000097,Hertfordshire,East of England,138.5
+2005,Hertsmere,E07000098,Hertfordshire,East of England,93.9
+2006,Hertsmere,E07000098,Hertfordshire,East of England,95.1
+2007,Hertsmere,E07000098,Hertfordshire,East of England,96.3
+2008,Hertsmere,E07000098,Hertfordshire,East of England,97.9
+2009,Hertsmere,E07000098,Hertfordshire,East of England,98.9
+2010,Hertsmere,E07000098,Hertfordshire,East of England,99.9
+2005,North Hertfordshire,E07000099,Hertfordshire,East of England,120.6
+2006,North Hertfordshire,E07000099,Hertfordshire,East of England,121.4
+2007,North Hertfordshire,E07000099,Hertfordshire,East of England,122.4
+2008,North Hertfordshire,E07000099,Hertfordshire,East of England,123.7
+2009,North Hertfordshire,E07000099,Hertfordshire,East of England,124.7
+2010,North Hertfordshire,E07000099,Hertfordshire,East of England,125.8
+2005,St. Albans,E07000100,Hertfordshire,East of England,130.6
+2006,St. Albans,E07000100,Hertfordshire,East of England,131.5
+2007,St. Albans,E07000100,Hertfordshire,East of England,133.1
+2008,St. Albans,E07000100,Hertfordshire,East of England,135.2
+2009,St. Albans,E07000100,Hertfordshire,East of England,137.2
+2010,St. Albans,E07000100,Hertfordshire,East of England,138.8
+2005,Stevenage,E07000101,Hertfordshire,East of England,79.4
+2006,Stevenage,E07000101,Hertfordshire,East of England,79.3
+2007,Stevenage,E07000101,Hertfordshire,East of England,79.7
+2008,Stevenage,E07000101,Hertfordshire,East of England,80.5
+2009,Stevenage,E07000101,Hertfordshire,East of England,81
+2010,Stevenage,E07000101,Hertfordshire,East of England,81.8
+2005,Three Rivers,E07000102,Hertfordshire,East of England,84.6
+2006,Three Rivers,E07000102,Hertfordshire,East of England,85
+2007,Three Rivers,E07000102,Hertfordshire,East of England,86
+2008,Three Rivers,E07000102,Hertfordshire,East of England,87.1
+2009,Three Rivers,E07000102,Hertfordshire,East of England,88.1
+2010,Three Rivers,E07000102,Hertfordshire,East of England,88.9
+2005,Watford,E07000103,Hertfordshire,East of England,79.3
+2006,Watford,E07000103,Hertfordshire,East of England,79.6
+2007,Watford,E07000103,Hertfordshire,East of England,80.3
+2008,Watford,E07000103,Hertfordshire,East of England,82.5
+2009,Watford,E07000103,Hertfordshire,East of England,83.8
+2010,Watford,E07000103,Hertfordshire,East of England,86
+2005,Welwyn Hatfield,E07000104,Hertfordshire,East of England,106.1
+2006,Welwyn Hatfield,E07000104,Hertfordshire,East of England,108.8
+2007,Welwyn Hatfield,E07000104,Hertfordshire,East of England,110.4
+2008,Welwyn Hatfield,E07000104,Hertfordshire,East of England,111.7
+2009,Welwyn Hatfield,E07000104,Hertfordshire,East of England,112.8
+2010,Welwyn Hatfield,E07000104,Hertfordshire,East of England,114.4
+2005,Luton,E06000032,Luton,East of England,184.3
+2006,Luton,E06000032,Luton,East of England,184.7
+2007,Luton,E06000032,Luton,East of England,187.2
+2008,Luton,E06000032,Luton,East of England,190.5
+2009,Luton,E06000032,Luton,East of England,194.3
+2010,Luton,E06000032,Luton,East of England,198.8
+2005,Breckland,E07000143,Norfolk,East of England,126.2
+2006,Breckland,E07000143,Norfolk,East of England,127
+2007,Breckland,E07000143,Norfolk,East of England,128.1
+2008,Breckland,E07000143,Norfolk,East of England,129.2
+2009,Breckland,E07000143,Norfolk,East of England,129.9
+2010,Breckland,E07000143,Norfolk,East of England,130.9
+2005,Broadland,E07000144,Norfolk,East of England,121.3
+2006,Broadland,E07000144,Norfolk,East of England,121.9
+2007,Broadland,E07000144,Norfolk,East of England,122.5
+2008,Broadland,E07000144,Norfolk,East of England,122.7
+2009,Broadland,E07000144,Norfolk,East of England,123
+2010,Broadland,E07000144,Norfolk,East of England,123.7
+2005,Great Yarmouth,E07000145,Norfolk,East of England,94.1
+2006,Great Yarmouth,E07000145,Norfolk,East of England,94.8
+2007,Great Yarmouth,E07000145,Norfolk,East of England,95.5
+2008,Great Yarmouth,E07000145,Norfolk,East of England,95.9
+2009,Great Yarmouth,E07000145,Norfolk,East of England,96.3
+2010,Great Yarmouth,E07000145,Norfolk,East of England,97.2
+2005,King's Lynn and West Norfolk,E07000146,Norfolk,East of England,140.4
+2006,King's Lynn and West Norfolk,E07000146,Norfolk,East of England,141.3
+2007,King's Lynn and West Norfolk,E07000146,Norfolk,East of England,141.9
+2008,King's Lynn and West Norfolk,E07000146,Norfolk,East of England,142.6
+2009,King's Lynn and West Norfolk,E07000146,Norfolk,East of England,143
+2010,King's Lynn and West Norfolk,E07000146,Norfolk,East of England,143.6
+2005,North Norfolk,E07000147,Norfolk,East of England,100.5
+2006,North Norfolk,E07000147,Norfolk,East of England,100.7
+2007,North Norfolk,E07000147,Norfolk,East of England,100.8
+2008,North Norfolk,E07000147,Norfolk,East of England,101.5
+2009,North Norfolk,E07000147,Norfolk,East of England,101.2
+2010,North Norfolk,E07000147,Norfolk,East of England,101.7
+2005,Norwich,E07000148,Norfolk,East of England,126.6
+2006,Norwich,E07000148,Norfolk,East of England,129.2
+2007,Norwich,E07000148,Norfolk,East of England,132.6
+2008,Norwich,E07000148,Norfolk,East of England,137.3
+2009,Norwich,E07000148,Norfolk,East of England,140.1
+2010,Norwich,E07000148,Norfolk,East of England,143.5
+2005,South Norfolk,E07000149,Norfolk,East of England,115.2
+2006,South Norfolk,E07000149,Norfolk,East of England,115.6
+2007,South Norfolk,E07000149,Norfolk,East of England,116.5
+2008,South Norfolk,E07000149,Norfolk,East of England,118.1
+2009,South Norfolk,E07000149,Norfolk,East of England,119.7
+2010,South Norfolk,E07000149,Norfolk,East of England,121.8
+2005,Peterborough,E06000031,Peterborough,East of England,165.5
+2006,Peterborough,E06000031,Peterborough,East of England,167.5
+2007,Peterborough,E06000031,Peterborough,East of England,168.3
+2008,Peterborough,E06000031,Peterborough,East of England,169.8
+2009,Peterborough,E06000031,Peterborough,East of England,171.2
+2010,Peterborough,E06000031,Peterborough,East of England,173.4
+2005,Southend-on-Sea,E06000033,Southend-on-Sea,East of England,158.5
+2006,Southend-on-Sea,E06000033,Southend-on-Sea,East of England,159
+2007,Southend-on-Sea,E06000033,Southend-on-Sea,East of England,160.9
+2008,Southend-on-Sea,E06000033,Southend-on-Sea,East of England,163.1
+2009,Southend-on-Sea,E06000033,Southend-on-Sea,East of England,164.2
+2010,Southend-on-Sea,E06000033,Southend-on-Sea,East of England,165.3
+2005,Babergh,E07000200,Suffolk,East of England,85.5
+2006,Babergh,E07000200,Suffolk,East of England,85.9
+2007,Babergh,E07000200,Suffolk,East of England,85.9
+2008,Babergh,E07000200,Suffolk,East of England,86
+2009,Babergh,E07000200,Suffolk,East of England,85.8
+2010,Babergh,E07000200,Suffolk,East of England,85.6
+2005,Forest Heath,E07000201,Suffolk,East of England,59.6
+2006,Forest Heath,E07000201,Suffolk,East of England,59.2
+2007,Forest Heath,E07000201,Suffolk,East of England,60
+2008,Forest Heath,E07000201,Suffolk,East of England,60.8
+2009,Forest Heath,E07000201,Suffolk,East of England,62.2
+2010,Forest Heath,E07000201,Suffolk,East of England,64.3
+2005,Ipswich,E07000202,Suffolk,East of England,121.6
+2006,Ipswich,E07000202,Suffolk,East of England,122.3
+2007,Ipswich,E07000202,Suffolk,East of England,123.1
+2008,Ipswich,E07000202,Suffolk,East of England,125.4
+2009,Ipswich,E07000202,Suffolk,East of England,126.6
+2010,Ipswich,E07000202,Suffolk,East of England,128.3
+2005,Mid Suffolk,E07000203,Suffolk,East of England,90.2
+2006,Mid Suffolk,E07000203,Suffolk,East of England,91.3
+2007,Mid Suffolk,E07000203,Suffolk,East of England,93
+2008,Mid Suffolk,E07000203,Suffolk,East of England,93.7
+2009,Mid Suffolk,E07000203,Suffolk,East of England,94.2
+2010,Mid Suffolk,E07000203,Suffolk,East of England,95
+2005,St. Edmundsbury,E07000204,Suffolk,East of England,100.8
+2006,St. Edmundsbury,E07000204,Suffolk,East of England,101.4
+2007,St. Edmundsbury,E07000204,Suffolk,East of England,102
+2008,St. Edmundsbury,E07000204,Suffolk,East of England,102.9
+2009,St. Edmundsbury,E07000204,Suffolk,East of England,103.5
+2010,St. Edmundsbury,E07000204,Suffolk,East of England,104.5
+2005,Suffolk Coastal,E07000205,Suffolk,East of England,119.9
+2006,Suffolk Coastal,E07000205,Suffolk,East of England,121.2
+2007,Suffolk Coastal,E07000205,Suffolk,East of England,123.2
+2008,Suffolk Coastal,E07000205,Suffolk,East of England,124.1
+2009,Suffolk Coastal,E07000205,Suffolk,East of England,124.1
+2010,Suffolk Coastal,E07000205,Suffolk,East of England,124.3
+2005,Waveney,E07000206,Suffolk,East of England,117
+2006,Waveney,E07000206,Suffolk,East of England,117.2
+2007,Waveney,E07000206,Suffolk,East of England,117.7
+2008,Waveney,E07000206,Suffolk,East of England,117.9
+2009,Waveney,E07000206,Suffolk,East of England,117.7
+2010,Waveney,E07000206,Suffolk,East of England,117.5
+2005,Thurrock,E06000034,Thurrock,East of England,148.9
+2006,Thurrock,E06000034,Thurrock,East of England,150.6
+2007,Thurrock,E06000034,Thurrock,East of England,152.2
+2008,Thurrock,E06000034,Thurrock,East of England,155.2
+2009,Thurrock,E06000034,Thurrock,East of England,157.2
+2010,Thurrock,E06000034,Thurrock,East of England,159.7
+2005,Barking and Dagenham,E09000002,Barking and Dagenham,Greater London,167
+2006,Barking and Dagenham,E09000002,Barking and Dagenham,Greater London,167.9
+2007,Barking and Dagenham,E09000002,Barking and Dagenham,Greater London,169.1
+2008,Barking and Dagenham,E09000002,Barking and Dagenham,Greater London,171.5
+2009,Barking and Dagenham,E09000002,Barking and Dagenham,Greater London,175.6
+2010,Barking and Dagenham,E09000002,Barking and Dagenham,Greater London,179.7
+2005,Barnet,E09000003,Barnet,Greater London,329.1
+2006,Barnet,E09000003,Barnet,Greater London,333
+2007,Barnet,E09000003,Barnet,Greater London,335.6
+2008,Barnet,E09000003,Barnet,Greater London,338.1
+2009,Barnet,E09000003,Barnet,Greater London,343.1
+2010,Barnet,E09000003,Barnet,Greater London,348.2
+2005,Bexley,E09000004,Bexley,Greater London,221.9
+2006,Bexley,E09000004,Bexley,Greater London,222.6
+2007,Bexley,E09000004,Bexley,Greater London,223.4
+2008,Bexley,E09000004,Bexley,Greater London,225
+2009,Bexley,E09000004,Bexley,Greater London,225.9
+2010,Bexley,E09000004,Bexley,Greater London,228
+2005,Brent,E09000005,Brent,Greater London,257.6
+2006,Brent,E09000005,Brent,Greater London,257.1
+2007,Brent,E09000005,Brent,Greater London,255.1
+2008,Brent,E09000005,Brent,Greater London,254.5
+2009,Brent,E09000005,Brent,Greater London,255.5
+2010,Brent,E09000005,Brent,Greater London,256.6
+2005,Bromley,E09000006,Bromley,Greater London,302.1
+2006,Bromley,E09000006,Bromley,Greater London,303.9
+2007,Bromley,E09000006,Bromley,Greater London,305.6
+2008,Bromley,E09000006,Bromley,Greater London,308
+2009,Bromley,E09000006,Bromley,Greater London,310.2
+2010,Bromley,E09000006,Bromley,Greater London,312.4
+2005,Camden,E09000007,Camden,Greater London,218.4
+2006,Camden,E09000007,Camden,Greater London,221.5
+2007,Camden,E09000007,Camden,Greater London,223.9
+2008,Camden,E09000007,Camden,Greater London,226.5
+2009,Camden,E09000007,Camden,Greater London,231.2
+2010,Camden,E09000007,Camden,Greater London,235.4
+2005,City of London,E09000001,City of London,Greater London,8.7
+2006,City of London,E09000001,City of London,Greater London,9.4
+2007,City of London,E09000001,City of London,Greater London,10.5
+2008,City of London,E09000001,City of London,Greater London,11.3
+2009,City of London,E09000001,City of London,Greater London,11.5
+2010,City of London,E09000001,City of London,Greater London,11.7
+2005,Croydon,E09000008,Croydon,Greater London,335.5
+2006,Croydon,E09000008,Croydon,Greater London,336.8
+2007,Croydon,E09000008,Croydon,Greater London,338.4
+2008,Croydon,E09000008,Croydon,Greater London,341.2
+2009,Croydon,E09000008,Croydon,Greater London,342.8
+2010,Croydon,E09000008,Croydon,Greater London,345.6
+2005,Ealing,E09000009,Ealing,Greater London,307.3
+2006,Ealing,E09000009,Ealing,Greater London,308.3
+2007,Ealing,E09000009,Ealing,Greater London,309.1
+2008,Ealing,E09000009,Ealing,Greater London,312.1
+2009,Ealing,E09000009,Ealing,Greater London,316.6
+2010,Ealing,E09000009,Ealing,Greater London,318.5
+2005,Enfield,E09000010,Enfield,Greater London,283.4
+2006,Enfield,E09000010,Enfield,Greater London,285.5
+2007,Enfield,E09000010,Enfield,Greater London,287
+2008,Enfield,E09000010,Enfield,Greater London,289
+2009,Enfield,E09000010,Enfield,Greater London,291.2
+2010,Enfield,E09000010,Enfield,Greater London,294.9
+2005,Greenwich,E09000011,Greenwich,Greater London,223.3
+2006,Greenwich,E09000011,Greenwich,Greater London,223.6
+2007,Greenwich,E09000011,Greenwich,Greater London,223.6
+2008,Greenwich,E09000011,Greenwich,Greater London,223.7
+2009,Greenwich,E09000011,Greenwich,Greater London,226.1
+2010,Greenwich,E09000011,Greenwich,Greater London,228.5
+2005,Hackney,E09000012,Hackney,Greater London,208.6
+2006,Hackney,E09000012,Hackney,Greater London,209.4
+2007,Hackney,E09000012,Hackney,Greater London,210.5
+2008,Hackney,E09000012,Hackney,Greater London,212.8
+2009,Hackney,E09000012,Hackney,Greater London,216
+2010,Hackney,E09000012,Hackney,Greater London,219.2
+2005,Hammersmith and Fulham,E09000013,Hammersmith and Fulham,Greater London,169.1
+2006,Hammersmith and Fulham,E09000013,Hammersmith and Fulham,Greater London,168.6
+2007,Hammersmith and Fulham,E09000013,Hammersmith and Fulham,Greater London,169.1
+2008,Hammersmith and Fulham,E09000013,Hammersmith and Fulham,Greater London,168.6
+2009,Hammersmith and Fulham,E09000013,Hammersmith and Fulham,Greater London,169.7
+2010,Hammersmith and Fulham,E09000013,Hammersmith and Fulham,Greater London,169.7
+2005,Haringey,E09000014,Haringey,Greater London,224.4
+2006,Haringey,E09000014,Haringey,Greater London,225.4
+2007,Haringey,E09000014,Haringey,Greater London,224.7
+2008,Haringey,E09000014,Haringey,Greater London,225.3
+2009,Haringey,E09000014,Haringey,Greater London,225.5
+2010,Haringey,E09000014,Haringey,Greater London,225
+2005,Harrow,E09000015,Harrow,Greater London,218.7
+2006,Harrow,E09000015,Harrow,Greater London,221.3
+2007,Harrow,E09000015,Harrow,Greater London,223.3
+2008,Harrow,E09000015,Harrow,Greater London,225.4
+2009,Harrow,E09000015,Harrow,Greater London,228.1
+2010,Harrow,E09000015,Harrow,Greater London,230.1
+2005,Havering,E09000016,Havering,Greater London,227
+2006,Havering,E09000016,Havering,Greater London,228.6
+2007,Havering,E09000016,Havering,Greater London,230.3
+2008,Havering,E09000016,Havering,Greater London,232.3
+2009,Havering,E09000016,Havering,Greater London,234.1
+2010,Havering,E09000016,Havering,Greater London,236.1
+2005,Hillingdon,E09000017,Hillingdon,Greater London,251.7
+2006,Hillingdon,E09000017,Hillingdon,Greater London,253.9
+2007,Hillingdon,E09000017,Hillingdon,Greater London,255.3
+2008,Hillingdon,E09000017,Hillingdon,Greater London,258.1
+2009,Hillingdon,E09000017,Hillingdon,Greater London,262.5
+2010,Hillingdon,E09000017,Hillingdon,Greater London,266.1
+2005,Hounslow,E09000018,Hounslow,Greater London,221.5
+2006,Hounslow,E09000018,Hounslow,Greater London,224.6
+2007,Hounslow,E09000018,Hounslow,Greater London,228.1
+2008,Hounslow,E09000018,Hounslow,Greater London,230.2
+2009,Hounslow,E09000018,Hounslow,Greater London,234.2
+2010,Hounslow,E09000018,Hounslow,Greater London,236.8
+2005,Islington,E09000019,Islington,Greater London,184.6
+2006,Islington,E09000019,Islington,Greater London,185.3
+2007,Islington,E09000019,Islington,Greater London,186.8
+2008,Islington,E09000019,Islington,Greater London,188.5
+2009,Islington,E09000019,Islington,Greater London,191.8
+2010,Islington,E09000019,Islington,Greater London,194.1
+2005,Kensington and Chelsea,E09000020,Kensington and Chelsea,Greater London,169.6
+2006,Kensington and Chelsea,E09000020,Kensington and Chelsea,Greater London,169.6
+2007,Kensington and Chelsea,E09000020,Kensington and Chelsea,Greater London,170.9
+2008,Kensington and Chelsea,E09000020,Kensington and Chelsea,Greater London,171.1
+2009,Kensington and Chelsea,E09000020,Kensington and Chelsea,Greater London,169.9
+2010,Kensington and Chelsea,E09000020,Kensington and Chelsea,Greater London,169.5
+2005,Kingston upon Thames,E09000021,Kingston upon Thames,Greater London,157.7
+2006,Kingston upon Thames,E09000021,Kingston upon Thames,Greater London,160.3
+2007,Kingston upon Thames,E09000021,Kingston upon Thames,Greater London,162.3
+2008,Kingston upon Thames,E09000021,Kingston upon Thames,Greater London,164.6
+2009,Kingston upon Thames,E09000021,Kingston upon Thames,Greater London,166.7
+2010,Kingston upon Thames,E09000021,Kingston upon Thames,Greater London,169
+2005,Lambeth,E09000022,Lambeth,Greater London,274.4
+2006,Lambeth,E09000022,Lambeth,Greater London,277.1
+2007,Lambeth,E09000022,Lambeth,Greater London,279.3
+2008,Lambeth,E09000022,Lambeth,Greater London,281.4
+2009,Lambeth,E09000022,Lambeth,Greater London,283.3
+2010,Lambeth,E09000022,Lambeth,Greater London,284.5
+2005,Lewisham,E09000023,Lewisham,Greater London,254.3
+2006,Lewisham,E09000023,Lewisham,Greater London,256.7
+2007,Lewisham,E09000023,Lewisham,Greater London,258.9
+2008,Lewisham,E09000023,Lewisham,Greater London,262
+2009,Lewisham,E09000023,Lewisham,Greater London,264.5
+2010,Lewisham,E09000023,Lewisham,Greater London,266.5
+2005,Merton,E09000024,Merton,Greater London,195
+2006,Merton,E09000024,Merton,Greater London,197.6
+2007,Merton,E09000024,Merton,Greater London,199.8
+2008,Merton,E09000024,Merton,Greater London,202.8
+2009,Merton,E09000024,Merton,Greater London,206.4
+2010,Merton,E09000024,Merton,Greater London,208.8
+2005,Newham,E09000025,Newham,Greater London,243.3
+2006,Newham,E09000025,Newham,Greater London,241.4
+2007,Newham,E09000025,Newham,Greater London,241.4
+2008,Newham,E09000025,Newham,Greater London,242.4
+2009,Newham,E09000025,Newham,Greater London,241.2
+2010,Newham,E09000025,Newham,Greater London,240.1
+2005,Redbridge,E09000026,Redbridge,Greater London,251.2
+2006,Redbridge,E09000026,Redbridge,Greater London,255.1
+2007,Redbridge,E09000026,Redbridge,Greater London,259.3
+2008,Redbridge,E09000026,Redbridge,Greater London,263.8
+2009,Redbridge,E09000026,Redbridge,Greater London,267.7
+2010,Redbridge,E09000026,Redbridge,Greater London,270.5
+2005,Richmond upon Thames,E09000027,Richmond,Greater London,183.6
+2006,Richmond upon Thames,E09000027,Richmond,Greater London,185.5
+2007,Richmond upon Thames,E09000027,Richmond,Greater London,186.2
+2008,Richmond upon Thames,E09000027,Richmond,Greater London,187.2
+2009,Richmond upon Thames,E09000027,Richmond,Greater London,189
+2010,Richmond upon Thames,E09000027,Richmond,Greater London,190.9
+2005,Southwark,E09000028,Southwark,Greater London,265.9
+2006,Southwark,E09000028,Southwark,Greater London,273
+2007,Southwark,E09000028,Southwark,Greater London,279.1
+2008,Southwark,E09000028,Southwark,Greater London,283
+2009,Southwark,E09000028,Southwark,Greater London,285.6
+2010,Southwark,E09000028,Southwark,Greater London,287
+2005,Sutton,E09000029,Sutton,Greater London,184.7
+2006,Sutton,E09000029,Sutton,Greater London,185.9
+2007,Sutton,E09000029,Sutton,Greater London,187.5
+2008,Sutton,E09000029,Sutton,Greater London,189.5
+2009,Sutton,E09000029,Sutton,Greater London,192.2
+2010,Sutton,E09000029,Sutton,Greater London,194.2
+2005,Tower Hamlets,E09000030,Tower Hamlets,Greater London,214.1
+2006,Tower Hamlets,E09000030,Tower Hamlets,Greater London,217.2
+2007,Tower Hamlets,E09000030,Tower Hamlets,Greater London,221.8
+2008,Tower Hamlets,E09000030,Tower Hamlets,Greater London,226.8
+2009,Tower Hamlets,E09000030,Tower Hamlets,Greater London,234.8
+2010,Tower Hamlets,E09000030,Tower Hamlets,Greater London,237.9
+2005,Waltham Forest,E09000031,Waltham Forest,Greater London,218.7
+2006,Waltham Forest,E09000031,Waltham Forest,Greater London,219.2
+2007,Waltham Forest,E09000031,Waltham Forest,Greater London,219.8
+2008,Waltham Forest,E09000031,Waltham Forest,Greater London,221.4
+2009,Waltham Forest,E09000031,Waltham Forest,Greater London,224.3
+2010,Waltham Forest,E09000031,Waltham Forest,Greater London,227.1
+2005,Wandsworth,E09000032,Wandsworth,Greater London,278.2
+2006,Wandsworth,E09000032,Wandsworth,Greater London,281.1
+2007,Wandsworth,E09000032,Wandsworth,Greater London,282.8
+2008,Wandsworth,E09000032,Wandsworth,Greater London,283.7
+2009,Wandsworth,E09000032,Wandsworth,Greater London,286.6
+2010,Wandsworth,E09000032,Wandsworth,Greater London,289.6
+2005,Westminster,E09000033,Westminster,Greater London,234.2
+2006,Westminster,E09000033,Westminster,Greater London,240.1
+2007,Westminster,E09000033,Westminster,Greater London,243.7
+2008,Westminster,E09000033,Westminster,Greater London,246.6
+2009,Westminster,E09000033,Westminster,Greater London,249.4
+2010,Westminster,E09000033,Westminster,Greater London,253.1
+2005,Bracknell Forest,E06000036,Bracknell Forest,South East,111.2
+2006,Bracknell Forest,E06000036,Bracknell Forest,South East,111.8
+2007,Bracknell Forest,E06000036,Bracknell Forest,South East,113
+2008,Bracknell Forest,E06000036,Bracknell Forest,South East,114
+2009,Bracknell Forest,E06000036,Bracknell Forest,South East,115.1
+2010,Bracknell Forest,E06000036,Bracknell Forest,South East,116.5
+2005,Brighton and Hove,E06000043,Brighton and Hove,South East,247.1
+2006,Brighton and Hove,E06000043,Brighton and Hove,South East,248
+2007,Brighton and Hove,E06000043,Brighton and Hove,South East,250.2
+2008,Brighton and Hove,E06000043,Brighton and Hove,South East,253.8
+2009,Brighton and Hove,E06000043,Brighton and Hove,South East,256.3
+2010,Brighton and Hove,E06000043,Brighton and Hove,South East,258.8
+2005,Aylesbury Vale,E07000004,Buckinghamshire,South East,168.4
+2006,Aylesbury Vale,E07000004,Buckinghamshire,South East,169.2
+2007,Aylesbury Vale,E07000004,Buckinghamshire,South East,170.5
+2008,Aylesbury Vale,E07000004,Buckinghamshire,South East,172
+2009,Aylesbury Vale,E07000004,Buckinghamshire,South East,173.5
+2010,Aylesbury Vale,E07000004,Buckinghamshire,South East,174.4
+2005,Chiltern,E07000005,Buckinghamshire,South East,89.9
+2006,Chiltern,E07000005,Buckinghamshire,South East,90.4
+2007,Chiltern,E07000005,Buckinghamshire,South East,91.1
+2008,Chiltern,E07000005,Buckinghamshire,South East,91.3
+2009,Chiltern,E07000005,Buckinghamshire,South East,90.9
+2010,Chiltern,E07000005,Buckinghamshire,South East,91.4
+2005,South Bucks,E07000006,Buckinghamshire,South East,63.6
+2006,South Bucks,E07000006,Buckinghamshire,South East,64.2
+2007,South Bucks,E07000006,Buckinghamshire,South East,65.1
+2008,South Bucks,E07000006,Buckinghamshire,South East,65.7
+2009,South Bucks,E07000006,Buckinghamshire,South East,66.6
+2010,South Bucks,E07000006,Buckinghamshire,South East,67.5
+2005,Wycombe,E07000007,Buckinghamshire,South East,161.8
+2006,Wycombe,E07000007,Buckinghamshire,South East,161.4
+2007,Wycombe,E07000007,Buckinghamshire,South East,161.8
+2008,Wycombe,E07000007,Buckinghamshire,South East,162.5
+2009,Wycombe,E07000007,Buckinghamshire,South East,163.6
+2010,Wycombe,E07000007,Buckinghamshire,South East,164.8
+2005,Eastbourne,E07000061,East Sussex,South East,94.8
+2006,Eastbourne,E07000061,East Sussex,South East,95.5
+2007,Eastbourne,E07000061,East Sussex,South East,96
+2008,Eastbourne,E07000061,East Sussex,South East,96.2
+2009,Eastbourne,E07000061,East Sussex,South East,96.4
+2010,Eastbourne,E07000061,East Sussex,South East,97
+2005,Hastings,E07000062,East Sussex,South East,86.4
+2006,Hastings,E07000062,East Sussex,South East,86
+2007,Hastings,E07000062,East Sussex,South East,86
+2008,Hastings,E07000062,East Sussex,South East,86.3
+2009,Hastings,E07000062,East Sussex,South East,86.9
+2010,Hastings,E07000062,East Sussex,South East,87.2
+2005,Lewes,E07000063,East Sussex,South East,94.3
+2006,Lewes,E07000063,East Sussex,South East,94.5
+2007,Lewes,E07000063,East Sussex,South East,95.1
+2008,Lewes,E07000063,East Sussex,South East,95.7
+2009,Lewes,E07000063,East Sussex,South East,96.4
+2010,Lewes,E07000063,East Sussex,South East,97.5
+2005,Rother,E07000064,East Sussex,South East,87.6
+2006,Rother,E07000064,East Sussex,South East,88
+2007,Rother,E07000064,East Sussex,South East,88.8
+2008,Rother,E07000064,East Sussex,South East,89.5
+2009,Rother,E07000064,East Sussex,South East,89.2
+2010,Rother,E07000064,East Sussex,South East,89.8
+2005,Wealden,E07000065,East Sussex,South East,142.7
+2006,Wealden,E07000065,East Sussex,South East,143.2
+2007,Wealden,E07000065,East Sussex,South East,143.6
+2008,Wealden,E07000065,East Sussex,South East,143.4
+2009,Wealden,E07000065,East Sussex,South East,143.1
+2010,Wealden,E07000065,East Sussex,South East,144.1
+2005,Basingstoke and Deane,E07000084,Hampshire,South East,157.4
+2006,Basingstoke and Deane,E07000084,Hampshire,South East,158.4
+2007,Basingstoke and Deane,E07000084,Hampshire,South East,160
+2008,Basingstoke and Deane,E07000084,Hampshire,South East,161.5
+2009,Basingstoke and Deane,E07000084,Hampshire,South East,163.3
+2010,Basingstoke and Deane,E07000084,Hampshire,South East,165.1
+2005,East Hampshire,E07000085,Hampshire,South East,109.4
+2006,East Hampshire,E07000085,Hampshire,South East,109.5
+2007,East Hampshire,E07000085,Hampshire,South East,110.5
+2008,East Hampshire,E07000085,Hampshire,South East,111.2
+2009,East Hampshire,E07000085,Hampshire,South East,111.9
+2010,East Hampshire,E07000085,Hampshire,South East,112.6
+2005,Eastleigh,E07000086,Hampshire,South East,117.5
+2006,Eastleigh,E07000086,Hampshire,South East,118.5
+2007,Eastleigh,E07000086,Hampshire,South East,119.5
+2008,Eastleigh,E07000086,Hampshire,South East,120
+2009,Eastleigh,E07000086,Hampshire,South East,120.8
+2010,Eastleigh,E07000086,Hampshire,South East,122.4
+2005,Fareham,E07000087,Hampshire,South East,108.6
+2006,Fareham,E07000087,Hampshire,South East,108.8
+2007,Fareham,E07000087,Hampshire,South East,110
+2008,Fareham,E07000087,Hampshire,South East,110.9
+2009,Fareham,E07000087,Hampshire,South East,111.5
+2010,Fareham,E07000087,Hampshire,South East,112.1
+2005,Gosport,E07000088,Hampshire,South East,77.4
+2006,Gosport,E07000088,Hampshire,South East,78.1
+2007,Gosport,E07000088,Hampshire,South East,79.2
+2008,Gosport,E07000088,Hampshire,South East,80.1
+2009,Gosport,E07000088,Hampshire,South East,80
+2010,Gosport,E07000088,Hampshire,South East,79.9
+2005,Hart,E07000089,Hampshire,South East,87.4
+2006,Hart,E07000089,Hampshire,South East,88.9
+2007,Hart,E07000089,Hampshire,South East,90.2
+2008,Hart,E07000089,Hampshire,South East,90.9
+2009,Hart,E07000089,Hampshire,South East,91.2
+2010,Hart,E07000089,Hampshire,South East,91.2
+2005,Havant,E07000090,Hampshire,South East,116.2
+2006,Havant,E07000090,Hampshire,South East,116
+2007,Havant,E07000090,Hampshire,South East,116.1
+2008,Havant,E07000090,Hampshire,South East,116.5
+2009,Havant,E07000090,Hampshire,South East,116.5
+2010,Havant,E07000090,Hampshire,South East,116.8
+2005,New Forest,E07000091,Hampshire,South East,173.1
+2006,New Forest,E07000091,Hampshire,South East,174.1
+2007,New Forest,E07000091,Hampshire,South East,175.1
+2008,New Forest,E07000091,Hampshire,South East,175.8
+2009,New Forest,E07000091,Hampshire,South East,176.4
+2010,New Forest,E07000091,Hampshire,South East,177
+2005,Rushmoor,E07000092,Hampshire,South East,88
+2006,Rushmoor,E07000092,Hampshire,South East,88.8
+2007,Rushmoor,E07000092,Hampshire,South East,89.7
+2008,Rushmoor,E07000092,Hampshire,South East,91.1
+2009,Rushmoor,E07000092,Hampshire,South East,91.1
+2010,Rushmoor,E07000092,Hampshire,South East,92
+2005,Test Valley,E07000093,Hampshire,South East,112.2
+2006,Test Valley,E07000093,Hampshire,South East,112.4
+2007,Test Valley,E07000093,Hampshire,South East,113.2
+2008,Test Valley,E07000093,Hampshire,South East,113.5
+2009,Test Valley,E07000093,Hampshire,South East,113.4
+2010,Test Valley,E07000093,Hampshire,South East,113.5
+2005,Winchester,E07000094,Hampshire,South East,108.9
+2006,Winchester,E07000094,Hampshire,South East,109.4
+2007,Winchester,E07000094,Hampshire,South East,110.8
+2008,Winchester,E07000094,Hampshire,South East,112.2
+2009,Winchester,E07000094,Hampshire,South East,113.3
+2010,Winchester,E07000094,Hampshire,South East,114.3
+2005,Isle of Wight,E06000046,Isle of Wight,South East,137.8
+2006,Isle of Wight,E06000046,Isle of Wight,South East,138.5
+2007,Isle of Wight,E06000046,Isle of Wight,South East,139.4
+2008,Isle of Wight,E06000046,Isle of Wight,South East,140.2
+2009,Isle of Wight,E06000046,Isle of Wight,South East,140.2
+2010,Isle of Wight,E06000046,Isle of Wight,South East,140.5
+2005,Ashford,E07000105,Kent,South East,109
+2006,Ashford,E07000105,Kent,South East,110.6
+2007,Ashford,E07000105,Kent,South East,111.9
+2008,Ashford,E07000105,Kent,South East,113
+2009,Ashford,E07000105,Kent,South East,114.1
+2010,Ashford,E07000105,Kent,South East,115.5
+2005,Canterbury,E07000106,Kent,South East,143.3
+2006,Canterbury,E07000106,Kent,South East,145
+2007,Canterbury,E07000106,Kent,South East,146.6
+2008,Canterbury,E07000106,Kent,South East,148.1
+2009,Canterbury,E07000106,Kent,South East,149.1
+2010,Canterbury,E07000106,Kent,South East,153.2
+2005,Dartford,E07000107,Kent,South East,89.4
+2006,Dartford,E07000107,Kent,South East,90.7
+2007,Dartford,E07000107,Kent,South East,91.4
+2008,Dartford,E07000107,Kent,South East,92.8
+2009,Dartford,E07000107,Kent,South East,93.6
+2010,Dartford,E07000107,Kent,South East,94.6
+2005,Dover,E07000108,Kent,South East,106.1
+2006,Dover,E07000108,Kent,South East,105.6
+2007,Dover,E07000108,Kent,South East,105.9
+2008,Dover,E07000108,Kent,South East,106.2
+2009,Dover,E07000108,Kent,South East,106.1
+2010,Dover,E07000108,Kent,South East,106.9
+2005,Gravesham,E07000109,Kent,South East,96.6
+2006,Gravesham,E07000109,Kent,South East,97.6
+2007,Gravesham,E07000109,Kent,South East,97.9
+2008,Gravesham,E07000109,Kent,South East,98.5
+2009,Gravesham,E07000109,Kent,South East,98.8
+2010,Gravesham,E07000109,Kent,South East,99.6
+2005,Maidstone,E07000110,Kent,South East,143
+2006,Maidstone,E07000110,Kent,South East,144.2
+2007,Maidstone,E07000110,Kent,South East,145.6
+2008,Maidstone,E07000110,Kent,South East,146.8
+2009,Maidstone,E07000110,Kent,South East,148.2
+2010,Maidstone,E07000110,Kent,South East,149.8
+2005,Sevenoaks,E07000111,Kent,South East,111
+2006,Sevenoaks,E07000111,Kent,South East,112.4
+2007,Sevenoaks,E07000111,Kent,South East,112.7
+2008,Sevenoaks,E07000111,Kent,South East,112.8
+2009,Sevenoaks,E07000111,Kent,South East,113.2
+2010,Sevenoaks,E07000111,Kent,South East,114.1
+2005,Shepway,E07000112,Kent,South East,99
+2006,Shepway,E07000112,Kent,South East,99
+2007,Shepway,E07000112,Kent,South East,99.5
+2008,Shepway,E07000112,Kent,South East,99.8
+2009,Shepway,E07000112,Kent,South East,100.3
+2010,Shepway,E07000112,Kent,South East,101.2
+2005,Swale,E07000113,Kent,South East,126.9
+2006,Swale,E07000113,Kent,South East,127.6
+2007,Swale,E07000113,Kent,South East,129.2
+2008,Swale,E07000113,Kent,South East,130.8
+2009,Swale,E07000113,Kent,South East,131.9
+2010,Swale,E07000113,Kent,South East,133.4
+2005,Thanet,E07000114,Kent,South East,128.8
+2006,Thanet,E07000114,Kent,South East,128.8
+2007,Thanet,E07000114,Kent,South East,129.3
+2008,Thanet,E07000114,Kent,South East,130.2
+2009,Thanet,E07000114,Kent,South East,130.9
+2010,Thanet,E07000114,Kent,South East,132.2
+2005,Tonbridge and Malling,E07000115,Kent,South East,111.6
+2006,Tonbridge and Malling,E07000115,Kent,South East,113.1
+2007,Tonbridge and Malling,E07000115,Kent,South East,114.7
+2008,Tonbridge and Malling,E07000115,Kent,South East,116
+2009,Tonbridge and Malling,E07000115,Kent,South East,117.4
+2010,Tonbridge and Malling,E07000115,Kent,South East,118.8
+2005,Tunbridge Wells,E07000116,Kent,South East,104.1
+2006,Tunbridge Wells,E07000116,Kent,South East,104.3
+2007,Tunbridge Wells,E07000116,Kent,South East,105.2
+2008,Tunbridge Wells,E07000116,Kent,South East,106.8
+2009,Tunbridge Wells,E07000116,Kent,South East,107.6
+2010,Tunbridge Wells,E07000116,Kent,South East,108.2
+2005,Medway,E06000035,Medway,South East,251.3
+2006,Medway,E06000035,Medway,South East,251.2
+2007,Medway,E06000035,Medway,South East,252
+2008,Medway,E06000035,Medway,South East,253.5
+2009,Medway,E06000035,Medway,South East,254.8
+2010,Medway,E06000035,Medway,South East,256.7
+2005,Milton Keynes,E06000042,Milton Keynes,South East,221
+2006,Milton Keynes,E06000042,Milton Keynes,South East,224.9
+2007,Milton Keynes,E06000042,Milton Keynes,South East,229
+2008,Milton Keynes,E06000042,Milton Keynes,South East,232.9
+2009,Milton Keynes,E06000042,Milton Keynes,South East,236.7
+2010,Milton Keynes,E06000042,Milton Keynes,South East,241.5
+2005,Cherwell,E07000177,Oxfordshire,South East,137.1
+2006,Cherwell,E07000177,Oxfordshire,South East,137.8
+2007,Cherwell,E07000177,Oxfordshire,South East,137.9
+2008,Cherwell,E07000177,Oxfordshire,South East,138.8
+2009,Cherwell,E07000177,Oxfordshire,South East,139.2
+2010,Cherwell,E07000177,Oxfordshire,South East,140.4
+2005,Oxford,E07000178,Oxfordshire,South East,144
+2006,Oxford,E07000178,Oxfordshire,South East,144
+2007,Oxford,E07000178,Oxfordshire,South East,145.2
+2008,Oxford,E07000178,Oxfordshire,South East,146.5
+2009,Oxford,E07000178,Oxfordshire,South East,149.3
+2010,Oxford,E07000178,Oxfordshire,South East,153.7
+2005,South Oxfordshire,E07000179,Oxfordshire,South East,129.1
+2006,South Oxfordshire,E07000179,Oxfordshire,South East,129.2
+2007,South Oxfordshire,E07000179,Oxfordshire,South East,129.4
+2008,South Oxfordshire,E07000179,Oxfordshire,South East,130
+2009,South Oxfordshire,E07000179,Oxfordshire,South East,130.6
+2010,South Oxfordshire,E07000179,Oxfordshire,South East,131
+2005,Vale of White Horse,E07000180,Oxfordshire,South East,117.9
+2006,Vale of White Horse,E07000180,Oxfordshire,South East,118.3
+2007,Vale of White Horse,E07000180,Oxfordshire,South East,118.2
+2008,Vale of White Horse,E07000180,Oxfordshire,South East,118.1
+2009,Vale of White Horse,E07000180,Oxfordshire,South East,118.7
+2010,Vale of White Horse,E07000180,Oxfordshire,South East,119.8
+2005,West Oxfordshire,E07000181,Oxfordshire,South East,99.3
+2006,West Oxfordshire,E07000181,Oxfordshire,South East,100.3
+2007,West Oxfordshire,E07000181,Oxfordshire,South East,101.6
+2008,West Oxfordshire,E07000181,Oxfordshire,South East,102.1
+2009,West Oxfordshire,E07000181,Oxfordshire,South East,102.5
+2010,West Oxfordshire,E07000181,Oxfordshire,South East,103.8
+2005,Portsmouth,E06000044,Portsmouth,South East,195.8
+2006,Portsmouth,E06000044,Portsmouth,South East,196.2
+2007,Portsmouth,E06000044,Portsmouth,South East,196.7
+2008,Portsmouth,E06000044,Portsmouth,South East,199.4
+2009,Portsmouth,E06000044,Portsmouth,South East,203.5
+2010,Portsmouth,E06000044,Portsmouth,South East,207.1
+2005,Reading,E06000038,Reading,South East,142.7
+2006,Reading,E06000038,Reading,South East,143.9
+2007,Reading,E06000038,Reading,South East,145.8
+2008,Reading,E06000038,Reading,South East,149.2
+2009,Reading,E06000038,Reading,South East,151.8
+2010,Reading,E06000038,Reading,South East,154.2
+2005,Slough,E06000039,Slough,South East,120.1
+2006,Slough,E06000039,Slough,South East,121.6
+2007,Slough,E06000039,Slough,South East,123.4
+2008,Slough,E06000039,Slough,South East,125.8
+2009,Slough,E06000039,Slough,South East,128.4
+2010,Slough,E06000039,Slough,South East,131.1
+2005,Southampton,E06000045,Southampton,South East,227.7
+2006,Southampton,E06000045,Southampton,South East,228.7
+2007,Southampton,E06000045,Southampton,South East,230.8
+2008,Southampton,E06000045,Southampton,South East,234.1
+2009,Southampton,E06000045,Southampton,South East,236.7
+2010,Southampton,E06000045,Southampton,South East,239.7
+2005,Elmbridge,E07000207,Surrey,South East,127
+2006,Elmbridge,E07000207,Surrey,South East,128.2
+2007,Elmbridge,E07000207,Surrey,South East,129.3
+2008,Elmbridge,E07000207,Surrey,South East,129.5
+2009,Elmbridge,E07000207,Surrey,South East,130.6
+2010,Elmbridge,E07000207,Surrey,South East,131.9
+2005,Epsom and Ewell,E07000208,Surrey,South East,68.6
+2006,Epsom and Ewell,E07000208,Surrey,South East,69.3
+2007,Epsom and Ewell,E07000208,Surrey,South East,70.6
+2008,Epsom and Ewell,E07000208,Surrey,South East,71.8
+2009,Epsom and Ewell,E07000208,Surrey,South East,72.7
+2010,Epsom and Ewell,E07000208,Surrey,South East,74.3
+2005,Guildford,E07000209,Surrey,South East,130.4
+2006,Guildford,E07000209,Surrey,South East,132
+2007,Guildford,E07000209,Surrey,South East,132.9
+2008,Guildford,E07000209,Surrey,South East,134.2
+2009,Guildford,E07000209,Surrey,South East,135.7
+2010,Guildford,E07000209,Surrey,South East,137.1
+2005,Mole Valley,E07000210,Surrey,South East,81.5
+2006,Mole Valley,E07000210,Surrey,South East,81.7
+2007,Mole Valley,E07000210,Surrey,South East,82.5
+2008,Mole Valley,E07000210,Surrey,South East,83.4
+2009,Mole Valley,E07000210,Surrey,South East,83.8
+2010,Mole Valley,E07000210,Surrey,South East,84.6
+2005,Reigate and Banstead,E07000211,Surrey,South East,127.7
+2006,Reigate and Banstead,E07000211,Surrey,South East,128.9
+2007,Reigate and Banstead,E07000211,Surrey,South East,131.1
+2008,Reigate and Banstead,E07000211,Surrey,South East,133.4
+2009,Reigate and Banstead,E07000211,Surrey,South East,136.1
+2010,Reigate and Banstead,E07000211,Surrey,South East,138.6
+2005,Runnymede,E07000212,Surrey,South East,79.3
+2006,Runnymede,E07000212,Surrey,South East,79.7
+2007,Runnymede,E07000212,Surrey,South East,81.3
+2008,Runnymede,E07000212,Surrey,South East,82.2
+2009,Runnymede,E07000212,Surrey,South East,83.9
+2010,Runnymede,E07000212,Surrey,South East,85.9
+2005,Spelthorne,E07000213,Surrey,South East,90.2
+2006,Spelthorne,E07000213,Surrey,South East,90.6
+2007,Spelthorne,E07000213,Surrey,South East,91.2
+2008,Spelthorne,E07000213,Surrey,South East,91.8
+2009,Spelthorne,E07000213,Surrey,South East,92.6
+2010,Spelthorne,E07000213,Surrey,South East,93.5
+2005,Surrey Heath,E07000214,Surrey,South East,81.4
+2006,Surrey Heath,E07000214,Surrey,South East,82.2
+2007,Surrey Heath,E07000214,Surrey,South East,83
+2008,Surrey Heath,E07000214,Surrey,South East,83
+2009,Surrey Heath,E07000214,Surrey,South East,83.9
+2010,Surrey Heath,E07000214,Surrey,South East,84.5
+2005,Tandridge,E07000215,Surrey,South East,79.1
+2006,Tandridge,E07000215,Surrey,South East,79.5
+2007,Tandridge,E07000215,Surrey,South East,80.5
+2008,Tandridge,E07000215,Surrey,South East,81.3
+2009,Tandridge,E07000215,Surrey,South East,82.2
+2010,Tandridge,E07000215,Surrey,South East,83.1
+2005,Waverley,E07000216,Surrey,South East,116.4
+2006,Waverley,E07000216,Surrey,South East,116.8
+2007,Waverley,E07000216,Surrey,South East,117.7
+2008,Waverley,E07000216,Surrey,South East,118.5
+2009,Waverley,E07000216,Surrey,South East,119.3
+2010,Waverley,E07000216,Surrey,South East,120.3
+2005,Woking,E07000217,Surrey,South East,89.3
+2006,Woking,E07000217,Surrey,South East,90.2
+2007,Woking,E07000217,Surrey,South East,91.1
+2008,Woking,E07000217,Surrey,South East,91.6
+2009,Woking,E07000217,Surrey,South East,92.4
+2010,Woking,E07000217,Surrey,South East,93.5
+2005,West Berkshire,E06000037,West Berkshire,South East,146
+2006,West Berkshire,E06000037,West Berkshire,South East,147.2
+2007,West Berkshire,E06000037,West Berkshire,South East,149.3
+2008,West Berkshire,E06000037,West Berkshire,South East,151.4
+2009,West Berkshire,E06000037,West Berkshire,South East,153
+2010,West Berkshire,E06000037,West Berkshire,South East,154
+2005,Adur,E07000223,West Sussex,South East,60
+2006,Adur,E07000223,West Sussex,South East,60.5
+2007,Adur,E07000223,West Sussex,South East,60.9
+2008,Adur,E07000223,West Sussex,South East,61
+2009,Adur,E07000223,West Sussex,South East,61.3
+2010,Adur,E07000223,West Sussex,South East,61.6
+2005,Arun,E07000224,West Sussex,South East,147.3
+2006,Arun,E07000224,West Sussex,South East,148.4
+2007,Arun,E07000224,West Sussex,South East,149.4
+2008,Arun,E07000224,West Sussex,South East,149.6
+2009,Arun,E07000224,West Sussex,South East,149.9
+2010,Arun,E07000224,West Sussex,South East,150.6
+2005,Chichester,E07000225,West Sussex,South East,109.1
+2006,Chichester,E07000225,West Sussex,South East,109.9
+2007,Chichester,E07000225,West Sussex,South East,110.6
+2008,Chichester,E07000225,West Sussex,South East,111.8
+2009,Chichester,E07000225,West Sussex,South East,112.6
+2010,Chichester,E07000225,West Sussex,South East,113.5
+2005,Crawley,E07000226,West Sussex,South East,100.5
+2006,Crawley,E07000226,West Sussex,South East,101.3
+2007,Crawley,E07000226,West Sussex,South East,102.2
+2008,Crawley,E07000226,West Sussex,South East,104
+2009,Crawley,E07000226,West Sussex,South East,105.3
+2010,Crawley,E07000226,West Sussex,South East,107.6
+2005,Horsham,E07000227,West Sussex,South East,125.9
+2006,Horsham,E07000227,West Sussex,South East,127.3
+2007,Horsham,E07000227,West Sussex,South East,128.6
+2008,Horsham,E07000227,West Sussex,South East,129.2
+2009,Horsham,E07000227,West Sussex,South East,129.8
+2010,Horsham,E07000227,West Sussex,South East,130.8
+2005,Mid Sussex,E07000228,West Sussex,South East,128.1
+2006,Mid Sussex,E07000228,West Sussex,South East,128.8
+2007,Mid Sussex,E07000228,West Sussex,South East,129.9
+2008,Mid Sussex,E07000228,West Sussex,South East,130.9
+2009,Mid Sussex,E07000228,West Sussex,South East,131.6
+2010,Mid Sussex,E07000228,West Sussex,South East,132.5
+2005,Worthing,E07000229,West Sussex,South East,99.6
+2006,Worthing,E07000229,West Sussex,South East,100.4
+2007,Worthing,E07000229,West Sussex,South East,101.5
+2008,Worthing,E07000229,West Sussex,South East,102.1
+2009,Worthing,E07000229,West Sussex,South East,102.4
+2010,Worthing,E07000229,West Sussex,South East,103.2
+2005,Windsor and Maidenhead,E06000040,Windsor and Maidenhead,South East,136
+2006,Windsor and Maidenhead,E06000040,Windsor and Maidenhead,South East,137.8
+2007,Windsor and Maidenhead,E06000040,Windsor and Maidenhead,South East,139.9
+2008,Windsor and Maidenhead,E06000040,Windsor and Maidenhead,South East,141.7
+2009,Windsor and Maidenhead,E06000040,Windsor and Maidenhead,South East,143.8
+2010,Windsor and Maidenhead,E06000040,Windsor and Maidenhead,South East,146.1
+2005,Wokingham,E06000041,Wokingham,South East,152.8
+2006,Wokingham,E06000041,Wokingham,South East,154.7
+2007,Wokingham,E06000041,Wokingham,South East,157.4
+2008,Wokingham,E06000041,Wokingham,South East,159.7
+2009,Wokingham,E06000041,Wokingham,South East,161.9
+2010,Wokingham,E06000041,Wokingham,South East,163.2
+2005,Bath and North East Somerset,E06000022,Bath and North East Somerset,South West,172.6
+2006,Bath and North East Somerset,E06000022,Bath and North East Somerset,South West,173.1
+2007,Bath and North East Somerset,E06000022,Bath and North East Somerset,South West,175.5
+2008,Bath and North East Somerset,E06000022,Bath and North East Somerset,South West,177.4
+2009,Bath and North East Somerset,E06000022,Bath and North East Somerset,South West,177.7
+2010,Bath and North East Somerset,E06000022,Bath and North East Somerset,South West,179.7
+2005,Bournemouth,E06000028,Bournemouth,South West,160.5
+2006,Bournemouth,E06000028,Bournemouth,South West,161.3
+2007,Bournemouth,E06000028,Bournemouth,South West,164
+2008,Bournemouth,E06000028,Bournemouth,South West,164.6
+2009,Bournemouth,E06000028,Bournemouth,South West,164.9
+2010,Bournemouth,E06000028,Bournemouth,South West,168.1
+2005,"Bristol, City of",E06000023,"Bristol, City of",South West,408
+2006,"Bristol, City of",E06000023,"Bristol, City of",South West,413.6
+2007,"Bristol, City of",E06000023,"Bristol, City of",South West,420.7
+2008,"Bristol, City of",E06000023,"Bristol, City of",South West,426.1
+2009,"Bristol, City of",E06000023,"Bristol, City of",South West,433.1
+2010,"Bristol, City of",E06000023,"Bristol, City of",South West,441.3
+2005,Cornwall,E06000052,Cornwall,South West,517.8
+2006,Cornwall,E06000052,Cornwall,South West,521.8
+2007,Cornwall,E06000052,Cornwall,South West,526.4
+2008,Cornwall,E06000052,Cornwall,South West,529.3
+2009,Cornwall,E06000052,Cornwall,South West,531.1
+2010,Cornwall,E06000052,Cornwall,South West,535.3
+2005,East Devon,E07000040,Devon,South West,130.5
+2006,East Devon,E07000040,Devon,South West,131.5
+2007,East Devon,E07000040,Devon,South West,132.6
+2008,East Devon,E07000040,Devon,South West,133
+2009,East Devon,E07000040,Devon,South West,132.7
+2010,East Devon,E07000040,Devon,South West,132.9
+2005,Exeter,E07000041,Devon,South West,114.2
+2006,Exeter,E07000041,Devon,South West,116.5
+2007,Exeter,E07000041,Devon,South West,118.6
+2008,Exeter,E07000041,Devon,South West,118.5
+2009,Exeter,E07000041,Devon,South West,118.8
+2010,Exeter,E07000041,Devon,South West,119.6
+2005,Mid Devon,E07000042,Devon,South West,72.8
+2006,Mid Devon,E07000042,Devon,South West,73.6
+2007,Mid Devon,E07000042,Devon,South West,74.8
+2008,Mid Devon,E07000042,Devon,South West,75.6
+2009,Mid Devon,E07000042,Devon,South West,76
+2010,Mid Devon,E07000042,Devon,South West,76.1
+2005,North Devon,E07000043,Devon,South West,90.6
+2006,North Devon,E07000043,Devon,South West,91
+2007,North Devon,E07000043,Devon,South West,91.4
+2008,North Devon,E07000043,Devon,South West,91.5
+2009,North Devon,E07000043,Devon,South West,91.5
+2010,North Devon,E07000043,Devon,South West,91.5
+2005,South Hams,E07000044,Devon,South West,82.6
+2006,South Hams,E07000044,Devon,South West,83.2
+2007,South Hams,E07000044,Devon,South West,83.5
+2008,South Hams,E07000044,Devon,South West,83.6
+2009,South Hams,E07000044,Devon,South West,83.5
+2010,South Hams,E07000044,Devon,South West,83.7
+2005,Teignbridge,E07000045,Devon,South West,124.4
+2006,Teignbridge,E07000045,Devon,South West,125
+2007,Teignbridge,E07000045,Devon,South West,126
+2008,Teignbridge,E07000045,Devon,South West,126.6
+2009,Teignbridge,E07000045,Devon,South West,126.9
+2010,Teignbridge,E07000045,Devon,South West,127.3
+2005,Torridge,E07000046,Devon,South West,62.8
+2006,Torridge,E07000046,Devon,South West,63.8
+2007,Torridge,E07000046,Devon,South West,64.6
+2008,Torridge,E07000046,Devon,South West,65.3
+2009,Torridge,E07000046,Devon,South West,65.3
+2010,Torridge,E07000046,Devon,South West,65.8
+2005,West Devon,E07000047,Devon,South West,50.7
+2006,West Devon,E07000047,Devon,South West,51.1
+2007,West Devon,E07000047,Devon,South West,52
+2008,West Devon,E07000047,Devon,South West,52.8
+2009,West Devon,E07000047,Devon,South West,52.7
+2010,West Devon,E07000047,Devon,South West,53.1
+2005,Christchurch,E07000048,Dorset,South West,45.7
+2006,Christchurch,E07000048,Dorset,South West,45.9
+2007,Christchurch,E07000048,Dorset,South West,46.3
+2008,Christchurch,E07000048,Dorset,South West,46.7
+2009,Christchurch,E07000048,Dorset,South West,47
+2010,Christchurch,E07000048,Dorset,South West,47.3
+2005,East Dorset,E07000049,Dorset,South West,86.3
+2006,East Dorset,E07000049,Dorset,South West,86.5
+2007,East Dorset,E07000049,Dorset,South West,87.4
+2008,East Dorset,E07000049,Dorset,South West,87.7
+2009,East Dorset,E07000049,Dorset,South West,87.6
+2010,East Dorset,E07000049,Dorset,South West,87.8
+2005,North Dorset,E07000050,Dorset,South West,64.2
+2006,North Dorset,E07000050,Dorset,South West,65
+2007,North Dorset,E07000050,Dorset,South West,65.8
+2008,North Dorset,E07000050,Dorset,South West,65.7
+2009,North Dorset,E07000050,Dorset,South West,64.3
+2010,North Dorset,E07000050,Dorset,South West,64.2
+2005,Purbeck,E07000051,Dorset,South West,44.3
+2006,Purbeck,E07000051,Dorset,South West,44.7
+2007,Purbeck,E07000051,Dorset,South West,45.2
+2008,Purbeck,E07000051,Dorset,South West,45.4
+2009,Purbeck,E07000051,Dorset,South West,45.2
+2010,Purbeck,E07000051,Dorset,South West,45.2
+2005,West Dorset,E07000052,Dorset,South West,95.4
+2006,West Dorset,E07000052,Dorset,South West,95.9
+2007,West Dorset,E07000052,Dorset,South West,96.6
+2008,West Dorset,E07000052,Dorset,South West,96.7
+2009,West Dorset,E07000052,Dorset,South West,96.5
+2010,West Dorset,E07000052,Dorset,South West,96.7
+2005,Weymouth and Portland,E07000053,Dorset,South West,64.2
+2006,Weymouth and Portland,E07000053,Dorset,South West,64
+2007,Weymouth and Portland,E07000053,Dorset,South West,64
+2008,Weymouth and Portland,E07000053,Dorset,South West,63.7
+2009,Weymouth and Portland,E07000053,Dorset,South West,63.6
+2010,Weymouth and Portland,E07000053,Dorset,South West,63.5
+2005,Cheltenham,E07000078,Gloucestershire,South West,110.3
+2006,Cheltenham,E07000078,Gloucestershire,South West,110.9
+2007,Cheltenham,E07000078,Gloucestershire,South West,112.1
+2008,Cheltenham,E07000078,Gloucestershire,South West,112.7
+2009,Cheltenham,E07000078,Gloucestershire,South West,113.9
+2010,Cheltenham,E07000078,Gloucestershire,South West,115.3
+2005,Cotswold,E07000079,Gloucestershire,South West,82.5
+2006,Cotswold,E07000079,Gloucestershire,South West,82.9
+2007,Cotswold,E07000079,Gloucestershire,South West,83.7
+2008,Cotswold,E07000079,Gloucestershire,South West,83.6
+2009,Cotswold,E07000079,Gloucestershire,South West,83.5
+2010,Cotswold,E07000079,Gloucestershire,South West,83.5
+2005,Forest of Dean,E07000080,Gloucestershire,South West,82.2
+2006,Forest of Dean,E07000080,Gloucestershire,South West,82.4
+2007,Forest of Dean,E07000080,Gloucestershire,South West,82.8
+2008,Forest of Dean,E07000080,Gloucestershire,South West,82.9
+2009,Forest of Dean,E07000080,Gloucestershire,South West,82.8
+2010,Forest of Dean,E07000080,Gloucestershire,South West,82.9
+2005,Gloucester,E07000081,Gloucestershire,South West,112.9
+2006,Gloucester,E07000081,Gloucestershire,South West,113.9
+2007,Gloucester,E07000081,Gloucestershire,South West,115.7
+2008,Gloucester,E07000081,Gloucestershire,South West,116.5
+2009,Gloucester,E07000081,Gloucestershire,South West,117.3
+2010,Gloucester,E07000081,Gloucestershire,South West,118.4
+2005,Stroud,E07000082,Gloucestershire,South West,109.7
+2006,Stroud,E07000082,Gloucestershire,South West,109.9
+2007,Stroud,E07000082,Gloucestershire,South West,110.3
+2008,Stroud,E07000082,Gloucestershire,South West,110.6
+2009,Stroud,E07000082,Gloucestershire,South West,111.1
+2010,Stroud,E07000082,Gloucestershire,South West,111.7
+2005,Tewkesbury,E07000083,Gloucestershire,South West,78.7
+2006,Tewkesbury,E07000083,Gloucestershire,South West,79.4
+2007,Tewkesbury,E07000083,Gloucestershire,South West,79.9
+2008,Tewkesbury,E07000083,Gloucestershire,South West,79.9
+2009,Tewkesbury,E07000083,Gloucestershire,South West,80.6
+2010,Tewkesbury,E07000083,Gloucestershire,South West,81.7
+2005,Isles of Scilly,E06000053,Isles of Scilly,South West,2.1
+2006,Isles of Scilly,E06000053,Isles of Scilly,South West,2.1
+2007,Isles of Scilly,E06000053,Isles of Scilly,South West,2.2
+2008,Isles of Scilly,E06000053,Isles of Scilly,South West,2.3
+2009,Isles of Scilly,E06000053,Isles of Scilly,South West,2.2
+2010,Isles of Scilly,E06000053,Isles of Scilly,South West,2.1
+2005,North Somerset,E06000024,North Somerset,South West,197.9
+2006,North Somerset,E06000024,North Somerset,South West,200.8
+2007,North Somerset,E06000024,North Somerset,South West,204.1
+2008,North Somerset,E06000024,North Somerset,South West,207
+2009,North Somerset,E06000024,North Somerset,South West,209.1
+2010,North Somerset,E06000024,North Somerset,South West,212.2
+2005,Plymouth,E06000026,Plymouth,South West,248.2
+2006,Plymouth,E06000026,Plymouth,South West,251.3
+2007,Plymouth,E06000026,Plymouth,South West,254.4
+2008,Plymouth,E06000026,Plymouth,South West,255.6
+2009,Plymouth,E06000026,Plymouth,South West,256.7
+2010,Plymouth,E06000026,Plymouth,South West,258.7
+2005,Poole,E06000029,Poole,South West,138.2
+2006,Poole,E06000029,Poole,South West,138.9
+2007,Poole,E06000029,Poole,South West,140
+2008,Poole,E06000029,Poole,South West,140.7
+2009,Poole,E06000029,Poole,South West,141.2
+2010,Poole,E06000029,Poole,South West,142.1
+2005,Mendip,E07000187,Somerset,South West,106.7
+2006,Mendip,E07000187,Somerset,South West,107.3
+2007,Mendip,E07000187,Somerset,South West,108.1
+2008,Mendip,E07000187,Somerset,South West,108.9
+2009,Mendip,E07000187,Somerset,South West,108.7
+2010,Mendip,E07000187,Somerset,South West,109
+2005,Sedgemoor,E07000188,Somerset,South West,109.9
+2006,Sedgemoor,E07000188,Somerset,South West,110.9
+2007,Sedgemoor,E07000188,Somerset,South West,111.9
+2008,Sedgemoor,E07000188,Somerset,South West,112.3
+2009,Sedgemoor,E07000188,Somerset,South West,112.1
+2010,Sedgemoor,E07000188,Somerset,South West,112.8
+2005,South Somerset,E07000189,Somerset,South West,156.2
+2006,South Somerset,E07000189,Somerset,South West,157.1
+2007,South Somerset,E07000189,Somerset,South West,158.1
+2008,South Somerset,E07000189,Somerset,South West,158.8
+2009,South Somerset,E07000189,Somerset,South West,158.6
+2010,South Somerset,E07000189,Somerset,South West,158.6
+2005,Taunton Deane,E07000190,Somerset,South West,106.8
+2006,Taunton Deane,E07000190,Somerset,South West,107.4
+2007,Taunton Deane,E07000190,Somerset,South West,108.1
+2008,Taunton Deane,E07000190,Somerset,South West,108.6
+2009,Taunton Deane,E07000190,Somerset,South West,108.7
+2010,Taunton Deane,E07000190,Somerset,South West,109.4
+2005,West Somerset,E07000191,Somerset,South West,35.4
+2006,West Somerset,E07000191,Somerset,South West,35.4
+2007,West Somerset,E07000191,Somerset,South West,35.5
+2008,West Somerset,E07000191,Somerset,South West,35.6
+2009,West Somerset,E07000191,Somerset,South West,35.4
+2010,West Somerset,E07000191,Somerset,South West,35.4
+2005,South Gloucestershire,E06000025,South Gloucestershire,South West,255.4
+2006,South Gloucestershire,E06000025,South Gloucestershire,South West,257.5
+2007,South Gloucestershire,E06000025,South Gloucestershire,South West,259.4
+2008,South Gloucestershire,E06000025,South Gloucestershire,South West,260.4
+2009,South Gloucestershire,E06000025,South Gloucestershire,South West,262.2
+2010,South Gloucestershire,E06000025,South Gloucestershire,South West,264.8
+2005,Swindon,E06000030,Swindon,South West,186.9
+2006,Swindon,E06000030,Swindon,South West,189
+2007,Swindon,E06000030,Swindon,South West,192.5
+2008,Swindon,E06000030,Swindon,South West,196
+2009,Swindon,E06000030,Swindon,South West,198.8
+2010,Swindon,E06000030,Swindon,South West,201.8
+2005,Torbay,E06000027,Torbay,South West,132.9
+2006,Torbay,E06000027,Torbay,South West,133.2
+2007,Torbay,E06000027,Torbay,South West,134
+2008,Torbay,E06000027,Torbay,South West,134
+2009,Torbay,E06000027,Torbay,South West,134
+2010,Torbay,E06000027,Torbay,South West,134.3
+2005,Wiltshire,E06000054,Wiltshire,South West,444.5
+2006,Wiltshire,E06000054,Wiltshire,South West,446.2
+2007,Wiltshire,E06000054,Wiltshire,South West,450.2
+2008,Wiltshire,E06000054,Wiltshire,South West,454.1
+2009,Wiltshire,E06000054,Wiltshire,South West,456.1
+2010,Wiltshire,E06000054,Wiltshire,South West,459.8
+2005,Blaenau Gwent,W06000019,Wales,Wales,68.7
+2006,Blaenau Gwent,W06000019,Wales,Wales,68.9
+2007,Blaenau Gwent,W06000019,Wales,Wales,68.8
+2008,Blaenau Gwent,W06000019,Wales,Wales,68.8
+2009,Blaenau Gwent,W06000019,Wales,Wales,68.6
+2010,Blaenau Gwent,W06000019,Wales,Wales,68.4
+2005,Bridgend,W06000013,Wales,Wales,131.2
+2006,Bridgend,W06000013,Wales,Wales,132
+2007,Bridgend,W06000013,Wales,Wales,133.2
+2008,Bridgend,W06000013,Wales,Wales,133.9
+2009,Bridgend,W06000013,Wales,Wales,134.2
+2010,Bridgend,W06000013,Wales,Wales,134.6
+2005,Caerphilly,W06000018,Wales,Wales,170.7
+2006,Caerphilly,W06000018,Wales,Wales,171.1
+2007,Caerphilly,W06000018,Wales,Wales,171.8
+2008,Caerphilly,W06000018,Wales,Wales,172.4
+2009,Caerphilly,W06000018,Wales,Wales,172.7
+2010,Caerphilly,W06000018,Wales,Wales,173.1
+2005,Cardiff,W06000015,Wales,Wales,317.8
+2006,Cardiff,W06000015,Wales,Wales,321.7
+2007,Cardiff,W06000015,Wales,Wales,325.8
+2008,Cardiff,W06000015,Wales,Wales,330.5
+2009,Cardiff,W06000015,Wales,Wales,336.2
+2010,Cardiff,W06000015,Wales,Wales,341.1
+2005,Carmarthenshire,W06000010,Wales,Wales,177.4
+2006,Carmarthenshire,W06000010,Wales,Wales,178.4
+2007,Carmarthenshire,W06000010,Wales,Wales,179.7
+2008,Carmarthenshire,W06000010,Wales,Wales,180.7
+2009,Carmarthenshire,W06000010,Wales,Wales,180.8
+2010,Carmarthenshire,W06000010,Wales,Wales,180.7
+2005,Ceredigion,W06000008,Wales,Wales,75.6
+2006,Ceredigion,W06000008,Wales,Wales,75.7
+2007,Ceredigion,W06000008,Wales,Wales,76.4
+2008,Ceredigion,W06000008,Wales,Wales,76.8
+2009,Ceredigion,W06000008,Wales,Wales,76.4
+2010,Ceredigion,W06000008,Wales,Wales,76.9
+2005,Conwy,W06000003,Wales,Wales,110.6
+2006,Conwy,W06000003,Wales,Wales,110.8
+2007,Conwy,W06000003,Wales,Wales,111.2
+2008,Conwy,W06000003,Wales,Wales,111.4
+2009,Conwy,W06000003,Wales,Wales,111.4
+2010,Conwy,W06000003,Wales,Wales,110.9
+2005,Denbighshire,W06000004,Wales,Wales,95.2
+2006,Denbighshire,W06000004,Wales,Wales,95.4
+2007,Denbighshire,W06000004,Wales,Wales,96.2
+2008,Denbighshire,W06000004,Wales,Wales,96.7
+2009,Denbighshire,W06000004,Wales,Wales,96.7
+2010,Denbighshire,W06000004,Wales,Wales,96.7
+2005,Flintshire,W06000005,Wales,Wales,149.2
+2006,Flintshire,W06000005,Wales,Wales,149.1
+2007,Flintshire,W06000005,Wales,Wales,149.4
+2008,Flintshire,W06000005,Wales,Wales,149.7
+2009,Flintshire,W06000005,Wales,Wales,149.9
+2010,Flintshire,W06000005,Wales,Wales,149.7
+2005,Gwynedd,W06000002,Wales,Wales,118.1
+2006,Gwynedd,W06000002,Wales,Wales,118.4
+2007,Gwynedd,W06000002,Wales,Wales,118.6
+2008,Gwynedd,W06000002,Wales,Wales,118.6
+2009,Gwynedd,W06000002,Wales,Wales,118.8
+2010,Gwynedd,W06000002,Wales,Wales,119
+2005,Isle of Anglesey,W06000001,Wales,Wales,68.5
+2006,Isle of Anglesey,W06000001,Wales,Wales,68.6
+2007,Isle of Anglesey,W06000001,Wales,Wales,68.8
+2008,Isle of Anglesey,W06000001,Wales,Wales,68.8
+2009,Isle of Anglesey,W06000001,Wales,Wales,68.8
+2010,Isle of Anglesey,W06000001,Wales,Wales,68.6
+2005,Merthyr Tydfil,W06000024,Wales,Wales,55.3
+2006,Merthyr Tydfil,W06000024,Wales,Wales,55.3
+2007,Merthyr Tydfil,W06000024,Wales,Wales,55.4
+2008,Merthyr Tydfil,W06000024,Wales,Wales,55.6
+2009,Merthyr Tydfil,W06000024,Wales,Wales,55.7
+2010,Merthyr Tydfil,W06000024,Wales,Wales,55.7
+2005,Monmouthshire,W06000021,Wales,Wales,87.3
+2006,Monmouthshire,W06000021,Wales,Wales,87.4
+2007,Monmouthshire,W06000021,Wales,Wales,87.6
+2008,Monmouthshire,W06000021,Wales,Wales,87.8
+2009,Monmouthshire,W06000021,Wales,Wales,88
+2010,Monmouthshire,W06000021,Wales,Wales,88.1
+2005,Neath Port Talbot,W06000012,Wales,Wales,136.6
+2006,Neath Port Talbot,W06000012,Wales,Wales,137
+2007,Neath Port Talbot,W06000012,Wales,Wales,137.3
+2008,Neath Port Talbot,W06000012,Wales,Wales,137.6
+2009,Neath Port Talbot,W06000012,Wales,Wales,137.4
+2010,Neath Port Talbot,W06000012,Wales,Wales,137.4
+2005,Newport,W06000022,Wales,Wales,138.6
+2006,Newport,W06000022,Wales,Wales,138.8
+2007,Newport,W06000022,Wales,Wales,139
+2008,Newport,W06000022,Wales,Wales,139.7
+2009,Newport,W06000022,Wales,Wales,140.4
+2010,Newport,W06000022,Wales,Wales,141.3
+2005,Pembrokeshire,W06000009,Wales,Wales,115.6
+2006,Pembrokeshire,W06000009,Wales,Wales,116.1
+2007,Pembrokeshire,W06000009,Wales,Wales,116.8
+2008,Pembrokeshire,W06000009,Wales,Wales,117.6
+2009,Pembrokeshire,W06000009,Wales,Wales,117.4
+2010,Pembrokeshire,W06000009,Wales,Wales,117.1
+2005,Powys,W06000023,Wales,Wales,129.7
+2006,Powys,W06000023,Wales,Wales,130.3
+2007,Powys,W06000023,Wales,Wales,131
+2008,Powys,W06000023,Wales,Wales,131.7
+2009,Powys,W06000023,Wales,Wales,131.7
+2010,Powys,W06000023,Wales,Wales,131.3
+2005,"Rhondda, Cynon, Taff",W06000016,Wales,Wales,234.5
+2006,"Rhondda, Cynon, Taff",W06000016,Wales,Wales,235
+2007,"Rhondda, Cynon, Taff",W06000016,Wales,Wales,234.6
+2008,"Rhondda, Cynon, Taff",W06000016,Wales,Wales,234.4
+2009,"Rhondda, Cynon, Taff",W06000016,Wales,Wales,234.4
+2010,"Rhondda, Cynon, Taff",W06000016,Wales,Wales,234.3
+2005,Swansea,W06000011,Wales,Wales,226.9
+2006,Swansea,W06000011,Wales,Wales,227.7
+2007,Swansea,W06000011,Wales,Wales,228.9
+2008,Swansea,W06000011,Wales,Wales,230.1
+2009,Swansea,W06000011,Wales,Wales,231.3
+2010,Swansea,W06000011,Wales,Wales,232.5
+2005,Torfaen,W06000020,Wales,Wales,90.5
+2006,Torfaen,W06000020,Wales,Wales,90.6
+2007,Torfaen,W06000020,Wales,Wales,90.6
+2008,Torfaen,W06000020,Wales,Wales,90.6
+2009,Torfaen,W06000020,Wales,Wales,90.7
+2010,Torfaen,W06000020,Wales,Wales,90.5
+2005,"Vale of Glamorgan, The",W06000014,Wales,Wales,121.8
+2006,"Vale of Glamorgan, The",W06000014,Wales,Wales,122.7
+2007,"Vale of Glamorgan, The",W06000014,Wales,Wales,123.4
+2008,"Vale of Glamorgan, The",W06000014,Wales,Wales,124.1
+2009,"Vale of Glamorgan, The",W06000014,Wales,Wales,124.6
+2010,"Vale of Glamorgan, The",W06000014,Wales,Wales,125
+2005,Wrexham,W06000006,Wales,Wales,130.1
+2006,Wrexham,W06000006,Wales,Wales,130.9
+2007,Wrexham,W06000006,Wales,Wales,131.9
+2008,Wrexham,W06000006,Wales,Wales,132.7
+2009,Wrexham,W06000006,Wales,Wales,133.2
+2010,Wrexham,W06000006,Wales,Wales,133.6
+2005,Aberdeen City,S12000033,Scotland,Scotland,205.9
+2006,Aberdeen City,S12000033,Scotland,Scotland,206.9
+2007,Aberdeen City,S12000033,Scotland,Scotland,209.3
+2008,Aberdeen City,S12000033,Scotland,Scotland,210.4
+2009,Aberdeen City,S12000033,Scotland,Scotland,213.8
+2010,Aberdeen City,S12000033,Scotland,Scotland,217.1
+2005,Aberdeenshire,S12000034,Scotland,Scotland,233.4
+2006,Aberdeenshire,S12000034,Scotland,Scotland,236.3
+2007,Aberdeenshire,S12000034,Scotland,Scotland,239.2
+2008,Aberdeenshire,S12000034,Scotland,Scotland,241.5
+2009,Aberdeenshire,S12000034,Scotland,Scotland,243.5
+2010,Aberdeenshire,S12000034,Scotland,Scotland,245.8
+2005,Angus,S12000041,Scotland,Scotland,108.8
+2006,Angus,S12000041,Scotland,Scotland,109.3
+2007,Angus,S12000041,Scotland,Scotland,109.9
+2008,Angus,S12000041,Scotland,Scotland,110.3
+2009,Angus,S12000041,Scotland,Scotland,110.3
+2010,Angus,S12000041,Scotland,Scotland,110.6
+2005,Argyll and Bute,S12000035,Scotland,Scotland,90.9
+2006,Argyll and Bute,S12000035,Scotland,Scotland,91.4
+2007,Argyll and Bute,S12000035,Scotland,Scotland,91.4
+2008,Argyll and Bute,S12000035,Scotland,Scotland,90.5
+2009,Argyll and Bute,S12000035,Scotland,Scotland,90
+2010,Argyll and Bute,S12000035,Scotland,Scotland,89.2
+2005,Clackmannanshire,S12000005,Scotland,Scotland,48.6
+2006,Clackmannanshire,S12000005,Scotland,Scotland,48.9
+2007,Clackmannanshire,S12000005,Scotland,Scotland,49.9
+2008,Clackmannanshire,S12000005,Scotland,Scotland,50.5
+2009,Clackmannanshire,S12000005,Scotland,Scotland,50.5
+2010,Clackmannanshire,S12000005,Scotland,Scotland,50.6
+2005,Dumfries and Galloway,S12000006,Scotland,Scotland,148.3
+2006,Dumfries and Galloway,S12000006,Scotland,Scotland,148
+2007,Dumfries and Galloway,S12000006,Scotland,Scotland,148.3
+2008,Dumfries and Galloway,S12000006,Scotland,Scotland,148.6
+2009,Dumfries and Galloway,S12000006,Scotland,Scotland,148.5
+2010,Dumfries and Galloway,S12000006,Scotland,Scotland,148.2
+2005,Dundee City,S12000042,Scotland,Scotland,142.4
+2006,Dundee City,S12000042,Scotland,Scotland,142.2
+2007,Dundee City,S12000042,Scotland,Scotland,142.2
+2008,Dundee City,S12000042,Scotland,Scotland,142.5
+2009,Dundee City,S12000042,Scotland,Scotland,143.4
+2010,Dundee City,S12000042,Scotland,Scotland,144.3
+2005,East Ayrshire,S12000008,Scotland,Scotland,119.4
+2006,East Ayrshire,S12000008,Scotland,Scotland,119.3
+2007,East Ayrshire,S12000008,Scotland,Scotland,119.6
+2008,East Ayrshire,S12000008,Scotland,Scotland,119.9
+2009,East Ayrshire,S12000008,Scotland,Scotland,120.2
+2010,East Ayrshire,S12000008,Scotland,Scotland,120.2
+2005,East Dunbartonshire,S12000009,Scotland,Scotland,106
+2006,East Dunbartonshire,S12000009,Scotland,Scotland,105.5
+2007,East Dunbartonshire,S12000009,Scotland,Scotland,104.9
+2008,East Dunbartonshire,S12000009,Scotland,Scotland,104.7
+2009,East Dunbartonshire,S12000009,Scotland,Scotland,104.7
+2010,East Dunbartonshire,S12000009,Scotland,Scotland,104.6
+2005,East Lothian,S12000010,Scotland,Scotland,91.8
+2006,East Lothian,S12000010,Scotland,Scotland,92.8
+2007,East Lothian,S12000010,Scotland,Scotland,94.4
+2008,East Lothian,S12000010,Scotland,Scotland,96.1
+2009,East Lothian,S12000010,Scotland,Scotland,96.8
+2010,East Lothian,S12000010,Scotland,Scotland,97.5
+2005,East Renfrewshire,S12000011,Scotland,Scotland,89.6
+2006,East Renfrewshire,S12000011,Scotland,Scotland,89.3
+2007,East Renfrewshire,S12000011,Scotland,Scotland,89.3
+2008,East Renfrewshire,S12000011,Scotland,Scotland,89.2
+2009,East Renfrewshire,S12000011,Scotland,Scotland,89.2
+2010,East Renfrewshire,S12000011,Scotland,Scotland,89.5
+2005,"Edinburgh, City of",S12000036,Scotland,Scotland,457.8
+2006,"Edinburgh, City of",S12000036,Scotland,Scotland,463.5
+2007,"Edinburgh, City of",S12000036,Scotland,Scotland,468.1
+2008,"Edinburgh, City of",S12000036,Scotland,Scotland,471.7
+2009,"Edinburgh, City of",S12000036,Scotland,Scotland,477.7
+2010,"Edinburgh, City of",S12000036,Scotland,Scotland,486.1
+2005,Eilean Siar,S12000013,Scotland,Scotland,26.4
+2006,Eilean Siar,S12000013,Scotland,Scotland,26.4
+2007,Eilean Siar,S12000013,Scotland,Scotland,26.3
+2008,Eilean Siar,S12000013,Scotland,Scotland,26.2
+2009,Eilean Siar,S12000013,Scotland,Scotland,26.2
+2010,Eilean Siar,S12000013,Scotland,Scotland,26.2
+2005,Falkirk,S12000014,Scotland,Scotland,149.2
+2006,Falkirk,S12000014,Scotland,Scotland,149.7
+2007,Falkirk,S12000014,Scotland,Scotland,150.7
+2008,Falkirk,S12000014,Scotland,Scotland,151.6
+2009,Falkirk,S12000014,Scotland,Scotland,152.5
+2010,Falkirk,S12000014,Scotland,Scotland,153.3
+2005,Fife,S12000015,Scotland,Scotland,356.7
+2006,Fife,S12000015,Scotland,Scotland,358.9
+2007,Fife,S12000015,Scotland,Scotland,360.5
+2008,Fife,S12000015,Scotland,Scotland,361.9
+2009,Fife,S12000015,Scotland,Scotland,363.5
+2010,Fife,S12000015,Scotland,Scotland,365
+2005,Glasgow City,S12000043,Scotland,Scotland,578.8
+2006,Glasgow City,S12000043,Scotland,Scotland,580.7
+2007,Glasgow City,S12000043,Scotland,Scotland,581.9
+2008,Glasgow City,S12000043,Scotland,Scotland,584.2
+2009,Glasgow City,S12000043,Scotland,Scotland,588.5
+2010,Glasgow City,S12000043,Scotland,Scotland,592.8
+2005,Highland,S12000017,Scotland,Scotland,213.6
+2006,Highland,S12000017,Scotland,Scotland,215.3
+2007,Highland,S12000017,Scotland,Scotland,217.4
+2008,Highland,S12000017,Scotland,Scotland,219.4
+2009,Highland,S12000017,Scotland,Scotland,220.5
+2010,Highland,S12000017,Scotland,Scotland,221.6
+2005,Inverclyde,S12000018,Scotland,Scotland,82.1
+2006,Inverclyde,S12000018,Scotland,Scotland,81.5
+2007,Inverclyde,S12000018,Scotland,Scotland,81.1
+2008,Inverclyde,S12000018,Scotland,Scotland,80.8
+2009,Inverclyde,S12000018,Scotland,Scotland,80.2
+2010,Inverclyde,S12000018,Scotland,Scotland,79.8
+2005,Midlothian,S12000019,Scotland,Scotland,79.2
+2006,Midlothian,S12000019,Scotland,Scotland,79.3
+2007,Midlothian,S12000019,Scotland,Scotland,79.5
+2008,Midlothian,S12000019,Scotland,Scotland,80.6
+2009,Midlothian,S12000019,Scotland,Scotland,80.8
+2010,Midlothian,S12000019,Scotland,Scotland,81.1
+2005,Moray,S12000020,Scotland,Scotland,86.6
+2006,Moray,S12000020,Scotland,Scotland,86.8
+2007,Moray,S12000020,Scotland,Scotland,86.9
+2008,Moray,S12000020,Scotland,Scotland,87.8
+2009,Moray,S12000020,Scotland,Scotland,87.7
+2010,Moray,S12000020,Scotland,Scotland,87.7
+2005,North Ayrshire,S12000021,Scotland,Scotland,135.8
+2006,North Ayrshire,S12000021,Scotland,Scotland,135.5
+2007,North Ayrshire,S12000021,Scotland,Scotland,135.8
+2008,North Ayrshire,S12000021,Scotland,Scotland,135.9
+2009,North Ayrshire,S12000021,Scotland,Scotland,135.5
+2010,North Ayrshire,S12000021,Scotland,Scotland,135.2
+2005,North Lanarkshire,S12000044,Scotland,Scotland,323.4
+2006,North Lanarkshire,S12000044,Scotland,Scotland,323.8
+2007,North Lanarkshire,S12000044,Scotland,Scotland,324.7
+2008,North Lanarkshire,S12000044,Scotland,Scotland,325.5
+2009,North Lanarkshire,S12000044,Scotland,Scotland,326.3
+2010,North Lanarkshire,S12000044,Scotland,Scotland,326.4
+2005,Orkney Islands,S12000023,Scotland,Scotland,19.6
+2006,Orkney Islands,S12000023,Scotland,Scotland,19.8
+2007,Orkney Islands,S12000023,Scotland,Scotland,19.9
+2008,Orkney Islands,S12000023,Scotland,Scotland,19.9
+2009,Orkney Islands,S12000023,Scotland,Scotland,20
+2010,Orkney Islands,S12000023,Scotland,Scotland,20.1
+2005,Perth and Kinross,S12000024,Scotland,Scotland,138.6
+2006,Perth and Kinross,S12000024,Scotland,Scotland,140.2
+2007,Perth and Kinross,S12000024,Scotland,Scotland,142.1
+2008,Perth and Kinross,S12000024,Scotland,Scotland,144.2
+2009,Perth and Kinross,S12000024,Scotland,Scotland,145.9
+2010,Perth and Kinross,S12000024,Scotland,Scotland,147.8
+2005,Renfrewshire,S12000038,Scotland,Scotland,170
+2006,Renfrewshire,S12000038,Scotland,Scotland,169.6
+2007,Renfrewshire,S12000038,Scotland,Scotland,169.6
+2008,Renfrewshire,S12000038,Scotland,Scotland,169.8
+2009,Renfrewshire,S12000038,Scotland,Scotland,169.9
+2010,Renfrewshire,S12000038,Scotland,Scotland,170.3
+2005,Scottish Borders,S12000026,Scotland,Scotland,109.7
+2006,Scottish Borders,S12000026,Scotland,Scotland,110.2
+2007,Scottish Borders,S12000026,Scotland,Scotland,111.4
+2008,Scottish Borders,S12000026,Scotland,Scotland,112.4
+2009,Scottish Borders,S12000026,Scotland,Scotland,112.7
+2010,Scottish Borders,S12000026,Scotland,Scotland,112.9
+2005,Shetland Islands,S12000027,Scotland,Scotland,22
+2006,Shetland Islands,S12000027,Scotland,Scotland,21.9
+2007,Shetland Islands,S12000027,Scotland,Scotland,22
+2008,Shetland Islands,S12000027,Scotland,Scotland,22
+2009,Shetland Islands,S12000027,Scotland,Scotland,22.2
+2010,Shetland Islands,S12000027,Scotland,Scotland,22.4
+2005,South Ayrshire,S12000028,Scotland,Scotland,111.8
+2006,South Ayrshire,S12000028,Scotland,Scotland,111.7
+2007,South Ayrshire,S12000028,Scotland,Scotland,111.7
+2008,South Ayrshire,S12000028,Scotland,Scotland,111.7
+2009,South Ayrshire,S12000028,Scotland,Scotland,111.4
+2010,South Ayrshire,S12000028,Scotland,Scotland,111.4
+2005,South Lanarkshire,S12000029,Scotland,Scotland,306.3
+2006,South Lanarkshire,S12000029,Scotland,Scotland,307.7
+2007,South Lanarkshire,S12000029,Scotland,Scotland,309.5
+2008,South Lanarkshire,S12000029,Scotland,Scotland,310.1
+2009,South Lanarkshire,S12000029,Scotland,Scotland,310.9
+2010,South Lanarkshire,S12000029,Scotland,Scotland,311.9
+2005,Stirling,S12000030,Scotland,Scotland,86.9
+2006,Stirling,S12000030,Scotland,Scotland,87.8
+2007,Stirling,S12000030,Scotland,Scotland,88.2
+2008,Stirling,S12000030,Scotland,Scotland,88.4
+2009,Stirling,S12000030,Scotland,Scotland,88.7
+2010,Stirling,S12000030,Scotland,Scotland,89.9
+2005,West Dunbartonshire,S12000039,Scotland,Scotland,91.4
+2006,West Dunbartonshire,S12000039,Scotland,Scotland,91.2
+2007,West Dunbartonshire,S12000039,Scotland,Scotland,91.1
+2008,West Dunbartonshire,S12000039,Scotland,Scotland,90.9
+2009,West Dunbartonshire,S12000039,Scotland,Scotland,90.9
+2010,West Dunbartonshire,S12000039,Scotland,Scotland,90.6
+2005,West Lothian,S12000040,Scotland,Scotland,163.8
+2006,West Lothian,S12000040,Scotland,Scotland,165.7
+2007,West Lothian,S12000040,Scotland,Scotland,167.8
+2008,West Lothian,S12000040,Scotland,Scotland,169.5
+2009,West Lothian,S12000040,Scotland,Scotland,171
+2010,West Lothian,S12000040,Scotland,Scotland,172.1
+2005,Antrim,95T,Northern Ireland,Northern Ireland,50.5
+2006,Antrim,95T,Northern Ireland,Northern Ireland,51.5
+2007,Antrim,95T,Northern Ireland,Northern Ireland,52.6
+2008,Antrim,95T,Northern Ireland,Northern Ireland,53.2
+2009,Antrim,95T,Northern Ireland,Northern Ireland,54
+2010,Antrim,95T,Northern Ireland,Northern Ireland,54.1
+2005,Ards,95X,Northern Ireland,Northern Ireland,75.3
+2006,Ards,95X,Northern Ireland,Northern Ireland,76.2
+2007,Ards,95X,Northern Ireland,Northern Ireland,77.1
+2008,Ards,95X,Northern Ireland,Northern Ireland,77.6
+2009,Ards,95X,Northern Ireland,Northern Ireland,78.1
+2010,Ards,95X,Northern Ireland,Northern Ireland,78.2
+2005,Armagh,95O,Northern Ireland,Northern Ireland,55.8
+2006,Armagh,95O,Northern Ireland,Northern Ireland,56.8
+2007,Armagh,95O,Northern Ireland,Northern Ireland,57.7
+2008,Armagh,95O,Northern Ireland,Northern Ireland,58.2
+2009,Armagh,95O,Northern Ireland,Northern Ireland,58.8
+2010,Armagh,95O,Northern Ireland,Northern Ireland,59.4
+2005,Ballymena,95G,Northern Ireland,Northern Ireland,60.7
+2006,Ballymena,95G,Northern Ireland,Northern Ireland,61.4
+2007,Ballymena,95G,Northern Ireland,Northern Ireland,62.1
+2008,Ballymena,95G,Northern Ireland,Northern Ireland,62.7
+2009,Ballymena,95G,Northern Ireland,Northern Ireland,63.2
+2010,Ballymena,95G,Northern Ireland,Northern Ireland,63.5
+2005,Ballymoney,95D,Northern Ireland,Northern Ireland,28.7
+2006,Ballymoney,95D,Northern Ireland,Northern Ireland,29.2
+2007,Ballymoney,95D,Northern Ireland,Northern Ireland,29.7
+2008,Ballymoney,95D,Northern Ireland,Northern Ireland,30.1
+2009,Ballymoney,95D,Northern Ireland,Northern Ireland,30.4
+2010,Ballymoney,95D,Northern Ireland,Northern Ireland,30.6
+2005,Banbridge,95Q,Northern Ireland,Northern Ireland,44.8
+2006,Banbridge,95Q,Northern Ireland,Northern Ireland,45.5
+2007,Banbridge,95Q,Northern Ireland,Northern Ireland,46.4
+2008,Banbridge,95Q,Northern Ireland,Northern Ireland,47
+2009,Banbridge,95Q,Northern Ireland,Northern Ireland,47.6
+2010,Banbridge,95Q,Northern Ireland,Northern Ireland,48
+2005,Belfast,95Z,Northern Ireland,Northern Ireland,268
+2006,Belfast,95Z,Northern Ireland,Northern Ireland,267.4
+2007,Belfast,95Z,Northern Ireland,Northern Ireland,267.5
+2008,Belfast,95Z,Northern Ireland,Northern Ireland,268.3
+2009,Belfast,95Z,Northern Ireland,Northern Ireland,268.4
+2010,Belfast,95Z,Northern Ireland,Northern Ireland,268.7
+2005,Carrickfergus,95V,Northern Ireland,Northern Ireland,39.2
+2006,Carrickfergus,95V,Northern Ireland,Northern Ireland,39.7
+2007,Carrickfergus,95V,Northern Ireland,Northern Ireland,40
+2008,Carrickfergus,95V,Northern Ireland,Northern Ireland,40
+2009,Carrickfergus,95V,Northern Ireland,Northern Ireland,40.1
+2010,Carrickfergus,95V,Northern Ireland,Northern Ireland,40.2
+2005,Castlereagh,95Y,Northern Ireland,Northern Ireland,65.7
+2006,Castlereagh,95Y,Northern Ireland,Northern Ireland,65.6
+2007,Castlereagh,95Y,Northern Ireland,Northern Ireland,65.6
+2008,Castlereagh,95Y,Northern Ireland,Northern Ireland,66.2
+2009,Castlereagh,95Y,Northern Ireland,Northern Ireland,66.8
+2010,Castlereagh,95Y,Northern Ireland,Northern Ireland,67
+2005,Coleraine,95C,Northern Ireland,Northern Ireland,56.6
+2006,Coleraine,95C,Northern Ireland,Northern Ireland,56.7
+2007,Coleraine,95C,Northern Ireland,Northern Ireland,56.8
+2008,Coleraine,95C,Northern Ireland,Northern Ireland,57
+2009,Coleraine,95C,Northern Ireland,Northern Ireland,57.1
+2010,Coleraine,95C,Northern Ireland,Northern Ireland,56.8
+2005,Cookstown,95I,Northern Ireland,Northern Ireland,34.1
+2006,Cookstown,95I,Northern Ireland,Northern Ireland,34.8
+2007,Cookstown,95I,Northern Ireland,Northern Ireland,35.4
+2008,Cookstown,95I,Northern Ireland,Northern Ireland,35.9
+2009,Cookstown,95I,Northern Ireland,Northern Ireland,36.3
+2010,Cookstown,95I,Northern Ireland,Northern Ireland,36.7
+2005,Craigavon,95N,Northern Ireland,Northern Ireland,84.7
+2006,Craigavon,95N,Northern Ireland,Northern Ireland,86.8
+2007,Craigavon,95N,Northern Ireland,Northern Ireland,88.8
+2008,Craigavon,95N,Northern Ireland,Northern Ireland,90.8
+2009,Craigavon,95N,Northern Ireland,Northern Ireland,92.4
+2010,Craigavon,95N,Northern Ireland,Northern Ireland,93.6
+2005,Derry,95A,Northern Ireland,Northern Ireland,107.3
+2006,Derry,95A,Northern Ireland,Northern Ireland,107.9
+2007,Derry,95A,Northern Ireland,Northern Ireland,108.5
+2008,Derry,95A,Northern Ireland,Northern Ireland,109.1
+2009,Derry,95A,Northern Ireland,Northern Ireland,109.6
+2010,Derry,95A,Northern Ireland,Northern Ireland,109.8
+2005,Down,95R,Northern Ireland,Northern Ireland,67.4
+2006,Down,95R,Northern Ireland,Northern Ireland,68.3
+2007,Down,95R,Northern Ireland,Northern Ireland,69.2
+2008,Down,95R,Northern Ireland,Northern Ireland,69.8
+2009,Down,95R,Northern Ireland,Northern Ireland,70.3
+2010,Down,95R,Northern Ireland,Northern Ireland,70.8
+2005,Dungannon and South Tyrone,95M,Northern Ireland,Northern Ireland,50.7
+2006,Dungannon and South Tyrone,95M,Northern Ireland,Northern Ireland,52.3
+2007,Dungannon and South Tyrone,95M,Northern Ireland,Northern Ireland,54.3
+2008,Dungannon and South Tyrone,95M,Northern Ireland,Northern Ireland,55.4
+2009,Dungannon and South Tyrone,95M,Northern Ireland,Northern Ireland,56.4
+2010,Dungannon and South Tyrone,95M,Northern Ireland,Northern Ireland,57.7
+2005,Fermanagh,95L,Northern Ireland,Northern Ireland,59.7
+2006,Fermanagh,95L,Northern Ireland,Northern Ireland,60.6
+2007,Fermanagh,95L,Northern Ireland,Northern Ireland,61.3
+2008,Fermanagh,95L,Northern Ireland,Northern Ireland,62
+2009,Fermanagh,95L,Northern Ireland,Northern Ireland,62.4
+2010,Fermanagh,95L,Northern Ireland,Northern Ireland,63.1
+2005,Larne,95F,Northern Ireland,Northern Ireland,31.1
+2006,Larne,95F,Northern Ireland,Northern Ireland,31.3
+2007,Larne,95F,Northern Ireland,Northern Ireland,31.3
+2008,Larne,95F,Northern Ireland,Northern Ireland,31.3
+2009,Larne,95F,Northern Ireland,Northern Ireland,31.4
+2010,Larne,95F,Northern Ireland,Northern Ireland,31.7
+2005,Limavady,95B,Northern Ireland,Northern Ireland,34.1
+2006,Limavady,95B,Northern Ireland,Northern Ireland,34.3
+2007,Limavady,95B,Northern Ireland,Northern Ireland,34.4
+2008,Limavady,95B,Northern Ireland,Northern Ireland,34.1
+2009,Limavady,95B,Northern Ireland,Northern Ireland,34
+2010,Limavady,95B,Northern Ireland,Northern Ireland,33.6
+2005,Lisburn,95S,Northern Ireland,Northern Ireland,111.5
+2006,Lisburn,95S,Northern Ireland,Northern Ireland,112.9
+2007,Lisburn,95S,Northern Ireland,Northern Ireland,113.5
+2008,Lisburn,95S,Northern Ireland,Northern Ireland,114.8
+2009,Lisburn,95S,Northern Ireland,Northern Ireland,116.5
+2010,Lisburn,95S,Northern Ireland,Northern Ireland,117.8
+2005,Magherafelt,95H,Northern Ireland,Northern Ireland,41.8
+2006,Magherafelt,95H,Northern Ireland,Northern Ireland,42.4
+2007,Magherafelt,95H,Northern Ireland,Northern Ireland,43.1
+2008,Magherafelt,95H,Northern Ireland,Northern Ireland,43.8
+2009,Magherafelt,95H,Northern Ireland,Northern Ireland,44.2
+2010,Magherafelt,95H,Northern Ireland,Northern Ireland,44.7
+2005,Moyle,95E,Northern Ireland,Northern Ireland,16.5
+2006,Moyle,95E,Northern Ireland,Northern Ireland,16.5
+2007,Moyle,95E,Northern Ireland,Northern Ireland,16.7
+2008,Moyle,95E,Northern Ireland,Northern Ireland,16.9
+2009,Moyle,95E,Northern Ireland,Northern Ireland,16.9
+2010,Moyle,95E,Northern Ireland,Northern Ireland,17
+2005,Newry and Mourne,95P,Northern Ireland,Northern Ireland,91.6
+2006,Newry and Mourne,95P,Northern Ireland,Northern Ireland,93.4
+2007,Newry and Mourne,95P,Northern Ireland,Northern Ireland,95.5
+2008,Newry and Mourne,95P,Northern Ireland,Northern Ireland,97.3
+2009,Newry and Mourne,95P,Northern Ireland,Northern Ireland,98.7
+2010,Newry and Mourne,95P,Northern Ireland,Northern Ireland,99.9
+2005,Newtownabbey,95U,Northern Ireland,Northern Ireland,80.8
+2006,Newtownabbey,95U,Northern Ireland,Northern Ireland,81.2
+2007,Newtownabbey,95U,Northern Ireland,Northern Ireland,81.7
+2008,Newtownabbey,95U,Northern Ireland,Northern Ireland,82.7
+2009,Newtownabbey,95U,Northern Ireland,Northern Ireland,83.4
+2010,Newtownabbey,95U,Northern Ireland,Northern Ireland,83.6
+2005,North Down,95W,Northern Ireland,Northern Ireland,78.3
+2006,North Down,95W,Northern Ireland,Northern Ireland,78.7
+2007,North Down,95W,Northern Ireland,Northern Ireland,78.7
+2008,North Down,95W,Northern Ireland,Northern Ireland,78.9
+2009,North Down,95W,Northern Ireland,Northern Ireland,79.6
+2010,North Down,95W,Northern Ireland,Northern Ireland,79.9
+2005,Omagh,95K,Northern Ireland,Northern Ireland,50.7
+2006,Omagh,95K,Northern Ireland,Northern Ireland,51
+2007,Omagh,95K,Northern Ireland,Northern Ireland,51.5
+2008,Omagh,95K,Northern Ireland,Northern Ireland,52.1
+2009,Omagh,95K,Northern Ireland,Northern Ireland,52.4
+2010,Omagh,95K,Northern Ireland,Northern Ireland,52.9
+2005,Strabane,95J,Northern Ireland,Northern Ireland,38.7
+2006,Strabane,95J,Northern Ireland,Northern Ireland,39.1
+2007,Strabane,95J,Northern Ireland,Northern Ireland,39.4
+2008,Strabane,95J,Northern Ireland,Northern Ireland,39.6
+2009,Strabane,95J,Northern Ireland,Northern Ireland,39.9
+2010,Strabane,95J,Northern Ireland,Northern Ireland,40.1
+2005,Large elec users (high voltage lines) unknown location,#N/A,Unallocated,Unallocated,
+2006,Large elec users (high voltage lines) unknown location,#N/A,Unallocated,Unallocated,
+2007,Large elec users (high voltage lines) unknown location,#N/A,Unallocated,Unallocated,
+2008,Large elec users (high voltage lines) unknown location,#N/A,Unallocated,Unallocated,
+2009,Large elec users (high voltage lines) unknown location,#N/A,Unallocated,Unallocated,
+2010,Large elec users (high voltage lines) unknown location,#N/A,Unallocated,Unallocated,
+2005,Unallocated,#N/A,Unallocated,Unallocated,
+2006,Unallocated,#N/A,Unallocated,Unallocated,
+2007,Unallocated,#N/A,Unallocated,Unallocated,
+2008,Unallocated,#N/A,Unallocated,Unallocated,
+2009,Unallocated,#N/A,Unallocated,Unallocated,
+2010,Unallocated,#N/A,Unallocated,Unallocated,

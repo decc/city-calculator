@@ -1,15 +1,15 @@
 This directory contains data from a variety of sources. The structure of the
 sub-directories is:
 
-	    topic/publisher/vintage/
+	    /publisher/topic/vintage
 
-Example: emissions/decc/2012-08-23 contains emissions data published by DECC
-on 23 August 2012.
+Example: decc/regional/2012-10 contains regional energy and emissions data
+published by DECC and republished here on 2012-10.
 
 Within each such directory there are typically three subdirectories:
 
-raw/   	    Contains the raw data as downloaded from the publisher, typically an
-	    Excel file.
+raw/   	    Contains the raw data as downloaded from the publisher, typically an Excel
+	    file. 
 
 modified/   Contains restructured versions of the raw data to make it easier to
 	    work with. Modifications typically include recoding of nonstandard
