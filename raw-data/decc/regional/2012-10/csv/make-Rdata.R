@@ -1,4 +1,5 @@
-# Load the emissions and populations data sest as R tables and save the corresponding R objects
+## Load the emissions and populations data sets as R data frames and save the
+## corresponding R objects
 
 ukregco2 <- read.csv(file = "ukregco2.csv", na.strings = "#N/A")
 ukregpop <- read.csv(file = "ukregpop.csv", na.string = "#N/A")
