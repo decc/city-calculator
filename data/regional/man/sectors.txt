@@ -1,0 +1,39 @@
+Emissions
+	Domestic 
+
+Gas
+	Domestic consumers
+	Commercial and industrial consumers
+
+Electricity
+	Domestic consumers
+	Commercial and industrial consumers
+
+Road Transport
+     Buses
+     HGV
+     Motor-cycles
+     Diesel Cars
+     Petrol Cars
+     Diesel LGV
+     Petrol LGV
+
+Other Fuels
+     Petroleum
+	Industrial
+	Domestic
+	Rail
+	Public Administration
+	Commercial
+	Agriculture
+	
+     Coal
+	Industrial & Commercial
+	Domestic
+
+     Manufactured Solid Fuels
+        Industrial
+	Domestic
+	
+     Renewables & Wastes
+        All Sources 

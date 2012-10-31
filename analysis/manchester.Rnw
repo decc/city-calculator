@@ -44,20 +44,39 @@
 % 
 <<label = initialise, echo = FALSE>>=
 ## Initiliase analytical code
+##
 options(continue = " ")
 source("city-tool.R")
 ## The name of the city -- change this to change the city for which the calculations are performed 
+##
 the_city = "Manchester"
-## Add names of cities and high-level sectors to UK regional statistics
-cities.co2 <- subset(merge(merge(cities, ukregco2), sector0),
-                     select = c("city", "la_name", "sector0", "sector_name", "yr", "CO2"))
 
-cities.pop <- subset(merge(cities, ukregpop),
-                     select = c("city", "la_name", "yr", "pop"))
-## Summarise emissions and population by year for the city.
-the_city.co2 <- ddply(cities.co2[cities.co2$city == the_city, ],
-                      .(yr), summarise, CO2 = sum(CO2))
-the_city.pop <- cities.pop[cities.pop$city == the_city, ]
+## Add in city names to CO2 and population datasets
+##
+all.co2 <- merge(city_codes, ukregco2, by = "geography_code")
+all.pop <- merge(city_codes, ukregpop, by = "geography_code")
+
+## Total emissions at city level
+##
+cities.co2 <- ddply(all.co2, .(city, yr), summarise, CO2 = sum(CO2))
+
+## Summaries by year at borough level for this city 
+##
+boroughs.co2 <- ddply(all.co2[all.co2$city == the_city, ],
+                      .(geography_code, geography_name, yr), summarise, CO2 = sum(CO2))
+
+boroughs.pop <- ddply(all.pop[all.pop$city == the_city, ],
+                      .(geography_code, geography_name, yr), summarise, pop = sum(pop))
+
+boroughs.all <- merge(boroughs.co2, boroughs.pop, by = c("geography_code", "geography_name", "yr"))
+
+boroughs.all$CO2percapita <- with(boroughs.all, CO2 / pop)
+
+## Emissions per capita by sector0 at borough level
+##
+
+
+
 @ 
 
 \section{Introduction}
@@ -119,6 +138,10 @@ format(dcast(cities.co2, city ~ yr, function(x) {0.001 * sum(x)}, value.var =
   end-user basis.\label{table:summary_all}}
 \end{table}
 %
+
+\end{document}
+%%% TEMPORARY END OF DOCUMENT FOR DEBUGGING
+
 Emissions per capita in \city\ were
 \SI[round-mode = places, round-precision = 1]{%
 \Sexpr{with(the_city.co2, sum(CO2[yr == 2010])) / with(the_city.pop, sum(pop[yr == 2010]))}%
