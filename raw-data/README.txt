@@ -19,4 +19,5 @@ modified/   Contains restructured versions of the raw data to make it easier to
 csv/	    Contains the data as comma-separated-value text files, suitable for
 	    loading into a statistical package such as R. 
 
+R/	    R code for creating .Rdata files, and the .Rdata files themselves.
 

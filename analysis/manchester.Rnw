@@ -46,37 +46,33 @@
 ## Initiliase analytical code
 ##
 options(continue = " ")
-source("city-tool.R")
+source("../R/city-tool.R")
 ## The name of the city -- change this to change the city for which the calculations are performed 
 ##
 the_city = "Manchester"
 
-## Add in city names to CO2 and population datasets
+## Add in city names to CO2 and population datasets, and sector0 to CO2
 ##
-all.co2 <- merge(city_codes, ukregco2, by = "geography_code")
+all.co2 <- merge(merge(city_codes, ukregco2, by = "geography_code"), sector0, by = "sector_code")
 all.pop <- merge(city_codes, ukregpop, by = "geography_code")
 
 ## Total emissions at city level
 ##
 cities.co2 <- ddply(all.co2, .(city, yr), summarise, CO2 = sum(CO2))
 
-## Summaries by year at borough level for this city 
+## Summary by year at borough and sector0 level for this city 
 ##
-boroughs.co2 <- ddply(all.co2[all.co2$city == the_city, ],
-                      .(geography_code, geography_name, yr), summarise, CO2 = sum(CO2))
+boroughs.co2 <- ddply(all.co2[all.co2$city == the_city, ], .(geography_code, geography_name, yr, sector0, sector_code, sector), summarise, CO2 = sum(CO2))
 
-boroughs.pop <- ddply(all.pop[all.pop$city == the_city, ],
-                      .(geography_code, geography_name, yr), summarise, pop = sum(pop))
+boroughs.pop <- ddply(all.pop[all.pop$city == the_city, ], .(geography_code, geography_name, yr), summarise, pop = sum(pop))
 
-boroughs.all <- merge(boroughs.co2, boroughs.pop, by = c("geography_code", "geography_name", "yr"))
-
-boroughs.all$CO2percapita <- with(boroughs.all, CO2 / pop)
-
-## Emissions per capita by sector0 at borough level
+## In boroughs.all, the pop variable should not be summed as it contains duplicates.
 ##
+boroughs.all <- transform(merge(boroughs.co2, boroughs.pop, by = c("geography_code", "geography_name", "yr")), CO2percapita = CO2 / pop)
 
-
-
+## Emissions by sector and year for the city
+##
+co2 <- ddply(boroughs.co2, .(yr, sector0, sector_code, sector), summarise, CO2 = sum(CO2))
 @ 
 
 \section{Introduction}
@@ -125,7 +121,7 @@ reconciliation of these figures.
 
 In 2010, total emissions from \city\ were \SI[round-mode = places, round-precision =
 1]{%
-\Sexpr{0.001 * sum(the_city.co2$CO2[the_city.co2$yr == 2010])}%
+\Sexpr{0.001 * sum(boroughs.co2$CO2[boroughs.co2$yr == 2010])}%
 }{Mt.\COO}~\cite{decc-regional-emissions}. Table~\ref{table:summary_all} shows
 \citys\ historic \COO\ emissions in the context of selected other cities.
 %
@@ -139,18 +135,16 @@ format(dcast(cities.co2, city ~ yr, function(x) {0.001 * sum(x)}, value.var =
 \end{table}
 %
 
-\end{document}
-%%% TEMPORARY END OF DOCUMENT FOR DEBUGGING
-
-Emissions per capita in \city\ were
-\SI[round-mode = places, round-precision = 1]{%
-\Sexpr{with(the_city.co2, sum(CO2[yr == 2010])) / with(the_city.pop, sum(pop[yr == 2010]))}%
-}{t.\COO} in 2010, which compares with a UK average of \SI[round-mode = places, round-precision = 1]{%
-\Sexpr{sum(ukregco2$CO2) / sum(ukregpop$pop, na.rm = TRUE)}%
-}{t.\COO} (based on the regional statistics dataset). 
-% The next section is only applicable for those cities which are composed of
-% several boroughs
-
+Emissions per capita in \city\ were \SI[round-mode = places, round-precision = 1]{%
+\Sexpr{with(boroughs.co2, sum(CO2[yr == 2010])) / with(boroughs.pop, sum(pop[yr == 2010]))}%
+}{t.\COO} in 2010, which compares with a UK average of \SI[round-mode = places,
+round-precision = 1]{%
+  \Sexpr{sum(ukregco2$CO2) / sum(ukregpop$pop, na.rm = TRUE)}%
+}{t.\COO} (based on the regional statistics dataset).
+%%
+%% The next section is only applicable for those cities which are composed of
+%% several boroughs
+%%
 The boroughs which comprise \city\ differ in their emissions
 characteristics. Table~\ref{table:borough-summary} shows summary statistics for
 each borough; and table~\ref{table:borough-emissions-bysector} shows the per capita
@@ -158,14 +152,12 @@ emissions broken down by sector.
 %
 \begin{table}[htbp]
 <<label = borough_summary, echo = FALSE>>=
-city <- cities.co2[cities.co2$city == the_city, ]
-city0 <- ddply(city, .(la_name, yr), summarise, CO2 = sum(CO2))
-city0 <- transform(merge(city0, ukregpop), CO2percapita = CO2 / pop)
-n.boroughs <- length(cities$city[cities$city == the_city])
-format(subset(city0, 
-              yr == 2010, 
-              select = c("la_name", "CO2", "pop", "CO2percapita")),
-       big.mark =",", digits = 2)
+n.boroughs <- length(city_codes$city[city_codes$city == the_city])
+format(
+  ddply(boroughs.all[boroughs.all$yr == 2010, ], 
+        .(geography_name), summarise,
+        CO2 = sum(CO2), pop = sum(pop)/length(pop), CO2percapita = sum(CO2percapita)),
+  big.mark =",", digits = 2)
 @ 
 \caption{Summary statistics for each of the \Sexpr{n.boroughs} boroughs that make up
   \city. (Emissions are in~\si{kt.\COO}; population figures are mid-year
@@ -174,12 +166,8 @@ format(subset(city0,
 
 \begin{table}[htbp]
 <<label = city_co2, echo = FALSE>>=
-cities.sector0.co2 <- ddply(cities.co2, .(city, la_name, sector0, yr), 
-                            summarise, CO2 = sum(CO2))
-cities.sector0.co2 <- merge(cities.sector0.co2, cities.pop)
-cities.sector0.co2 <- transform(cities.sector0.co2, CO2percapita = CO2 / pop)
-format(dcast(subset(cities.sector0.co2, city == the_city & yr == 2010),
-             la_name ~ sector0, 
+format(dcast(subset(boroughs.all, yr == 2010),
+             geography_name ~ sector0, 
              sum, value.var = "CO2percapita", margins = "sector0"), 
        big.mark = ",", digits = 2)
 @ 
@@ -188,6 +176,16 @@ format(dcast(subset(cities.sector0.co2, city == the_city & yr == 2010),
   sectors shown here are not identical to those in the data as published by DECC
   as Railways have been included within
   Transport.\label{table:borough-emissions-bysector}}
+\end{table}
+
+Finally, table~\ref{table:city-all} shows \citys\ total emissions for each
+detailed sector over time.
+\begin{table}[htbp]
+<<label = city_all, echo = FALSE>>=
+format(
+  dcast(co2, sector ~ yr, value.var = "CO2"), big.mark = ",", digits = 1)
+@ 
+\caption{Sectoral emissions for \city, \si{kt.\COO}.\label{table:city-all}}
 \end{table}
 
 The Greater Manchester Combined Authority has set a decarbonisation target of a
@@ -200,8 +198,6 @@ adopted a target of \SI{41}{\percent} by 2020 against 2005
 levels~\cite{mcc-future}. For the purpose of this document, we will assume
 that the 2020 target is a reduction of about \SI{40}{\percent} against 2005
 levels.
-
-
 
 
 

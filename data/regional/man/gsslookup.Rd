@@ -22,7 +22,7 @@ Names and Codes for UK Administrative Geography
   
   \describe{
     
-    \item{\code{geography_code}}{The new \dQuote{9 digit} GSS code (or
+    \item{\code{geography_code}}{The new \dQuote{9 character} GSS code (or
       the old DCA92 code for district council areas in Northern Ireland).}
     
     \item{\code{geography_name}}{The name of the local authority.}
@@ -46,7 +46,7 @@ Names and Codes for UK Administrative Geography
 
   This dataset provides a lookup from GSS codes to names. It includes
   those codes in existence since 2009 and until July 2012. Northern
-  Ireland has elected not to use the new \acronym{ONS} \dQuote{9 digit}
+  Ireland has elected not to use the new \acronym{ONS} \dQuote{9 character}
   coding scheme; however, those codes have been added to the list, although
   strictly speaking they do not have the same status. 
 

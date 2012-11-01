@@ -1,15 +1,29 @@
 Emissions
-	Domestic 
+A	Industry and Commercial Electricity
+B	Industry and Commercial Gas
+C	Large Industrial Installations
+D	Industrial and Commercial Other Fuels
+E	Agricultural Combustion
+F	Railways
+G	Domestic Electricity
+H	Domestic Gas
+I	Domestic 'Other Fuels'
+J	Road Transport (A roads)
+K	Road Transport (Motorways)
+L	Road Transport (Minor roads)
+M	Road Transport Other
+N	LULUCF Net Emissions
 
-Gas
+
+Gas (GWh)
 	Domestic consumers
 	Commercial and industrial consumers
 
-Electricity
+Electricity (GWh)
 	Domestic consumers
 	Commercial and industrial consumers
 
-Road Transport
+Road Transport (thousand-tonnes)
      Buses
      HGV
      Motor-cycles
@@ -18,8 +32,8 @@ Road Transport
      Diesel LGV
      Petrol LGV
 
-Other Fuels
-     Petroleum
+Other Fuels (ktoe)
+     Petroleum 
 	Industrial
 	Domestic
 	Rail
