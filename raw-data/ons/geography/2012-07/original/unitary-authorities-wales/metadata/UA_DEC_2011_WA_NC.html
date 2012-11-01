@@ -1,0 +1,605 @@
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <META http-equiv="Content-Type" content="text/html">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>Unitary Authority (Wal) Dec 2011 Names and Codes</title>
+      <link rel="stylesheet" href="../assets/css/smp-screen.css" media="screen"></link>
+      <link rel="stylesheet" href="../assets/css/smp-print.css" media="print"></link>
+      <style type="text/css">h2 {font-size: 150%; font-weight: bold}
+			td.attrTitle {background-color: #ddccee}
+			div.data, div.section {display: block}
+			table.section {font-size: 100%}
+			a.section {color: #000060; text-decoration: none}
+			span.stub {margin-left: 20px; width: 180px; font-weight: bold}
+			span.legal {font-style: italic}
+		</style>
+   </head><script type="text/javascript">// Toggle visibility of the named section
+
+	
+	
+		// Escape special characters to allow use of LT and GT symbols, which would otherwise be treated as HTML tags
+
+		function toggleText(item) 
+		{
+		
+			var sections = new Array(
+				"enclosures", "generalinfo", "history", "lineage", "spatial", "attr", "distinfo", "metainfo", "subset")
+
+			if (item == 'on') 
+			{
+				for (i = 0; i < sections.length; i++) 
+				{
+					if (document.getElementById(sections[i]) != null)
+					{
+    					if (document.getElementById(sections[i]))
+    						document.getElementById(sections[i]).style.display = 'block'
+    				}
+				}
+			}
+			else if (item == 'off') 
+			{
+				for (i = 0; i < sections.length; i++) 
+				{
+					if (document.getElementById(sections[i]) != null)
+					{
+    					if (document.getElementById(sections[i]))
+    						document.getElementById(sections[i]).style.display = 'none'
+					}
+				}
+			}
+			else 
+			{
+				if (document.getElementById(item) != null)
+				{
+    				if (document.getElementById(item).style.display == 'none')
+    					document.getElementById(item).style.display = 'block' 
+    				else
+    					document.getElementById(item).style.display = 'none' 
+				}
+			}
+		} 
+
+		function formatDate(date) {
+			months = new Array(
+				"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+			var outDate;
+			if (date == "") {
+				outDate = "Date not available";
+			}
+			else {
+				if (date.length == 4)
+					outDate = date;
+				else {
+					if (date.length > 6)
+						outDate = eval(date.substr(6,2)) + " ";
+					else
+						outDate = "";
+					outDate += months[eval(date.substr(4,2)) - 1] + " " + date.substr(0,4);
+				}
+			}
+			document.write(outDate);
+		}
+		
+		// Print text replacing all new line characters with HTML new line tags
+
+		function printText(section) {
+			text = section.innerText
+			section.removeNode(true)
+			document.write(text.replace(/\n/g, "<br/>"))
+		}
+
+	function formatTime(time) {
+			if (time == "")
+				outTime = "";
+			else
+				outTime = time.substr(0,2) + ":" + time.substr(2,2) + ":" + time.substr(4,2);
+			document.write(outTime);
+		}
+        
+        // product ID
+		var prodId = "{4BCB0310-3D8E-45AB-90AC-5F51825F2569}";
+		
+		/*
+		* retrieve product type and set if parent
+		*/
+		if(parent)
+		{
+			if(parent.parent)
+			{
+				if(parent.parent.setProductType != undefined)
+				{
+					var productType = "tabular";
+					parent.parent.setProductType(productType, prodId);
+				}
+			}
+		}
+
+		/***********************************************************
+		*
+		* Attachment handling code - begin configurable parameters
+		*
+		***********************************************************/
+
+		// GRI Portal host name, for retrieving metadata attachments
+		var gripHost = "";
+
+		// servlet path for streaming attachments
+		var mdAttPath = "/grip/action/ViewAttachment";
+
+		// servlet parameter to specify product ID
+		var mdAttProdIdParam = "categoryId";
+
+		// servlet parameter to specify attachment number
+		var mdAttAttNoParam = "attIndex";
+
+		/***********************************************************
+		*
+		* Attachment handling code - end configurable parameters
+		*
+		***********************************************************/
+
+		// variable to hold reference to attachments window
+		var mdAttWin = null;
+
+		// attachments window name - generated to be unique, so that two instances of the containing
+		// application can run side-by-side on a single machine without interfering with each other
+		var mdAttWinName = "metadataAttachmentWindow" + Math.round(Math.random() * 32768);
+		
+		// download host name
+		var downloadHost = "";
+
+		// flag to indicate whether attachments can be viewed
+		var canViewAttachments = false;
+		if(window.parent != null)
+		{
+			canViewAttachments = window.parent.isGrip;
+		}
+		if(canViewAttachments)
+		{
+			downloadHost = document.location.host;
+		}
+
+		function openAttachment(indexPos)
+		{
+			if(canViewAttachments)
+			{
+				// open attachment in the attachment window
+				//alert("http://" + downloadHost + mdAttPath + "?" + mdAttProdIdParam + "=" + 
+				//	prodId + String.fromCharCode( 38 )  + mdAttAttNoParam + "=" + indexPos );
+				
+				mdAttWin = window.open(
+					"http://" + downloadHost + mdAttPath
+						+ "?" + mdAttProdIdParam + "=" + prodId
+						+ String.fromCharCode( 38 ) + mdAttAttNoParam + "=" + indexPos,
+						mdAttWinName,
+						"width=" + (screen.availWidth - 200)
+						+ ",height=" + (screen.availHeight - 200)
+						+ ",left=100,top=100,resizable,scrollbars");
+	
+				// focus the attachment window
+				mdAttWin.focus();
+			}
+			else
+			{
+				alert("Attachments may only be opened from within"
+					+ " the GRI Portal web application.");
+			}
+		}
+
+		function cleanUp() {
+			try {
+				// close attachment window
+				mdAttWin.close();
+				mdAttWin = null;
+			}
+			catch(e) {
+			}
+		}
+
+	</script>
+   <body onunload="cleanUp();">
+      <div id="xslContent" class="content" style="margin: 15">
+         <table width="95%">
+            <tr>
+               <td width="1%" style="padding-top:10px"><img src="../assets/images/tabular_product_icon.gif"></img>
+               </td>
+               <td width="99%">
+                  <h2 style="text-align: left">Unitary Authority (Wal) Dec 2011 Names and Codes</h2>
+               </td>
+            </tr>
+         </table>
+         <div>
+            <table>
+               <tr>
+                  <td class="attrTitle">Abstract:</td>
+                  <td>
+                     <pre id="abstract">This file contains names and codes for Unitary Authorities in Wales as at the end of 2011.
+
+Unitary authorities (UAs) are areas with a single tier of local government. 22 UAs were established across the whole of Wales in 1996. They are made up of electoral divisions. The names and codes in this file have not changed since 1998. However, because the digital boundary set containing this geography is based on the most recent OS Boundary-Line product and therefore released annually, it was decided that this names and code file should also be released annually to avoid confusion.
+
+This file contains the new 9 character coding as well as the old 4 character coding. For more information, please use the following link to the Code History Database (CHD) - http://www.ons.gov.uk/ons/guide-method/geography/products/names--codes-and-look-ups/code-history-database/index.html
+
+Due to an underlying Oracle database issue the GRI cannot currently display special characters in Welsh names. The data has been edited so that special characters now appear as standard letters and not in their corrupted form. Special characters can however be displayed in attachments and an Excel file including the correct characters has been provided.</pre><script type="text/javascript" language="JavaScript">printText(abstract);</script>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="attrTitle">Version:</td>
+                  <td>v1</td>
+               </tr>
+               <tr>
+                  <td class="attrTitle">Data Currency:</td>
+                  <td><script>formatDate('20111231')</script><script>formatTime('')</script>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="attrTitle">Theme Keywords:</td>
+                  <td>Unitary Authority, Unitary Authorities, UA</td>
+               </tr>
+               <tr>
+                  <td class="attrTitle">Place Keywords:</td>
+                  <td>Wales, Wal, WA</td>
+               </tr>
+               <tr>
+                  <td class="attrTitle">Legal Restrictions:</td>
+                  <td><span class="legal">Data use restrictions: </span>copyright<br></br>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="attrTitle">Use Restrictions:</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td class="attrTitle">No. of Records:</td>
+                  <td>22</td>
+               </tr>
+            </table>
+            <hr></hr><span style="font-size: 110%; font-weight: bold"><a href="javascript:void(0)" onclick="toggleText('off')">Collapse All</a>&nbsp;
+		<a href="javascript:void(0)" onclick="toggleText('on')">Expand All</a>
+            </span><br></br>
+            <hr></hr>
+         </div>
+         <div style="margin: 1">
+            <h2><a class="section" href="javascript:void(0)" onclick="toggleText('generalinfo')">General Information</a>
+            </h2>
+            <div id="generalinfo" class="section">
+               <table class="section" cellspacing="0">
+                  <tr>
+                     <td><span class="stub">Alternative Title(s):</span>
+                     </td>
+                     <td>UAs (Wal) Dec 2011 Names and Codes<br>UA_DEC_2011_WA_NC<br>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Themes/Categories/Topic Category:</span>
+                     </td>
+                     <td>Administrative Boundaries</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Presentation Format:</span>
+                     </td>
+                     <td>Digital table</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Creation Date:</span>
+                     </td>
+                     <td><script>formatDate('20111231')</script>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Version Date:</span>
+                     </td>
+                     <td><script>formatDate('20111231')</script>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Publication Date:</span>
+                     </td>
+                     <td><script>formatDate('20111231')</script>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Dataset Language:</span>
+                     </td>
+                     <td>English</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Update Frequency:</span>
+                     </td>
+                     <td>Annually</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Date of Last Revision:</span>
+                     </td>
+                     <td><script>formatDate('20111231')</script>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Schedule of Next Update:</span>
+                     </td>
+                     <td><script>formatDate('20121231')</script>
+                     </td>
+                  </tr>
+               </table><br>
+               <hr>
+            </div>
+            <h2><a class="section" href="javascript:void(0)" onclick="toggleText('history')">Dataset History</a>
+            </h2>
+            <div id="history" class="section">
+               <table class="section" cellspacing="0">
+                  <tr>
+                     <td><span class="stub">Lineage:</span>
+                     </td>
+                     <td>The new 9 character and old style codes have been created by ONS. The names are statutory names taken from the Statutory Instrument (SI)
+<br>
+                     </td>
+                  </tr>
+               </table><br>
+               <hr>
+            </div>
+            <h2><a class="section" href="javascript:void(0)" onclick="toggleText('spatial')">Spatial Information</a>
+            </h2>
+            <div id="spatial" class="section">
+               <table class="section" cellspacing="0">
+                  <tr>
+                     <td><span class="stub">Co-ordinate System:</span>
+                     </td>
+                     <td>Great Britain National Grid</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Spatial Representation Type:</span>
+                     </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Scale:</span>
+                     </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Resolution:</span>
+                     </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Spatial Precision:</span>
+                     </td>
+                     <td>Not stated</td>
+                  </tr>
+               </table><br>
+               <hr>
+            </div>
+            <h2><a class="section" href="javascript:void(0)" onclick="toggleText('distinfo')">Distribution Information</a>
+            </h2>
+            <div id="distinfo" class="section">
+               <table class="section" cellspacing="0">
+                  <tr>
+                     <td><span class="stub">Distributor's Name:</span>
+                     </td>
+                     <td>ONS Geography Customer Services, Room 1300</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Distributor's Organisation:</span>
+                     </td>
+                     <td>Office for National Statistics</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Distributor's Address:</span>
+                     </td>
+                     <td>Segensworth Road, Titchfield<br>Fareham<br>Hampshire<br>PO15 5RR<br>United Kingdom<br>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Distributor's Email Address:</span>
+                     </td>
+                     <td>ons.geography@ons.gov.uk</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Distributor's Phone Number:</span>
+                     </td>
+                     <td>+44 (0)1329 444971</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Distributor's Fax Number:</span>
+                     </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Available Data Format and Version:</span>
+                     </td>
+                     <td>SDE Table, 1</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Available Data Format and Version:</span>
+                     </td>
+                     <td>.csv, 1</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Available Data Format and Version:</span>
+                     </td>
+                     <td>.dbf, 1</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Available Data Format and Version:</span>
+                     </td>
+                     <td>.doc, 1</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Available Data Format and Version:</span>
+                     </td>
+                     <td>.mdb, 1</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Available Data Format and Version:</span>
+                     </td>
+                     <td>.txt, 1</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Available Data Format and Version:</span>
+                     </td>
+                     <td>.xls, 1</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Offline Media Supply:</span>
+                     </td>
+                     <td>CD</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Online Location:</span>
+                     </td>
+                     <td>Server=cb419; Service=5151; User=pl_admin; Version=SDE.DEFAULT</td>
+                  </tr>
+               </table><br>
+               <hr>
+            </div>
+            <h2><a class="section" href="javascript:void(0)" onclick="toggleText('metainfo')">Metadata Information</a>
+            </h2>
+            <div id="metainfo" class="section">
+               <table class="section" cellspacing="0">
+                  <tr>
+                     <td><span class="stub">Author:</span>
+                     </td>
+                     <td>Tee Parry</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Organisation:</span>
+                     </td>
+                     <td>ONS Geography</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Author's Role:</span>
+                     </td>
+                     <td>Creator of metadata</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Author's Function:</span>
+                     </td>
+                     <td>Processor</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Date of Last Metadata Update:</span>
+                     </td>
+                     <td><script type="text/javascript">formatDate('20120419')
+				document.write(", ")
+				formatTime('11125500')
+			</script>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Metadata Standard Name:</span>
+                     </td>
+                     <td>ISO 19115 Geographic Information - Metadata</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Metadata Standard Version:</span>
+                     </td>
+                     <td>DIS_ESRI1.0</td>
+                  </tr>
+                  <tr>
+                     <td><span class="stub">Metadata Identifier:</span>
+                     </td>
+                     <td>{98F822E5-F9ED-42CC-B230-9FA5542F6B9E}</td>
+                  </tr>
+               </table><br>
+               <hr>
+            </div>
+            <h2><a class="section" href="javascript:void(0)" onclick="toggleText('attr')">Attributes</a>
+            </h2>
+            <div id="attr" class="data">
+               <table style="margin-left: 20px">
+                  <tr>
+                     <th align="left" style="padding-right:5px">No</th>
+                     <th align="left" style="padding-right:5px">Name</th>
+                     <th align="left" style="padding-right:5px">Data Type</th>
+                     <th align="left" style="padding-right:5px">Width</th>
+                     <th align="left" style="padding-right:5px">Decimal Places</th>
+                     <th align="left" style="padding-right:5px">Definition</th>
+                  </tr>
+                  <tr>
+                     <td class="data" style="padding-right:5px">1</td>
+                     <td class="data" style="padding-right:5px">OBJECTID</td>
+                     <td class="data" style="padding-right:5px">OID</td>
+                     <td class="data" style="padding-right:5px">4</td>
+                     <td class="data" style="padding-right:5px"></td>
+                     <td class="data" style="padding-right:5px">Internal feature number.</td>
+                  </tr>
+                  <tr>
+                     <td class="data" style="padding-right:5px">2</td>
+                     <td class="data" style="padding-right:5px">UA11CD</td>
+                     <td class="data" style="padding-right:5px">String</td>
+                     <td class="data" style="padding-right:5px">10</td>
+                     <td class="data" style="padding-right:5px"></td>
+                     <td class="data" style="padding-right:5px"></td>
+                  </tr>
+                  <tr>
+                     <td class="data" style="padding-right:5px">3</td>
+                     <td class="data" style="padding-right:5px">UA11CDO</td>
+                     <td class="data" style="padding-right:5px">String</td>
+                     <td class="data" style="padding-right:5px">10</td>
+                     <td class="data" style="padding-right:5px"></td>
+                     <td class="data" style="padding-right:5px"></td>
+                  </tr>
+                  <tr>
+                     <td class="data" style="padding-right:5px">4</td>
+                     <td class="data" style="padding-right:5px">UA11NM</td>
+                     <td class="data" style="padding-right:5px">String</td>
+                     <td class="data" style="padding-right:5px">50</td>
+                     <td class="data" style="padding-right:5px"></td>
+                     <td class="data" style="padding-right:5px"></td>
+                  </tr>
+                  <tr>
+                     <td class="data" style="padding-right:5px">5</td>
+                     <td class="data" style="padding-right:5px">UA11NMW</td>
+                     <td class="data" style="padding-right:5px">String</td>
+                     <td class="data" style="padding-right:5px">50</td>
+                     <td class="data" style="padding-right:5px"></td>
+                     <td class="data" style="padding-right:5px"></td>
+                  </tr>
+               </table><br>
+               <hr>
+            </div>
+            <h2><a class="section" href="javascript:void(0)" onclick="toggleText('subset')">Subset</a>
+            </h2>
+            <div id="subset" class="section">
+               <table class="section" cellspacing="0">
+                  <tr>
+                     <td valign="top"><span class="stub">Subset Fields:</span>
+                     </td>
+                     <td>
+                        <table>
+                           <tr>
+                              <th align="left" style="padding-right:5px">No</th>
+                              <th align="left" style="padding-right:5px">Name</th>
+                              <th align="left" style="padding-right:5px">Alias</th>
+                           </tr>
+                           <tr>
+                              <td class="data" style="padding-right:5px">1</td>
+                              <td class="data" style="padding-right:5px">UA11CD</td>
+                              <td class="data" style="padding-right:5px">UA11CD</td>
+                           </tr>
+                           <tr>
+                              <td class="data" style="padding-right:5px">2</td>
+                              <td class="data" style="padding-right:5px">UA11CDO</td>
+                              <td class="data" style="padding-right:5px">UA11CDO</td>
+                           </tr>
+                           <tr>
+                              <td class="data" style="padding-right:5px">3</td>
+                              <td class="data" style="padding-right:5px">UA11NM</td>
+                              <td class="data" style="padding-right:5px">UA11NM</td>
+                           </tr>
+                           <tr>
+                              <td class="data" style="padding-right:5px">4</td>
+                              <td class="data" style="padding-right:5px">UA11NMW</td>
+                              <td class="data" style="padding-right:5px">UA11NMW</td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </table><br>
+               <hr>
+            </div>
+         </div>
+         <div id="footer"><br></br>Copyright © 2005 Office for National Statistics.
+	</div>
+      </div>
+   </body>
+</html>
