@@ -1,0 +1,6 @@
+*.bbl
+*.bcf
+*.blg
+*.out
+*.run.xml
+*.Rdata
