@@ -45,10 +45,10 @@ data(ukregenergy)
   
   \subsection{Value variables}{
     \describe{
-      \item{\code{GWh}}{(\code{ukreggas}) Energy consumption, GWh.}
-      \item{\code{ktoe}}{(\code{ukregotherfuels}) Energy consumption,
+      \item{\code{GWh}}{(Gas, electricity) Energy consumption, GWh.}
+      \item{\code{ktoe}}{(Other fuels) Energy consumption,
 	thousand tonnes of oil equivalent.}
-      \item{\code{thousand-tonnes}}{(\code{ukregroadfuel}) Road fuel
+      \item{\code{thousand-tonnes}}{(Road fuel) Road fuel
 	consumption, thousand tonnes.}
       \item{\code{N_consumers}}{(\code{ukreggas}) Number of consumers, thousands.}
       \item{\code{N_MPAN}}{(\code{ukregelectricity}) Number of Meter Point

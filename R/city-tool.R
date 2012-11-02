@@ -1,11 +1,16 @@
 ## Functions making up the City Calculator
-## TODO: Make this an R package
+## TODO: Make this an R package(s)
 
 library(plyr)
 library(reshape2)
 
 ## Regional energy and emissions data
-load("../data/regional/data/ukreg.Rdata")
+load("../data/regional/data/ukregenergy.Rdata")
+load("../data/regional/data/ukregco2.Rdata")
+load("../data/regional/data/gsslookup.Rdata")
+
+# Energy conversion factors
+source("../data/physical/data/conversion.R")
 
 ## Cities of interest
 city_codes <- read.table(header = TRUE, text = "
@@ -53,4 +58,12 @@ sector0$sector0 <- factor(sector0$sector0,
 
 
 
+
+## Sectors
+## Industrial & Commerical includes Agriculture, Public Administration
+
+sectors <- c("Domestic", "Industrial & Commercial", "Road Transport",
+             "Rail Transport", "LULUCF")
+
+fuels <- c("
 
