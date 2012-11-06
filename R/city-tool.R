@@ -62,8 +62,8 @@ sector0$sector0 <- factor(sector0$sector0,
 ## Sectors
 ## Industrial & Commerical includes Agriculture, Public Administration
 
-sectors <- c("Domestic", "Industrial & Commercial", "Road Transport",
-             "Rail Transport", "LULUCF")
+## sectors <- c("Domestic", "Industrial & Commercial", "Road Transport",
+##          "Rail Transport", "LULUCF")
 
-fuels <- c("
+## fuels <- c("
 
