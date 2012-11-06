@@ -65,5 +65,5 @@ sector0$sector0 <- factor(sector0$sector0,
 ## sectors <- c("Domestic", "Industrial & Commercial", "Road Transport",
 ##          "Rail Transport", "LULUCF")
 
-## fuels <- c("
+## fuels <- c("Grid Electricity", "Gas", "Petrol", "Diesel", "Coal", "Manufactured Solid Fuels", "Renewables & Waste")
 

@@ -17,4 +17,6 @@ save(ukregco2, ukregpop, file = "ukregco2.Rdata")
 save(ukreggas, ukreggas_excluded, ukregelectricity,
      ukregroadfuel, ukregotherfuels, file = "ukregenergy.Rdata")
 
+## Redefine the sectors and fuels and make two files
+
 
