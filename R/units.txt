@@ -1,0 +1,167 @@
+### Some notes on units
+### 
+
+### Nomenclature:
+
+Dimensions
+---------- 
+
+[force], [length], [time], [energy], [mass], [velocity] ...
+
+[energy] = [mass] [length]^2 [time]^-2
+
+[force] = [mass] [length] [time]^-2
+
+[velocity] = [length] [time]^-1
+
+- spaces are not required in multiplying dimensions.
+- brackets are required.
+- lower case, english words, although perhaps we should use [M] [L] [T] for the
+  usual basis ones, and [energy], [force], etc for the usual derived ones.
+
+? "_" not spaces
+
+There is a distinction between a "dimension qua dimension" (eg, [force]) and a
+"dimension expressed in a basis" (eg, [mass] [length] [time]^-2)
+
+Units
+-----
+
+Each base dimension has a set of units.
+Derived dimensions may have individual units, or derived units (derived from the
+definition).
+
+Units([mass]) ={kg, g, slug, ...}
+Units([length]) = {m, cm, ft, furlong, ...}
+Units([energy]) = {J, Wh, toe, ...}
+Units([force]) = {N, lb, ...}
+
+Base units
+----------
+
+How things should be written when not using powers. May include powers. (Not
+sure how to deal with this yet!)
+
+{m, kg, s} or {cm, g, s} for example
+
+Some units don't take prefixes. 
+
+- 1000 lb, not 1 Glb
+
+But some units of the same dimension come in "compatible" groups:
+
+{kg, tonne}, {s, min, h, day, yr, ...}, {inch, foot, yard, mile, ...)
+
+tonne = Mg, but treat as different unit.
+
+Basis units may not be the same as basis dimensions. For example, one my wish to
+measure in [energy] and use kW h, rather than J.
+
+
+Restrictions
+------------
+
+- Only integer powers. Implication: Only certain sets of basis vectors are allowed.
+
+MLT -> E, F, T
+
+[length] = [energy] [force]^-1
+[mass] = [force] [length]^-1 [time]^2 = [force] [energy]^-1 [force] [time]^2
+       = [energy]^-1 [force]^2 [time]^2
+[time] = [time]
+
+ 
+Hmm..
+
+[power] = [energy] [time]^-1
+
+so MLT -> F, E, P?
+
+[time] = [power]^-1 [energy]
+
+
+Kind-of-quantity
+----------------
+
+Right. So, the International Vocabulary of Metrology notes that quantities can
+have the same dimension, but not be of the same kind. (Which I guess is what we
+are trying to express by the above.)
+
+For example: "energy" and "moment of force". Both have dimensions [force]
+[length], but they are not the same "kind-of-quantity".
+
+
+More trouble
+------------
+
+radian (a unit of [angle]) has base dimension 1. How do we know to denote
+numbers of dimension 1 "rad" and not, as it might be, "µg / kg"?
+
+
+How about the following:
+
+1. A dimension is a vector in D. Certain vectors have names. (eg, [energy],
+[velocity]). Certain named vectors have units (eg, [energy], but not [velocity]
+in SI; although "mach" and "knot" in other units.).
+
+? "mach" ~ "knot" ~ "km/h"
+
+2. A kind-of-quantity K is a set, {v1, v2, ..., vn}, of vectors in D. Or is a
+kind-of-quantity set a set of kinds-of-quantities? Er .... 
+
+3. The dimension of K is the vector v1 + v2 + ... + vn.
+
+4. There are certain bases which are "physically coherent". (MLT, FEP). One
+typically reduces in the appropriate physically coherent basis.
+
+5. Each vector in D (or in a kind-of-quantity set) has a unit. Including the 0
+vector, which could have units, eg, 1, %, m/m, rad, ... 
+
+
+
+A "set of vectors" is a tensor product space. (But not symmetric. Unless perhaps
+it's just products of R with itself?) A kind-of-quantity is a vector space, and
+an isomorphism onto a tensor product of other vector spaces. 
+
+A quantity is written by giving -
+  (a) a unit for each of some kind-of-quantity spaces;
+  (b) a particular isomorphism for this particular quantity's kind-of-quantity
+  space onto a tensor product of spaces with units.
+
+So ... how do we write an isomorphism?
+
+So ... m s^-1 is a single unit? For velocity, of course: it is that unit of
+velocity consistent with the SI units for length and time.
+
+So ... a quantity is a vector in a vector space (sui generis!) and an
+isomorphism from that vector space onto a distinguished tensor product space
+(which defines the dimension). Then, for each tensor product space, there are a
+set of named units -- each unit is a single name. Some of them, true, *look
+like* products of more fundamental units. But this is just a helpful similarity
+of surface features.
+
+Okay. 
+
+[length] for dimension.
+{m s^-1} for a single unit  for this dimension (in this case, in [velocity]).   
+<X> for a  
+
+Is there a unique derived unit for each dimension? No. 
+
+Units apply to quantity-kinds. rad is the unit of [angle]. [angle] is a quantity
+kind. It is isomorphic to [length] [length]^-1 (tensor product implied).
+
+units can be derived as the pull-back of other units via the isomorphism. 
+
+s^-1 is a different unit to s.
+
+What is the structure on the space of all quantity-kinds? What if we thought
+"kinetic energy" and "potential energy" were two different quantity-kinds? How
+do we arrange that both are measured in J? Would there be J_kinetic and
+J_potential? I guess so ... both would be pull-backs of kg m^2 s^-2?
+
+
+
+
+
+
