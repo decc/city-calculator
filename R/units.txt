@@ -1,3 +1,34 @@
+
+
+An imagined dialogue with R
+===========================
+
+add.quantity_kind("energy")
+
+add.unit(quantity_kind = "[energy]", symbol = "J", name = c("joule", "joules"), coherent =
+TRUE, system = "SI", allow.prefix = TRUE)
+
+add.unit(quantity_kind = "[energy]", symbol = "toe", name = c("tonne of oil
+equivalent", "tonnes of oil equivalent"), coherent = FALSE, allow.prefix = TRUE)
+
+add.conversion(defiendum = "toe", value = as.quantity(4.1868e10, unit = "J"))
+
+add.morphism("[acceleration]", "[length] [time]^-1 [time]^-1")
+add.morphism("[force]", "[mass] [acceleration]") 
+add.morphism("[energy]", "[force] [distance]")
+add.morphism("[torque]", "[force] [distance]")
+add.morphism("[angle]", "[UNIT]")
+add.morphism("[energy]", "[torque] [angle]")
+
+add.unit.series(quantity_kind = "time", series = "hms", c("y", "d", "h", "min",
+"sec"), ..., coherent = FALSE)
+
+
+
+
+
+
+
 ### Some notes on units
 ### 
 
@@ -33,7 +64,7 @@ definition).
 
 Units([mass]) ={kg, g, slug, ...}
 Units([length]) = {m, cm, ft, furlong, ...}
-Units([energy]) = {J, Wh, toe, ...}
+Units([energy]) = {J, W h, toe, ...}
 Units([force]) = {N, lb, ...}
 
 Base units
@@ -54,7 +85,7 @@ But some units of the same dimension come in "compatible" groups:
 
 tonne = Mg, but treat as different unit.
 
-Basis units may not be the same as basis dimensions. For example, one my wish to
+Basis units may not be the same as basis dimensions. For example, one may wish to
 measure in [energy] and use kW h, rather than J.
 
 
