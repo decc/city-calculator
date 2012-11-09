@@ -1,3 +1,76 @@
+"Simple unit"
+-------------
+
+A simple unit is a single symbol that uniquely identifies a
+dimension. 
+
+Definitions vs. Physics
+-----------------------
+
+Hypothesis: Some combinations of quantity spaces are definitional, some are
+physics. So for example: 
+
+
+Definitional:	[area] = [length]^2 
+ 
+		[acceleration] = [velocity] [time]^-1
+
+		?? [frequency] = [time]^-1
+
+		?? [solid angle] = [angle]^2
+
+(Tensor product spaces; only one defintion).
+
+
+Physics:	[energy] = [force] [distance]
+
+		[force] = [mass] [acceleration] 
+
+(Grouping matters; multiple isomporphisms).
+
+So ... what's [torque]? The problem is, it's definitional, but I wouldn't name
+[force]x[distance] as [torque]. Is *everything* an isomorphism? So, for example,
+[area] ~ [length]x[length] ? 
+
+ Well ... why not?
+
+
+dim([X]) is a vector, s.t. dim([X][Y]) = dim([X])+dim([Y]). 
+
+
+Reduced form
+------------
+
+Units in reduced form are powers of basis units. Dimensions in reduced form
+are powers of basis dimensions.
+
+
+Are dimensions and units equivalent? 
+------------------------------------
+
+The map between simple units and dimensions is 1:1 but not onto. A simple unit
+implies a dimension; but some dimensions do not have "natural" units. Dimensions
+lacking natural units are conventionally measured in equivalent units.
+
+So, for example, torque does not have its own unit. It is measured in N
+m. Energy, which is equivalent to N m, does have its own unit, the joule.
+
+The full form of the unit of torque is (N m)_[torque]. This is perhaps not
+helpful.
+
+
+Powers and synonyms
+-------------------
+
+[length]^2 is a synonym for [area]. It means [area], rather than [length]
+[length]. [length]^-1 is a synonym for [inverse_length]. Likewise, m^3, in the
+context of simple units, is a synonym for "cubic metres", the unit of
+volume. The unit of [length] [length] [length] is m m m. 
+
+
+
+  
+
 
 
 An imagined dialogue with R
