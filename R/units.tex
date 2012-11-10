@@ -1,0 +1,58 @@
+\documentclass[a4paper, twocolumn, 10pt]{article}
+\usepackage{amsmath}   % for mathematical niceties
+\usepackage{amsfonts}
+\usepackage{biblatex}  % for citations
+\usepackage{booktabs}  % for professional tables
+\usepackage{hyperref}  % to make URLs clickable
+%\usepackage{geometry}
+% \usepackage{tabularx}
+\usepackage{microtype} % Because we care
+% \usepackage{color}
+%
+% BIBLIOGRAPHY
+\addbibresource{../bibliography/cities.bib}
+%
+% SI UNITS
+\usepackage[load-configurations=abbreviations, per-mode=symbol, mode=text]{siunitx}
+\DeclareSIUnit{\year}{y}
+%
+% TYPOGRAPHY
+\usepackage[utf8]{inputenc}          
+\usepackage[T1]{fontenc}              
+\usepackage[tt={monowidth}]{cfr-lm} 
+%
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\reals}{\mathbb{R}}
+\title{The dimensions of physical quantities}
+\author{James Geddes}
+\begin{document}
+\maketitle
+
+Fix, once and for all, a set, $\K$, of vector spaces such that:
+\begin{enumerate}
+\item $\reals\in\K$,
+\item For any $V, W\in\K$ we have $V\otimes W\in\K$; and
+\item For any $V\in\K$ we have $V^*\in\K$.
+\end{enumerate}
+
+The view here is that we wish to write down physical quantities. The homes for
+these physical quantities shall be the vector spaces that are the elements
+of~$\K$: any physical quantity must be a vector in one of the elemets
+of~$\K$. We shall call an element of $\K$ a ``quantity-kind''.
+
+There is a natural isomorphism between $V\otimes W$ and $W\otimes V$ so we shall
+consider these identical; likewise we shall treat $(V\otimes W)^*$ as identical,
+under the natural isomorphism, to $V^*\otimes W^*$. 
+
+Then $\K$ itself has a ``vector-space--like'' structure: consider the operation
+of taking the tensor product as ``addition'' and taking the dual as
+``multiplication by $-1$''. (Strictly speaking, it's not a vector space because
+only multiplication by the integers is defined. I suppose it's a module over the
+integers.) Multiplication by zero produces~$\reals$. 
+
+
+
+ 
+
+
+\end{document}

@@ -10,7 +10,6 @@ Definitions vs. Physics
 Hypothesis: Some combinations of quantity spaces are definitional, some are
 physics. So for example: 
 
-
 Definitional:	[area] = [length]^2 
  
 		[acceleration] = [velocity] [time]^-1
