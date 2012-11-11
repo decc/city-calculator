@@ -1,0 +1,100 @@
+\documentclass[a4paper, twocolumn, 10pt]{article}
+\usepackage{amsmath}   % for mathematical niceties
+\usepackage{amsfonts}
+\usepackage{biblatex}  % for citations
+\usepackage{booktabs}  % for professional tables
+\usepackage{hyperref}  % to make URLs clickable
+%\usepackage{geometry}
+% \usepackage{tabularx}
+\usepackage{microtype} % Because we care
+% \usepackage{color}
+%
+% BIBLIOGRAPHY
+\addbibresource{../bibliography/cities.bib}
+%
+% SI UNITS
+\usepackage[load-configurations=abbreviations, per-mode=symbol, mode=text]{siunitx}
+\DeclareSIUnit{\year}{y}
+%
+% TYPOGRAPHY
+\usepackage[utf8]{inputenc}          
+\usepackage[T1]{fontenc}              
+\usepackage[tt={monowidth}]{cfr-lm} 
+%
+\newcommand{\physics}{\mathbb{P}}
+\newcommand{\dimensions}{\mathcal{D}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\integers}{\mathbb{Z}}
+\title{The dimensions of physical quantities}
+\author{James Geddes}
+\begin{document}
+\maketitle
+
+The following is an unusual description of what constitutes
+``physics''. Everything is to be understood to be in scare quotes. There will be an
+air of apparently unjustified formality about this description. I believe that
+the statements made can be replaced with rigorous versions (and proofs adduced)
+but I make no claims to have done so.
+
+Fix, once and for all, a set of vector spaces, $U$, $V$, $W$, \ldots. These
+vector spaces are the ``home'' of physical quantities. That is, any particular
+statment of a physical situation can be described by giving a vector in each of
+these vector spaces. (We imagine that they are, for example, the vector spaces
+of ``displacement'', ``velocity'', ``energy'', ``force'', and so forth.) Without
+loss of generality, imagine that there are only three possible kinds of physical
+entity: $U$, $V$, and $W$. That is, a state of the world is a vector in $U\oplus
+V\oplus W$.
+
+Now consider the following construction. For any vector space $V$, define
+$V^2=V\otimes V$, and likewise for higher ``powers''. Set
+\[
+\physics = \reals \oplus (U\oplus V\oplus W) \oplus (U\oplus V\oplus W)^2
+\oplus \dotsb.
+\]
+Note that ``$\otimes$'' is distributive over ``$\oplus$''. Let $s= u\oplus
+v\oplus w\in U\oplus V\oplus W$ be some physical state.
+
+By a \emph{physical law} is meant a map $L:\physics\to(U\oplus V\oplus\dotsb)$
+together with the assertion that, for $v$. For example, if $U$ is the space of
+force, $V$ the space of displacement, and $W$ the space of energy; then the law
+``$\text{work} = \text{force}\times\text{distance}$''
+
+Duals.
+
+
+\begin{enumerate}
+% \item $\reals\in\physics$,
+\item For any $V, W\in\physics$ we have $V\otimes W\in\physics$; and
+\item For any $V\in\physics$ we have $V^*\in\physics$.
+\end{enumerate}
+
+The view here is that we wish to write down physical quantities. The homes for
+these physical quantities shall be the vector spaces that are the elements
+of~$\physics$: any physical quantity must be a vector in one of the elemets
+of~$\\physics$. We shall call an element of $\physics$ a ``quantity-kind''.
+
+There is a natural isomorphism between $V\otimes W$ and $W\otimes V$ so we shall
+consider these identical; likewise we shall treat $(V\otimes W)^*$ as identical,
+under the natural isomorphism, to $V^*\otimes W^*$. 
+
+Note that $\physics$ almost has a ``vector-space--like'' structure: consider the
+operation of taking the tensor product as ``addition'' and taking the dual as
+``multiplication by $-1$''. (Strictly speaking, it's not almost a vector space because
+only multiplication by the integers is defined. I suppose it's almost a module over the
+integers.) It's not quite a vector space (sorry, module over the integers)
+though, because there's no ``zero'' vector, and in any case $V\otimes V^*$ isn't it.  
+
+Let $\dimensions$ be a (finite-dimensional!) module over $\integers$ and suppose there is
+given, for each $V\in\physics$, a linear map $L(V):V\to\dimensions$ such that:
+\begin{enumerate}
+\item $L(V\otimes W) = L(V) + L(W)$;
+\item $L(V\otimes V^*) = 0$.
+\end{enumerate}
+
+
+
+  
+
+
+
+\end{document}
