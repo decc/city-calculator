@@ -51,13 +51,25 @@ $V^2=V\otimes V$, and likewise for higher ``powers''. Set
 \physics = \reals \oplus (U\oplus V\oplus W) \oplus (U\oplus V\oplus W)^2
 \oplus \dotsb.
 \]
-Note that ``$\otimes$'' is distributive over ``$\oplus$''. Let $s= u\oplus
-v\oplus w\in U\oplus V\oplus W$ be some physical state.
+Note that ``$\otimes$'' is distributive over ``$\oplus$''. 
+
+Let $s= u\oplus v\oplus w\in U\oplus V\oplus W$ be some state (not necessarily
+one which satisifies the ``laws of physics''). Note that there is a natural
+injection $U\times V \to U\otimes V$ (for example) but not $V\to V^*$. (So if
+some space $V^*$ is required to describe the physics it will need to be put in
+by hand.)
+
+By $\exp(v)$ is meant the element of $\physics$ given by
+\[
+\exp(V) \equiv 1\oplus
+v\oplus (v\otimes v) \oplus \dotsb .
+\] 
 
 By a \emph{physical law} is meant a map $L:\physics\to(U\oplus V\oplus\dotsb)$
-together with the assertion that, for $v$. For example, if $U$ is the space of
-force, $V$ the space of displacement, and $W$ the space of energy; then the law
-``$\text{work} = \text{force}\times\text{distance}$''
+together with the assertion that, for $v\in U\oplus V\oplus W$ a description of
+a possible world, $L(\exp v)=0$. For example, if $U$ is the space of force, $V$ the
+space of displacement, and $W$ the space of energy; then the law ``$\text{work}
+= \text{force}\times\text{distance}$''
 
 Duals.
 
