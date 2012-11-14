@@ -1,14 +1,11 @@
 ### Units - A physical quantity package for R
 
 ## Notes:
+##
 ## - Ratio scales only -- no degrees Celsius to Kelvin
 ## - Currently uses SI as the underlying basis
 ## - Does not do conversions between coherent systems
 
-## Data structures
-## ---------------
-
-units <- NULL # listof unit
 
 ## add.QuantityKind
 ##
@@ -22,103 +19,133 @@ units <- NULL # listof unit
 ## Example: qk_expr <- c(energy = 1, mass = -1)
 ## Returns a 7-element vector of the powers of the basis vectors
 
-get.si.basis <- function(qk) {
-  qk$si.basis
+as_vector <- function(qk_expr) {
+    Reduce(`+`,                                       # Add up ...
+           Map(`*`,                                   # the powers of ..
+               qk_expr,                            
+               lapply(quantityKinds[names(qk_expr)],  # the basis dimensions
+                      function(x) {`[[`(x, "vector")} ))) # (extracting the si vectors).   
 }
 
-compute.si.basis <- function(qk_expr) {
-  Reduce(`+`,
-         Map(`*`, qk_expr, lapply(quantity.kinds[names(qk_expr)], get.si.basis)))
-}
+add_QuantityKind <- function(name, definition) {
 
-add.QuantityKind <- function(name, definition) {
-  if (name %in% names(quantity.kinds)) {
-    stop("quantity kind [", name, "] already defined")
-  }
-  new.quantity.kinds <- c(quantity.kinds,
-                          list(
-                            list(definition = definition,
-                                 si.basis =
-                                 compute.si.basis(definition))))
-  names(new.quantity.kinds) <- c(names(quantity.kinds), name)
-  quantity.kinds <<- new.quantity.kinds
+    if (name %in% names(quantityKinds)) {
+        stop("quantity kind [", name, "] already defined")
+    }
+
+    quantityKinds[[name]] <<- list(definition = definition,
+                                   vector = as_vector(definition))
 }
 
 
 ## Definitions of quantity kinds
 ## Should be package local in the end
 
-si.bases <- list(symbol = c("L", "M", "T", "I", "Th", "N", "J"),
-                 name = c("length", "mass", "time", "electric current",
-                 "thermodynamic temperature", "amount of substance", "luminous intensity"))
+Bases <- data.frame(
+    symbol = c("L", "M", "T", "I", "Th", "N", "J"),
+    name = c("length", "mass", "time", "electric current",
+        "thermodynamic temperature", "amount of substance", "luminous intensity")) 
 
-quantity.kinds <- list(
-  position = list(
-    definition = NULL,
-    si.basis = c(1,0,0,0,0,0,0)),
-  displacement = list(
-    definition = NULL,
-    si.basis = c(1,0,0,0,0,0,0)),
-  mass = list(
-    definition = NULL,
-    si.basis = c(0,1,0,0,0,0,0)),
-  time = list(
-    definition = NULL,
-    si.basis = c(0,0,1,0,0,0,0)),
-  electric_current = list(
-    definition = NULL,
-    si.basis = c(0,0,0,1,0,0,0)),
-  temperature = list(
-    definition = NULL,
-    si.basis = c(0,0,0,0,1,0,0)),
-  amount = list(
-    definition = NULL,
-    si.basis = c(0,0,0,0,0,1,0)),
-  luminous_intensity = list(
-    definition = NULL,
-    si.basis = c(0,0,0,0,0,0,1)))
-  
+## unitSets: listof groups of units
+## at least one unit set, named "_basis" must be present
+## other derived units may be added. The list _basis must be of the same length
+## and in the same order as Bases.
 
-add.QuantityKind("velocity",
-                 list(displacement = 1, time = -1)) # m/s
+## Units in the _basis unit set are the default for those dimensions whose
+## definition is NULL.
 
-add.QuantityKind("acceleration",
-                 list(velocity = 1, time = -1)) # (m/s)/s
+unitSets <- list(
+    "_basis" = list(
+        symbol = c("m", "kg", "s", "A", "K", "mol", "cd"),
+        name = c("metre", "kilogram", "second", "ampere", "kelvin", "mole",
+            "candela"),
+        plural.name = c("metres", "kilograms", "seconds", "amperes", "kelvins",
+            "moles", "candelas")))
 
-add.QuantityKind("area",
-                 list(displacement = 2)) # m^2
+## TODO: Add new unit sets: coherent (J, N, ...) and prefixed (GJ, g, ...)
+## Same format, but now each unit lists its known quantityKinds.
+## And also need a "default units map quantityKinds -> units$.
 
-add.QuantityKind("frequency",
-                 list(time = -1)) # Hz = s^-1 ????? Maybe frequency is
-                                  # fundamental? s Hz is ... what? N??
+quantityKinds <- list(
+    position = list(
+        definition = NULL,
+        vector = c(1,0,0,0,0,0,0)),
+    displacement = list(
+        definition = NULL,
+        vector = c(1,0,0,0,0,0,0)),
+    mass = list(
+        definition = NULL,
+        vector = c(0,1,0,0,0,0,0)),
+    time = list(
+        definition = NULL,
+        vector = c(0,0,1,0,0,0,0)),
+    electric_current = list(
+        definition = NULL,
+        vector = c(0,0,0,1,0,0,0)),
+    temperature = list(
+        definition = NULL,
+        vector = c(0,0,0,0,1,0,0)),
+    amount = list(
+        definition = NULL,
+        vector = c(0,0,0,0,0,1,0)),
+    luminous_intensity = list(
+        definition = NULL,
+        vector = c(0,0,0,0,0,0,1)))
 
-add.QuantityKind("angle",
-                 list(displacement = 1, position = -1)) # rad = m/m
 
-add.QuantityKind("solid_angle",
-                 list(angle = 2)) # sr = rad^2
+## format_si_vector
+## Convert a vector of powers of basis units to a string
+## eg, format_si_vector(c(1,0,-1,0,0,0,0)) -> "m s^-1"
 
-add.QuantityKind("momentum",
-                 list(mass = 1, velocity = 1)) # kg (m/s)
+format_unit <- function(symbol, power) {
+    if (power == 0) {
+        NULL
+    } else if (power == 1) {
+        symbol
+    } else {
+        paste(symbol, "^", power, sep = "")
+    }
+}
 
-add.QuantityKind("force",
-                 list(mass = 1, acceleration = 1)) # N = kg (m/s)/s 
+format_vector <- function(si) {
+    paste(
+        unlist( # Drops any NULLs returned by format_si_unit 
+               mapply(format_unit, unitSets[[c("_basis", "symbol")]],
+                      si)),
+        collapse = " ")
+}
+    
+    
+
+
+add_QuantityKind(name = "velocity",
+                 definition = c(displacement = 1, time = -1)) # m/s
+add_QuantityKind(name = "acceleration",
+                 definition = c(velocity = 1, time = -1)) # (m/s)/s
+add_QuantityKind(name = "area",
+                 definition = c(displacement = 2)) # m^2
+add_QuantityKind(name = "frequency",
+                 definition = c(time = -1)) # Hz = s^-1 ????? Maybe frequency is
+                                        # fundamental? s Hz is ... what? N??
+add_QuantityKind(name = "angle",
+                 definition = c(displacement = 1, position = -1)) # rad = m/m
+add_QuantityKind(name = "solid_angle",
+                 definition = c(angle = 2)) # sr = rad^2
+add_QuantityKind(name = "momentum",
+                 definition = c(mass = 1, velocity = 1)) # kg (m/s)
+add_QuantityKind(name = "force",
+                 definition = c(mass = 1, acceleration = 1)) # N = kg (m/s)/s 
                                         # Should be (momentum = 1,
                                         # time = -1?)
-
-add.QuantityKind("pressure",
-                 list(force = 1, area = -1)) # Pa = N/m^2
-
-add.QuantityKind("energy",
-                 list(force = 1, displacement = 1)) # J = N m
-
-add.QuantityKind("power",
-                 list(energy = 1, time = -1)) # W = J/s
-
-add.QuantityKind("electric_charge",
-                 list(electric_current = 1, time = -1)) # C = A s
-
-add.QuantityKind("voltage",
-                 list(energy = 1, electric_charge = -1)) # V = J / C.
+add_QuantityKind(name = "pressure",
+                 definition = c(force = 1, area = -1)) # Pa = N/m^2
+add_QuantityKind(name = "energy",
+                 definition = c(force = 1, displacement = 1)) # J = N m
+add_QuantityKind(name = "power",
+                 definition = c(energy = 1, time = -1)) # W = J/s
+add_QuantityKind(name = "electric_charge",
+                 defintion = c(electric_current = 1, time = -1)) # C = A s
+add_QuantityKind(name = "voltage",
+                 definition = c(energy = 1, electric_charge = -1)) # V = J / C.
 
 
