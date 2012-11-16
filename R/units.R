@@ -6,6 +6,17 @@
 ## - Currently uses SI as the underlying basis
 ## - Does not do conversions between coherent systems
 
+## An object of class PhysicalQuantity contains an attribute "measure", where
+
+measure := quantity_kind, compatible-unit
+
+        := quantity_kind, compatible-listof (measure, power)
+
+        := 
+
+An atomic dimension is a quantity kind, together with a list of units and
+powers, such that the 
+
 
 ## add.QuantityKind
 ##
@@ -42,11 +53,11 @@ get_unit_loc <- function(symbol) {}
 add_unit0 <- function(qk, symbol, name, plural.name, coherent, multiple, series) {
 
   if (any(symbol %in% Units$basis$symbol)) {
-    stop("unit '", symbol, "' is already a basis unit.")
+    stop("unit '", symbol, "' is already defined (as a basis unit)")
   } else if (any(symbol %in% Units$coherent$symbol)) {
-    stop("unit '", symbol, "' is already defined as a coherent unit.")
+    stop("unit '", symbol, "' is already defined (as a coherent unit)")
   } else if (any(symbol %in% Units$other$symbol)) {
-    stop("unit '", symbol, "' is already defined.")
+    stop("unit '", symbol, "' is already defined")
   }
 
   if (coherent) {
@@ -216,38 +227,30 @@ add_unit("J", "cd", "candela", coherent = TRUE, gen.prefixes = TRUE, true.basis
          = "cd")
 
 ## Some dimensions which don't have their own units in SI
-add_quantityKind(name = "velocity",
-                 definition = c(displacement = 1, time = -1)) # m/s
-add_quantityKind(name = "acceleration",
-                 definition = c(velocity = 1, time = -1)) # (m/s)/s
-add_quantityKind(name = "area",
-                 definition = c(displacement = 2)) # m^2
+add_quantityKind("velocity", c(displacement = 1, time = -1)) # m/s
+add_quantityKind("acceleration", c(velocity = 1, time = -1)) # (m/s)/s
+add_quantityKind("area", c(displacement = 2)) # m^2
 
 ## Dimensions with their own units
-add_quantityKind(name = "frequency",
-                 definition = c(time = -1))
-add_unit("frequency", "Hz", "hertz", "hertz", coherent = TRUE, gen.prefixes =
-                 TRUE)
+add_quantityKind("frequency", c(time = -1))
+add_unit("frequency", "Hz", "hertz", "hertz",
+         coherent = TRUE, gen.prefixes = TRUE)
 
-add_quantityKind(name = "angle",
-                 definition = c(displacement = 1, position = -1)) # rad = m/m
-add_quantityKind(name = "solid_angle",
-                 definition = c(angle = 2)) # sr = rad^2
-add_quantityKind(name = "momentum",
-                 definition = c(mass = 1, velocity = 1)) # kg (m/s)
-add_quantityKind(name = "force",
-                 definition = c(mass = 1, acceleration = 1)) # N = kg (m/s)/s 
-                                        # Should be (momentum = 1,
-                                        # time = -1?)
-add_quantityKind(name = "pressure",
-                 definition = c(force = 1, area = -1)) # Pa = N/m^2
-add_quantityKind(name = "energy",
-                 definition = c(force = 1, displacement = 1)) # J = N m
-add_quantityKind(name = "power",
-                 definition = c(energy = 1, time = -1)) # W = J/s
-add_quantityKind(name = "electric_charge",
-                 definition = c(electric_current = 1, time = -1)) # C = A s
-add_quantityKind(name = "voltage",
-                 definition = c(energy = 1, electric_charge = -1)) # V = J / C.
+add_quantityKind("angle", c(displacement = 1, position = -1)) # rad = m/m
+add_unit("angle", "rad", "radian",
+         coherent = TRUE, gen.prefixes = FALSE)
+
+add_quantityKind("solid_angle", c(angle = 2)) # sr = rad^2
+add_unit("solid_angle", "sr", "steradian",
+         coherent = TRUE, gen.prefixes = FALSE)
+
+add_quantityKind("momentum", c(mass = 1, velocity = 1)) # kg (m/s)
+add_quantityKind("force", c(mass = 1, acceleration = 1)) # N = kg (m/s)/s 
+                                        # Should be (momentum = 1, time = -1?)
+add_quantityKind("pressure", c(force = 1, area = -1)) # Pa = N/m^2
+add_quantityKind("energy", c(force = 1, displacement = 1)) # J = N m
+add_quantityKind("power", c(energy = 1, time = -1)) # W = J/s
+add_quantityKind("electric_charge", c(electric_current = 1, time = -1)) # C = A s
+add_quantityKind("voltage", c(energy = 1, electric_charge = -1)) # V = J / C.
 
 
