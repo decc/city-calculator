@@ -3,52 +3,49 @@
 ## Notes:
 ##
 ## - Ratio scales only -- no degrees Celsius to Kelvin
-## - Currently uses SI as the underlying basis
-## - Does not do conversions between coherent systems
+## - Uses SI as the underlying basis
 
 ## An object of class PhysicalQuantity contains an attribute "measure", where
-
-measure := quantity_kind, compatible-unit
-
-        := quantity_kind, compatible-listof (measure, power)
-
-        := 
-
-An atomic dimension is a quantity kind, together with a list of units and
-powers, such that the 
-
-
-## add.QuantityKind
 ##
-## Adds a new quantity kind to the package-global list. Returns the new quantity
-## kind. name should not be the name of an exisiting quantity kind and should be
-## coercable to symbol. definition is a list consisting of pairs (quantity kind,
-## power).
+## A unit is a compatible unit for a quantity kind just in case the reduction of
+## the dimensions of the unit to basis dimensions is the same as the reduction
+## of the dimensions of the quantity kind.
+## 
+## atomic_unit := one of a list of named units (kg, J, N, Gt, mHz, ...)
+##
+## unit := listof (atomic_unit, power) such that no atomic_unit occurs twice and no
+## power is zero
+## 
+## atomic_measure := (quantity_kind, unit) such that unit is a compatible unit for quantity_kind
+## 
+## measure := listof (atomic_measure, power) such that no atomic_measure occurs
+## twice and no power is zero
+##
+##         := 
+##                
 
-## qk_expr should be an integer vector giving powers of quantity kinds, which
-## should be present in Quantity.Kinds
-## Example: qk_expr <- c(energy = 1, mass = -1)
-## Returns a 7-element vector of the powers of the basis vectors
+
+## Simplify: convert x-x an omitted symbol
+## Reduce: convert to basis thingies
+
+
 
 as_vector <- function(qk_expr) {
-    Reduce(`+`,                                       # Add up ...
-           Map(`*`,                                   # the powers of ..
+    Reduce(`+`,                                           # Add up ...
+           Map(`*`,                                       # the powers of ..
                qk_expr,                            
-               lapply(Quantity.Kinds[names(qk_expr)],  # the basis dimensions
+               lapply(Quantity.Kinds[names(qk_expr)],     # the basis dimensions
                       function(x) {`[[`(x, "vector")} ))) # (extracting the vectors).   
 }
 
 add_quantityKind <- function(name, definition) {
-
   if (name %in% names(Quantity.Kinds)) {
     stop("quantity kind [", name, "] already defined")
-    }
-
+  }
   Quantity.Kinds[[name]] <<- list(definition = definition,
-                                   vector = as_vector(definition))
+                                  vector = as_vector(definition))
 }
 
-get_unit_loc <- function(symbol) {}
 
 add_unit0 <- function(qk, symbol, name, plural.name, coherent, multiple, series) {
 
@@ -203,11 +200,11 @@ format_unit <- function(symbol, power) {
     }
 }
 
-format_vector <- function(si) {
+format_vector <- function(vector) {
     paste(
-        unlist( # Drops any NULLs returned by format_si_unit 
+        unlist( # Drops any NULLs returned by format_unit 
                mapply(format_unit, Units[[c("basis", "symbol")]],
-                      si)),
+                      vector)),
         collapse = " ")
 }
 
