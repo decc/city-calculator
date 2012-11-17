@@ -5,28 +5,95 @@
 ## - Ratio scales only -- no degrees Celsius to Kelvin
 ## - Uses SI as the underlying basis
 
-## An object of class PhysicalQuantity contains an attribute "measure", where
+## An object of class Quantity contains an attribute "measure", where
 ##
+## atomic_unit := one of a list of named units (kg, J, N, Gt, mHz, ...)
+
+is.basis_unit <- function(au) {
+  au %in% Units$basis$symbol
+}
+
+is.coherent_unit <- function(au) {
+  au %in% Units$coherent$symbol | is.basis_unit(au)
+}
+
+is.atomic_unit <- function(au) {
+  au %in% Units$other$symbol | is.coherent_unit(au)
+}
+
+## unit := vector-of (atomic_unit = power) such that no atomic_unit occurs twice and no
+## power is zero
+
+is.unit <- function(u) {
+  (is.numeric(u)
+   && all(is.atomic_unit(names(u))) 
+   && !anyDuplicated(names(u))
+   && !any(u == 0))
+}
+
 ## A unit is a compatible unit for a quantity kind just in case the reduction of
 ## the dimensions of the unit to basis dimensions is the same as the reduction
 ## of the dimensions of the quantity kind.
-## 
-## atomic_unit := one of a list of named units (kg, J, N, Gt, mHz, ...)
-##
-## unit := listof (atomic_unit, power) such that no atomic_unit occurs twice and no
-## power is zero
-## 
-## atomic_measure := (quantity_kind, unit) such that unit is a compatible unit for quantity_kind
-## 
-## measure := listof (atomic_measure, power) such that no atomic_measure occurs
-## twice and no power is zero
-##
-##         := 
-##                
 
+is.compatible_unit <- function(unit, qk) {
+  
+}
+
+qk_simplify <- function(qk) {}
+
+
+## 
+## atomic_measure := pair (unit, quantity_kind) such that unit is a compatible unit for quantity_kind
+## 
+## measure := list-of (atomic_measure, power) such that no power is zero
+##                
+## Example atomic measures:
+## N_[force]
+## kg_[mass]
+## (kg m s^-2)_[force]
+## (m s^-1)_[velocity]
+## (N m)_[energy]
+##
+## Example non-atomic measures:
+## kg_[mass] (m s^-1)_[velocity]
+## N_[force] m_[displacement]
+## 
+## Things that are not measures:
+## * (N_[force] m_[displacement])_[energy] 
+## * (N_[force] m_[position])_[torque] 
 
 ## Simplify: convert x-x an omitted symbol
 ## Reduce: convert to basis thingies
+
+
+## Determine whether argument is an atomic unit
+
+## Determine whether argument is a unit
+
+## Determine whether argument is an atomic measure
+
+
+## Determine whether argument is a measure
+is.measure <- function(m) {
+  
+}
+
+as.Quantity <- function(vec, measure) {
+  
+}
+
+print.Quantity <- function(vec, verbose = FALSE) {
+  print(paste("It's ... ", format(vec)))
+  invisible(xx)
+}
+
+
+q_to_unit <- function(vec, new.unit) {}
+
+q_add <- function(q1, q2) {} # Can only add q's with identical measures
+q_mult <- function(q1, q2, kind = NULL) {}
+
+
 
 
 
@@ -49,11 +116,11 @@ add_quantityKind <- function(name, definition) {
 
 add_unit0 <- function(qk, symbol, name, plural.name, coherent, multiple, series) {
 
-  if (any(symbol %in% Units$basis$symbol)) {
+  if (any(is.basis_unit(symbol))) {
     stop("unit '", symbol, "' is already defined (as a basis unit)")
-  } else if (any(symbol %in% Units$coherent$symbol)) {
+  } else if (any(is.coherent_unit(symbol))) {
     stop("unit '", symbol, "' is already defined (as a coherent unit)")
-  } else if (any(symbol %in% Units$other$symbol)) {
+  } else if (any(is.other_unit(symbol))) {
     stop("unit '", symbol, "' is already defined")
   }
 
@@ -126,13 +193,15 @@ add_unit <- function(qk, symbol, name, plural.name = "", coherent = FALSE, multi
 ## Definitions of quantity kinds
 ## Should be package local in the end
 
-Bases <- data.frame(
+Basis.Dimensions <- data.frame(
   symbol = c("L", "M", "T", "I", "Th", "N", "J"),
   name = c("length", "mass", "time", "electric current",
     "thermodynamic temperature", "amount of substance", "luminous intensity")) 
 
 ## Units in basis.units are the default for those dimensions whose
-## definition is NULL.
+## definition is NULL. The order should be precisely the same as the order in
+## Basis.Dimensions
+
 
 Units <- list(
   basis = data.frame(
