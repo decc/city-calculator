@@ -39,7 +39,7 @@ is.compatible_unit <- function(unit, qk) {
   
 }
 
-qk_simplify <- function(qk) {}
+simplify.dimension <- function(qk) {}
 
 
 ## 
@@ -94,45 +94,42 @@ q_add <- function(q1, q2) {} # Can only add q's with identical measures
 q_mult <- function(q1, q2, kind = NULL) {}
 
 
-
-
-
-as_vector <- function(qk_expr) {
+as_vector <- function(dim_expr) {
     Reduce(`+`,                                           # Add up ...
            Map(`*`,                                       # the powers of ..
-               qk_expr,                            
-               lapply(Quantity.Kinds[names(qk_expr)],     # the basis dimensions
+               dim_expr,                            
+               lapply(Dimensions[names(dim_expr)],     # the basis dimensions
                       function(x) {`[[`(x, "vector")} ))) # (extracting the vectors).   
 }
 
-add_quantityKind <- function(name, definition) {
-  if (name %in% names(Quantity.Kinds)) {
-    stop("quantity kind [", name, "] already defined")
+add_dimension <- function(name, definition) {
+  if (name %in% names(Dimensions)) {
+    stop("dimension [", name, "] already defined")
   }
-  Quantity.Kinds[[name]] <<- list(definition = definition,
+  Dimensions[[name]] <<- list(definition = definition,
                                   vector = as_vector(definition))
 }
 
 
-add_unit0 <- function(qk, symbol, name, plural.name, coherent, multiple, series) {
+add_unit0 <- function(dimension, symbol, name, plural.name, coherent, multiple, series) {
 
   if (any(is.basis_unit(symbol))) {
     stop("unit '", symbol, "' is already defined (as a basis unit)")
   } else if (any(is.coherent_unit(symbol))) {
     stop("unit '", symbol, "' is already defined (as a coherent unit)")
-  } else if (any(is.other_unit(symbol))) {
+  } else if (any(is.atomic_unit(symbol))) {
     stop("unit '", symbol, "' is already defined")
   }
 
   if (coherent) {
     Units$coherent <<- rbind(Units$coherent,
-                             data.frame(qk = qk,
+                             data.frame(dimension = dimension,
                                         symbol = symbol,
                                         name = name,
                                         plural.name = plural.name))
   } else {
     Units$other <<- rbind(Units$other,
-                          data.frame(qk = qk,
+                          data.frame(dimension = dimension,
                                      symbol = symbol,
                                      name = name,
                                      plural.name = plural.name,
@@ -146,17 +143,13 @@ add_unit0 <- function(qk, symbol, name, plural.name, coherent, multiple, series)
 ## Add units, including making up all the prefixed versions, calling add_unit0
 ## for each individual unit (and to check for duplicates).
 
-add_unit <- function(qk, symbol, name, plural.name = "", coherent = FALSE, multiple
+add_unit <- function(dimension, symbol, name, plural.name = "", coherent = FALSE, multiple
                      = 1.0, gen.prefixes = FALSE, true.basis = NA) {
-  
-  if (is.na(qk)) {
-    stop("quantity kind must be given for unit ", symbol)
-  }
   
   if (plural.name == "") plural.name <- paste(name, "s", sep = "")
   
   if (!gen.prefixes) {
-    add_unit0(qk, symbol, name, plural.name, coherent, multiple, NA) 
+    add_unit0(dimension, symbol, name, plural.name, coherent, multiple, NA) 
   } else {
     
     ## Prefixed units are added one at a time so that add_unit0 can report
@@ -164,25 +157,25 @@ add_unit <- function(qk, symbol, name, plural.name = "", coherent = FALSE, multi
     ## very frequently.
 
     if (is.na(true.basis)) {
-      add_unit0(qk, symbol, name, plural.name, coherent, multiple, symbol)
+      add_unit0(dimension, symbol, name, plural.name, coherent, multiple, symbol)
       prefix.range <- 1:length(SI.Prefixes$prefix)
       skip.multiple <- 1
     } else if (true.basis == symbol) {
       prefix.range <- 1:length(SI.Prefixes$prefix)
       skip.multiple <- 1
     } else {
-      add_unit0(qk, symbol, name, plural.name, FALSE, multiple, symbol)
+      add_unit0(dimension, symbol, name, plural.name, FALSE, multiple, symbol)
       skip <- match(true.basis, paste(SI.Prefixes$prefix, symbol, sep = ""))
       prefix.range <- (1:length(SI.Prefixes$prefix))[-skip]
       skip.multiple <- SI.Prefixes$multiple[[skip]]
     }
     
     for (i in prefix.range) {
-      add_unit0(qk,
+      add_unit0(dimension,
                 paste(SI.Prefixes$prefix[[i]], symbol, sep = ""),
                 paste(SI.Prefixes$name[[i]], name, sep = ""),
                 paste(SI.Prefixes$name[[i]], plural.name, sep = ""),
-                FALSE, # These are not coherent derived units
+                FALSE, # These are not coherent, derived units
                 SI.Prefixes$multiple[[i]] / skip.multiple,
                 symbol)
     }
@@ -196,16 +189,19 @@ add_unit <- function(qk, symbol, name, plural.name = "", coherent = FALSE, multi
 Basis.Dimensions <- data.frame(
   symbol = c("L", "M", "T", "I", "Th", "N", "J"),
   name = c("length", "mass", "time", "electric current",
-    "thermodynamic temperature", "amount of substance", "luminous intensity")) 
+    "thermodynamic temperature", "amount of substance", "luminous intensity"),
+  dimension = c("length", "mass", "time", "electric_current",
+    "temperature", "amount", "luminous_intensity")) 
 
 ## Units in basis.units are the default for those dimensions whose
 ## definition is NULL. The order should be precisely the same as the order in
 ## Basis.Dimensions
 
-
 Units <- list(
   basis = data.frame(
     symbol = c("m", "kg", "s", "A", "K", "mol", "cd"),
+    dimension = c("length", "mass", "time", "electric_current",
+      "temperature", "amount", "luminous_intensity"), 
     name = c("metre", "kilogram", "second", "ampere", "kelvin", "mole",
       "candela"),
     plural.name = c("metres", "kilograms", "seconds", "amperes", "kelvins",
@@ -225,34 +221,31 @@ SI.Prefixes <- data.frame(name = c("yotta", "zetta", "exa", "peta", "tera",
 
 
 ## TODO: Add new unit sets: coherent (J, N, ...) and prefixed (GJ, g, ...)
-## Same format, but now each unit lists its known quantityKinds.
-## And also need a "default units map quantityKinds -> Units$.
+## Same format, but now each unit lists its known Dimensions.
+## And also need a "default units map Dimensions -> Units$.
 
-Quantity.Kinds <- list(
-    position = list(
-        definition = NULL,
-        vector = c(1,0,0,0,0,0,0)),
-    displacement = list(
-        definition = NULL,
-        vector = c(1,0,0,0,0,0,0)),
-    mass = list(
-        definition = NULL,
-        vector = c(0,1,0,0,0,0,0)),
-    time = list(
-        definition = NULL,
-        vector = c(0,0,1,0,0,0,0)),
-    electric_current = list(
-        definition = NULL,
-        vector = c(0,0,0,1,0,0,0)),
-    temperature = list(
-        definition = NULL,
-        vector = c(0,0,0,0,1,0,0)),
-    amount = list(
-        definition = NULL,
-        vector = c(0,0,0,0,0,1,0)),
-    luminous_intensity = list(
-        definition = NULL,
-        vector = c(0,0,0,0,0,0,1)))
+Dimensions <- list(
+  length = list(
+    definition = NULL,
+    vector = c(1,0,0,0,0,0,0)),
+  mass = list(
+    definition = NULL,
+    vector = c(0,1,0,0,0,0,0)),
+  time = list(
+    definition = NULL,
+    vector = c(0,0,1,0,0,0,0)),
+  electric_current = list(
+    definition = NULL,
+    vector = c(0,0,0,1,0,0,0)),
+  temperature = list(
+    definition = NULL,
+    vector = c(0,0,0,0,1,0,0)),
+  amount = list(
+    definition = NULL,
+    vector = c(0,0,0,0,0,1,0)),
+  luminous_intensity = list(
+    definition = NULL,
+    vector = c(0,0,0,0,0,0,1)))
 
 
 ## format_si_vector
@@ -278,7 +271,7 @@ format_vector <- function(vector) {
 }
 
 
-## Create a reasonably complete set of dimensions and units
+## A reasonably complete set of dimensions and units
 
 ## The SI prefixed versions of the base units.
 add_unit("M", "g", "gram", coherent = TRUE, gen.prefixes = TRUE, true.basis = "kg")
@@ -293,30 +286,30 @@ add_unit("J", "cd", "candela", coherent = TRUE, gen.prefixes = TRUE, true.basis
          = "cd")
 
 ## Some dimensions which don't have their own units in SI
-add_quantityKind("velocity", c(displacement = 1, time = -1)) # m/s
-add_quantityKind("acceleration", c(velocity = 1, time = -1)) # (m/s)/s
-add_quantityKind("area", c(displacement = 2)) # m^2
+add_dimension("velocity", c(length = 1, time = -1)) # m/s
+add_dimension("acceleration", c(velocity = 1, time = -1)) # (m/s)/s
+add_dimension("area", c(length = 2)) # m^2
 
 ## Dimensions with their own units
-add_quantityKind("frequency", c(time = -1))
+add_dimension("frequency", c(time = -1))
 add_unit("frequency", "Hz", "hertz", "hertz",
          coherent = TRUE, gen.prefixes = TRUE)
 
-add_quantityKind("angle", c(displacement = 1, position = -1)) # rad = m/m
+add_dimension("angle", c(length = 1, length = -1)) # rad = m/m
 add_unit("angle", "rad", "radian",
          coherent = TRUE, gen.prefixes = FALSE)
 
-add_quantityKind("solid_angle", c(angle = 2)) # sr = rad^2
+add_dimension("solid_angle", c(angle = 2)) # sr = rad^2
 add_unit("solid_angle", "sr", "steradian",
          coherent = TRUE, gen.prefixes = FALSE)
 
-add_quantityKind("momentum", c(mass = 1, velocity = 1)) # kg (m/s)
-add_quantityKind("force", c(mass = 1, acceleration = 1)) # N = kg (m/s)/s 
-                                        # Should be (momentum = 1, time = -1?)
-add_quantityKind("pressure", c(force = 1, area = -1)) # Pa = N/m^2
-add_quantityKind("energy", c(force = 1, displacement = 1)) # J = N m
-add_quantityKind("power", c(energy = 1, time = -1)) # W = J/s
-add_quantityKind("electric_charge", c(electric_current = 1, time = -1)) # C = A s
-add_quantityKind("voltage", c(energy = 1, electric_charge = -1)) # V = J / C.
+add_dimension("momentum", c(mass = 1, velocity = 1)) # kg (m/s)
+add_dimension("force", c(mass = 1, acceleration = 1)) # N = kg (m/s)/s 
+                                        # should perhaps be (momentum = 1, time = -1?)
+add_dimension("pressure", c(force = 1, area = -1)) # Pa = N/m^2
+add_dimension("energy", c(force = 1, length = 1)) # J = N m
+add_dimension("power", c(energy = 1, time = -1)) # W = J/s
+add_dimension("electric_charge", c(electric_current = 1, time = -1)) # C = A s
+add_dimension("voltage", c(energy = 1, electric_charge = -1)) # V = J / C.
 
 
