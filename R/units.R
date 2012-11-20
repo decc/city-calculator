@@ -1,9 +1,28 @@
-### Units - A physical quantity package for R
+### Units - A physical quantity package for SI units (and extensions)
 
 ## Notes:
 ##
 ## - Ratio scales only -- no degrees Celsius to Kelvin
 ## - Uses SI as the underlying basis
+##
+## Main user functions:
+## Quantity(v, unit_string, dimension_string) : make an object of class Quantity
+## print(q, verbose = FALSE) : print an object q of class Quantity
+## 
+## add_unit
+## add_dimension
+
+## TODO
+##
+## most functions work only with simple measures
+## measures should be recursive
+## perhaps Units should have named rows?
+## functions which take 'measure, dimension = NULL', should just take 'measure' and
+## accept a string representation 
+## write unit tests (aha ha)
+## unit.Quantity
+## dimension.Quantity (?)
+## unit.String --> return details of unit
 
 indef.article <- function(str) {
   if (substr(str, 1, 1) %in% c("a", "A", "e", "E", "i", "I", "o", "O", "u",
@@ -41,12 +60,11 @@ is.unit <- function(u) {
    && !any(u == 0))
 }
 
-## unit.dimensions : unit -> dimension
+## unit.dimension : unit -> dimension
 ## Extract the dimension of a unit
-## Not vectorised
 
-unit.dimension <- function(unit) {
-  Units$dimension[Units$symbol == unit]
+unit.dimension <- function(symb) {
+  Units$dimension[match(symb, Units$symbol)]
 }
 
 ## A unit is a compatible unit for a dimension just in case the reduction of
@@ -57,7 +75,7 @@ to_basis <- function(dim_expr) {
   Reduce(`+`,                                           # Add up ...
          Map(`*`,                                       # the powers of ..
              dim_expr,                            
-             lapply(Dimensions[names(dim_expr)],     # the basis dimensions
+             lapply(Dimensions[names(dim_expr)],        # the basis dimensions
                     function(x) {`[[`(x, "vector")} ))) # (extracting the vectors).   
 }
 
@@ -98,7 +116,12 @@ is.measure_part <- function(mp) {
    && !identical(mp[[2]], 0))
 }
 
-
+## Assumes 'm' is a measure
+is.simple_measure <- function(m) {
+  (identical(length(m), 1L)        # m contains only one part ...
+   && identical(m[[1]][[2]], 1))  # and the power of that part is 1
+}
+  
 
 ## Example atomic measures:
 ## N_[force]
@@ -106,6 +129,7 @@ is.measure_part <- function(mp) {
 ## (kg m s^-2)_[force]
 ## (m s^-1)_[velocity]
 ## (N m)_[energy]
+## (N m)_[torque]
 ##
 ## Example non-atomic measures:
 ## kg_[mass] (m s^-1)_[velocity]
@@ -115,39 +139,125 @@ is.measure_part <- function(mp) {
 ## * (N_[force] m_[displacement])_[energy] 
 ## * (N_[force] m_[position])_[torque] 
 
-## Simplify: convert x-x an omitted symbol
-## Reduce: convert to basis thingies
+## as.Quantity : Quantity -> same quantity, different units.
+## TODO: allow quantities other than those with simple measures
+##
+
+basis_vector <- function(m) {
+  ## Return the 7-element basis vector of this measure
+  ## assumes measure is a simple measure
+  dim_expr <- as.numeric(m[[1]][[1]][[1]])
+  names(dim_expr) <- unit.dimension(names(m[[1]][[1]][[1]]))
+  to_basis(dim_expr)
+}
+
+is.compatible.measure <- function(m1, m2) {
+  (identical(basis_vector(m1), basis_vector(m2)))
+}
+
+as.Quantity <- function(q, measure) {
+  if (!inherits(q, "Quantity")) stop("'q' must be a Quantity")
+
+  old.measure <- attr(q, "measure")
+  
+  if (is.character(measure)) {
+    new.measure <- as.measure(measure, old.measure[[1]][[1]][[2]])
+  } else {
+    new.measure <- measure
+  }
+  
+  if (!is.simple_measure(new.measure)) stop("'measure' must be a simple measure")
+
+    if (!is.compatible.measure(new.measure, old.measure)) {
+    stop("'q' and 'measure' must be unit compatible")
+  }
+
+  result <- q * unit.si_multiple(old.measure[[1]][[1]][[1]]) /
+    unit.si_multiple(new.measure[[1]][[1]][[1]])
+
+  attr(result, "measure") <- new.measure
+  result
+}
+   
 
 ## Quantity: make a numeric object of class Quantity
 ## measure: either a measure, or a unit, or a string representing a unit
 
-## TODO: Allow measure to be a string, eg, "kg m^2 s^-2"
-
 Quantity <- function(vec, measure, dimension = NULL) {
   if (class(vec) == "Quantity") warn("'vec' is already a Quantity")
   if (!is.numeric(vec)) stop("'vec' must be numeric")
+  if (is.character(measure)) {
+    measure <- as.measure(measure, dimension)
+  } 
   if (!is.measure(measure)) stop("'measure' is not a valid measure")
-  
+
   class(vec) <- c("Quantity", "numeric")
   attr(vec, "measure") <- measure
   vec
 }
 
-## string_to_measure: return a measure given a character string of the form "kg
+## as.measure: return a measure given a character string of the form "kg
 ## m^2 s^-2"
+## TODO: Allow, eg, "kg_[mass]"
 
-string_to_measure <- function(str) {
+as.measure <- function(str, dimension = NULL) {
+  unit <- as.unit(str)
+  measure <- if (!is.null(dimension)) {
+    if (!is.dimension(dimension)) {
+      stop("'", dimension, "' is not a known dimension")
+    }
+    if (!is.compatible_unit(unit, dimension)) {
+      stop ("the dimensions of ", unit, " are not ", dimension)
+    }
+    list(list(list(unit, dimension), 1))
+  } else {
+    unpack.unit(unit)
+  }
+  
+  measure
 }
 
-to_SI.Quantity <- function(q) {
-  ## make units SI base units
+## unpack.unit: convert, eg, "m s^-2" to "m_[length] (s_[time])^-2"
+unpack.unit <- function(unit) {
+  mapply(function(au, power) {
+    list(
+      list({v <- c(1); names(v) <- au; v}, unit.dimension(au)),
+      power)},
+         names(unit),
+         unit,
+         USE.NAMES = FALSE, SIMPLIFY = FALSE)
 }
+
+## as.unit: string -> unit (eg, "kg m^2 s^-2") 
+as.unit <- function(str) {
+  unlist(
+    lapply(strsplit(
+      unlist(strsplit(str, " ", fixed = TRUE)),
+      "^", fixed = TRUE),
+           make_unit_part))
+}
+
+## make_unit_part: list(unit, power) -> c(unit = power)
+make_unit_part <- function(ll) {
+  if (length(ll) == 1L) {
+    power <- 1
+  } else {
+    power <- as.numeric(ll[[2]])
+  }
+
+  if (!is.atomic_unit(ll[[1]])) stop (ll[[1]], " is not a known unit")
+  if (identical(power, 0L)) stop ("powers of 0 are not allowed in unit definitions")
+  
+  names(power) <- ll[[1]]
+  power
+}
+
 
 ## TODO: Need to capture the numeric-relevant options to 'print'
 
 print.Quantity <- function(vec, verbose = FALSE, ...) {
   cat("Units:", format_measure(attr(vec, "measure"), verbose), "\n")
-  print(as.numeric(vec), ...)
+  print(c(vec), ...)
   invisible(vec)
 }
 
@@ -157,23 +267,35 @@ format_measure <- function(measure, verbose = FALSE) {
 }
 
 format_measure_part <- function(mp, verbose, parens = FALSE) {
+  
+  is.longunit <- !identical(length(mp[[1]][[1]][[1]]), 1L)
+  
   if (mp[[2]] == 1) {
-    if (parens) {
+    if (parens && is.longunit) {
       paste("(", format_atomic_measure(mp[[1]], verbose), ")", sep = "")
     } else {
       format_atomic_measure(mp[[1]], verbose)
     }
   } else {
-    paste("(", format_atomic_measure(mp[[1]], verbose), ")^", mp[[2]], sep = "")
+    if (is.longunit) {
+      paste("(", format_atomic_measure(mp[[1]], verbose), ")^", mp[[2]], sep = "")
+    } else {
+      paste(format_atomic_measure(mp[[1]], verbose), "^", mp[[2]], sep = "")
+    }
   }
 }
-
+  
+  
 format_atomic_measure <- function(am, verbose) {
   ff <- format_unit(am[[1]])
   if (!verbose) {
     ff 
   } else {
-    paste("[", ff, "]_", am[[2]], sep = "")
+    if (length(am[[1]]) > 1L) {
+      paste("(", ff, ")_[", am[[2]], "]", sep = "")
+    } else {
+      paste(ff, "_[", am[[2]], "]", sep = "")
+    }   
   }
 }
 
@@ -192,15 +314,16 @@ format_unit_part <- function(symbol, power) {
   }
 }
 
+## to_SI: Quantity -> Quantity expressed in SI units, using the SI unit for each
+## corresponding dimension, where possible
 
-## format_vector <- function(vector) {
-##    paste(
-##        unlist( # Drops any NULLs returned by format_unit 
-##               mapply(format_unit, Units[[c("basis", "symbol")]],
-##                      vector)),
-##        collapse = " ")
-## }
-
+## unit.si_multiple: unit -> number: the multiple these units are of SI basis units 
+unit.si_multiple <- function(unit) {
+  Reduce(`*`,
+         mapply(function(au, power) {
+           Units$multiple[Units$symbol == au]^power
+         }, names(unit), unit))
+}  
 
 q_to_unit <- function(vec, new.unit) {}
 q_add <- function(q1, q2) {} # Can only add q's with identical measures
@@ -213,7 +336,7 @@ add_dimension <- function(name, definition) {
     stop("dimension [", name, "] already defined")
   }
   Dimensions[[name]] <<- list(definition = definition,
-                                  vector = as_vector(definition))
+                              vector = to_basis(definition))
 }
 
 
@@ -239,10 +362,25 @@ add_unit0 <- function(dimension, symbol, name, plural.name, type, multiple, seri
 ## for each individual unit (and to check for duplicates).
 ## TODO: Vectorise
 
-add_unit <- function(dimension, symbol, name, plural.name = "", is.coherent = FALSE, multiple
-                     = 1.0, gen.prefixes = FALSE, true.basis = NA, series = NA) {
+add_unit <- function(dimension, symbol, name, plural.name = "",
+                     is.coherent = FALSE,
+                     multiple = 1.0,
+                     gen.prefixes = FALSE,
+                     true.basis = NA,
+                     series = NA) {
+
+  if (inherits(multiple, "Quantity")) {
+    measure <- attr(multiple, "measure")
+    if (!is.simple_measure(measure)) {
+      stop("'multiple' must be a simple measure or numeric")
+    }
+    multiple <- as.numeric(multiple) * unit.si_multiple(measure[[1]][[1]][[1]]) 
+  }
   
-  if (plural.name == "") plural.name <- paste(name, "s", sep = "")
+  if (plural.name == "") {
+    plural.name <- paste(name, "s", sep = "")
+  }
+    
   type <- if (is.coherent) "coherent" else "other"
   
   if (!gen.prefixes) {
@@ -273,7 +411,7 @@ add_unit <- function(dimension, symbol, name, plural.name = "", is.coherent = FA
                 paste(SI.Prefixes$name[[i]], name, sep = ""),
                 paste(SI.Prefixes$name[[i]], plural.name, sep = ""),
                 "other", # These are not coherent, derived units
-                SI.Prefixes$multiple[[i]] / skip.multiple,
+                SI.Prefixes$multiple[[i]] * multiple / skip.multiple,
                 series)
     }
   }
@@ -402,10 +540,26 @@ add_unit("voltage", "V", "volt", is.coherent = TRUE, gen.prefixes = TRUE)
 ## Dimensions without their own units
 add_dimension("momentum", c(mass = 1, velocity = 1)) # kg (m/s)
 
-## Non-SI energy units
+## Non-SI energy and time units
 
-add_unit("energy", "cal", "calorie", multiple = 4.1868, is.coherent = FALSE, gen.prefixes = FALSE)
+add_unit("time", "h", "hour", multiple = 60 * 60)
 
+## "Small-c" calorie.
+## Definition: International Steam Table calorie (1956)
+## See, eg, http://en.wikipedia.org/wiki/Calorie
+## This also appears to be the definition used by DUKES
+add_unit("energy", "cal", "calorie", multiple = 4.1868)
+
+## Tonne of oil equivalent.
+## Definition: OECD/IEA definition, also the one used by DUKES
+add_unit("energy", "toe", "tonne of oil equivalent", "tonnes of oil equivalent",
+         multiple = Quantity(1e10, "cal"), gen.prefixes = TRUE)
+
+## therms
+## Definition: The Units of Measurement Regulations, 1995
+## http://www.legislation.gov.uk/uksi/1995/1804/schedule/made
+add_unit("energy", "therm", "therm", multiple = Quantity(105.505585257348,
+                                       "MJ"), gen.prefixes = TRUE)
 
 
 
