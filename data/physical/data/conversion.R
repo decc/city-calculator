@@ -1,8 +1,9 @@
 ## Physical constants
 ## ==================
 ##
-## Calorific values, and emissions factors.
-##
+## Calorific values and emissions factors
+
+library(siunits)
 
 ## Calorific values
 ## ----------------
@@ -13,14 +14,18 @@
 ## petrol = Motor spirit (DUKES)
 ## diesel = DERV (DUKES)
 
-fuel.hhv <- c(petrol = 47.1, diesel = 45.7) # Units: GJ / tonne
+fuel.hhv <- as.Quantity(c(petrol = 47.1,
+                          diesel = 45.7), "GJ t^-1")
 
 ## Emissions factors
 ## -----------------
 
 ## Source: DUKES 2012, Annex A, Fuel conversion factors ... 2010
+## Units: Emissions of CO_2
 
-fuel.co2 <- c(gas = 0.185, petrol = 0.240, diesel = 0.252) # kg CO2 / kWh
+fuel.co2 <- as.Quantity(c(gas = 0.185,
+                          petrol = 0.240,
+                          diesel = 0.252), "kg (kW h)_[energy]^-1")
 
 
 
