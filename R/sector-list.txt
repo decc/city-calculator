@@ -1,0 +1,22 @@
+Fuels
+=====
+
+Gas
+Electricity
+Petroleum
+Petrol
+Diesel
+Coal
+Manufactured Solid Fuels
+Renewables & Waste
+
+Sectors
+=======
+
+Domestic
+Commercial and industrial [includes public admin]
+Cars, motor-cycles, and buses
+HGV
+Rail
+Agriculture
+

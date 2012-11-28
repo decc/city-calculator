@@ -1,4 +1,4 @@
-2Emissions
+Emissions
 A	Industry and Commercial Electricity
 B	Industry and Commercial Gas
 C	Large Industrial Installations
