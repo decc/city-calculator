@@ -1448,12 +1448,12 @@ yr,NUTS4_code,LAU1_code,lau,geography_code,sector,GWh,N_consumers
 2005,UKM4400,,Eilean Siar (Western Isles),S12000013,Domestic consumers,0,0
 2006,UKM4400,,Eilean Siar (Western Isles),S12000013,Domestic consumers,0,0
 2007,UKM4400,,Eilean Siar (Western Isles),S12000013,Domestic consumers,0,0
-2008,UKM4400,,Eilean Siar (Western Isles),S12000013,Domestic consumers,-,-
+2008,UKM4400,,Eilean Siar (Western Isles),S12000013,Domestic consumers,0,0
 2009,UKM4400,,Eilean Siar (Western Isles),S12000013,Domestic consumers,0,0
 2005,UKM4400,,Eilean Siar (Western Isles),S12000013,Commercial and industrial consumers,0,0
 2006,UKM4400,,Eilean Siar (Western Isles),S12000013,Commercial and industrial consumers,0,0
 2007,UKM4400,,Eilean Siar (Western Isles),S12000013,Commercial and industrial consumers,0,0
-2008,UKM4400,,Eilean Siar (Western Isles),S12000013,Commercial and industrial consumers,-,-
+2008,UKM4400,,Eilean Siar (Western Isles),S12000013,Commercial and industrial consumers,0,0
 2009,UKM4400,,Eilean Siar (Western Isles),S12000013,Commercial and industrial consumers,0,0
 2005,UKD2204,,Ellesmere Port & Neston,E07000016,Domestic consumers,613.905148,33.361
 2006,UKD2204,,Ellesmere Port & Neston,E07000016,Domestic consumers,594.32156,33.435
@@ -2092,12 +2092,12 @@ yr,NUTS4_code,LAU1_code,lau,geography_code,sector,GWh,N_consumers
 2005,UKK3007,,Isles of Scilly,E06000053,Domestic consumers,0,0
 2006,UKK3007,,Isles of Scilly,E06000053,Domestic consumers,0,0
 2007,UKK3007,,Isles of Scilly,E06000053,Domestic consumers,0,0
-2008,UKK3007,,Isles of Scilly,E06000053,Domestic consumers,-,-
+2008,UKK3007,,Isles of Scilly,E06000053,Domestic consumers,0,0
 2009,UKK3007,,Isles of Scilly,E06000053,Domestic consumers,0,0
 2005,UKK3007,,Isles of Scilly,E06000053,Commercial and industrial consumers,0,0
 2006,UKK3007,,Isles of Scilly,E06000053,Commercial and industrial consumers,0,0
 2007,UKK3007,,Isles of Scilly,E06000053,Commercial and industrial consumers,0,0
-2008,UKK3007,,Isles of Scilly,E06000053,Commercial and industrial consumers,-,-
+2008,UKK3007,,Isles of Scilly,E06000053,Commercial and industrial consumers,0,0
 2009,UKK3007,,Isles of Scilly,E06000053,Commercial and industrial consumers,0,0
 2005,UKI1203,,Islington,E09000019,Domestic consumers,1253.708058,83.819
 2006,UKI1203,,Islington,E09000019,Domestic consumers,1206.315536,84.957
@@ -2942,12 +2942,12 @@ yr,NUTS4_code,LAU1_code,lau,geography_code,sector,GWh,N_consumers
 2005,UKM4500,,Orkney Islands,S12000023,Domestic consumers,0,0
 2006,UKM4500,,Orkney Islands,S12000023,Domestic consumers,0,0
 2007,UKM4500,,Orkney Islands,S12000023,Domestic consumers,0,0
-2008,UKM4500,,Orkney Islands,S12000023,Domestic consumers,-,-
+2008,UKM4500,,Orkney Islands,S12000023,Domestic consumers,0,0
 2009,UKM4500,,Orkney Islands,S12000023,Domestic consumers,0,0
 2005,UKM4500,,Orkney Islands,S12000023,Commercial and industrial consumers,0,0
 2006,UKM4500,,Orkney Islands,S12000023,Commercial and industrial consumers,0,0
 2007,UKM4500,,Orkney Islands,S12000023,Commercial and industrial consumers,0,0
-2008,UKM4500,,Orkney Islands,S12000023,Commercial and industrial consumers,-,-
+2008,UKM4500,,Orkney Islands,S12000023,Commercial and industrial consumers,0,0
 2009,UKM4500,,Orkney Islands,S12000023,Commercial and industrial consumers,0,0
 2005,UKG2203,,Oswestry,E07000184,Domestic consumers,199.786731,11.192
 2006,UKG2203,,Oswestry,E07000184,Domestic consumers,199.823261,11.497
@@ -3506,12 +3506,12 @@ yr,NUTS4_code,LAU1_code,lau,geography_code,sector,GWh,N_consumers
 2005,UKM4600,,Shetland Islands,S12000027,Domestic consumers,0,0
 2006,UKM4600,,Shetland Islands,S12000027,Domestic consumers,0,0
 2007,UKM4600,,Shetland Islands,S12000027,Domestic consumers,0,0
-2008,UKM4600,,Shetland Islands,S12000027,Domestic consumers,-,-
+2008,UKM4600,,Shetland Islands,S12000027,Domestic consumers,0,0
 2009,UKM4600,,Shetland Islands,S12000027,Domestic consumers,0,0
 2005,UKM4600,,Shetland Islands,S12000027,Commercial and industrial consumers,0,0
 2006,UKM4600,,Shetland Islands,S12000027,Commercial and industrial consumers,0,0
 2007,UKM4600,,Shetland Islands,S12000027,Commercial and industrial consumers,0,0
-2008,UKM4600,,Shetland Islands,S12000027,Commercial and industrial consumers,-,-
+2008,UKM4600,,Shetland Islands,S12000027,Commercial and industrial consumers,0,0
 2009,UKM4600,,Shetland Islands,S12000027,Commercial and industrial consumers,0,0
 2005,UKG2204,,Shrewsbury and Atcham,E07000185,Domestic consumers,569.498012,32.637
 2006,UKG2204,,Shrewsbury and Atcham,E07000185,Domestic consumers,554.031661,33.048

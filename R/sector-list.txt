@@ -9,14 +9,16 @@ Diesel
 Coal
 Manufactured Solid Fuels
 Renewables & Waste
+NA
 
 Sectors
 =======
 
 Domestic
-Commercial and industrial [includes public admin]
+Commercial and industrial [includes Public Admininstration]
 Cars, motor-cycles, and buses
-HGV
+LGVs
+HGVs
 Rail
 Agriculture
-
+LULUCF
