@@ -20,50 +20,40 @@ sector0s <- c("domestic", "commercial & industrial", "transport",
               "all sources", "LULUCF")
 
 ## Sectors for the energy data. `coarse` refers to sector0s, above.
-sectors <- data.frame(
-  fine = c(
-    "domestic", "commercial & industrial",
-    "cars & motor-cycles", "buses", "LGVs", "HGVs", "rail",
-    "agriculture", "all sources", "LULUCF"),
-  coarse = c(
-    "domestic", "commercial & industrial",
-    "transport", "transport", "transport", "transport", "transport",
-    "commercial & industrial", "all sources", "LULUCF"))
-
+sectors <- read.table(header = TRUE, text = "
+fine                      coarse
+domestic                  domestic
+'commercial & industrial' 'commercial & industrial'
+'cars & motor-cycles'     transport
+buses                     transport
+LGVs                      transport
+HGVs                      transport
+rail                      transport
+agriculture               'commercial & industrial'
+'all sources'             'all sources'
+LULUCF                    LULUCF
+")
+                      
 ## Sectors for the CO2 emissions data
-co2.sectors <- data.frame(
-  orig = c(
-    A = "Industry and Commercial Electricity",
-    B = "Industry and Commercial Gas",
-    C = "Large Industrial Installations",
-    D = "Industrial and Commercial Other Fuels",
-    E = "Agricultural Combustion",
-    F = "Railways",
-    G = "Domestic Electricity",
-    H = "Domestic Gas",
-    I = "Domestic 'Other Fuels'",
-    J = "Road Transport (A roads)",
-    K = "Road Transport (Motorways)",
-    L = "Road Transport (Minor Roads)",
-    M = "Road Transport Other",
-    N  = "LULUCF Net Emissions"),
-  coarse = c(
-    "commercial & industrial", # A
-    "commercial & industrial", # B
-    "commercial & industrial", # C
-    "commercial & industrial", # D
-    "commercial & industrial", # E
-    "transport",               # F
-    "domestic",                # G
-    "domestic",                # H
-    "domestic",                # I
-    "transport",               # J
-    "transport",               # K
-    "transport",               # L
-    "transport",               # M
-    "LULUCF"),                 # N    
-  row.names = "orig")
-  
+
+co2.sectors <- read.table(header = TRUE, text = "
+  orig                                    coarse
+A 'Industry and Commercial Electricity'   'commercial & industrial'
+B 'Industry and Commercial Gas'           'commercial & industrial'
+C 'Large Industrial Installations'        'commercial & industrial'
+D 'Industrial and Commercial Other Fuels' 'commercial & industrial'
+E 'Agricultural Combustion'               'commercial & industrial'
+F  Railways                               'transport'
+G 'Domestic Electricity'                  'domestic'
+H 'Domestic Gas'                          'domestic'
+I \"Domestic 'Other Fuels'\"              'domestic'
+J 'Road Transport (A roads)'              'transport'
+K 'Road Transport (Motorways)'            'transport'
+L 'Road Transport (Minor roads)'          'transport'
+M 'Road Transport Other'                  'transport'
+N 'LULUCF Net Emissions'                  'LULUCF'
+")
+   
 out.names <- c("yr", "lau", "geography_code", "sector", "fuel", "energy")
 
 ## Raw data
@@ -166,16 +156,14 @@ otherfuels <- transform(
 ## COMBINED
 
 ukregenergy <- rbind(gas, electricity, roadfuel, otherfuels)
-ukregenergy$sector0 <- secto
-
+ukregenergy$sector0 <- sectors$coarse[match(ukregenergy$sector, sectors$fine)]
+ukregco2$sector0 <- co2.sectors$coarse[match(ukregco2$sector, co2.sectors$orig)]
 
 ## Save data
 ## ---------
 
 setwd("../R")
-
 save(ukregco2, ukregpop, file = "ukregco2.Rdata")
-
 save(ukregenergy, ukreggas, ukreggas_excluded, ukregelectricity,
      ukregroadfuel, ukregotherfuels, file = "ukregenergy.Rdata")
 

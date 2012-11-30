@@ -31,39 +31,3 @@ Nottingham E06000018 Nottingham
 Newcastle E08000021 'Newcastle upon Tyne'
 ")
 
-## High-level emissions sectors
-sector0 <- read.table(header = TRUE, text = "
-sector_code sector0
-A 'Ind. & Comm.'
-B 'Ind. & Comm.'
-C 'Ind. & Comm.'
-D 'Ind. & Comm.'
-E 'Ind. & Comm.'
-F 'Transport'
-G 'Domestic'
-H 'Domestic'
-I 'Domestic'
-J 'Transport'
-K 'Transport'
-L 'Transport'
-M 'Transport'
-N 'LULUCF'
-")
-
-sector0$sector0 <- factor(sector0$sector0,
-                          c("Domestic", "Transport",
-                            "Ind. & Comm.",
-                            "LULUCF"),
-                          ordered = TRUE)
-
-
-
-
-## Sectors
-## Industrial & Commerical includes Agriculture, Public Administration
-
-## sectors <- c("Domestic", "Industrial & Commercial", "Road Transport",
-##          "Rail Transport", "LULUCF")
-
-## fuels <- c("Grid Electricity", "Gas", "Petrol", "Diesel", "Coal", "Manufactured Solid Fuels", "Renewables & Waste")
-
