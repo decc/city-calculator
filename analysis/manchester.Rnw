@@ -51,9 +51,9 @@ source("../R/city-tool.R")
 ##
 the_city = "Manchester"
 
-## Add in city names to CO2 and population datasets, and sector0 to CO2
+## Add in city names to CO2 and population datasets
 ##
-all.co2 <- merge(merge(city_codes, ukregco2, by = "geography_code"), sector0, by = "sector_code")
+all.co2 <- merge(city_codes, ukregco2, by = "geography_code")
 all.pop <- merge(city_codes, ukregpop, by = "geography_code")
 
 ## Total emissions at city level
@@ -76,12 +76,11 @@ co2 <- ddply(boroughs.co2, .(yr, sector0, sector_code, sector), summarise, CO2 =
 @ 
 
 \section{Introduction}
-
 \subsection{DECC's work with cities}
-
 \subsection{About this document}
 
-\section{Overview of \citys\  emissions}
+\section{Overview of \citys\  emissions and energy consumption}
+\subsection{Emissions}
 
 The UK's total greenhouse gas emissions in 2010 (exlcuding international
 aviation and shipping) were \SI{590.2}{Mt.\COO e}, of which \SI[round-mode =
@@ -196,8 +195,11 @@ back to~1990, the most recent period being~2005. It has been suggested that the
 against 2005 levels~\cite{woodholmes-lot1c}. In addition, Manchester City has
 adopted a target of \SI{41}{\percent} by 2020 against 2005
 levels~\cite{mcc-future}. For the purpose of this document, we will assume
-that the 2020 target is a reduction of about \SI{40}{\percent} against 2005
+that the 2020 target is a reduction of \SI{40}{\percent} against 2005
 levels.
+
+\subsection{Energy}
+
 
 
 
