@@ -1,6 +1,5 @@
 \documentclass[a4paper]{article}
 \usepackage{amsmath}   % for mathematical niceties
-\usepackage{Sweave}    % for literate analysis
 \usepackage{biblatex}  % for citations
 \usepackage{booktabs}  % for professional tables
 \usepackage{hyperref}  % to make URLs clickable
@@ -23,13 +22,7 @@
 \usepackage[utf8]{inputenc}          
 \usepackage[T1]{fontenc}              
 \usepackage[tt={monowidth}]{cfr-lm} 
-%
-% SWEAVE OPTIONS
-%\SweaveOpts{keep.source=TRUE}
-%\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontsize=\small, formatcom=\color{decc.orange}}
-%\DefineVerbatimEnvironment{Soutput}{Verbatim}{fontsize=\small, formatcom=\color{decc.blue}}
-%\DefineVerbatimEnvironment{Scode}{Verbatim}{fontsize=\small}
-%
+%%
 % SHORTCUTS
 \newcommand{\COO}{{\lstyle CO$_\text{2}$}}
 %
@@ -42,13 +35,13 @@
 \begin{document}
 \maketitle
 % 
-<<label = initialise, echo = FALSE>>=
+<<"initialise", echo = FALSE>>=
+opts_chunk$set(echo = FALSE, tidy = FALSE)
+options(xtable.floating = FALSE, xtable.booktabs = TRUE, xtable.include.rownames = FALSE, xtable.format.args = list(big.mark = ","))
 ## Initiliase analytical code
 ##
-options(continue = " ")
 source("../R/city-tool.R")
-## The name of the city -- change this to change the city for which the calculations are performed 
-##
+library(xtable)
 the_city = "Manchester"
 
 ## Add in city names to CO2 and population datasets
@@ -62,13 +55,19 @@ cities.co2 <- ddply(all.co2, .(city, yr), summarise, CO2 = sum(CO2))
 
 ## Summary by year at borough and sector0 level for this city 
 ##
-boroughs.co2 <- ddply(all.co2[all.co2$city == the_city, ], .(geography_code, geography_name, yr, sector0, sector_code, sector), summarise, CO2 = sum(CO2))
+boroughs.co2 <- ddply(all.co2[all.co2$city == the_city, ], 
+                      .(geography_code, geography_name, yr, sector0, sector_code, sector), 
+                      summarise, CO2 = sum(CO2))
 
-boroughs.pop <- ddply(all.pop[all.pop$city == the_city, ], .(geography_code, geography_name, yr), summarise, pop = sum(pop))
+boroughs.pop <- ddply(all.pop[all.pop$city == the_city, ], 
+                      .(geography_code, geography_name, yr), 
+                      summarise, pop = sum(pop))
 
 ## In boroughs.all, the pop variable should not be summed as it contains duplicates.
 ##
-boroughs.all <- transform(merge(boroughs.co2, boroughs.pop, by = c("geography_code", "geography_name", "yr")), CO2percapita = CO2 / pop)
+boroughs.all <- transform(merge(boroughs.co2, boroughs.pop, 
+                                by = c("geography_code", "geography_name", "yr")), 
+                          CO2percapita = CO2 / pop)
 
 ## Emissions by sector and year for the city
 ##
@@ -125,14 +124,14 @@ In 2010, total emissions from \city\ were \SI[round-mode = places, round-precisi
 \citys\ historic \COO\ emissions in the context of selected other cities.
 %
 \begin{table}[htbp]
-<<label = summary_all, echo = FALSE>>=
-format(dcast(cities.co2, city ~ yr, function(x) {0.001 * sum(x)}, value.var =
-             "CO2"), digits = 3)
+  \centering
+<<label = summary_all, results = "asis">>=
+xtable(dcast(cities.co2, city ~ yr, function(x) {0.001 * sum(x)}, value.var =
+             "CO2"), digits = 1)
 @ 
 \caption{Total \COO\ emissions (in \si{Mt.\COO}) from selected cities on an
   end-user basis.\label{table:summary_all}}
 \end{table}
-%
 
 Emissions per capita in \city\ were \SI[round-mode = places, round-precision = 1]{%
 \Sexpr{with(boroughs.co2, sum(CO2[yr == 2010])) / with(boroughs.pop, sum(pop[yr == 2010]))}%
@@ -150,40 +149,43 @@ each borough; and table~\ref{table:borough-emissions-bysector} shows the per cap
 emissions broken down by sector.
 %
 \begin{table}[htbp]
-<<label = borough_summary, echo = FALSE>>=
+  \centering
+<<label = borough_summary, results = "asis">>=
 n.boroughs <- length(city_codes$city[city_codes$city == the_city])
-format(
+xtable(
   ddply(boroughs.all[boroughs.all$yr == 2010, ], 
         .(geography_name), summarise,
         CO2 = sum(CO2), pop = sum(pop)/length(pop), CO2percapita = sum(CO2percapita)),
-  big.mark =",", digits = 2)
+  digits = 1)
 @ 
-\caption{Summary statistics for each of the \Sexpr{n.boroughs} boroughs that make up
-  \city. (Emissions are in~\si{kt.\COO}; population figures are mid-year
-  estimates in thousands; and emissions per capita are in tonnes.)\label{table:borough-summary}}
+\caption{Summary statistics for each of the \Sexpr{n.boroughs} boroughs that
+  make up \city. (Emissions are in~\si{kt.\COO}; population figures are mid-year
+  estimates in thousands; and emissions per capita are in
+  tonnes.)\label{table:borough-summary}}
 \end{table}
 
 \begin{table}[htbp]
-<<label = city_co2, echo = FALSE>>=
-format(dcast(subset(boroughs.all, yr == 2010),
+  \centering
+<<label = city_co2, results = "asis">>=
+xtable(dcast(subset(boroughs.all, yr == 2010),
              geography_name ~ sector0, 
              sum, value.var = "CO2percapita", margins = "sector0"), 
-       big.mark = ",", digits = 2)
+       digits = 1)
 @ 
-\caption{Per capita emissions from the individual boroughs in 2010. The
-  abbreviated sector is ``Industrial and Commercial''. Note that the high-level
-  sectors shown here are not identical to those in the data as published by DECC
-  as Railways have been included within
+\caption{Per capita emissions from the individual boroughs in 2010. Note that
+  the high-level sectors shown here are not identical to those in the data as
+  published by DECC as Railways have been included within
   Transport.\label{table:borough-emissions-bysector}}
 \end{table}
 
 Finally, table~\ref{table:city-all} shows \citys\ total emissions for each
 detailed sector over time.
 \begin{table}[htbp]
-<<label = city_all, echo = FALSE>>=
-format(
-  dcast(co2, sector ~ yr, value.var = "CO2"), big.mark = ",", digits = 1)
-@ 
+  \centering
+<<label = city_all, results = "asis">>=
+xtable(
+  dcast(co2, sector ~ yr, value.var = "CO2"), digits = 0)
+@
 \caption{Sectoral emissions for \city, \si{kt.\COO}.\label{table:city-all}}
 \end{table}
 
@@ -200,8 +202,19 @@ levels.
 
 \subsection{Energy}
 
-
-
+As at the time of writing, not all energy data was available for 2010, so
+table~\ref{table:energy-summary} shows energy consumption for~2009.  
+\begin{table}[htbp]
+  \centering
+<<label = energy_summary, results = "asis">>=
+energy <- extract_city(the_city, ukregenergy)
+energy <- ddply(energy, .(yr, sector, sector0, fuel), summarise, energy = sum(energy))
+print(xtable(dcast(subset(energy, yr == 2009), 
+                   fuel ~ sector0, sum, value.var = "energy", margins = TRUE), 
+             digits = 0))
+@ 
+\caption{2009 energy consumption for \city, \si{GW.h}.\label{table:energy-summary}}
+\end{table}
 
 \printbibliography
 

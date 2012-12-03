@@ -20,9 +20,10 @@ data(ukregenergy)
 
 \format{
 
-  Five data frames (\code{ukreggas}, \code{ukreggas_excluded},
+  Six data frames: \code{ukregenergy} (amalgmated energy data with
+  consistent units), \code{ukreggas}, \code{ukreggas_excluded},
   \code{ukregelectricity}, \code{ukregroadfuel}, and
-  \code{ukregotherfuels}).
+  \code{ukregotherfuels}.
   
   \subsection{Variables identifying an observation}{
     \describe{
@@ -36,6 +37,8 @@ data(ukregenergy)
     
       \item{\code{sector}}{Economic sector. Not consistent across all
 	datasets.}
+
+      \item{\code{sector0}}{High-level economic sector.}
   
       \item{\code{vehicle_type}}{(\code{ukregroadfuel}) Type of vehicle (and
 	sometimes fuel).}
@@ -45,6 +48,7 @@ data(ukregenergy)
   
   \subsection{Value variables}{
     \describe{
+      \item{\code{energy}}{(Combined data set) Energy consumption.}
       \item{\code{GWh}}{(Gas, electricity) Energy consumption, GWh.}
       \item{\code{ktoe}}{(Other fuels) Energy consumption,
 	thousand tonnes of oil equivalent.}

@@ -8,7 +8,7 @@ manchester.bbl: ../bibliography/cities.bib
 	biber manchester
 
 .Rnw.tex:	
-	R CMD Sweave $<
+	Rscript  -e "library(knitr); knit('$<')"
 
 .tex.pdf:
 	pdflatex $<

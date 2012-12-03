@@ -155,6 +155,10 @@ otherfuels <- transform(
     levels = sectors$fine),
   energy = as.Quantity(as.Quantity(ktoe, "ktoe"), "(GW h)_[energy]"))[ , out.names]
   
+## CORRECT UNITS FOR CO2 DATASET
+
+ukregco2$CO2 <- as.Quantity(ukregco2$CO2, "kt")
+
 ## COMBINED
 
 ukregenergy <- rbind(gas, electricity, roadfuel, otherfuels)
