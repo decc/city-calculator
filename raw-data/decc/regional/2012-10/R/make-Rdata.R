@@ -8,6 +8,8 @@
 ## energy to a common physical unit and add units to CO2 emissions (uses the
 ## `siunits` package).
 
+library(siunits)
+
 ## Definitions
 ## -----------
 
@@ -166,5 +168,6 @@ setwd("../R")
 save(ukregco2, ukregpop, file = "ukregco2.Rdata")
 save(ukregenergy, ukreggas, ukreggas_excluded, ukregelectricity,
      ukregroadfuel, ukregotherfuels, file = "ukregenergy.Rdata")
+
 
 
