@@ -13,12 +13,25 @@ load("../data/regional/data/gsslookup.Rdata")
 
 ## Emissions factors
 ## -----------------
-## Source: DUKES 2012, Annex A, "Fuel conversion factors [...] 2010"
-## Units: Emissions of CO_2
+## Source: DUKES 2012, Annex A: "Fuel conversion factors for converting fossil
+## fuels to carbon dioxide, 2010"
+## Units: kg CO_2 / kWh
 
-fuel.co2 <- as.Quantity(c(   gas = 0.185,
-                          petrol = 0.240,
-                          diesel = 0.252), "kg (kW h)_[energy]^-1")
+fuel.co2 <- as.Quantity(c(   gas = 0.185, # Natural gas
+                          petrol = 0.240, 
+                          diesel = 0.252,
+                            coal = 0.285, # Industrial coal
+                       petroleum = 0.267, # Fuel oil
+      'manufactured solid fuels' = 0.369, # Coking coal
+            'renewables & waste' = 0.000),
+                        "kg (kW h)_[energy]^-1")
+
+## Source: This is the figure used to impute the emissions from regional
+## electricity consumption in the regional emissions dataset 2009. It is found
+## in AEA's technical report for that dataset,
+## http://www.decc.gov.uk/assets/decc/11/stats/climate-change/6225-technical-report-local-and-regional-carbon-dioxid.pdf
+
+electricity.co2 <- as.Quantity(500, "t (GW h)_[energy]^-1")
 
 ## Fuels and Sectors
 ## -----------------
@@ -62,3 +75,4 @@ extract_city <- function(city, data) {
   data[data$geography_code %in%
        city_codes$geography_code[city_codes$city == city], ]
 }
+

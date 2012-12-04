@@ -165,7 +165,7 @@ xtable(
 \end{table}
 
 \begin{table}[htbp]
-  \centering
+  \centering\small
 <<label = city_co2, results = "asis">>=
 xtable(dcast(subset(boroughs.all, yr == 2010),
              geography_name ~ sector0, 
@@ -181,7 +181,7 @@ xtable(dcast(subset(boroughs.all, yr == 2010),
 Finally, table~\ref{table:city-all} shows \citys\ total emissions for each
 detailed sector over time.
 \begin{table}[htbp]
-  \centering
+  \centering\small
 <<label = city_all, results = "asis">>=
 xtable(
   dcast(co2, sector ~ yr, value.var = "CO2"), digits = 0)
@@ -205,7 +205,7 @@ levels.
 As at the time of writing, not all energy data was available for 2010, so
 table~\ref{table:energy-summary} shows energy consumption for~2009.  
 \begin{table}[htbp]
-  \centering
+  \centering\small
 <<label = energy_summary, results = "asis">>=
 energy <- extract_city(the_city, ukregenergy)
 energy <- ddply(energy, .(yr, sector, sector0, fuel), summarise, energy = sum(energy))
@@ -215,6 +215,8 @@ print(xtable(dcast(subset(energy, yr == 2009),
 @ 
 \caption{2009 energy consumption for \city, \si{GW.h}.\label{table:energy-summary}}
 \end{table}
+
+
 
 \printbibliography
 
