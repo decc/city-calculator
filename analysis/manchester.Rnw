@@ -38,7 +38,7 @@
 <<"initialise", echo = FALSE>>=
 opts_chunk$set(echo = FALSE, tidy = FALSE)
 options(xtable.floating = FALSE, xtable.booktabs = TRUE, xtable.include.rownames = FALSE, xtable.format.args = list(big.mark = ","))
-## Initiliase analytical code
+## Initialise analytical code
 ##
 source("../R/city-tool.R")
 library(xtable)
@@ -81,13 +81,13 @@ co2 <- ddply(boroughs.co2, .(yr, sector0, sector_code, sector), summarise, CO2 =
 \section{Overview of \citys\  emissions and energy consumption}
 \subsection{Emissions}
 
-The UK's total greenhouse gas emissions in 2010 (exlcuding international
+The UK's total greenhouse gas emissions in 2010 (excluding international
 aviation and shipping) were \SI{590.2}{Mt.\COO e}, of which \SI[round-mode =
 places, round-precision = 1]{%
-\Sexpr{with(ukregco2, 0.001*sum(CO2[yr == 2010]))}}%
-{Mt.\COO} are included in the local authority dataset \cite{decc-emissions,
-  decc-regional-emissions}. Table~\ref{table:reconciliation} shows a
-reconciliation of these figures.
+  \Sexpr{as.numeric(as.Quantity(with(ukregco2, sum(CO2[yr == 2010])), "Mt"))}%
+}{Mt.\COO} are included in the local authority dataset \cite{decc-emissions,
+    decc-regional-emissions}. Table~\ref{table:reconciliation} shows a
+  reconciliation of these figures.
 %
 \begin{table}[htbp]
   \centering
@@ -106,7 +106,8 @@ reconciliation of these figures.
     \textit{less} Sectors excluded from local authority dataset &   23.5 \\ \midrule
     \textbf{Local authority dataset (\COO)}              & 
     \num[round-mode = places, round-precision = 1, text-rm =
-    \bfseries]{\Sexpr{with(ukregco2, 0.001*sum(CO2[yr == 2010]))}} \\ \bottomrule
+    \bfseries]{\Sexpr{with(ukregco2, as.numeric(as.Quantity(sum(CO2[yr ==
+        2010]), "Mt")))}} \\ \bottomrule
   \end{tabular}
   \caption{Reconciliation of the total emissions
     from the local authority dataset with the UK's UNFCCC submission. Sectors
@@ -117,9 +118,8 @@ reconciliation of these figures.
 \end{table}  
 % 
 
-In 2010, total emissions from \city\ were \SI[round-mode = places, round-precision =
-1]{%
-\Sexpr{0.001 * sum(boroughs.co2$CO2[boroughs.co2$yr == 2010])}%
+In 2010, total emissions from \city\ were \SI[round-mode = places, round-precision = 1]{%
+\Sexpr{as.numeric(as.Quantity(sum(boroughs.co2$CO2[boroughs.co2$yr == 2010]), "Mt"))}%
 }{Mt.\COO}~\cite{decc-regional-emissions}. Table~\ref{table:summary_all} shows
 \citys\ historic \COO\ emissions in the context of selected other cities.
 %
@@ -135,9 +135,8 @@ xtable(dcast(cities.co2, city ~ yr, function(x) {0.001 * sum(x)}, value.var =
 
 Emissions per capita in \city\ were \SI[round-mode = places, round-precision = 1]{%
 \Sexpr{with(boroughs.co2, sum(CO2[yr == 2010])) / with(boroughs.pop, sum(pop[yr == 2010]))}%
-}{t.\COO} in 2010, which compares with a UK average of \SI[round-mode = places,
-round-precision = 1]{%
-  \Sexpr{sum(ukregco2$CO2) / sum(ukregpop$pop, na.rm = TRUE)}%
+}{t.\COO}in 2010, which compares with a UK average of \SI[round-mode = places, round-precision = 1]{%
+\Sexpr{sum(ukregco2$CO2) / sum(ukregpop$pop, na.rm = TRUE)}%
 }{t.\COO} (based on the regional statistics dataset).
 %%
 %% The next section is only applicable for those cities which are composed of
