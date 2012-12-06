@@ -38,6 +38,10 @@
 <<"initialise", echo = FALSE>>=
 opts_chunk$set(echo = FALSE, tidy = FALSE)
 options(xtable.floating = FALSE, xtable.booktabs = TRUE, xtable.include.rownames = FALSE, xtable.format.args = list(big.mark = ","))
+as_num <- function(n) {
+  I(as.numeric(n))
+}
+
 ## Initialise analytical code
 ##
 source("../R/city-tool.R")
@@ -84,7 +88,7 @@ co2 <- ddply(boroughs.co2, .(yr, sector0, sector_code, sector), summarise, CO2 =
 The UK's total greenhouse gas emissions in 2010 (excluding international
 aviation and shipping) were \SI{590.2}{Mt.\COO e}, of which \SI[round-mode =
 places, round-precision = 1]{%
-  \Sexpr{as.numeric(as.Quantity(with(ukregco2, sum(CO2[yr == 2010])), "Mt"))}%
+  \Sexpr{as_num(as.Quantity(with(ukregco2, sum(CO2[yr == 2010])), "Mt"))}%
 }{Mt.\COO} are included in the local authority dataset \cite{decc-emissions,
     decc-regional-emissions}. Table~\ref{table:reconciliation} shows a
   reconciliation of these figures.
