@@ -68,10 +68,11 @@ boroughs.pop <- ddply(all.pop[all.pop$city == the_city, ],
                       summarise, pop = sum(pop))
 
 ## In boroughs.all, the pop variable should not be summed as it contains duplicates.
-##
+## Note: boroughs.all is unitless to avoid problems with xtable.
 boroughs.all <- transform(merge(boroughs.co2, boroughs.pop, 
-                                by = c("geography_code", "geography_name", "yr")), 
-                          CO2percapita = CO2 / pop)
+                                by = c("geography_code", "geography_name", "yr")),
+                          CO2 = as.numeric(as.Quantity(CO2, "kt")),
+                          CO2percapita = as.numeric(as.Quantity(CO2, "kt") / pop))
 
 ## Emissions by sector and year for the city
 ##
@@ -123,7 +124,7 @@ places, round-precision = 1]{%
 % 
 
 In 2010, total emissions from \city\ were \SI[round-mode = places, round-precision = 1]{%
-\Sexpr{as.numeric(as.Quantity(sum(boroughs.co2$CO2[boroughs.co2$yr == 2010]), "Mt"))}%
+\Sexpr{as_num(as.Quantity(sum(boroughs.co2$CO2[boroughs.co2$yr == 2010]), "Mt"))}%
 }{Mt.\COO}~\cite{decc-regional-emissions}. Table~\ref{table:summary_all} shows
 \citys\ historic \COO\ emissions in the context of selected other cities.
 %
@@ -138,9 +139,9 @@ xtable(dcast(cities.co2, city ~ yr, function(x) {0.001 * sum(x)}, value.var =
 \end{table}
 
 Emissions per capita in \city\ were \SI[round-mode = places, round-precision = 1]{%
-\Sexpr{with(boroughs.co2, sum(CO2[yr == 2010])) / with(boroughs.pop, sum(pop[yr == 2010]))}%
+\Sexpr{as_num(as.Quantity(with(boroughs.co2, sum(CO2[yr == 2010])), "kt") / with(boroughs.pop, sum(pop[yr == 2010])))}%
 }{t.\COO}in 2010, which compares with a UK average of \SI[round-mode = places, round-precision = 1]{%
-\Sexpr{sum(ukregco2$CO2) / sum(ukregpop$pop, na.rm = TRUE)}%
+\Sexpr{as_num(as.Quantity(sum(ukregco2$CO2), "kt") / sum(ukregpop$pop, na.rm = TRUE))}%
 }{t.\COO} (based on the regional statistics dataset).
 %%
 %% The next section is only applicable for those cities which are composed of
@@ -219,8 +220,48 @@ print(xtable(dcast(subset(energy, yr == 2009),
 \caption{2009 energy consumption for \city, \si{GW.h}.\label{table:energy-summary}}
 \end{table}
 
+Given the energy data and a set of emissions factors, we can compute the
+emissions implied by the energy consumption. Table~\ref{table:impliedemissions}
+shows the result using emissions factors corresponding to direct emissions
+only (apart from electricity). The computed emissions are lower than those in
+the regional statistics, because those include certain indirect emissions;
+notably those from extraction and refining of fuels. 
 
+\begin{table}[htbp]
+  \centering\small
+<<label = emissions_from_energy, results = "asis">>=
+ef <- c(fuel.co2, electricity = electricity.co2)
+energy$ef <- ef[match(energy$fuel, names(ef))] 
+energy$co2 <- as.Quantity(energy$energy * energy$ef, "kt")
+print(xtable(dcast(subset(energy, yr == 2009), 
+                   fuel ~ sector0, sum, value.var = "co2", margins = TRUE), 
+             digits = 0))
+@ 
+\caption{2009 computed emissions, \si{kt.\COO}.\label{table:impliedemissions}}
+\end{table}
 
+Table~\ref{table:comparison} shows that the difference is less than
+\SI{3}{\percent} in total and most of that comes from the transport sector, where
+the implied emissions underreport by about~\SI{10}{\percent}.
+
+\begin{table}[htbp]
+  \centering
+<<label = comparison, results = "asis">>=
+computed <- ddply(subset(energy, yr == 2009),
+                  .(sector0), summarise, computed = as.numeric(as.Quantity(sum(co2), "Mt")))
+regional <- ddply(subset(co2, yr == 2009),
+                  .(sector0), summarise, regional = as.numeric(as.Quantity(sum(CO2), "Mt")))
+comp <- merge(computed, regional, all = TRUE)
+comp$sector0 <- as.character(comp$sector0)
+comp <- rbind(comp,
+              data.frame(sector0 = "(all)", 
+                         computed = sum(comp$computed, na.rm = TRUE), 
+                         regional = sum(comp$regional, na.rm = TRUE)))
+xtable(comp, digits = 2)
+@ 
+\caption{Computed emissions and emissions from the regional emissions
+  statistics, high level sectors, 2009, in~\si{Mt}.\label{table:comparison}}
+\end{table}
 \printbibliography
 
 \end{document}

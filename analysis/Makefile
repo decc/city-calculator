@@ -2,7 +2,7 @@
 
 manchester: manchester.pdf 
 
-manchester.pdf: manchester.Rnw manchester.bbl
+manchester.pdf: manchester.Rnw manchester.bbl ../R/city-tool.R
 
 manchester.bbl: ../bibliography/cities.bib
 	biber manchester

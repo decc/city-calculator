@@ -11,8 +11,8 @@ load("../data/regional/data/ukregenergy.Rdata")
 load("../data/regional/data/ukregco2.Rdata")
 load("../data/regional/data/gsslookup.Rdata")
 
-## Emissions factors
-## -----------------
+## Emissions factors (includes direct emissions only)
+## --------------------------------------------------
 ## Source: DUKES 2012, Annex A: "Fuel conversion factors for converting fossil
 ## fuels to carbon dioxide, 2010"
 ## Units: kg CO_2 / kWh
