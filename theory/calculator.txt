@@ -1,0 +1,112 @@
+The City Calculator
+===================
+
+The city calculator is a "version" of the 2050 Calculator. That is, at heart, it
+is an energy model; most of the hard work inside the Calculator is in figuring
+out the flows of energy; and most of those calculations are done via little
+"driver tree models".
+
+The aim of this note is to clarify what the previous sentence means and to
+produce an architecture of the city calculator.
+
+I focus on a single year (eg, 2020). The same model applies to any year.
+
+
+Context: The 2050 Calculator
+----------------------------
+
+Recall that the 2050 Calculator is structured as two main sections. The first
+section is the collection of "sector sheets". These compute, for each sector, a
+set of energy flows. The second section is the set of "yearly balance
+sheets". These collect, in one place, the set of all energy flows for a given
+year (characterised by fuel type and sector, as it happens).
+
+Common to both sections are the energy flows. A single "flow" is the fundamental
+unit of this model.
+
+
+Flows
+-----
+
+A /flow/ is a quantity of energy. It represents the production or consumption of
+a particular kind of energy at a particular place and time. For example: the
+consumption of a certain amount of petrol by a car travelling 1 km; the
+production of a certain amount of heat energy by a condensing boiler; the
+"production" of a certain amount of losses by that same boiler.
+
+Flows may be assigned /characteristics/ which classify them. In the 2050
+Calculator, there are two kinds of characteristics: sectors and "fuel
+types". (Fuel types are also called "energy vectors" in the 2050 Calculator.) 
+
+Note that fuel types include categories not traditionally thought of as fuels,
+namely: kinds of service demand (eg, "road transport"), kinds of primary supply
+(eg, "wind"), and "losses". These categories must be included in order that the
+model obeys the energy balance principle, described below. (They can be thought
+of as being equivalent to "nominal accounts" in accounting theory.)
+
+These non-traditional fuel types mean that every sector can be thought of as
+engaged in the transformation of energy from one form to another. Those sectors
+whose function is to model the primary production of energy can be thought of as
+transforming energy from a "primary production" fuel type to a "real" fuel type
+(such as coal). Those sectors whose function is to model end-user consumption of
+energy can be be throught of as transforming energy from real fuels to a "final
+demand" fuel type. 
+
+Fuel types are hierarchical in nature. (For example, "petrol" is a subset of
+"liquid hydrocarbon".) The set of all fuel types forms a single hierarchy. Each
+flow must be assigned to one element of this heriarchy. (Modelling hierarchies is
+not entirely trivial, it turns out, but I will ignore that complication here.)
+
+
+Transducers (and the energy balance principle)
+----------------------------------------------
+
+A sector in the 2050 Calculator is a little model of a particular economic
+grouping, such as "passenger transport." These little models are typically very
+simplistic: they decompose the economic sector into small, atomic units, each of
+which convert energy from one form to another.
+
+For example, the "domestic passenger transport" worksheet unltimately breaks
+down into a set of vehicle-technology-distance units, such as car-ICE-km,
+bus-HEV-km, rail-diesel-km and so on. Each of these atomic units converts the
+particular fuel type for that unit into the final demand for that unit.
+
+We shall call this kind of unit a /transducer/. A transducer is a "tiny model"
+whose sole function is to convert energy from one form to another. More
+formally, a transducer computes a set of energy flows such that the sum of these
+flows is zero. (The rule that the sum of flows must be zero is the energy
+balance principle.)
+
+It is a design decision of the 2050 Calculator that transducers interact with
+each other solely through the energy flows, not via other kinds of data. That
+stipulation defines, in part, the class of models of which the 2050 Calculator
+is an example.
+
+[You may be wondering whether the model will contain innumerable such
+transducers. After all, if the total distance travelled by cars with internal
+combustion engines is 716 bn passenger-km, are we really going to have a model
+with 716 bn car-ICE-km transducers? Answer: no, the model should clearly just
+store one, together with the number 7.16 x 10^11. That is an implementation detail,
+however.]
+
+The nice thing about transducers is that they may be combined: the sum of two
+transducers is a transducer (and the product of a transducer and a number is
+also a transducer). For example, the car-<technology>-<distance> transducers may
+be aggregated over all technologies and distances to obtain the car transducer:
+this transducer tells you, overall, how much energy is consumed by
+cars. Likewise, the sum of all transducers responsible for passenger transport
+is the "passenger transport" sector. In a sense, the meaning of "sector" is
+simply "combination of transducers."
+
+The next section explains how the model figures out how much of each transducer
+is required.
+
+
+Driver trees
+------------
+
+The class of models that we are calling "Calculators" has, I think, two
+characteristics. The first we have already described -- it is that transducers
+interact only via their energy flows. The second is about how we populate the
+model with those transducers. 
+
