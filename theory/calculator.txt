@@ -9,6 +9,10 @@ out the flows of energy; and most of those calculations are done via little
 The aim of this note is to clarify what the previous sentence means and to
 produce an architecture of the city calculator.
 
+In summary, this note explains: "flows", which are the fundamental unit of this
+model; "activities" which create flows; the "driver-tree apprach"; and finally
+how the output may be interpreted.
+
 I focus on a single year (eg, 2020). The same model applies to any year.
 
 
@@ -58,7 +62,7 @@ flow must be assigned to one element of this heriarchy. (Modelling hierarchies i
 not entirely trivial, it turns out, but I will ignore that complication here.)
 
 
-Transducers (and the energy balance principle)
+Activities (and the energy balance principle)
 ----------------------------------------------
 
 A sector in the 2050 Calculator is a little model of a particular economic
@@ -71,36 +75,35 @@ down into a set of vehicle-technology-distance units, such as car-ICE-km,
 bus-HEV-km, rail-diesel-km and so on. Each of these atomic units converts the
 particular fuel type for that unit into the final demand for that unit.
 
-We shall call this kind of unit a /transducer/. A transducer is a "tiny model"
+We shall call this kind of unit an /activity/. An activity is a "tiny model"
 whose sole function is to convert energy from one form to another. More
-formally, a transducer computes a set of energy flows such that the sum of these
+formally, an activity computes a set of energy flows such that the sum of these
 flows is zero. (The rule that the sum of flows must be zero is the energy
-balance principle.)
+balance principle.) Don't think of the word "activity" in its English sense:
+think of it as a label for a certain entity within the model.
 
-It is a design decision of the 2050 Calculator that transducers interact with
-each other solely through the energy flows, not via other kinds of data. That
+It is a design decision of the 2050 Calculator that activities interact with each
+other solely through the energy flows, not via other kinds of data. That
 stipulation defines, in part, the class of models of which the 2050 Calculator
 is an example.
 
-A note on typographic style. I shall write
-
 [You may be wondering whether the model will contain innumerable such
-transducers. After all, if the total distance travelled by cars with internal
+activities. After all, if the total distance travelled by cars with internal
 combustion engines is 716 bn passenger-km, are we really going to have a model
-with 716 bn car-ICE-km transducers? Answer: no, the model should clearly just
-store one, together with the number 7.16 x 10^11. That is an implementation detail,
-however.]
+with 716 bn car-ICE-km activities? Answer: no, the model should clearly just
+store one, together with the number 7.16 x 10^11. That is an implementation
+detail, however.]
 
-The nice thing about transducers is that they may be combined: the sum of two
-transducers is a transducer (and the product of a transducer and a number is
-also a transducer). For example, the car-<technology>-<distance> transducers may
-be aggregated over all technologies and distances to obtain the car transducer:
-this transducer tells you how much energy is consumed by cars,
-overall. Likewise, the sum of all transducers responsible for passenger
-transport is the "passenger transport" sector. In a sense, the meaning of
-"sector" is simply "combination of transducers."
+The nice thing about activities is that they may be combined: the sum of two
+activities is an activity (and the product of an activity and a number is also
+an activity). For example, the car-[technology]-km activities may be aggregated
+over all technologies and distances to obtain the "car" activity: this activity
+tells you how much energy is consumed by cars, overall. Likewise, the sum of all
+activities responsible for passenger transport is the "passenger transport"
+sector. In this sense, the meaning of "sector" is simply "combination of
+activities."
 
-The next section explains how the model figures out how much of each transducer
+The next section explains how the model figures out how much of each activiy
 is required.
 
 
@@ -108,15 +111,60 @@ Driver trees
 ------------
 
 The class of models that we are calling "Calculators" has, I think, two defining
-characteristics. The first we have already described -- it is that transducers
+characteristics. The first we have already described -- it is that activities
 interact only via their energy flows. The second is about how we populate the
-model with those transducers.
+model with those activities.
 
 In principle, we could do this via some economic (or other) optimising model. In
 the Calculator, however, we tend to do it by a sort of reverse aggregation
 process. 
 
-For example, here is how the passenger transport sector works. First, we assume
-that the total energy consumption is that of a representative person, multiplied
-by the number of people:
+For example, here is how the passenger transport sector works. To distinguish
+between activities and numbers, I'll write the names of activities in angle
+brackets. So, first we model the total energy consumption as the energy
+consumption of a representative passenger, multiplied by the number of people:
+
+  <passenger-transport> = population x <passenger>
+
+Then we write the <passenger> actvitiy as the sum of the modal distances per
+person:
+
+  <passenger>  =   distance-by-car x <passenger-km-by-car>
+	         + distance-by-bus x <passenger-km-by-bus>
+	      	 + distance-by-rail x <passenger-km-by-rail>
+
+Then we convert <passenger-km> to <vehicle-km> by multiplying by the occupancy, eg:
+
+  <passenger-km-by-car> = <car-km> x car-occupancy  
+    
+Finally, we split <vehicle-km> by technology:
+
+  <car-km> =   fraction-with-ICE x <car-ICE-km>
+  	     + fraction-with-PHEV x <car-PHEV-km>
+	     + fraction-with-EV x <car-EV-km>
+	     + fraction-with-FCV x <car-FCV-km>
+
+[NB: ICE = Internal Combustion Engine; PHEV = Plug-in Hybrid Electric Vehicle;
+EV = Electric Vehicle; FCV = Fuel Cell Vehicle]. 
+
+Finally, we have reached activities that are not built up from other activities,
+and for which we must simply calculate the energy flows.
+
+In summary, each sector is an aggregation of fundamental
+activities. Furthermore, in our models, the weights of each activity are given
+"top down": starting with the most aggregated transducer, we compute its
+disaggregation using simplistic approximations. This arrangement is colloquially
+known as a "driver-tree" approach.
+
+
+Characteristics
+---------------
+
+I mentioned earlier that in the 2050 Calculator flows have two characteristics:
+fuel type and sector. In the formalism described here, fuel type is also a
+characteristic of flows. Since each flow is generated by an activity, we can
+also characterise the flows by the activity. Furthermore, if the activity model
+follows the driver-tree approach, then activities form a natural hierarchy (in
+that some activities are aggregations of others).
+
 
