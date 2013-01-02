@@ -178,11 +178,14 @@ ii. "Fuel type".
 
 iii. "Sector". In this version, a sector is simply a label attached to a flow,
 which characterises something about the activity used to create it. Sectors are
-not necessarily hierarchical. For example, one could imagine the sector "train"
-appearing in both the "passenger transport" activity and the "freight" activity.
-However, if the activity model follows the driver-tree approach, then activities
-impose a natural hierarchy on the sectors (in that some activities are
-aggregations of others).
+not necessarily strictly hierarchical. For example, one could imagine the sector
+"train" appearing in both the "passenger transport" activity and the "freight"
+activity.  However, if the activity model follows the driver-tree approach, then
+activities impose a natural hierarchy on the sectors (in that some activities
+are aggregations of others).
+
+It is required that the sum of all flows corresponding to a particular sector is
+zero.
 
 
 Formalities
@@ -190,26 +193,15 @@ Formalities
 
 More generally:
 
-A /model/ is a function which takes a set of model parameters (the ones that the
-user can adjust) and produces:
+A /model/ is a function which takes a set of global assumptions and produces and
+activity. 
 
-     i. An activity;
-     ii. A set of functions for adjusting the parameters,
-     iii. 
+An activity takes as arguments a set of model parameters and produces:
 
-The activity is evaluated in an environment consisting of the parameters, which
-may have been adjusted.
-
-  
+   i. A set of labelled flows;
+   ii. Possibly, a preferred hierarchy for the sector labels;
+   iii. Possibly, a set of activity levels (tbd). 
 
 
-
-an /activity/ is a function which, when evaluated, produces a
-set of labelled flows whose sum is zero. 
-
-A /model/ is 
-
-(i) a function which produces
-a set of activities, and a 
 
 
