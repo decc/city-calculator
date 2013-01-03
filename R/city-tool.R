@@ -66,8 +66,8 @@ Newcastle  E08000021 'Newcastle upon Tyne'
 
 ##
 
-## Extract that part of a data frame containing city data
-## Assumes: data is a data frame containing a column `geography_code`
+## Extract that part of a dataframe containing city data
+## Assumes: data is a dataframe containing a column `geography_code`
 ## Returns: those rows for which `geography_code` is one of the local
 ## authorities in the city.
 

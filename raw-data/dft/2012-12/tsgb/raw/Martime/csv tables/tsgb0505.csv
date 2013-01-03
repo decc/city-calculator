@@ -1,0 +1,78 @@
+Department for Transport Statistics,,,,,,,,,,,,,,,
+Port Freight Statistics,,,,,,,,,,,,,,,
+Table port0205,,,,,,,,,,,,,,,
+"UK major port unitised traffic, foreign and domestic by unit type: 2011",,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,Thousand units/thousand tonnes,
+,Foreign traffic,,,,,Domestic traffic,,,,,,All foreign and domestic,,,
+,All units,Loaded units,Empty Units,Weight of goods,,All units,Loaded units,Empty Units,Weight of goods,,All units,Loaded units,Empty Units,Weight of goods,
+All traffic,,,,,,,,,,,,,,,
+Containers,,,,,,,,,,,,,,,
+        20' containers,"1,517","1,180",337,"18,827",,157,96,61,"1,102",,"1,675","1,277",398,"19,929",
+        40' containers,"2,663","1,938",725,"30,628",,193,136,57,"2,272",,"2,856","2,074",783,"32,899",
+        Containers >20' & <40',75,56,19,"1,135",,4,1,3,30,,79,57,22,"1,165",
+        Containers >40',272,192,81,"3,610",,10,5,4,99,,282,197,85,"3,709",
+        All container traffic,"4,528","3,367","1,161","54,200",-,364,238,126,"3,503",-,"4,892","3,605","1,287","57,703",
+Roll-on/roll-off (self-propelled),,,,,,,,,,,,,,,
+        Road goods vehicles and trailers ,"2,932","2,536",396,"34,865",,596,533,63,"7,491",,"3,528","3,068",459,"42,356",
+"        Passenger cars, motorcycles and accompanying trailers/caravans","4,665",-,-,-,,"1,227",-,-,-,,"5,892",-,-,-,
+        Passenger buses,111,-,-,-,,32,-,-,-,,143,-,-,-,
+        Import/export motor vehicles,"3,299",1,-,"5,123",,125,-,-,161,,"3,424",1,-,"5,284",
+        Other mobile self-propelled units,5,5,-,47,,1,-,1,-,,5,5,1,47,
+        All ro-ro self-propelled traffic,"11,011","2,541",396,"40,035",-,"1,981",533,64,"7,652",-,"12,992","3,074",460,"47,687",
+Roll-on/roll-off (non self-propelled),,,,,,,,,,,,,,,
+        Unaccompanied road goods trailers,"1,669","1,396",274,"24,271",,"1,016",918,98,"13,651",,"2,685","2,314",371,"37,923",
+"        Unaccompanied caravans, agricultural and industrial vehicles",45,-,-,268,,24,-,-,43,,69,-,-,311,
+"        Rail wagons, shipborne port to port trailers, and barges                                                                                                                                                                                               ",720,493,227,"11,353",,6,3,3,27,,727,497,230,"11,380",
+        Other mobile non self-propelled units,1,1,-,8,,-,-,-,-,,1,1,-,8,
+        All ro-ro non self-propelled traffic,"2,435","1,890",501,"35,901",-,"1,047",922,101,"13,721",-,"3,482","2,811",602,"49,622",
+All traffic,"17,974","7,797","2,058","130,135",,"3,392","1,693",291,"24,876",,"21,366","9,490","2,349","155,012",
+Inward traffic,,,,,,,,,,,,,,,
+Containers,,,,,,,,,,,,,,,
+        20' containers,785,742,43,"11,089",,79,37,41,480,,864,779,85,"11,569",
+        40' containers,"1,350","1,276",74,"17,690",,98,67,31,"1,125",,"1,447","1,343",104,"18,815",
+        Containers >20' & <40',40,38,2,776,,2,1,2,15,,42,39,4,791
+        Containers >40',138,123,14,"2,519",,5,3,2,44,,142,126,17,"2,564"
+        All container traffic,"2,312","2,179",133,"32,074",-,184,108,76,"1,665",-,"2,496","2,287",209,"33,739"
+Roll-on/roll-off (self-propelled),,,,,,,,,,,,,,
+        Road goods vehicles and trailers ,"1,464","1,419",45,"20,169",,297,263,35,"3,704",,"1,761","1,682",80,"23,873"
+"        Passenger cars, motorcycles and accompanying trailers/caravans","2,301",-,-,-,,615,-,-,-,,"2,916",-,-,-
+        Passenger buses,56,-,-,-,,16,-,-,-,,73,-,-,-
+        Import/export motor vehicles,"1,954",-,-,"2,735",,61,-,-,82,,"2,015",-,-,"2,817"
+        Other mobile self-propelled units,-,-,-,4,,-,-,-,-,,1,-,-,4
+        All ro-ro self-propelled traffic,"5,776","1,420",45,"22,907",-,990,263,35,"3,786",-,"6,766","1,682",80,"26,693"
+Roll-on/roll-off (non self-propelled),,,,,,,,,,,,,,
+        Unaccompanied road goods trailers,850,825,25,"14,762",,503,451,52,"6,658",,"1,353","1,276",77,"21,420"
+"        Unaccompanied caravans, agricultural and industrial vehicles",26,-,-,174,,9,-,-,18,,35,-,-,192
+"        Rail wagons, shipborne port to port trailers, and barges                                                                                                                                                                                               ",368,359,9,"8,750",,3,2,1,16,,372,362,10,"8,766"
+        Other mobile non self-propelled units,-,-,-,-,,-,-,-,-,,-,-,-,-
+        All ro-ro non self-propelled traffic,"1,244","1,185",34,"23,686",-,515,453,54,"6,692",-,"1,759","1,637",87,"30,378"
+All inward traffic,"9,332","4,784",211,"78,667",,"1,689",823,165,"12,142",,"11,022","5,607",376,"90,810"
+Outward traffic,,,,,,,,,,,,,,
+Containers,,,,,,,,,,,,,,
+        20' containers,732,438,294,"7,738",,79,59,20,623,,811,497,314,"8,361"
+        40' containers,"1,314",662,651,"12,938",,95,68,27,"1,146",,"1,409",731,678,"14,084"
+        Containers >20' & <40',35,18,17,359,,2,1,2,15,,37,19,19,374
+        Containers >40',135,69,66,"1,091",,5,3,2,55,,139,72,68,"1,146"
+        All container traffic,"2,216","1,187","1,028","22,125",-,181,131,50,"1,839",-,"2,396","1,318","1,078","23,964"
+Roll-on/roll-off (self-propelled),,,,,,,,,,,,,,
+        Road goods vehicles and trailers ,"1,468","1,116",351,"14,697",,299,270,28,"3,787",,"1,766","1,387",379,"18,484"
+"        Passenger cars, motorcycles and accompanying trailers/caravans","2,364",-,-,-,,612,-,-,-,,"2,976",-,-,-
+        Passenger buses,55,-,-,-,,15,-,-,-,,70,-,-,-
+        Import/export motor vehicles,"1,345",-,-,"2,389",,64,-,-,79,,"1,409",-,-,"2,468"
+        Other mobile self-propelled units,4,4,-,43,,-,-,-,-,,5,4,-,43
+        All ro-ro self-propelled traffic,"5,235","1,121",351,"17,128",-,990,270,29,"3,866",-,"6,225","1,391",380,"20,994"
+Roll-on/roll-off (non self-propelled),,,,,,,,,,,,,,
+        Unaccompanied road goods trailers,819,570,249,"9,509",,513,468,46,"6,993",,"1,332","1,038",294,"16,503"
+"        Unaccompanied caravans, agricultural and industrial vehicles",19,-,-,94,,15,-,-,25,,34,-,-,119
+"        Rail wagons, shipborne port to port trailers, and barges                                                                                                                                                                                               ",352,134,218,"2,603",,3,1,2,12,,355,135,220,"2,614"
+        Other mobile non self-propelled units,1,1,-,8,,-,-,-,-,,1,1,-,8
+        All ro-ro non self-propelled traffic,"1,191",705,467,"12,214",-,531,469,48,"7,030",-,"1,722","1,174",515,"19,244"
+All outward traffic,"8,642","3,013","1,847","51,468",,"1,702",870,126,"12,734",,"10,344","3,883","1,973","64,202"
+
+Information on methodology and quality can be found in the Technical Note:,,,,,,,,,,,,,,
+https://www.gov.uk/government/organisations/department-for-transport/series/ports-statistics,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Telephone: 020 7944 4131,,,,,,,,,,,,,,Source: DfT Port Statistics
+Email: maritime.stats@dft.gsi.gov.uk,,,,,,,,,,,,,,Last updated:  20 September 2012
+,,,,,,,,,,,,,,Next update: September 2013
+The figures in this table are National Statistics,,,,,,,,,,,,,,

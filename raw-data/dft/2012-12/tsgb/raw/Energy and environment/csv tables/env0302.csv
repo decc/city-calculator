@@ -1,0 +1,110 @@
+Department for Transport statistics,,,,,,,,,
+Energy and environment,,,,,,,,,
+,,,,,,,,,
+Table ENV0302  (TSGB0309),,,,,,,,,
+Emissions for road vehicles (per vehicle kilometre) in urban conditions,,,,,,,,,
+,,,,,,,,Index: petrol car without three-way catalyst: pre 1993 = 100,
+(a)  Road vehicles (per vehicle kilometre) ,,Legislative vehicle class,,"Carbon
+monoxide","Hydro-
+carbons1","Oxides of
+nitrogen2","Particu-
+lates3","Carbon
+dioxide4",
+Petrol cars,Without three-way catalyst,Pre-Euro 1,pre 1993,100,100,100,2,100,
+,With three-way catalyst,Euro 1,1993-1996,25,9,12,1,93,
+,,Euro 2,1997-2000,5,3,7,1,89,
+,,Euro 3,2001-2005,2,1,3,1,83,
+,,Euro 4,2006-2010,4,1,2,1,76,
+,,Euro 5,2011-,4,1,2,1,67,
+Diesel cars,,Pre-Euro 1,pre 1993,6,10,27,100,91,
+,,Euro 1,1993-1996,3,6,27,30,88,
+,,Euro 2,1997-2000,2,4,28,21,83,
+,,Euro 3,2001-2005,1,2,33,19,76
+,,Euro 4,2006-2010,1,1,23,12,72
+,,Euro 5,2011,0.4,1,16,0.3,63
+Petrol light vans,Without three-way catalyst,Pre-Euro 1,pre 1994,120,117,134,2,104
+,With three-way catalyst,Euro 1,1994-1997,32,15,19,1,96
+,,Euro 2,1998-2000,1,2,7,1,92
+,,Euro 3,2001-2005,4,2,4,1,86
+,,Euro 4,2006-,4,1,2,1,79
+Diesel light vans,,Pre-Euro 1,pre 1994,7,13,61,150,93
+,,Euro 1,1994-1997,6,7,50,57,116
+,,Euro 2,1998-2001,6,7,50,61,108
+,,Euro 3,2002-2005,2,3,42,27,95
+,,Euro 4,2006-,1,2,34,16,95
+Rigid HGVs,,Pre-Euro I,pre 1993,22,69,411,275,
+,,Euro I,1993-1996,14,27,281,122,
+,,Euro II,1997-2001,12,17,304,56,See table (b)
+,,Euro III,2002-2005,11,15,238,53, below
+,,Euro IV,2006-2007,6,1,165,10,
+,,Euro V,2008-,1,1,132,10,
+Artic HGVs,,Pre-Euro I,pre 1993,25,28,663,306,
+,,Euro I,1993-1996,22,43,465,231,
+,,Euro II,1997-2001,18,27,495,104,See table (b)
+,,Euro III,2002-2005,20,23,397,95, below
+,,Euro IV,2006-2007,3,1,273,17,
+,,Euro V,2008-,1,1,182,17,
+Buses & coaches,,Pre-Euro I,pre 1993,28,54,515,263,
+,,Euro I,1993-1996,17,35,345,177,
+,,Euro II,1997-2001,14,23,373,77,See table (b)
+,,Euro III,2002-2005,15,21,292,73, below
+,,Euro IV,2006-2007,1,1,200,15,
+,,Euro V,2008-,1,1,159,16,
+Motorcycles,Less than 50cc - two stroke,Pre-Euro 1,pre 2000,141,"1,171",1,105,38
+,,Euro 1,2000-2004,57,230,1,42,23
+,,Euro 2,2004-2006,13,131,0,21,19
+,,Euro 3,2007,13,101,0,6,16
+,Greater than 50cc - two stroke,Pre-Euro 1,pre 2000,165,621,1,111,41
+,,Euro 1,2000-2004,109,192,2,45,38
+,,Euro 2,2004-2006,86,104,2,22,38
+,,Euro 3,2007,47,65,1,7,38
+,Greater than 50cc - four stroke,Pre-Euro 1,pre 2000,170,113,11,10,53
+,,Euro 1,2000-2004,103,62,11,10,50
+,,Euro 2,2004-2006,54,22,6,2,48
+,,Euro 3,2007,30,14,3,2,48
+,,,,,,,,
+(b) Fleet averaged CO2 emissions for HGVs and buses (per vehicle kilometre)4 in urban conditions,,,,,,,,
+Year,,,,,,Rigid HGVs,Artic HGVs,Buses
+1990,,,,,,414,667,409
+1991,,,,,,421,665,409
+1992,,,,,,421,660,409,,,,
+1993,,,,,,406,627,408,,,,
+1994,,,,,,394,616,403,,,,
+1995,,,,,,400,601,397,,,,
+1996,,,,,,393,590,389,,,,
+1997,,,,,,390,589,388,,,,
+1998,,,,,,373,564,388,,,,
+1999,,,,,,380,563,402,,,,
+2000,,,,,,377,563,421,,,,
+2001,,,,,,395,571,423,,,,
+2002,,,,,,384,567,441,,,,
+2003,,,,,,400,575,462,,,,
+2004,,,,,,386,555,471,,,,
+2005,,,,,,381,549,493,,,,
+2006,,,,,,398,553,485,,,             ,
+2007,,,,,,410,556,498,,,,
+2008,,,,,,425,577,518,,,,
+2009,,,,,,428,579,517,,,,
+2010,,,,,,434,585,517,,,,
+,,,,,,,,,,,,
+1. The hyrdrocarbons figures are based on non-methane hydrocarbons.,,,,,,,,The figures in this table are outside,,,,
+2. Oxides of notrogen emission factors have been revised since the last esition ,,,,,,,,the scope of national statistics,,,,
+"3. For particulates, legislative standards exist only for diesel vehicles. ",,,,,,,,Source - National Atmospheric Emissions Inventory,,,,
+    Particulates index is diesel car: pre 1993 =100.,,,,,,,,(AEA Energy and Environment),,,,
+"4. Legislative standards do not apply to CO2 emissions, but average factors are available for different ",,,,,,,,,,,,
+    legislative vehicle classes based on test cycle data. Better information on HGVs is based on average ,,,,,,,,Last Updated: November 2012,,,,
+"    fuel economy of the HGV fleet each year, see table (b) above.",,,,,,,,Next updated: November 2013,,,,
+5. The fleet averaged carbon dioxide figures for HGVs were based on fleet averaged fuel economy of HGVs ,,,,,,,,,,,,
+    using data from the DfT Continuing Survey of Road Goods Transport (CSRGT). For buses (not including,,,,,,,,,,,,
+    coaches) the figures are based on the DfT Bus Service Operators Grant system (BSOG). Both sets of ,,,,,,,,,,,,
+    figures are corrected for urban driving conditions. ,,,,,,,,,,,,
+Notes and definitions,,,,,,,,,,,,
+Email: environment.stats@dft.gsi.gov.uk,
+Telephone: 020 7944 4129,
+,
+,
+,
+,
+,
+,
+,
