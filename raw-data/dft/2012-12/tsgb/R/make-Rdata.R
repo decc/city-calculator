@@ -5,16 +5,19 @@ library(siunits)
 
 ## Table ENV0101 to flat table format
 
-fuel_wide <- read.csv(file = "../csv/env0101.csv", header = TRUE)
-fuel <- melt(fuel_wide,
-             id.vars = c("mode", "fuel", "vehicle"), variable.name = "yr", value.name = "consumption")
-fuel$yr <- as.numeric(substr(fuel$yr, 2, 5))
-fuel$consumption = as.Quantity(fuel$consumption, "Mt")
-save(fuel, file = "env0101.Rdata")
+env.wide <- read.csv(file = "../csv/env0101.csv", header = TRUE)
+tsgb.env0101 <- melt(env.wide,
+                     id.vars = c("mode", "fuel", "vehicle"),
+                     variable.name = "yr", value.name = "consumption")
+tsgb.env0101$yr <- as.numeric(substr(tsgb.env0101$yr, 2, 5))
+tsgb.env0101$consumption = as.Quantity(tsgb.env0101$consumption, "Mt")
+save(tsgb.env0101, file = "env0101.RData")
 
 ## Table TRA0201 to flat table format.
-  
-trans_wide <- read.csv(file = "../csv/tra0201.csv", header = TRUE)
-trans <- melt(trans_wide, id.vars = c("Year"), variable.name = "vehicle", value.name = "distance")
-trans$distance = as.Quantity(trans$distance, "Tm") # Terametres!
-save(trans, file = "tra0201.Rdata")
+
+dist.wide <- read.csv(file = "../csv/tra0201.csv", header = TRUE, check.names = FALSE)
+tsgb.tra0201 <- melt(dist.wide,
+                     id.vars = c("Year"),
+                     variable.name = "vehicle", value.name = "distance")
+tsgb.tra0201$distance = as.Quantity(tsgb.tra0201$distance, "Tm") # Terametres!
+save(tsgb.tra0201, file = "tra0201.RData")

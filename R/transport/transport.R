@@ -1,7 +1,10 @@
-## THE TRANSPORT SECTOR
-##
+### THE TRANSPORT SECTOR
+### ====================
 
-source("calculator.R")
+## FIXME: Includes calculator.R for debugging. This file should be included by a
+## master model file instead
+source("../calculator.R")
+source("transport-baseline-data.R")
 
 ## Transport Activity Driver Tree
 ## ------------------------------
@@ -23,7 +26,9 @@ source("calculator.R")
 ##            + (fraction cars with PHEV) x <car-PHEV-km>
 ##            + (fraction cars with EV) x <car-EV-km>
 ##            + (fraction cars with FCV) x <car-FCV-km>
+##
+## <bus-km> = ...
 
-## 2010 Vehicle efficiencies
-## -------------------------
+## Make activities representing a vehicle-km by different modes
+## ------------------------------------------------------------
 

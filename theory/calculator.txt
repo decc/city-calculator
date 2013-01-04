@@ -184,16 +184,13 @@ activity.  However, if the activity model follows the driver-tree approach, then
 activities impose a natural hierarchy on the sectors (in that some activities
 are aggregations of others).
 
-It is required that the sum of all flows corresponding to a particular sector is
-zero.
-
 
 Formalities
 -----------
 
 More generally:
 
-A /model/ is a function which takes a set of global assumptions and produces and
+A /model/ is a function which takes a set of global assumptions and produces an
 activity. 
 
 An activity takes as arguments a set of model parameters and produces:
@@ -202,6 +199,6 @@ An activity takes as arguments a set of model parameters and produces:
    ii. Possibly, a preferred hierarchy for the sector labels;
    iii. Possibly, a set of activity levels (tbd). 
 
-
+It is required that the set of flows produced by an activity sum to zero.
 
 
