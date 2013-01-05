@@ -1,8 +1,9 @@
 ### THE TRANSPORT SECTOR
 ### ====================
 
-## FIXME: Includes calculator.R for debugging. This file should be included by a
-## master model file instead
+## FIXME: Includes calculator.R for debugging. The present file should be
+## included by a master model file instead
+
 source("../calculator.R")
 source("transport-baseline-data.R")
 
@@ -29,6 +30,47 @@ source("transport-baseline-data.R")
 ##
 ## <bus-km> = ...
 
-## Make activities representing a vehicle-km by different modes
-## ------------------------------------------------------------
+## Activities representing a vehicle-km by different modes
+## -------------------------------------------------------
 
+## Car | internal combustion engine | 2010 efficiencies
+
+car.ICE.km <- local({
+  eff <- vehicle.efficiencies(2010)[["car"]]
+  Activity(function() {
+    list(
+      Flow(-eff, direction = "in",
+           fuel = fueltype("liquid hydrocarbon"),
+           sector = c("car")),
+      Flow(eff, direction = "out",
+           fuel = fueltype("final demand"),
+           sector = c("car")))
+  })
+})
+
+## Bus | internal combustion engine | 2010 efficiencies
+
+bus.ICE.km <- local({
+  eff <- vehicle.efficiencies(2010)[["bus"]]
+  Activity(function() {
+    list(
+      Flow(-eff,
+           direction = "in",
+           fuel = fueltype("liquid hydrocarbon"),
+           sector = c("bus")),
+      Flow(eff,
+           direction = "out",
+           fuel = fueltype("final demand"),
+           sector = c("bus")))
+  })
+})
+
+
+
+
+  
+      
+
+
+
+    

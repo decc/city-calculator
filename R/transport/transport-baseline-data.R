@@ -1,6 +1,11 @@
 ### Transport baseline datasets
+### ===========================
+
 ### Defines:
-### vehicle.efficiencies(year), which computes actual car, bus, and hgv efficiencies 
+### historic.vehicle.efficiency -- a dataframe
+### car.efficiency.2010
+### bus.efficiency.2010
+### hgv.efficiency.2010
 
 ## TODO: At present, it is intended that this file be source'd by the main
 ## calculator code. However, it may be nicer to write this file as R markdown,
@@ -8,10 +13,11 @@
 ## containing the required baseline data; and (b) a nicely-formatted report
 ## explaining what we did.
 
+library(plyr)
 library(siunits)
 
-### Vehicle Efficiencies
-### ====================
+### Road Vehicle Efficiencies
+### =========================
 
 data("env0101") # Fuel consumption by vehicle type (from TSGB 2012)
 data("tra0201") # Vehicle distances by vehicle type (from TSGB 2012)
@@ -22,12 +28,9 @@ data("calorific-values") # Calorific content of fuels (from DUKES 2012)
 ## overall "car" efficiency for passenger transport will therefore be
 ## overweighted by vans. 
 
-## Convert fuel mass (as given in TSGB Table env0101) to energy content
-## --------------------------------------------------------------------
-
 ## The names of fuels as used in TSGB are not the same as those used in DUKES
-## Annex A.1, which have anyway been rewritten to be more R-friendly. The
-## following is a lookup table to convert one to the other. 
+## Annex A.1, which have anyway been rewritten to be more R-friendly. The names
+## of vehicles in different TSGB tables are not necessarily consistent. 
 
 fuel.lookup <- read.table(header = TRUE, text = "
 tsgb                    dukes
@@ -39,46 +42,58 @@ tsgb                    dukes
 'LPG'                   lpg
 'Petrol'                petrol")
 
+env0101.vehicles <- read.table(header = TRUE, text = "
+tsgb                    calc 
+'Buses & coaches'       bus
+'Cars & taxis'          car
+'Heavy goods vehicles'  hgv
+'Light vans'            car
+'Motorcycles & mopeds'  car")
+
+tra0201.vehicles <- read.table(header = TRUE, text = "
+tsgb               calc
+'Cars and taxis'   car
+'Motorcycles'      car
+'Buses & coaches'  bus
+'Light vans'       car
+'Goods vehicles'   hgv
+'Pedal cycles'     bike")
+
+## Convert fuel consumption to energy
 tsgb.env0101$dukes.fuel <- fuel.lookup$dukes[match(tsgb.env0101$fuel,
                                                    fuel.lookup$tsgb)]
 
 tsgb.env0101$energy <- tsgb.env0101$consumption * dukes.annex.A.1[tsgb.env0101$dukes.fuel]
 
-vehicle.efficiencies <- function(yy) {  
-  ## Compute total distance travelled by vehicle type
-  distance <- with(tsgb.tra0201,
-                   c(car =
-                     sum(distance[Year == yy &
-                                  vehicle %in% c("Cars and taxis",
-                                                 "Motorcycles",
-                                                 "Light vans")]),
-                     bus =
-                     sum(distance[Year == yy &
-                                  vehicle %in% c("Buses & coaches")]),
-                     hgv =
-                     sum(distance[Year == yy &
-                                  vehicle %in% c("Goods vehicles")])))
-                   
-  ## Compute total energy used, by vehicle type
-  energy <- with(tsgb.env0101,
-                 c(car =
-                   sum(energy[yr == yy &
-                              vehicle %in% c("Cars & taxis",
-                                             "Light vans",
-                                             "Motorcycles & mopeds")]),
-                   bus =
-                   sum(energy[yr == yy &
-                              vehicle %in% c("Buses & coaches")]),
-                   hgv =
-                   sum(energy[yr == yy &
-                              vehicle %in% c("Heavy goods vehicles")])))
-  
-  ## Compute and return actual efficiencies 
-  as.Quantity(c(car = energy[["car"]] / distance[["car"]],
-                bus = energy[["bus"]] / distance[["bus"]],
-                hgv = energy[["hgv"]] / distance[["hgv"]]),
-              "(kW h)_[energy] km^-1")
-}
+## Convert vehicle names to common names
+tsgb.env0101$calc.vehicle <- env0101.vehicles$calc[match(tsgb.env0101$vehicle,
+                                                         env0101.vehicles$tsgb)]
+
+tsgb.tra0201$calc.vehicle <- tra0201.vehicles$calc[match(tsgb.tra0201$vehicle,
+                                                         tra0201.vehicles$tsgb)]
+
+## Summarise distance and fuel consumption by vehicle type and year
+
+fuel <- ddply(tsgb.env0101, .(calc.vehicle, yr), summarise, energy = sum(energy))
+dist <- ddply(tsgb.tra0201, .(calc.vehicle, Year), summarise, distance = sum(distance))
+dist$yr <- dist$Year
+dist$Year <- NULL
+
+## Combine the two datasets
+historic.vehicle.efficiency <- transform(merge(dist, fuel),
+                                         eff = as.Quantity(energy / distance,
+                                           "(kW h)_[energy] km^-1"))
+                                           
+
+car.efficiency.2010 <- with(historic.vehicle.efficiency,
+                            eff[calc.vehicle == "car" & yr == 2010])
+
+bus.efficiency.2010 <- with(historic.vehicle.efficiency,
+                            eff[calc.vehicle == "bus" & yr == 2010])
+
+hgv.efficiency.2010 <- with(historic.vehicle.efficiency,
+                            eff[calc.vehicle == "hgv" & yr == 2010])
+
 
 
 

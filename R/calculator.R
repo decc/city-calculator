@@ -8,27 +8,7 @@
 ### - decide whether labels are text or symbols or values
 ###
 
-## Entities
-## ========
-
-FuelTypes <- c("gas", "electricity", "petrol", "diesel", "coal", "petroleum",
-               "manufactured solid fuels", "renewables & waste",
-               "primary supply", "final demand", "real", "nominal")
-
-check.fueltype <- function(fuel) {
-  if (!(fuel %in% FuelTypes)) stop(fuel, " is not a recognised fuel type". call. = FALSE)
-  return fuel
-}
-
-## Labels
-## ======
-
-## A label is a character vector
-## Returns the set-theoretic union of its arguments
-
-merge.labels <- function(l1, l2) {
-  unique(c(l1,l2))
-}
+source("entities.R")
   
 ## Flows
 ## =====
@@ -71,7 +51,6 @@ flow.value <- function(f) {
 ## ==========
 
 ## Activity: Create an Activity given a function that returns a list of flows
-
 Activity <- function(act) {
   act
 }
@@ -80,9 +59,10 @@ Activity <- function(act) {
 ## Given an activity and a list of sectors, return an activity which produces
 ## the same set of flows with the sectors added to the flow labels if they don't
 ## already exist.
-
 label.activity <- function(act, sector = NULL) {
-  
+  function(...) {
+    label.flows(act(...), sector = sector)
+  }
 }
 
 ## label.flow
@@ -93,9 +73,16 @@ label.flow <- function(f, direction = NA, fuel = NULL, sector = NULL) {
        direction = if (is.na(direction)) flow.direction(f) else direction,
        fuel = merge.labels(flow.fuel(f), fuel),
        sector = merge.labels(flow.sector(f), sector))      
-  }
+}
 
-
+## label.flows
+## Label a list of flows
+label.flows <- function(fs, ...) {
+  lapply(fs, function(x) {
+    label.flow(x, ...)
+  })
+}
+         
 
   
   
