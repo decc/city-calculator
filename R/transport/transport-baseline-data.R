@@ -7,6 +7,11 @@
 ### bus.efficiency.2010
 ### hgv.efficiency.2010
 
+## METHOD
+##
+## 2010 car, bus, and hgv ICE efficiencies taken from 2010 total transport
+## figures as published by DfT.
+
 ## TODO: At present, it is intended that this file be source'd by the main
 ## calculator code. However, it may be nicer to write this file as R markdown,
 ## and have it processed by knitr. The output would be (a) an RData file
@@ -84,7 +89,6 @@ historic.vehicle.efficiency <- transform(merge(dist, fuel),
                                          eff = as.Quantity(energy / distance,
                                            "(kW h)_[energy] km^-1"))
                                            
-
 car.efficiency.2010 <- with(historic.vehicle.efficiency,
                             eff[calc.vehicle == "car" & yr == 2010])
 
