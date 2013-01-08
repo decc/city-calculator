@@ -36,7 +36,7 @@ source("transport-baseline-data.R")
 ## Car | internal combustion engine | 2010 efficiencies
 
 car.ICE.km <- local({
-  eff <- vehicle.efficiencies(2010)[["car"]]
+  eff <- efficiency.car.ICE
   Activity(function() {
     list(
       Flow(-eff, direction = "in",
@@ -51,7 +51,7 @@ car.ICE.km <- local({
 ## Bus | internal combustion engine | 2010 efficiencies
 
 bus.ICE.km <- local({
-  eff <- vehicle.efficiencies(2010)[["bus"]]
+  eff <- efficiency.bus.ICE
   Activity(function() {
     list(
       Flow(-eff,

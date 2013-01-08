@@ -1,25 +1,61 @@
 ### Transport baseline datasets
 ### ===========================
 
-### Defines:
-### historic.vehicle.efficiency -- a dataframe
-### car.efficiency.2010
-### bus.efficiency.2010
-### hgv.efficiency.2010
-
-## METHOD
-##
-## 2010 car, bus, and hgv ICE efficiencies taken from 2010 total transport
-## figures as published by DfT.
-
 ## TODO: At present, it is intended that this file be source'd by the main
 ## calculator code. However, it may be nicer to write this file as R markdown,
 ## and have it processed by knitr. The output would be (a) an RData file
 ## containing the required baseline data; and (b) a nicely-formatted report
 ## explaining what we did.
 
+## TODO: Allow baseline efficiency data to be requested for any given year.
+
 library(plyr)
 library(siunits)
+
+### Output
+### ------
+###
+### All efficiencies refer to 2010
+###
+### Computed from current data:
+###
+### historic.vehicle.efficiency -- a dataframe
+### efficiency.car.ICE
+### efficiency.bus.ICE
+### efficiency.hgv.ICE
+###
+### Taken from the 2050 Calculator:
+### (Downloaded 2013-01-08)
+###
+### efficiency.car.EV
+### efficiency.car.PHEV.petrol
+### efficiency.car.PHEV.electricity
+### efficiency.bus.ICE
+### efficiency.rail.DIESEL
+### efficiency.rail.ELECTRIC
+
+## 2050 CALCULATOR DATA
+
+efficiencies <- list(
+  car = list(
+    EV = as.Quantity(c(electricity = 600, "TJ Tm^-1")),
+    PHEV = as.Quantity(
+      c("liquid hydrocarbon" = 508,
+                 electricity = 417), "TJ Tm^-1")),
+  bus = list(
+    HEV = as.Quantity(c("liquid hydrocarbon" = 9885), "TJ Tm^-1"),
+    EV = as.Quantity(c(electricity = 3361), "TJ Tm^-1")), 
+  rail = list(
+    DIESEL = as.Quantity(c("liquid hydrocarbon" = 0.11),
+      "(TW h)_[energy] Tm^-1"), # per seat-km
+    ELECTRIC = as.Quantity(c(electricity = 0.032),
+      "(TW h)_[energy] Tm^-1"))) # per seat-km
+
+
+## CALCULATED EFFICIENCIES 
+##
+## 2010 car, bus, and hgv ICE efficiencies taken from 2010 total transport
+## figures as published by DfT.
 
 ### Road Vehicle Efficiencies
 ### =========================
@@ -89,14 +125,17 @@ historic.vehicle.efficiency <- transform(merge(dist, fuel),
                                          eff = as.Quantity(energy / distance,
                                            "(kW h)_[energy] km^-1"))
                                            
-car.efficiency.2010 <- with(historic.vehicle.efficiency,
-                            eff[calc.vehicle == "car" & yr == 2010])
+efficiencies[["car"]][["ICE"]]  <-
+  with(historic.vehicle.efficiency,
+       c("liquid hydrocarbon" = eff[calc.vehicle == "car" & yr == 2010]))
 
-bus.efficiency.2010 <- with(historic.vehicle.efficiency,
-                            eff[calc.vehicle == "bus" & yr == 2010])
+efficiencies[["bus"]][["ICE"]] <-
+  with(historic.vehicle.efficiency,
+       c("liquid hydrocarbon" = eff[calc.vehicle == "bus" & yr == 2010]))
 
-hgv.efficiency.2010 <- with(historic.vehicle.efficiency,
-                            eff[calc.vehicle == "hgv" & yr == 2010])
+efficiencies[["hgv"]][["ICE"]] <-
+  with(historic.vehicle.efficiency,
+       c("liquid hydrocarbon" = eff[calc.vehicle == "hgv" & yr == 2010]))
 
 
 

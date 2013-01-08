@@ -28,8 +28,8 @@
 %
 % CHOICE OF CITY
 % Change these to change the name of the city (not the calculation)
-\newcommand{\city}{Manchester}
-\newcommand{\citys}{Manchester's} 
+\newcommand{\city}{Birmingham}
+\newcommand{\citys}{Birmingham's} 
 \title{\city}
 \author{James Geddes}
 \begin{document}
@@ -46,7 +46,7 @@ as_num <- function(n) {
 ##
 source("../R/city-tool.R")
 library(xtable)
-the_city = "Manchester"
+the_city = "Birmingham"
 
 ## Add in city names to CO2 and population datasets
 ##

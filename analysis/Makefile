@@ -1,11 +1,11 @@
 .SUFFIXES: .tex .pdf .Rnw
 
-manchester: manchester.pdf 
+city: city.pdf 
 
-manchester.pdf: manchester.Rnw manchester.bbl ../R/city-tool.R
+city.pdf: city.Rnw city.bbl ../R/city-tool.R
 
-manchester.bbl: ../bibliography/cities.bib
-	biber manchester
+city.bbl: ../bibliography/cities.bib
+	biber city
 
 .Rnw.tex:	
 	Rscript  -e "library(knitr); knit('$<')"
