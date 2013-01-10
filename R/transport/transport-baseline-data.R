@@ -31,21 +31,21 @@ library(siunits)
 ### efficiency.car.PHEV.petrol
 ### efficiency.car.PHEV.electricity
 ### efficiency.bus.ICE
-### efficiency.rail.DIESEL
-### efficiency.rail.ELECTRIC
+### efficiency.train.DIESEL
+### efficiency.train.ELECTRIC
 
 ## 2050 CALCULATOR DATA
 
 efficiencies <- list(
   car = list(
-    EV = as.Quantity(c(electricity = 600, "TJ Tm^-1")),
+    EV = as.Quantity(c(electricity = 600), "TJ Tm^-1"),
     PHEV = as.Quantity(
       c("liquid hydrocarbon" = 508,
                  electricity = 417), "TJ Tm^-1")),
   bus = list(
     HEV = as.Quantity(c("liquid hydrocarbon" = 9885), "TJ Tm^-1"),
     EV = as.Quantity(c(electricity = 3361), "TJ Tm^-1")), 
-  rail = list(
+  train = list(
     DIESEL = as.Quantity(c("liquid hydrocarbon" = 0.11),
       "(TW h)_[energy] Tm^-1"), # per seat-km
     ELECTRIC = as.Quantity(c(electricity = 0.032),
@@ -114,29 +114,32 @@ tsgb.tra0201$calc.vehicle <- tra0201.vehicles$calc[match(tsgb.tra0201$vehicle,
                                                          tra0201.vehicles$tsgb)]
 
 ## Summarise distance and fuel consumption by vehicle type and year
-
 fuel <- ddply(tsgb.env0101, .(calc.vehicle, yr), summarise, energy = sum(energy))
 dist <- ddply(tsgb.tra0201, .(calc.vehicle, Year), summarise, distance = sum(distance))
-dist$yr <- dist$Year
+
+## Fix inconsistent naming conventions
+dist$yr <- dist$Year 
 dist$Year <- NULL
 
 ## Combine the two datasets
 historic.vehicle.efficiency <- transform(merge(dist, fuel),
                                          eff = as.Quantity(energy / distance,
                                            "(kW h)_[energy] km^-1"))
-                                           
-efficiencies[["car"]][["ICE"]]  <-
+
+## Add in computed efficiencies to the output table
+efficiencies[["car"]][["ICE"]] <-
   with(historic.vehicle.efficiency,
-       c("liquid hydrocarbon" = eff[calc.vehicle == "car" & yr == 2010]))
+       structure(eff[calc.vehicle == "car" & yr == 2010], names = "liquid hydrocarbon"))
 
 efficiencies[["bus"]][["ICE"]] <-
   with(historic.vehicle.efficiency,
-       c("liquid hydrocarbon" = eff[calc.vehicle == "bus" & yr == 2010]))
+       structure(eff[calc.vehicle == "bus" & yr == 2010], names = "liquid hydrocarbon"))
 
-efficiencies[["hgv"]][["ICE"]] <-
-  with(historic.vehicle.efficiency,
-       c("liquid hydrocarbon" = eff[calc.vehicle == "hgv" & yr == 2010]))
-
+efficiencies[["hgv"]] <-
+  list(ICE = 
+       with(historic.vehicle.efficiency,
+            structure(eff[calc.vehicle == "hgv" & yr == 2010], names = "liquid hydrocarbon")))
+       
 
 
 

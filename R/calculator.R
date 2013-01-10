@@ -1,5 +1,4 @@
 ### Functions for building "Calculator"-type models
-### 
 ### Author: James Geddes
 ###         james.geddes@decc.gsi.gov.uk
 ###
@@ -53,6 +52,11 @@ flow.value <- function(f) {
 ## Activity: Create an Activity given a function that returns a list of flows
 Activity <- function(act) {
   act
+}
+
+## constant_Activity: Make an activity which produces constant flows
+constant_Activity <- function(flows) {
+  Activity(function() {flows})
 }
 
 ## label.activity
