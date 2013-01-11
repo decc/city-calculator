@@ -41,6 +41,12 @@ flow.value <- function(f) {
   f[[1]]
 }
 
+## flow.scalar_mult : numeric Flow -> Flow
+## Multiply the value of a flow by a numeric
+flow.scalar_mult <- function(v, flow) {
+  list(v * flow[[1]], flow[-1])
+}
+
 ## Flowset
 ## =======
 
@@ -50,20 +56,56 @@ flow.value <- function(f) {
 ## ==========
 
 ## Activity: Create an Activity given a function that returns a list of flows
-Activity <- function(act) {
-  act
+make_Activity <- function(act) {
+  structure(act, class = "Activity")
+}
+
+is.Activity <- function(x) {
+  inherits(x, "Activity")
 }
 
 ## constant_Activity: Make an activity which produces constant flows
-constant_Activity <- function(flows) {
-  Activity(function() {flows})
+make_constant_Activity <- function(flows) {
+  make_Activity(function() {flows})
 }
+
+## act.scalar_mult : numeric Activity -> Activity
+## Multiply an Activity by a numeric
+## v: a numeric of length 1
+## act: an Activity
+act.scalar_mult <- function(v, act) {
+  new.act <- function(...) {
+    lapply(do.call(act, as.list(match.call()[-1])),
+           function(flow) { flow.scalar_mult(v, flow) })}
+  formals(new.act) <- formals(act)
+  new.act
+}
+
+mm <- function(f) {
+  g <- function(...) {
+    2 * do.call(f, as.list(match.call()[-1]))
+  }
+  formals(g) <- formals(f)
+  g  
+}
+
+
+
+
+## act.add Activity ... -> Activity
+## If there is one argument it must be a   
+## Add one or more Activities, which must all have the same formal arguments
+act.add <- function(...) {
+  
+}
+
+
 
 ## label.activity
 ## Given an activity and a list of sectors, return an activity which produces
 ## the same set of flows with the sectors added to the flow labels if they don't
 ## already exist.
-label.activity <- function(act, sector = NULL) {
+label <- function(act, sector = NULL) {
   function(...) {
     label.flows(act(...), sector = sector)
   }
