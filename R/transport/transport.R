@@ -34,18 +34,18 @@ source("transport-baseline-data.R")
 ## Returns an activity representing 1 vehicle-km.
 
 vehicle_technology_km_model <- function(vehicle, technology, efficiencies) {
-
   eff <- convert(
     efficiencies[[vehicle]][[technology]] * as.Quantity(1, "km"),
     to = "energy")
   
   flows <- mapply(function(x, fuel) {Flow(x, "in", fueltype(fuel), vehicle)},
                   eff, names(eff),
+                  SIMPLIFY = FALSE,
                   USE.NAMES = FALSE)
-  
-  make_constant_Activity(c(
-    list(Flow(-sum(eff), "out", "final demand", vehicle)),
-    flows))
+
+
+  make_constant_Activity(c(list(Flow(-sum(eff), "out", "final demand", vehicle)),
+                           flows))
 }
 
 ## Activites for each vehicle / engine technology choice

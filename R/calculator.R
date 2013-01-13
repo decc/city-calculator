@@ -44,7 +44,7 @@ flow.value <- function(f) {
 ## flow.scalar_mult : numeric Flow -> Flow
 ## Multiply the value of a flow by a numeric
 flow.scalar_mult <- function(v, flow) {
-  list(v * flow[[1]], flow[-1])
+  c(v * flow[[1]], flow[-1])
 }
 
 ## Flowset
@@ -76,17 +76,11 @@ make_constant_Activity <- function(flows) {
 act.scalar_mult <- function(v, act) {
   new.act <- function(...) {
     lapply(do.call(act, as.list(match.call()[-1])),
-           function(flow) { flow.scalar_mult(v, flow) })}
-  formals(new.act) <- formals(act)
-  new.act
-}
-
-mm <- function(f) {
-  g <- function(...) {
-    2 * do.call(f, as.list(match.call()[-1]))
+           function(x) {x})
   }
-  formals(g) <- formals(f)
-  g  
+                                        # function(flow) { flow.scalar_mult(v, flow) })}
+  formals(new.act) <- formals(act)
+  make_Activity(new.act)
 }
 
 
