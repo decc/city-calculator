@@ -25,26 +25,18 @@ Flow <- function(value, direction = NA, fuel = character(), sector = character()
        sector = sector)
 }
 
-flow.direction <- function(f) {
-  f$direction
-}
+flow.direction <- function(f) { f$direction }
 
-flow.fuel <- function(f) {
-  f$fuel
-}
+flow.fuel <- function(f) { f$fuel }
 
-flow.sector <- function(f) {
-  f$sector
-}
+flow.sector <- function(f) { f$sector }
 
-flow.value <- function(f) {
-  f[[1]]
-}
+flow.value <- function(f) { f[[1L]] }
 
 ## flow.scalar_mult : numeric Flow -> Flow
 ## Multiply the value of a flow by a numeric
-flow.scalar_mult <- function(v, flow) {
-  c(v * flow[[1]], flow[-1])
+flow.scalar_multiply <- function(v, flow) {
+  c(list(v * flow[[1L]]), flow[-1L])
 }
 
 ## Flowset
@@ -73,26 +65,41 @@ make_constant_Activity <- function(flows) {
 ## Multiply an Activity by a numeric
 ## v: a numeric of length 1
 ## act: an Activity
-act.scalar_mult <- function(v, act) {
+act.scalar_multiply <- function(v, act) {
   new.act <- function(...) {
-    lapply(do.call(act, as.list(match.call()[-1])),
-           function(x) {x})
+    lapply(do.call(act, as.list(match.call()[-1L])),
+           function(flow) {
+             flow.scalar_multiply(v, flow)
+           })
   }
-                                        # function(flow) { flow.scalar_mult(v, flow) })}
   formals(new.act) <- formals(act)
   make_Activity(new.act)
 }
 
-
-
-
 ## act.add Activity ... -> Activity
-## If there is one argument it must be a   
+##
 ## Add one or more Activities, which must all have the same formal arguments
+## (which is not checked). The arguments of the return activity will the the
+## formal arguments of the first argument to add.act. If there is one argument
+## it must be a list of Activities
 act.add <- function(...) {
-  
+  activities <- list(...)
+  if (!length(activities)) {
+    return(make_Activity(function() { list() }))
+  }
+  if (length(activities) == 1L && is.list(activities[[1L]])) {
+    activities <- activities[[1L]]
+  }
+  new.act <- function(...) {
+    matched_args <- match.call()[-1L]
+    call_with_matched_args <- function(f) {
+      do.call(f, as.list(matched_args))
+    }
+    unlist(lapply(activities, call_with_matched_args), recursive = FALSE)
+  }
+  formals(new.act) <- formals(activities[[1L]])
+  make_Activity(new.act)
 }
-
 
 
 ## label.activity

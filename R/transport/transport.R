@@ -80,7 +80,7 @@ vehicle.km <- list(
 ## technologies
 
 transport_passenger_model <- function(N, d, mode.share, occupancy, tech.share) {
-  act.scalar_mult(N * d,
+  act.scalar_multiply(N * d,
                   passenger_km_model(mode.share, occupancy, tech.share)) 
   ## Add sector label?
   
@@ -91,8 +91,8 @@ passenger_km_model <- function(mode.share, occupancy, tech.share) {
   act.add( 
     lapply(names(mode.share),
            function(mode) {
-             act.scalar_mult(mode.share[[mode]] * occupancy[[mode]],
-                             vehicle_km_model(mode, tech.share))}))
+             act.scalar_multiply(mode.share[[mode]] * occupancy[[mode]],
+                                 vehicle_km_model(mode, tech.share))}))
 }
 
 vehicle_km_model <- function(mode, tech.share) {
@@ -100,8 +100,8 @@ vehicle_km_model <- function(mode, tech.share) {
   act.add(
     lapply(names(tech.share[[mode]]),
            function(tech) {
-             act.scalar_mult(tech.share[[mode]][[tech]],
-                             vehicle.km[[mode]][[tech]])}))
+             act.scalar_multiply(tech.share[[mode]][[tech]],
+                                 vehicle.km[[mode]][[tech]])}))
 }
       
 
