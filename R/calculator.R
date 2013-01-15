@@ -48,7 +48,7 @@ flow.scalar_multiply <- function(v, flow) {
 ## ==========
 
 ## Activity: Create an Activity given a function that returns a list of flows
-make_Activity <- function(act) {
+Activity <- function(act) {
   structure(act, class = "Activity")
 }
 
@@ -58,14 +58,14 @@ is.Activity <- function(x) {
 
 ## constant_Activity: Make an activity which produces constant flows
 make_constant_Activity <- function(flows) {
-  make_Activity(function() {flows})
+  Activity(function() {flows})
 }
 
-## act.scalar_mult : numeric Activity -> Activity
+## activity.scalar_mult : numeric Activity -> Activity
 ## Multiply an Activity by a numeric
 ## v: a numeric of length 1
 ## act: an Activity
-act.scalar_multiply <- function(v, act) {
+activity.scalar_multiply <- function(v, act) {
   new.act <- function(...) {
     lapply(do.call(act, as.list(match.call()[-1L])),
            function(flow) {
@@ -73,19 +73,19 @@ act.scalar_multiply <- function(v, act) {
            })
   }
   formals(new.act) <- formals(act)
-  make_Activity(new.act)
+  Activity(new.act)
 }
 
-## act.add Activity ... -> Activity
+## activity.add Activity ... -> Activity
 ##
 ## Add one or more Activities, which must all have the same formal arguments
 ## (which is not checked). The arguments of the return activity will the the
-## formal arguments of the first argument to add.act. If there is one argument
+## formal arguments of the first argument to add.activity. If there is one argument
 ## it must be a list of Activities
-act.add <- function(...) {
+activity.add <- function(...) {
   activities <- list(...)
   if (!length(activities)) {
-    return(make_Activity(function() { list() }))
+    return(Activity(function() { list() }))
   }
   if (length(activities) == 1L && is.list(activities[[1L]])) {
     activities <- activities[[1L]]
@@ -98,7 +98,7 @@ act.add <- function(...) {
     unlist(lapply(activities, call_with_matched_args), recursive = FALSE)
   }
   formals(new.act) <- formals(activities[[1L]])
-  make_Activity(new.act)
+  Activity(new.act)
 }
 
 

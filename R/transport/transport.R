@@ -33,7 +33,7 @@ source("transport-baseline-data.R")
 ## [distance]^-1, one for each fuel type.
 ## Returns an activity representing 1 vehicle-km.
 
-vehicle_technology_km_model <- function(vehicle, technology, efficiencies) {
+vehicle_technology_km.model <- function(vehicle, technology, efficiencies) {
   eff <- convert(
     efficiencies[[vehicle]][[technology]] * as.Quantity(1, "km"),
     to = "energy")
@@ -79,28 +79,28 @@ vehicle.km <- list(
 ## tech.share: named list of vehicles, consisting of a named vector of
 ## technologies
 
-transport_passenger_model <- function(N, d, mode.share, occupancy, tech.share) {
-  act.scalar_multiply(N * d,
-                  passenger_km_model(mode.share, occupancy, tech.share)) 
+passenger_transport.model <- function(N, d, mode.share, occupancy, tech.share) {
+  activity.scalar_multiply(N * d,
+                  passenger_km.model(mode.share, occupancy, tech.share)) 
   ## Add sector label?
   
 }
 
-passenger_km_model <- function(mode.share, occupancy, tech.share) {
+passenger_km.model <- function(mode.share, occupancy, tech.share) {
   ## For each mode in mode.share, make a vehicle.km
-  act.add( 
+  activity.add( 
     lapply(names(mode.share),
            function(mode) {
-             act.scalar_multiply(mode.share[[mode]] * occupancy[[mode]],
-                                 vehicle_km_model(mode, tech.share))}))
+             activity.scalar_multiply(mode.share[[mode]] * occupancy[[mode]],
+                                 vehicle_km.model(mode, tech.share))}))
 }
 
-vehicle_km_model <- function(mode, tech.share) {
+vehicle_km.model <- function(mode, tech.share) {
   ## Combine the different kinds of technology for a given mode
-  act.add(
+  activity.add(
     lapply(names(tech.share[[mode]]),
            function(tech) {
-             act.scalar_multiply(tech.share[[mode]][[tech]],
+             activity.scalar_multiply(tech.share[[mode]][[tech]],
                                  vehicle.km[[mode]][[tech]])}))
 }
       
