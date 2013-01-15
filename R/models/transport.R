@@ -27,50 +27,6 @@ source("transport-baseline-data.R")
 ##
 ## <bus-km> = ...
 
-## make_vehicle_km: vehicle, technology, efficiencies -> Activity
-## efficiencies: A list of vehicles, each of which is a list of technologies,
-## each of which is a vector of named efficiencies, expresssed in units of [energy]
-## [distance]^-1, one for each fuel type.
-## Returns an activity representing 1 vehicle-km.
-
-vehicle_technology_km.model <- function(vehicle, technology, efficiencies) {
-  eff <- convert(
-    efficiencies[[vehicle]][[technology]] * as.Quantity(1, "km"),
-    to = "energy")
-  
-  flows <- mapply(function(x, fuel) {Flow(x, "in", fueltype(fuel), vehicle)},
-                  eff, names(eff),
-                  SIMPLIFY = FALSE,
-                  USE.NAMES = FALSE)
-
-
-  make_constant_Activity(c(list(Flow(-sum(eff), "out", "final demand", vehicle)),
-                           flows))
-}
-
-## Activites for each vehicle / engine technology choice
-## TODO: Could probably automate this ...
-
-vehicle.km <- list(
-  car = list(
-    ICE = vehicle_technology_km_model("car", "ICE", efficiencies),
-    PHEV = vehicle_technology_km_model("car", "PHEV", efficiencies),
-    EV = vehicle_technology_km_model("car", "EV", efficiencies)),
-  bus = list(
-    ICE = vehicle_technology_km_model("bus", "ICE", efficiencies),
-    HEV = vehicle_technology_km_model("bus", "HEV", efficiencies),
-    EV = vehicle_technology_km_model("bus", "EV", efficiencies)),
-  train = list(
-    ELECTRIC = vehicle_technology_km_model("train", "ELECTRIC", efficiencies),
-    DIESEL = vehicle_technology_km_model("train", "DIESEL", efficiencies)),
-  human = list(
-    WALK = vehicle_technology_km_model("human", "WALK",
-      list(human =
-           list(WALK =
-                as.Quantity(c(person = 0), "J km^-1"))))))
-    
-## make_passenger_transport
-##
 ## Create an activity following the above driver tree, given
 ## N: Number of people
 ## d: average distance travelled per person
@@ -104,8 +60,43 @@ vehicle_km.model <- function(mode, tech.share) {
                                  vehicle.km[[mode]][[tech]])}))
 }
       
+vehicle_technology_km.model <- function(vehicle, technology, efficiencies) {
+  eff <- convert(
+    efficiencies[[vehicle]][[technology]] * as.Quantity(1, "km"),
+    to = "energy")
+  
+  flows <- mapply(function(x, fuel) {Flow(x, "in", fueltype(fuel), vehicle)},
+                  eff, names(eff),
+                  SIMPLIFY = FALSE,
+                  USE.NAMES = FALSE)
 
 
+  make_constant_Activity(c(list(Flow(-sum(eff), "out", "final demand", vehicle)),
+                           flows))
+}
+
+## Activites for each vehicle / engine technology choice
+## TODO: Could probably automate this ...
+
+efficiencies.human <- list(human =
+                           list(WALK = as.Quantity(c(person = 0), "J km^-1"),
+                                BIKE = as.Quantity(c(person = 0), "J km^-1")))
+
+vehicle.km <- list(
+  car = list(
+    ICE = vehicle_technology_km.model("car", "ICE", efficiencies),
+    PHEV = vehicle_technology_km.model("car", "PHEV", efficiencies),
+    EV = vehicle_technology_km.model("car", "EV", efficiencies)),
+  bus = list(
+    ICE = vehicle_technology_km.model("bus", "ICE", efficiencies),
+    HEV = vehicle_technology_km.model("bus", "HEV", efficiencies),
+    EV = vehicle_technology_km.model("bus", "EV", efficiencies)),
+  train = list(
+    ELECTRIC = vehicle_technology_km.model("train", "ELECTRIC", efficiencies),
+    DIESEL = vehicle_technology_km.model("train", "DIESEL", efficiencies)),
+  human = list(
+    WALK = vehicle_technology_km.model("human", "WALK", efficiencies.human),
+    BIKE = vehicle_technology_km.model("human", "BIKE", efficiencies.human)))
 
   
       

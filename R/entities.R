@@ -34,7 +34,7 @@ merge.labels <- function(l1, l2) {
 ## that is a subtype of A; (2) Any activity which produces a fuel of type B can
 ## be "considered" to have produced a fuel of a supertype of B.
 ##
-## Fuel types are fixed once and for all. Every flow must have one and only fuel
+## Fuel types are fixed once and for all. Every flow must have one and only one fuel
 ## type
 
 ## fuel
@@ -51,9 +51,10 @@ FuelTypes <- c("gas", "electricity", "petrol", "diesel", "coal", "petroleum",
                "manufactured solid fuels", "renewables & waste",
                "primary supply", "final demand", "real", "nominal")
 
-check.fueltype <- function(fuel) {
-  if (!(fuel %in% FuelTypes)) stop(fuel, " is not a recognised fuel type", call. = FALSE)
-  return(fuel)
+check.fueltype <- function(atomic_fuel) {
+  if (!(atomic_fuel %in% FuelTypes))
+    stop(atomic_fuel, " is not a recognised fuel type", call. = FALSE)
+  return(atomic_fuel)
 }
 
 fueltype <- function(s) {

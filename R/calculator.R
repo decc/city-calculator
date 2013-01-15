@@ -25,9 +25,9 @@ Flow <- function(value, direction = NA, fuel = character(), sector = character()
        sector = sector)
 }
 
-flow.direction <- function(f) { f$direction }
-
-flow.fuel <- function(f) { f$fuel }
+flow.direction <- function(f) { f$direction } # Either "in" or "out"
+ 
+flow.fuel <- function(f) { f$fuel } # A character vector of atomic fuels
 
 flow.sector <- function(f) { f$sector }
 
@@ -39,10 +39,61 @@ flow.scalar_multiply <- function(v, flow) {
   c(list(v * flow[[1L]]), flow[-1L])
 }
 
-## Flowset
-## =======
+## Flowlist
+## ========
 
 ## A list of flows such that the sum of all flows is zero.
+
+## summarise.flows flowlist -> summary
+##
+## Presently only summarises by fueltype and direction.
+## TODO: Write function for pretty printing summary-type things
+## TODO: Add an optional argument to take a fueltype hierarchy.
+
+summarise.flows <- function(flowlist) {
+  ## Create hierarchical list of used fuels
+  fueltree <- entities_to_tree(lapply(flowlist, flow.fuel))
+  
+
+}
+
+
+## fuels: list-of character vector
+## A `tree` is either:
+## - list()                  Empty tree
+## - list("name")            Single node
+## - list("name", tree, ...) Node with subnodes
+##
+## Notes: Trees are rooted. (tree, ...) is not a tree
+##        list("name")[-1] -> list()
+## TODO: Make a closure
+
+entities_to_tree <- function(entities) {
+  is.empty <- function(ll) { 
+    isTRUE(length(ll) == 0L)
+  }
+  
+  insert_node <- function(tree, this) {
+    if (is.empty(tree)) {
+      list(this)
+    } else if () {
+    }  
+    
+  }
+  
+  add_to_tree <- function(tree, entity_list) {
+    if (is.empty(entity_list)) {
+      tree
+    } else {
+      add_to_tree(insert_node(tree, rest[[1]]), rest[-1])
+    }
+  }
+    
+  add_to_tree(tree = list(), entities) 
+}
+
+  
+
 
 ## Activities
 ## ==========
