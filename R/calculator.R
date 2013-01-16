@@ -72,11 +72,21 @@ entities_to_tree <- function(entities) {
   is.empty <- function(ll) { 
     isTRUE(length(ll) == 0L)
   }
-  
-  insert_node <- function(tree, this) {
+
+  ## branch: character()
+  insert_branch <- function(tree, branch) {
+    ## If `branch` is empty, return `tree`. Else
+    ## Either `tree` ... 
+    ## - is empty, in which case
+    ##   -> return (branch[[1]], insert_branch(list(), branch[-1])) 
+    ## - has a root node which is not equal to branch[[1]], in which case
+    ##   -> return FALSE (this tree has become inconsistent)
+    ## - has a root node which is equal to branch[[1]], in which case,
+    ## 
     if (is.empty(tree)) {
       list(this)
     } else if () {
+      
     }  
     
   }
@@ -85,7 +95,7 @@ entities_to_tree <- function(entities) {
     if (is.empty(entity_list)) {
       tree
     } else {
-      add_to_tree(insert_node(tree, rest[[1]]), rest[-1])
+      add_to_tree(insert_branch(tree, rest[[1]]), rest[-1])
     }
   }
     

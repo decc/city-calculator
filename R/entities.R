@@ -51,12 +51,25 @@ FuelTypes <- c("gas", "electricity", "petrol", "diesel", "coal", "petroleum",
                "manufactured solid fuels", "renewables & waste",
                "primary supply", "final demand", "real", "nominal")
 
+## TODO: USE THIS STRUCTURE
+FuelTree <- list("fuel",
+                 list("real",
+                      list("electricity"),
+                      list("hydrocarbon",
+                           list("liquid hydrocarbon",
+                                list("petrol"), list("diesel"))),
+                      list("person")),
+                 list("nominal",
+                      list("primary supply"), list("final demand")))
+
 check.fueltype <- function(atomic_fuel) {
   if (!(atomic_fuel %in% FuelTypes))
     stop(atomic_fuel, " is not a recognised fuel type", call. = FALSE)
   return(atomic_fuel)
 }
 
+## TODO: Rewrite to use FuelTree
+##       Reverse order of list
 fueltype <- function(s) {
   switch(s,
          "real" = c("real", "fuel"),
