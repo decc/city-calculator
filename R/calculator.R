@@ -69,37 +69,45 @@ summarise.flows <- function(flowlist) {
 ## TODO: Make a closure
 
 entities_to_tree <- function(entities) {
+  
   is.empty <- function(ll) { 
     isTRUE(length(ll) == 0L)
   }
 
+
+make_tree <- function(tree.name, tree.subtrees) {
+  ## name: character()
+  ## subtrees: a list of trees, possibly empty
+  list(name = tree.name, subtrees = tree.subtrees)
+}
+
+insert_branch <- function(trees, branch) {
+  ## trees: A list of trees, possibly empty
+  ## branch: character(), possibly empty
+  ##
+  ## Insert `branch` into the matching tree in `trees`. A tree is matching if
+  ## the name of its root node is the same as the first element of
+  ## `branch`. If there is no matching child node, add `branch` to the list.
+  ##
+  ## -> list(tree, ...)
+
+  if (is.empty(branch)) {
+    trees
+  } else if (is.empty(trees)) {
+    list(make_tree(branch[[1]], insert_branch(list(), branch[-1])))
+  } else if (trees[[1]][["name"]] == branch[[1]]) {
+    c(list(add_to_tree(trees[[1]], branch[-1])), trees[-1])
+  } else {
+    c(list(tree[[1]]), insert_branch(trees[-1], branch))
+  }
+}
+
+add_to_tree <- function(tree, branch) {
+  ## tree: a tree
   ## branch: character()
-  insert_branch <- function(tree, branch) {
-    ## If `branch` is empty, return `tree`. Else
-    ## Either `tree` ... 
-    ## - is empty, in which case
-    ##   -> return (branch[[1]], insert_branch(list(), branch[-1])) 
-    ## - has a root node which is not equal to branch[[1]], in which case
-    ##   -> return FALSE (this tree has become inconsistent)
-    ## - has a root node which is equal to branch[[1]], in which case,
-    ## 
-    if (is.empty(tree)) {
-      list(this)
-    } else if () {
-      
-    }  
-    
-  }
-  
-  add_to_tree <- function(tree, entity_list) {
-    if (is.empty(entity_list)) {
-      tree
-    } else {
-      add_to_tree(insert_branch(tree, rest[[1]]), rest[-1])
-    }
-  }
-    
-  add_to_tree(tree = list(), entities) 
+  ## Insert branch into the list of subtrees of tree
+  ## -> a tree
+  make_tree(tree[["name"]], insert_branch(tree[["subtrees"]], branch))
 }
 
   
