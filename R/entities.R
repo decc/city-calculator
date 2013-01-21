@@ -72,16 +72,16 @@ check.fueltype <- function(atomic_fuel) {
 ##       Reverse order of list
 fueltype <- function(s) {
   switch(s,
-         "real" = c("real", "fuel"),
-         "nominal" = c("nominal", "fuel"),
-         "primary supply" = c("primary supply", fueltype("nominal")),
-         "final demand" = c("final demand", fueltype("nominal")),
-         "electricity" = c("electricity", fueltype("real")),
-         "hydrocarbon" = c("hydrocarbon", fueltype("real")),
-         "liquid hydrocarbon" = c("liquid hydrocarbon", fueltype("hydrocarbon")),
-         "petrol" = c("petrol", fueltype("liquid hydrocarbon")),
-         "diesel" = c("diesel", fueltype("liquid hydrocarbon")),
-         "person" = c("person", fueltype("real")))
+         "real" = c("fuel", s),
+         "nominal" = c("fuel", s),
+         "primary supply" = c(fueltype("nominal"), s),
+         "final demand" = c(fueltype("nominal"), s),
+         "electricity" = c(fueltype("real"), s),
+         "hydrocarbon" = c(fueltype("real"), s),
+         "liquid hydrocarbon" = c(fueltype("hydrocarbon"), s),
+         "petrol" = c(fueltype("liquid hydrocarbon"), s),
+         "diesel" = c(fueltype("liquid hydrocarbon"), s),
+         "person" = c(fueltype("real"), s))
 }
 
 

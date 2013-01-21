@@ -71,8 +71,8 @@ vehicle_technology_km.model <- function(vehicle, technology, efficiencies) {
                   USE.NAMES = FALSE)
 
 
-  make_constant_Activity(c(list(Flow(-sum(eff), "out", "final demand", vehicle)),
-                           flows))
+  make_constant_Activity(c(list(Flow(-sum(eff), "out", fueltype("final demand"),
+                           vehicle)), flows))
 }
 
 ## Activites for each vehicle / engine technology choice

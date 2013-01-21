@@ -38,6 +38,6 @@ passenger_transport <- passenger_transport.model(N = population.uk,
 
 flows <- passenger_transport() # Should be run_model(passenger.transport) !!
 
-summarise.flows(flows)
+summarise_flows(flows)
 
 

@@ -39,8 +39,8 @@ flow.scalar_multiply <- function(v, flow) {
   c(list(v * flow[[1L]]), flow[-1L])
 }
 
-## Flowlist
-## ========
+### Flowlist
+### ========
 
 ## A list of flows such that the sum of all flows is zero.
 
@@ -50,56 +50,107 @@ flow.scalar_multiply <- function(v, flow) {
 ## TODO: Write function for pretty printing summary-type things
 ## TODO: Add an optional argument to take a fueltype hierarchy.
 
-summarise.flows <- function(flowlist) {
-  ## Create hierarchical list of used fuels
+summarise.flows <- function(flowlist, energy.unit = "[TW h]_energy") {
+  ## Create hierarchical list of fuel types
   fueltree <- entities_to_tree(lapply(flowlist, flow.fuel))
   
-
 }
 
+### TREES
+### =====
 
-## fuels: list-of character vector
+is.empty <- function(ll) { 
+  isTRUE(length(ll) == 0L)
+}
+
+## flatten_tree: convert `tree` to list of (node, level) pairs (suitable for
+## subsequent printing as an indented list, for example)
+flatten_tree <- function(tree) {
+  flatten_node <- function(tree, depth) {
+    if (is.empty(tree))
+      tree
+    else
+      append(list(list(tree[["node"]], depth)),
+             flatten_forest(tree[["forest"]], depth + 1))
+  }
+  flatten_forest <- function(forest, depth) {
+    if (is.empty(forest))
+      forest
+    else
+      append(flatten_node(forest[[1]], depth), flatten_forest(forest[-1], depth))
+  }
+  
+  flatten_node(tree, 0)
+} 
+
+
+## print_tree: Depth-first printing of tree as indented list.
+print.Tree <- function(tree) {
+  N.SPACES <- 2
+  out <- ""
+
+  for (node in flatten_tree(tree)) {
+    this.line <- paste(paste0(rep(" ", N.SPACES * node[[2]]), collapse = ""),
+                       node[[1]], sep = "")
+    out <- paste(out, this.line, "\n", sep = "")
+  }
+  cat(out)
+}
+
+## tree_to_strings : convert `tree` to a vector of strings, each string being
+## the name of a node, indendented by `indent` spaces for each step to the root
+## node. 
+tree_to_strings <- function(tree, indent = 2) {
+  vapply(flatten_tree(tree),
+         function(node) {
+           paste(paste0(rep(" ", indent * node[[2]]), collapse = ""),
+                 node[[1]], sep = "")
+         },
+         FUN.VALUE = character(1))   
+}
+
+## entities : list(entity, ...) where entity : character() 
 ## A `tree` is either:
-## - list()                  Empty tree
-## - list("name")            Single node
-## - list("name", tree, ...) Node with subnodes
+## - list(), or                  
+## - list(node = "node_name", forest = list(tree, ...))            
 ##
-## Notes: Trees are rooted. (tree, ...) is not a tree
-##        list("name")[-1] -> list()
-## TODO: Make a closure
+## TODO: Make into a closure
 
 entities_to_tree <- function(entities) {
+  forest <- list()
+  for (entity in entities)
+    forest <- insert_branch(forest, entity)
+
+  if (length(forest) != 1) 
+    stop("entity list had inconsistent root nodes.")
+
+  forest[[1]]
+}
   
-  is.empty <- function(ll) { 
-    isTRUE(length(ll) == 0L)
-  }
-
-
-make_tree <- function(tree.name, tree.subtrees) {
+make_tree <- function(name, subtrees) {
   ## name: character()
   ## subtrees: a list of trees, possibly empty
-  list(name = tree.name, subtrees = tree.subtrees)
+  list(node = name, forest = subtrees)
 }
-
-insert_branch <- function(trees, branch) {
-  ## trees: A list of trees, possibly empty
+  
+insert_branch <- function(forest, branch) {
+  ## forest: A list of trees, possibly empty
   ## branch: character(), possibly empty
   ##
-  ## Insert `branch` into the matching tree in `trees`. A tree is matching if
-  ## the name of its root node is the same as the first element of
-  ## `branch`. If there is no matching child node, add `branch` to the list.
+  ## Insert `branch` into the matching tree in `forest`. A tree is matching if
+  ## the name of its root node is the same as the first element of `branch`. If
+  ## there is no matching child node, add `branch` to the list.
   ##
   ## -> list(tree, ...)
 
-  if (is.empty(branch)) {
-    trees
-  } else if (is.empty(trees)) {
+  if (is.empty(branch)) 
+    forest
+  else if (is.empty(forest)) 
     list(make_tree(branch[[1]], insert_branch(list(), branch[-1])))
-  } else if (trees[[1]][["name"]] == branch[[1]]) {
-    c(list(add_to_tree(trees[[1]], branch[-1])), trees[-1])
-  } else {
-    c(list(tree[[1]]), insert_branch(trees[-1], branch))
-  }
+  else if (forest[[1]][["node"]] == branch[[1]]) 
+    c(list(add_to_tree(forest[[1]], branch[-1])), forest[-1])
+  else 
+    c(list(forest[[1]]), insert_branch(forest[-1], branch))
 }
 
 add_to_tree <- function(tree, branch) {
@@ -107,7 +158,7 @@ add_to_tree <- function(tree, branch) {
   ## branch: character()
   ## Insert branch into the list of subtrees of tree
   ## -> a tree
-  make_tree(tree[["name"]], insert_branch(tree[["subtrees"]], branch))
+  make_tree(tree[["node"]], insert_branch(tree[["forest"]], branch))
 }
 
   
