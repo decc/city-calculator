@@ -11,7 +11,7 @@ source("models/transport.R", chdir = TRUE)
 
 population.uk <- 60973000 # people
 
-distance_per_person <- as.Quantity(14104, "km") # per person per year
+distance.per.person <- as.Quantity(14104, "km") # per person per year
 
 mode.share <- c(car = 0.84,
                 bus = 0.06,
@@ -31,12 +31,12 @@ tech.share <- list(car = c(ICE = 0.99, PHEV = 0.01), # ADJUSTED to include PHEV
                    human = c(WALK = 0.81, BIKE = 0.19))
 
 passenger_transport <- passenger_transport.model(N = population.uk,
-                                                 d = distance_per_person,
+                                                 d = distance.per.person,
                                                  mode.share,
                                                  occupancy,
                                                  tech.share)
 
-flows <- passenger_transport() # Should be run_model(passenger.transport) !!
+flows <- calculate_flows(passenger_transport) 
 
 summarise_flows(flows)
 

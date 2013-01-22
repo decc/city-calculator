@@ -191,6 +191,11 @@ is.Activity <- function(x) {
   inherits(x, "Activity")
 }
 
+## calculate_flows : given an Activity, compute all flows
+calculate_flows <- function(activity) {
+  activity()
+}
+
 ## constant_Activity: Make an activity which produces constant flows
 make_constant_Activity <- function(flows) {
   Activity(function() {flows})
