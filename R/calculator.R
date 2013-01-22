@@ -8,7 +8,7 @@
 ###
 
 source("entities.R")
-  
+
 ## Flows
 ## =====
 
@@ -50,11 +50,26 @@ flow.scalar_multiply <- function(v, flow) {
 ## TODO: Write function for pretty printing summary-type things
 ## TODO: Add an optional argument to take a fueltype hierarchy.
 
-summarise.flows <- function(flowlist, energy.unit = "[TW h]_energy") {
+## flowlist : list(Flow, ...)
+## by : Flow -> Entity
+## compose : Flow X -> X
+##
+## `compose` is the function for "adding up" flows in the hierarchy given by
+## `by`
+
+total_flow <- function(flow, value) {
+
+}
+
+
+
+
+summarise_flows <- function(flowlist, energy.unit = "[TW h]_energy") {
   ## Create hierarchical list of fuel types
   fueltree <- entities_to_tree(lapply(flowlist, flow.fuel))
   
 }
+
 
 ### TREES
 ### =====
